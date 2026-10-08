@@ -2,7 +2,6 @@
 .venv/
 .env
 *.env
-!dokumen/*.xlsx
 
 # --- OS / editor noise ---
 .DS_Store
