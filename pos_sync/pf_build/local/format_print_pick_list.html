@@ -1,0 +1,495 @@
+<div class="pl-print-format">
+<style>
+    @page {
+        size: A4 portrait;
+        margin: 10mm;
+    }
+
+    .pl-print-format {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        font-size: 12px;
+        background: #ffffff;
+        padding: 0;
+        line-height: 1.4;
+    }
+    .pl-print-format table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* HEADER + TITLE + META */
+    .pl-header {
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+    .pl-header table {
+        width: 100%;
+    }
+    .pl-header td {
+        vertical-align: top;
+    }
+    .pl-header td.logo-cell {
+        width: 200px;
+    }
+    .pl-header td.info-cell {
+        text-align: right;
+    }
+    .pl-logo-box {
+        width: 90px;
+        height: 70px;
+        border: none;
+        text-align: center;
+        font-size: 10px;
+        color: #999;
+        line-height: 70px;
+        margin-bottom: 10px;
+    }
+    .pl-logo-box img {
+        max-width: 85px;
+        max-height: 65px;
+        vertical-align: middle;
+    }
+    .company-info {
+        text-align: left;
+        line-height: 1.5;
+    }
+    .company-info .company-name {
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
+    .company-info div {
+        font-size: 11.5px;
+        color: #333;
+    }
+    .pl-title {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+    .pl-meta {
+        text-align: right;
+    }
+    .pl-meta .meta-row {
+        margin-bottom: 4px;
+        white-space: nowrap;
+    }
+    .pl-meta .pl-label {
+        display: inline-block;
+        width: 100px;
+        color: #666;
+        font-size: 11.5px;
+        text-align: right;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .pl-meta .pl-val {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 11.5px;
+        text-align: left;
+        min-width: 140px;
+        vertical-align: middle;
+    }
+
+    /* CUSTOMER & REF INFO SECTION */
+    .pl-parties {
+        border-top: 1px solid #1a1a1a;
+        padding: 10px 0;
+        margin-bottom: 12px;
+    }
+    .pl-parties table td {
+        width: 50%;
+        vertical-align: top;
+        padding-right: 24px;
+    }
+    .pl-parties .section-title {
+        font-weight: bold;
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 4px;
+    }
+    .pl-parties .party-name {
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    .pl-parties .party-line {
+        font-size: 12px;
+        color: #333;
+    }
+
+    /* ITEMS TABLE */
+    .pl-items table {
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+        table-layout: fixed;
+    }
+    .pl-items th {
+        text-align: left;
+        padding: 6px 5px;
+        border-bottom: 1px solid #1a1a1a;
+        font-size: 10.5px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #444;
+    }
+    .pl-items td {
+        padding: 7px 5px;
+        vertical-align: middle;
+        font-size: 12px;
+        border-bottom: 1px solid #eee;
+    }
+    .pl-items tr:last-child td {
+        border-bottom: none;
+    }
+    .pl-items th.text-right, .pl-items td.text-right {
+        text-align: right;
+        white-space: nowrap;
+    }
+    .pl-items th.text-center, .pl-items td.text-center {
+        text-align: center;
+    }
+    .item-code {
+        font-weight: 600;
+    }
+    .item-desc {
+        color: #666;
+        font-weight: 400;
+    }
+    .batch-box {
+        display: inline-block;
+        border: 1px solid #ccc;
+        padding: 1px 4px;
+        font-size: 10px;
+        margin-top: 3px;
+        color: #555;
+    }
+
+    /* SUMMARY / NOTES */
+    .pl-summary-wrap {
+        margin-top: 10px;
+    }
+    .pl-summary-left {
+        font-size: 11.5px;
+        color: #555;
+        padding-top: 4px;
+        font-weight: bold;
+    }
+    .pl-note {
+        margin-top: 10px;
+        border: 1px solid #1a1a1a;
+        padding: 10px 12px;
+    }
+    .pl-note .section-title {
+        font-weight: bold;
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 4px;
+    }
+    .pl-note-content {
+        font-size: 11.5px;
+        color: #333;
+        white-space: pre-line;
+        min-height: 40px;
+    }
+
+    /* SIGNATURES */
+    .pl-signatures {
+        margin-top: 45px;
+    }
+    .pl-signatures table td {
+        width: 33.33%;
+        text-align: center;
+        padding: 0 10px;
+        vertical-align: top;
+    }
+    .pl-signatures .sig-role {
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 45px;
+    }
+    .pl-signatures .sig-name {
+        font-size: 11.5px;
+        color: #444;
+    }
+
+    /* TAMBAHAN KHUSUS PACKING LIST, TANPA MENGUBAH GAYA UTAMA */
+    .pl-page {
+        page-break-after: always;
+        break-after: page;
+    }
+    .pl-page:last-child {
+        page-break-after: auto;
+        break-after: auto;
+    }
+    .empty-row td {
+        height: 28px;
+    }
+    .manual-line {
+        display: inline-block;
+        min-width: 170px;
+        border-bottom: 1px dotted #777;
+        height: 13px;
+        vertical-align: top;
+    }
+    .manual-line.short {
+        min-width: 90px;
+    }
+    .packing-footer-table td {
+        vertical-align: top;
+    }
+
+    @media print {
+        .pl-page {
+            page-break-after: always;
+            break-after: page;
+        }
+        .pl-page:last-child {
+            page-break-after: auto;
+            break-after: auto;
+        }
+    }
+</style>
+
+{# ================================================================
+   FIELD YANG DIGUNAKAN SESUAI DOCTYPE PICK LIST:
+   - doc.company
+   - doc.purpose
+   - doc.customer
+   - doc.customer_name
+   - doc.parent_warehouse
+   - doc.status
+   - doc.delivery_status
+   - doc.work_order
+   - doc.material_request
+   - doc.locations (child table Pick List Item)
+   - doc.name, doc.creation, doc.owner adalah standard system fields
+   ================================================================ #}
+
+{% set company_doc = frappe.get_doc("Company", doc.company) %}
+{% set location_rows = doc.locations or [] %}
+
+{# Referensi Sales Order hanya dibaca dari child table bila memang tersedia. #}
+{% set sales_order_refs = [] %}
+{% for row in location_rows %}
+    {% if row.sales_order and row.sales_order not in sales_order_refs %}
+        {% set _ = sales_order_refs.append(row.sales_order) %}
+    {% endif %}
+{% endfor %}
+
+{# Menentukan referensi berdasarkan field Pick List yang benar-benar tersedia. #}
+{% if sales_order_refs %}
+    {% set reference_label = "Sales Order" %}
+    {% set reference_value = sales_order_refs | join(", ") %}
+{% elif doc.work_order %}
+    {% set reference_label = "Work Order" %}
+    {% set reference_value = doc.work_order %}
+{% elif doc.material_request %}
+    {% set reference_label = "Material Request" %}
+    {% set reference_value = doc.material_request %}
+{% else %}
+    {% set reference_label = "Reference" %}
+    {% set reference_value = "-" %}
+{% endif %}
+
+{% set displayed_customer = doc.customer_name or doc.customer or "Internal / N/A" %}
+{% set displayed_status = "Draft" if doc.docstatus == 0 else (doc.status or "-") %}
+{% set rows_per_page = 24 %}
+{% set item_count = location_rows | length %}
+{% set total_pages = (((item_count - 1) // rows_per_page) + 1) if item_count > 0 else 1 %}
+{% set page_starts = range(0, item_count, rows_per_page) if item_count > 0 else [0] %}
+
+{% for start_index in page_starts %}
+{% set page_rows = location_rows[start_index:start_index + rows_per_page] %}
+{% set blank_rows = rows_per_page - (page_rows | length) %}
+
+<div class="pl-page">
+    <div class="pl-header">
+        <table>
+            <tr>
+                <td class="logo-cell">
+                    {% if company_doc.company_logo and company_doc.company_logo.strip() %}
+                    <div class="pl-logo-box">
+                        <img src="{{ company_doc.company_logo }}">
+                    </div>
+                    {% endif %}
+                    <div class="company-info">
+                        <div class="company-name">{{ doc.company }}</div>
+                        {% if company_doc.phone_no %}
+                            <div>Phone: {{ company_doc.phone_no }}</div>
+                        {% endif %}
+                    </div>
+                </td>
+
+                <td class="info-cell">
+                    <div class="pl-title">PACKING LIST</div>
+
+                    <div class="pl-meta">
+                        <div class="meta-row">
+                            <span class="pl-label">Status</span>
+                            <span class="pl-val">{{ displayed_status }}</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="pl-label">Pick List No.</span>
+                            <span class="pl-val">{{ doc.name }}</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="pl-label">Date</span>
+                            <span class="pl-val">{{ frappe.utils.formatdate(doc.creation) }}</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="pl-label">Purpose</span>
+                            <span class="pl-val">{{ doc.purpose or "-" }}</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="pl-label">Page</span>
+                            <span class="pl-val">{{ loop.index }} / {{ total_pages }}</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="pl-parties">
+        <table>
+            <tr>
+                <td>
+                    <div class="section-title">Customer Details</div>
+                    <div class="party-name">{{ displayed_customer }}</div>
+                    {% if doc.customer and doc.customer_name and doc.customer != doc.customer_name %}
+                        <div class="party-line">{{ doc.customer }}</div>
+                    {% endif %}
+                </td>
+
+                <td>
+                    <div class="section-title">{{ reference_label }}</div>
+                    <div class="party-line">{{ reference_value }}</div>
+                    {% if doc.parent_warehouse %}
+                        <div class="section-title" style="margin-top:8px;">Warehouse</div>
+                        <div class="party-line">{{ doc.parent_warehouse }}</div>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="pl-items">
+        <table>
+            <thead>
+                <tr>
+                    <th class="text-center" style="width:6%;">No</th>
+                    <th style="width:46%;">Item</th>
+                    <th class="text-right" style="width:12%;">Qty</th>
+                    <th class="text-center" style="width:12%;">Satuan</th>
+                    <th class="text-center" style="width:12%;">Packer</th>
+                    <th class="text-center" style="width:12%;">Checker</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in page_rows %}
+                {% set displayed_qty = row.picked_qty if row.picked_qty else row.stock_qty %}
+                <tr>
+                    <td class="text-center" style="vertical-align:top;">
+                        {{ start_index + loop.index }}
+                    </td>
+                    <td style="vertical-align:top;">
+                        <span class="item-code">{{ row.item_name or row.item_code }}</span>
+
+                        {% if row.item_name and row.item_code and row.item_name != row.item_code %}
+                            <br><span class="item-desc">{{ row.item_code }}</span>
+                        {% endif %}
+
+                        {% if row.batch_no %}
+                            <br><span class="batch-box">Batch: {{ row.batch_no }}</span>
+                        {% endif %}
+
+                        {% if row.warehouse %}
+                            <br><span class="item-desc">Warehouse: {{ row.warehouse }}</span>
+                        {% endif %}
+                    </td>
+                    <td class="text-right" style="vertical-align:top;">
+                        {{ displayed_qty | int if displayed_qty == displayed_qty | int else displayed_qty }}
+                    </td>
+                    <td class="text-center" style="vertical-align:top;">
+                        {{ row.stock_uom or "-" }}
+                    </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                </tr>
+                {% endfor %}
+
+                {% for _ in range(blank_rows) %}
+                <tr class="empty-row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% if loop.last %}
+    <div class="pl-summary-wrap">
+        <table class="packing-footer-table">
+            <tr>
+                <td style="width:50%;">
+                    <div class="pl-summary-left">
+                        Total Qty: {{ location_rows | sum(attribute='stock_qty') }}
+                    </div>
+                </td>
+                <td style="width:25%; text-align:right; padding-right:12px;">
+                    <div class="pl-summary-left">Time:</div>
+                </td>
+                <td style="width:25%;">
+                    <span class="manual-line short"></span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="text-align:right; padding-right:12px;">
+                    <div class="pl-summary-left">Total Koli:</div>
+                </td>
+                <td>
+                    <span class="manual-line short"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="pl-signatures">
+        <table>
+            <tr>
+                <td>
+                    <div class="sig-role">Picker Name</div>
+                    <div class="sig-name">( ................................ )</div>
+                </td>
+                <td>
+                    <div class="sig-role">Packer Name</div>
+                    <div class="sig-name">( ................................ )</div>
+                </td>
+                <td>
+                    <div class="sig-role">Checker — TTD / TGL</div>
+                    <div class="sig-name">( ................................ )</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {% endif %}
+</div>
+
+{% endfor %}
+</div>

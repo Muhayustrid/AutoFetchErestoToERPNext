@@ -1,0 +1,209 @@
+<style>
+    /* Header Global Ropi — dipakai sebagai Letter Head default site (docs/11).
+       Prefix jh- agar tidak bentrok dengan CSS body format. */
+    .jh-header {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        background: #ffffff;
+        padding: 0 0 12px 0;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+    .jh-header table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .jh-header td {
+        vertical-align: top;
+    }
+    .jh-header td.jh-logo-cell {
+        width: 250px;
+    }
+    .jh-header td.jh-info-cell {
+        text-align: right;
+    }
+    .jh-logo-box {
+        width: 120px;
+        height: auto;
+        border: none;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .jh-logo-box img {
+        max-width: 100%;
+        max-height: 80px;
+        vertical-align: middle;
+        object-fit: contain;
+    }
+    .jh-company {
+        text-align: left;
+        line-height: 1.5;
+    }
+    .jh-company .jh-company-name {
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
+    .jh-company div {
+        font-size: 11.5px;
+        color: #333;
+    }
+    .jh-title {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: right;
+        margin: 0 0 10px 0;
+        line-height: 1.2;
+    }
+    .jh-meta {
+        text-align: right;
+    }
+    .jh-meta .jh-row {
+        margin-bottom: 4px;
+        white-space: nowrap;
+    }
+    .jh-meta .jh-label {
+        display: inline-block;
+        width: 90px;
+        color: #666;
+        font-size: 11.5px;
+        text-align: right;
+        margin-right: 10px;
+        vertical-align: middle;
+        border: none;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+    }
+    .jh-meta .jh-val {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 11.5px;
+        text-align: left;
+        min-width: 130px;
+        vertical-align: middle;
+        border: none;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+    }
+</style>
+
+{# Header global: logo + info company + judul + meta kondisional per DocType.
+   Context render = {"doc": doc.as_dict()} — pakai doc.get(...), jangan
+   doc.items (bentrok dengan method dict). #}
+{% set _company = doc.get("company") %}
+{% set _cd = frappe.db.get_value("Company", _company, ["company_logo", "phone_no", "email", "website"], as_dict=True) if _company else None %}
+{% set _items = doc.get("items") or [] %}
+{% set _doctype = doc.get("doctype") %}
+{% set _status = "Draft" if doc.get("docstatus") == 0 else doc.get("status") %}
+
+{% if _doctype == "Purchase Order" %}
+    {% set _title = "Purchase Order" %}
+    {% set _rows = [
+        ("Status", _status),
+        ("PO No.", doc.get("name")),
+        ("PO Date", frappe.utils.formatdate(doc.get("transaction_date"))),
+        ("Required By", frappe.utils.formatdate(doc.get("schedule_date"))),
+        ("Supplier Quotation", doc.get("supplier_quotation")),
+        ("Payment Terms", doc.get("payment_terms_template")),
+    ] %}
+{% elif _doctype == "Purchase Receipt" %}
+    {% set _po_refs = _items | map(attribute='purchase_order') | select | unique | list %}
+    {% set _title = "Purchase Receipt" %}
+    {% set _rows = [
+        ("Status", _status),
+        ("PR No.", doc.get("name")),
+        ("Posting Date", frappe.utils.formatdate(doc.get("posting_date"))),
+        ("Delivery Note", doc.get("supplier_delivery_note")),
+        ("Against PO", (_po_refs | join(", ")) if _po_refs else "-"),
+        ("Payment Terms", doc.get("payment_terms_template")),
+    ] %}
+{% elif _doctype == "Purchase Invoice" %}
+    {% set _po_refs = _items | map(attribute='purchase_order') | select | unique | list %}
+    {% set _pr_refs = _items | map(attribute='purchase_receipt') | select | unique | list %}
+    {% set _title = "Purchase Invoice" %}
+    {% set _rows = [
+        ("Status", _status),
+        ("Invoice No.", doc.get("name")),
+        ("Posting Date", frappe.utils.formatdate(doc.get("posting_date"))),
+        ("Due Date", frappe.utils.formatdate(doc.get("due_date"))),
+        ("Supplier Inv. No.", doc.get("bill_no")),
+        ("Against PO", (_po_refs | join(", ")) if _po_refs else "-"),
+        ("Against PR", (_pr_refs | join(", ")) if _pr_refs else "-"),
+        ("Payment Terms", doc.get("payment_terms_template")),
+    ] %}
+{% elif _doctype == "Sales Order" %}
+    {% set _title = "Sales Order" %}
+    {% set _rows = [
+        ("Status", _status),
+        ("SO No.", doc.get("name")),
+        ("SO Date", frappe.utils.formatdate(doc.get("transaction_date"))),
+        ("Delivery Date", frappe.utils.formatdate(doc.get("delivery_date"))),
+        ("Customer PO No.", doc.get("po_no")),
+        ("Payment Terms", doc.get("payment_terms_template")),
+    ] %}
+{% elif _doctype == "Delivery Note" %}
+    {% set _so_refs = _items | map(attribute='against_sales_order') | select | unique | list %}
+    {% set _title = "Delivery Note" %}
+    {% set _rows = [
+        ("Status", _status),
+        ("DN No.", doc.get("name")),
+        ("Posting Date", frappe.utils.formatdate(doc.get("posting_date"))),
+        ("Customer PO No.", doc.get("po_no")),
+        ("Against SO", (_so_refs | join(", ")) if _so_refs else "-"),
+        ("Payment Terms", doc.get("payment_terms_template")),
+    ] %}
+{% elif _doctype == "Material Request" %}
+    {% set _title = "Material Request" %}
+    {% set _rows = [
+        ("Status", _status),
+        ("MR No.", doc.get("name")),
+        ("Transaction Date", frappe.utils.formatdate(doc.get("transaction_date"))),
+        ("Required By", frappe.utils.formatdate(doc.get("schedule_date"))),
+        ("Purpose", doc.get("material_request_type")),
+    ] %}
+{% elif _doctype == "Stock Entry" %}
+    {% set _status = "Draft" if doc.get("docstatus") == 0 else ("Submitted" if doc.get("docstatus") == 1 else "Cancelled") %}
+    {% set _title = "Stock Entry" %}
+    {% set _rows = [
+        ("Status", _status),
+        ("STE No.", doc.get("name")),
+        ("Posting Date", frappe.utils.formatdate(doc.get("posting_date"))),
+        ("Purpose", doc.get("purpose")),
+    ] %}
+{% else %}
+    {% set _title = _doctype or "" %}
+    {% set _rows = [
+        ("No.", doc.get("name")),
+        ("Date", frappe.utils.formatdate(doc.get("posting_date") or doc.get("creation"))),
+    ] %}
+{% endif %}
+
+<div class="jh-header">
+    <table>
+        <tr>
+            <td class="jh-logo-cell">
+                {% if _cd and _cd.company_logo %}
+                <div class="jh-logo-box"><img src="{{ _cd.company_logo }}" alt="Company Logo"></div>
+                {% endif %}
+                {% if _company %}
+                <div class="jh-company">
+                    <div class="jh-company-name">{{ _company }}</div>
+                    {% if _cd and _cd.phone_no %}<div>Phone: {{ _cd.phone_no }}</div>{% endif %}
+                    {% if _cd and _cd.email %}<div>Email: {{ _cd.email }}</div>{% endif %}
+                    {% if _cd and _cd.website %}<div>WWW: {{ _cd.website }}</div>{% endif %}
+                </div>
+                {% endif %}
+            </td>
+            <td class="jh-info-cell">
+                <div class="jh-title">{{ _title }}</div>
+                <div class="jh-meta">
+                    {% for _label, _value in _rows %}{% if _value %}
+                    <div class="jh-row"><span class="jh-label">{{ _label }}</span><span class="jh-val">{{ _value }}</span></div>
+                    {% endif %}{% endfor %}
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

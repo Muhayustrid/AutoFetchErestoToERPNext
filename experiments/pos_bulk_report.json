@@ -1,0 +1,578 @@
+{
+ "pl_created": [],
+ "pl_skip": [
+  "PG-RSUP Palembang"
+ ],
+ "ip_added": {
+  "PG-RSUP Palembang": 0
+ },
+ "ip_fail": [],
+ "pg_created": [
+  {
+   "pg": "RSUP Palembang",
+   "items": 6,
+   "outlets": 1
+  },
+  {
+   "pg": "Menu 10K 11 Juni 2026",
+   "items": 12,
+   "outlets": 1
+  },
+  {
+   "pg": "Menu 12K 11 Juni 2026",
+   "items": 11,
+   "outlets": 1
+  },
+  {
+   "pg": "Menu 12K 24 Mei 2026",
+   "items": 15,
+   "outlets": 2
+  },
+  {
+   "pg": "Menu ROPI 12K 15 Juli 2026",
+   "items": 19,
+   "outlets": 61
+  },
+  {
+   "pg": "Menu ROPI 14K 15 Juli 2026",
+   "items": 17,
+   "outlets": 14
+  },
+  {
+   "pg": "ROPI 12K MARET 2026",
+   "items": 6,
+   "outlets": 4
+  },
+  {
+   "pg": "RSJD DR ARIF ZAINUDDIN SURAKARTA 10K MARET 2026",
+   "items": 5,
+   "outlets": 1
+  },
+  {
+   "pg": "UMBUL PELEM",
+   "items": 10,
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI SAN MEDICA CENTER",
+   "items": 7,
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI BANGKA TENGAH FRC",
+   "items": 7,
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI RS MEDINA GARUT",
+   "items": 6,
+   "outlets": 1
+  },
+  {
+   "pg": "JAMBI SOROLANGUN FRC",
+   "items": 5,
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI SUNGAI PENUH",
+   "items": 3,
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI 10 K",
+   "items": 2,
+   "outlets": 1
+  }
+ ],
+ "pg_skip": [
+  "Menu ROPI 10K 15 Juli 2026",
+  "RSUP Palembang"
+ ],
+ "pg_fail": [
+  {
+   "tier": "RSUP Palembang",
+   "http": 417,
+   "body": "{'exception': 'frappe.exceptions.ValidationError: Price List PG-RSUP Palembang already exists and is not linked to this Price Group', 'exc_type': 'ValidationError', '_exc_source': 'pos_next (app)', 'e"
+  },
+  {
+   "pg": "nan",
+   "err": "tiada item terpetakan"
+  }
+ ],
+ "prof_created": [
+  "RS KARTIKA ASIH SUKABUMI",
+  "RS MEDIROSSA - CIKARANG",
+  "RS MUHAMMADIYAH MARDATILAH PEMALANG",
+  "RS RAHMAN RAHIM",
+  "RS RAHMAN RAHIM SIDOREJO",
+  "RSI MUH. KENDAL",
+  "RSUD Hj. ANNA LASMANAH BANJARNEGARA",
+  "RSUD TAMAN HUSADA BONTANG",
+  "RS HOSANA MEDICA LIPPO CIKARANG",
+  "RS ANNISA TANGERANG",
+  "RS RAHMAN RAHIM SIDOARJO",
+  "RSUD DR. SOEGIRI LAMONGAN",
+  "PKU MUHAMMADIYAH GUBUG",
+  "RS BUNDA SEJATI TANGERANG",
+  "RS DARMAYU MADIUN",
+  "RS DUTA INDAH JAKARTA",
+  "RS H.A ZAKY DJUNAID",
+  "RS IHC WONOLANGAN PROBOLINGGO",
+  "RS KEN SARAS SEMARANG",
+  "RS KRISTEN NGESTI WALUYO TEMANGGUNG",
+  "RS LAWANG MEDIKA MALANG",
+  "RS MEDIROSSA 2 CIBARUSAH",
+  "RS MEDIROSSA CIKARANG",
+  "RS MUHAMMADIYAH MARDHATILLAH PEMALANG",
+  "RS NIRMALA SURI SUKOHARJO",
+  "RS NU TUBAN",
+  "RS PKU AISYIYAH BOYOLALI",
+  "RS PKU MUHAMMADIYAH GAMPING",
+  "RS PKU MUHAMMADIYAH KARANGANYAR",
+  "RS PKU MUHAMMADIYAH KOTA YOGYAKARTA",
+  "RS PKU MUHAMMADIYAH SRUWENG",
+  "RS PKU MUHAMMADIYAH SURAKARTA",
+  "RS PKU MUHAMMADIYAH TEMANGGUNG",
+  "RS PRIMA MEDIKA PEMALANG",
+  "RSI MUHAMMADIYAH KENDAL",
+  "RSI PKU MUH PEKAJANGAN",
+  "RSI PURWOKERTO",
+  "RSI SITI AISYIYAH MADIUN",
+  "RSM AHMAD DAHLAN KEDIRI",
+  "RSP DR ARIO WIRAWAN SALATIGA",
+  "RSU AGHISNA MEDIKA SIDAREJA",
+  "RSU AISYIYAH KLATEN",
+  "RSU AISYIYAH PONOROGO",
+  "RSU DADI KELUARGA PURWOKERTO",
+  "RSU HARAPAN IBU PURBALINGGA",
+  "RSU MITRA DELIMA MALANG",
+  "RSU MUH. SITI AMINAH BUMIAYU",
+  "RSU PUSAT SURAKARTA",
+  "RSU QUEEN LATIFA YOGYAKARTA",
+  "RSUD AJIBARANG BANYUMAS",
+  "RSUD AMBARAWA",
+  "RSUD BAGAS WARAS KLATEN",
+  "RSUD BANYUMAS",
+  "RSUD BATANG",
+  "RSUD BENDAN KOTA PEKALONGAN",
+  "RSUD BUNG KARNO SURAKARTA",
+  "RSUD DR HARJONO PONOROGO",
+  "RSUD DR MOHAMMAD ZYN SAMPANG",
+  "RSUD DR SOEDIRMAN KEBUMEN",
+  "RSUD DR TJITROWARDOJO PURWOREJO",
+  "RSUD DR. R. SOETIJONO BLORA",
+  "RSUD HUSADA PRIMA SURABAYA",
+  "RSUD KAJEN PEKALONGAN",
+  "RSUD KANJURUHAN MALANG",
+  "RSUD KOTA YOGYAKARTA",
+  "RSUD LAWANG MALANG",
+  "RSUD LIMPUNG BATANG",
+  "RSUD MAJENANG",
+  "RSUD NGUDI WALUYO WILINGI BLITAR",
+  "RSUD NYI AGENG SERANG KULON PROGO",
+  "RSUD R.A KARTINI JEPARA",
+  "RSUD RAA TJOKRONEGORO",
+  "RSUD SETJONEGORO WONOSOBO",
+  "RSUD SLEMAN",
+  "RSUD SULTAN FATAH DEMAK",
+  "RSUD SYAMRAMBU BANGKALAN",
+  "RSUD TEMANGGUNG",
+  "RSUI BANYU BENING BOYOLALI",
+  "LAKSANA BARU SWALAYAN MAJENANG",
+  "RADJAK HOSPITAL CILEUNGSI BOGOR",
+  "RS ADI HUSADA UNDAAN SURABAYA",
+  "RS AISYIYAH SITI FATIMAH SIDOARJO",
+  "RS AMC BANDUNG",
+  "RS ANNISA CITEUREUP",
+  "RS ASSAKINAH MEDIKA SIDOARJO",
+  "RS BETHA MEDIKA SUKABUMI",
+  "RS CINTA KASIH CIPUTAT",
+  "RS DUSTIRA CIMAHI",
+  "RS IHC DJATIROTO LUMAJANG",
+  "RS IHC TOELOENGREDJO PARE KEDIRI",
+  "RS INDRIATI SOLO BARU",
+  "RS ISLAM AR-RASYID PALEMBANG",
+  "RS ISLAM SAKINAH MOJOKERTO",
+  "RS ISLAM SURABAYA A. YANI",
+  "RS KARTIKA KASIH SUKABUMI",
+  "RS KARUNIA KASIH RUMAH KELUARGA BEKASI",
+  "RS MARZOEKI MAHDI BOGOR",
+  "RS MUHAMMADIYAH LAMONGAN",
+  "RS MUHAMMADIYAH PALEMBANG",
+  "RS NASIONAL DIPONEGORO SEMARANG",
+  "RS PELABUHAN CIREBON",
+  "RS PERKEBUNAN JEMBER",
+  "RS PKU MUHAMMADIYAH PAMOTAN REMBANG",
+  "RS PKU MUHAMMADIYAH SURABAYA",
+  "RS PKU WONOSOBO",
+  "RS PUTRA WASPADA TULUNGAGUNG",
+  "RS RESTU KASIH JAKARTA",
+  "RS SARKIES AISYIYAH KUDUS",
+  "RS SUMBER KASIH CIREBON",
+  "RS UI DEPOK",
+  "RS UNIMEDIKA SETU BEKASI",
+  "RS UNS SOLO",
+  "RSAI BANDUNG",
+  "RSD MADANI PEKANBARU",
+  "RSD NGANJUK",
+  "RSI AISYIYAH NGANJUK",
+  "RSI AYSHA CIBINONG BOGOR",
+  "RSI JAKARTA PONDOK KOPI",
+  "RSI SITI KHADIJAH PALEMBANG",
+  "RST DR. SOEDJONO MAGELANG",
+  "RSU MUSLIMAT PONOROGO",
+  "RSUD BANGIL KABUPATEN PASURUAN",
+  "RSUD BAYU ASIH PURWAKARTA",
+  "RSUD CAMPURDARAT TULUNGAGUNG",
+  "RSUD DR GONDO SUWARNO UNGARAN",
+  "RSUD DR. HARYOTO LUMAJANG",
+  "RSUD DR. M. YUNUS BENGKULU",
+  "RSUD DR. R. SOEPRAPTO CEPU",
+  "RSUD GRATI KABUPATEN PASURUAN",
+  "RSUD HARAPAN DAN DOA BENGKULU",
+  "RSUD JOMBANG",
+  "RSUD KOTA PRABUMULIH",
+  "RSUD PADANGAN BOJONEGORO",
+  "RSUD PROF. DR. SOEKANDAR MOJOSARI",
+  "RSUD SEKAYU BANYUASIN",
+  "RSUD TARAKAN JAKARTA",
+  "RSUD TIDAR KOTA MAGELANG",
+  "TOSERBA JADI BARU BUMIAYU",
+  "TOSERBA JADI BARU KEBUMEN",
+  "RS GRAHA HUSADA LAMPUNG",
+  "RS MITRA PLUMBON INDRAMAYU",
+  "RS PRIMA MEDIKA BALI",
+  "RS PUPUK KALTIM BONTANG",
+  "RS YASMIN BANYUWANGI",
+  "RS YOS SUDARSO PADANG",
+  "RSCM JAKARTA",
+  "RSI BONTANG",
+  "RSUD BALI MANDARA",
+  "RSUD DAYA KOTA MAKASSAR",
+  "RSUD DR. MOCH. ANSARI SALEH KALSEL",
+  "RSUD M. NATSIR KOTA SOLOK",
+  "RSUD MANGUSADA BADUNG BALI",
+  "RUMAH SAKIT UNIVERSITAS ANDALAS PADANG",
+  "RS WATES HUSADA GRESIK",
+  "RSI JAKARTA SUKAPURA",
+  "SWALAYAN ANEKA JAYA DEMAK",
+  "RSJD DR ARIF ZAINUDDIN SURAKARTA",
+  "ROPI UMBUL PELEM",
+  "RSU San Medica (FRC)",
+  "Bangka Tengah (FRC)",
+  "Plaza Haji alQosbah (FRC)",
+  "RS Medina Garut (FRC)",
+  "Jambi Sarulangun (FRC)",
+  "Sungai Penuh (FRC)",
+  "Mitra Swalayan Gombong (FRC)"
+ ],
+ "prof_skip": [
+  "RS PKU MUHAMMADIYAH DELANGGU",
+  "RSUP Palembang"
+ ],
+ "prof_fail": [
+  {
+   "company": "RSUP Palembang",
+   "http": 417,
+   "body": "{'exception': 'frappe.exceptions.LinkValidationError: Could not find Price Group: RSUP Palembang', 'exc_type': 'LinkValidationError', 'exc': '[\"Traceback (most recent call last):\\\\n  File \\\\\"apps/frappe/frappe/app.py\\\\\", line 158, in application\\\\n  "
+  },
+  {
+   "company": "RSUP Palembang",
+   "http": 417,
+   "body": "{'exception': 'frappe.exceptions.ValidationError: POS Profile SHIFT 1 - RSUP Palembang is not in the Members table of Shift Group ALL TIME. Manage membership from the Shift Group.', 'exc_type': 'ValidationError', '_exc_source': 'pos_next (app)', 'exc"
+  },
+  {
+   "company": "JURI GROUP",
+   "err": "akun kurang: ['1111.003']"
+  },
+  {
+   "company": "OUTLET",
+   "err": "akun kurang: ['5510.009', '4110.000', '4210.000', '1111.003', 'Main CC']"
+  },
+  {
+   "company": "PT. JUARA ROTI INDONESIA",
+   "err": "akun kurang: ['1111.003']"
+  },
+  {
+   "company": "TRAINING",
+   "err": "akun kurang: ['1111.003']"
+  }
+ ],
+ "link_updated": [],
+ "link_fail": [],
+ "unmapped": {
+  "RSUP Palembang": [
+   "PR00075",
+   "BC01",
+   "MC01",
+   "PR00073",
+   "PR00072",
+   "CR01",
+   "CM01",
+   "TJ01",
+   "PR00075",
+   "BC01",
+   "MC01",
+   "PR00073",
+   "PR00072",
+   "CR01",
+   "CM01",
+   "TJ01"
+  ],
+  "MENU 10K 11 JUNI 2026": [
+   "PG004"
+  ],
+  "MENU ROPI 12K 15 JULI 2026": [
+   "PG003",
+   "TJ02",
+   "CKN02",
+   "PR00075",
+   "TJ01",
+   "PG004"
+  ],
+  "MENU ROPI 14K 15 JULI 2026": [
+   "PG004",
+   "PG002",
+   "PG003"
+  ],
+  "ROPI 12K MARET 2026": [
+   "PR00075",
+   "PR00074",
+   "PR00073",
+   "TJ01",
+   "CK02",
+   "CM02",
+   "CM01",
+   "CK01",
+   "PG003",
+   "PG004",
+   "PR00072",
+   "BC01",
+   "MC01",
+   "TJ02"
+  ],
+  "RSJD DR ARIF ZAINUDDIN SURAKARTA 10K MARET 2026": [
+   "PG004",
+   "PG002"
+  ],
+  "UMBUL PELEM": [
+   "CKN02"
+  ],
+  "ROPI SAN MEDICA CENTER": [
+   "PR00037",
+   "TJ02",
+   "MC02",
+   "PR00034",
+   "BC01"
+  ],
+  "ROPI BANGKA TENGAH FRC": [
+   "AIR03",
+   "PR00074",
+   "MC05",
+   "MC01",
+   "P0014"
+  ],
+  "ROPI RS MEDINA GARUT": [
+   "PR00073",
+   "PR00072",
+   "CP02",
+   "PR00074",
+   "PR00075",
+   "CP01",
+   "TJ01",
+   "MC02"
+  ],
+  "JAMBI SOROLANGUN FRC": [
+   "CP01",
+   "CR01",
+   "CP02",
+   "P0005",
+   "SK002",
+   "P0013",
+   "CM01",
+   "SK001"
+  ],
+  "ROPI SUNGAI PENUH": [
+   "CP02",
+   "PR00037",
+   "CM02"
+  ]
+ },
+ "prep_ok": [
+  "PG-Menu ROPI 10K 15 Juli 2026",
+  "PG-RSUP Palembang"
+ ],
+ "prep_cleaned": [
+  {
+   "pl": "PG-RSUP Palembang",
+   "ip_deleted": 6
+  }
+ ],
+ "prep_fail": [],
+ "claim_ok": [
+  {
+   "pg": "RSUP Palembang",
+   "outlets": 1
+  },
+  {
+   "pg": "Menu ROPI 10K 15 Juli 2026",
+   "outlets": 68
+  },
+  {
+   "pg": "Menu 10K 11 Juni 2026",
+   "outlets": 1
+  },
+  {
+   "pg": "Menu 12K 11 Juni 2026",
+   "outlets": 1
+  },
+  {
+   "pg": "Menu 12K 24 Mei 2026",
+   "outlets": 2
+  },
+  {
+   "pg": "Menu ROPI 12K 15 Juli 2026",
+   "outlets": 61
+  },
+  {
+   "pg": "Menu ROPI 14K 15 Juli 2026",
+   "outlets": 14
+  },
+  {
+   "pg": "ROPI 12K MARET 2026",
+   "outlets": 4
+  },
+  {
+   "pg": "RSJD DR ARIF ZAINUDDIN SURAKARTA 10K MARET 2026",
+   "outlets": 1
+  },
+  {
+   "pg": "UMBUL PELEM",
+   "outlets": 1
+  },
+  {
+   "pg": "RSUP Palembang",
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI SAN MEDICA CENTER",
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI BANGKA TENGAH FRC",
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI RS MEDINA GARUT",
+   "outlets": 1
+  },
+  {
+   "pg": "JAMBI SOROLANGUN FRC",
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI SUNGAI PENUH",
+   "outlets": 1
+  },
+  {
+   "pg": "ROPI 10 K",
+   "outlets": 1
+  }
+ ],
+ "claim_fail": [],
+ "rate_conflict": [],
+ "group_ok": [
+  {
+   "label": "single SHIFT 1 - RS PKU MUHAMMADIYAH DELANGGU",
+   "n": 1,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "single SHIFT 1 - RSUP Palembang",
+   "n": 2,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "seed",
+   "n": 2,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "batch 1",
+   "n": 22,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "batch 2",
+   "n": 42,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "batch 3",
+   "n": 62,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "batch 4",
+   "n": 82,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "batch 5",
+   "n": 102,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "batch 6",
+   "n": 122,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "batch 7",
+   "n": 142,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "batch 8",
+   "n": 162,
+   "http": 200,
+   "body": ""
+  },
+  {
+   "label": "batch 9",
+   "n": 167,
+   "http": 200,
+   "body": ""
+  }
+ ],
+ "group_fail": [
+  {
+   "label": "batch 1",
+   "n": 3,
+   "http": 417,
+   "body": "{'exception': 'frappe.exceptions.ValidationError: POS Profile SHIFT 2- RS PKU MUHAMMADIYAH DELANGGU already belongs to Shift Group SHIFT 2. Remove it there first.', 'exc_type': 'ValidationError', '_ex"
+  },
+  {
+   "label": "single SHIFT 2- RS PKU MUHAMMADIYAH DELANGGU",
+   "n": 3,
+   "http": 417,
+   "body": "{'exception': 'frappe.exceptions.ValidationError: POS Profile SHIFT 2- RS PKU MUHAMMADIYAH DELANGGU already belongs to Shift Group SHIFT 2. Remove it there first.', 'exc_type': 'ValidationError', '_ex"
+  }
+ ],
+ "group_skipped": [
+  {
+   "profile": "SHIFT 2- RS PKU MUHAMMADIYAH DELANGGU",
+   "group": "SHIFT 2"
+  }
+ ]
+}

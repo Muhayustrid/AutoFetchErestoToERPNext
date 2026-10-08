@@ -1,0 +1,4504 @@
+{
+  "POS Closing Shift": [
+    {
+      "name": "POCLO-RPMD-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 10:00:53.379650",
+      "modified": "2026-10-05 10:00:53.398117",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "POCLO-RPMD-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 13:21:01.017816",
+      "modified": "2026-10-05 13:21:01.037988",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "POCLO-RPMD-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 16:04:58.567204",
+      "modified": "2026-10-05 16:04:58.589678",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "POCLO-RPMD-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 16:08:36.028182",
+      "modified": "2026-10-05 16:08:36.041815",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    }
+  ],
+  "POS Invoice": [
+    {
+      "name": "PINV-RPMD-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 09:57:59.173799",
+      "modified": "2026-10-05 09:57:59.473790",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 09:58:55.414434",
+      "modified": "2026-10-05 09:58:55.791528",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 09:59:35.584823",
+      "modified": "2026-10-05 09:59:35.865804",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 10:00:38.283774",
+      "modified": "2026-10-05 10:00:38.535254",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005005",
+      "docstatus": 1,
+      "creation": "2026-10-05 10:02:09.357003",
+      "modified": "2026-10-05 10:02:09.585835",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 10:21:16.427112",
+      "modified": "2026-10-05 10:21:16.674320",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005007",
+      "docstatus": 1,
+      "creation": "2026-10-05 12:18:00.766160",
+      "modified": "2026-10-05 12:18:01.007790",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005008",
+      "docstatus": 1,
+      "creation": "2026-10-05 12:59:29.964678",
+      "modified": "2026-10-05 12:59:30.258089",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005009",
+      "docstatus": 1,
+      "creation": "2026-10-05 13:00:26.428910",
+      "modified": "2026-10-05 13:00:26.693141",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005010",
+      "docstatus": 1,
+      "creation": "2026-10-05 13:05:01.677583",
+      "modified": "2026-10-05 13:05:01.956764",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005011",
+      "docstatus": 1,
+      "creation": "2026-10-05 13:12:23.060899",
+      "modified": "2026-10-05 13:12:23.497352",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005012",
+      "docstatus": 1,
+      "creation": "2026-10-05 13:13:00.398034",
+      "modified": "2026-10-05 13:13:00.783936",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005013",
+      "docstatus": 1,
+      "creation": "2026-10-05 13:13:28.304888",
+      "modified": "2026-10-05 13:13:28.648038",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005014",
+      "docstatus": 1,
+      "creation": "2026-10-05 13:15:13.597878",
+      "modified": "2026-10-05 13:15:13.804064",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005015",
+      "docstatus": 1,
+      "creation": "2026-10-05 13:17:57.380533",
+      "modified": "2026-10-05 13:17:57.629664",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005016",
+      "docstatus": 1,
+      "creation": "2026-10-05 13:19:57.860034",
+      "modified": "2026-10-05 13:19:58.093497",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005017",
+      "docstatus": 1,
+      "creation": "2026-10-05 16:00:56.157743",
+      "modified": "2026-10-05 16:00:56.507189",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PINV-RPMD-261005018",
+      "docstatus": 1,
+      "creation": "2026-10-05 16:02:49.565086",
+      "modified": "2026-10-05 16:02:49.786600",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    }
+  ],
+  "POS Opening Shift": [
+    {
+      "name": "POPEN-RPMD-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 09:55:04.515324",
+      "modified": "2026-10-05 10:00:53.407483",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "POPEN-RPMD-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 10:01:55.702324",
+      "modified": "2026-10-05 13:21:01.055547",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "POPEN-RPMD-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 16:00:06.755704",
+      "modified": "2026-10-05 16:04:58.600959",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "POPEN-RPMD-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 16:06:39.513891",
+      "modified": "2026-10-05 16:08:36.051654",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    }
+  ],
+  "Delivery Note": [
+    {
+      "name": "DN-JURI-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:53.362922",
+      "modified": "2026-10-05 07:36:53.881855",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:54.737992",
+      "modified": "2026-10-05 07:36:55.184517",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:55.972938",
+      "modified": "2026-10-05 07:36:56.349371",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:57.065330",
+      "modified": "2026-10-05 07:36:57.806349",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005005",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:58.903335",
+      "modified": "2026-10-05 07:36:59.103549",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:59.458169",
+      "modified": "2026-10-05 07:37:00.061857",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005007",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:01.428861",
+      "modified": "2026-10-05 07:37:02.077689",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005008",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:02.897536",
+      "modified": "2026-10-05 07:37:03.104088",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005009",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:03.601893",
+      "modified": "2026-10-05 07:37:03.793209",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005010",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:04.112551",
+      "modified": "2026-10-05 07:37:04.636632",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005011",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:05.515509",
+      "modified": "2026-10-05 07:37:05.731323",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005012",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:06.213057",
+      "modified": "2026-10-05 07:37:06.723610",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005013",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:07.487884",
+      "modified": "2026-10-05 07:37:07.836533",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005014",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:08.449644",
+      "modified": "2026-10-05 07:37:09.012540",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005015",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:10.061771",
+      "modified": "2026-10-05 07:37:10.320995",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005016",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:10.632095",
+      "modified": "2026-10-05 07:37:11.047570",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005017",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:11.966548",
+      "modified": "2026-10-05 07:37:12.419426",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005018",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:13.037636",
+      "modified": "2026-10-05 07:37:13.544207",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005019",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:14.370555",
+      "modified": "2026-10-05 07:37:14.821136",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005020",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:15.701023",
+      "modified": "2026-10-05 07:37:16.198570",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005021",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:17.135808",
+      "modified": "2026-10-05 07:37:17.525212",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005022",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:18.188970",
+      "modified": "2026-10-05 07:37:18.518807",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005023",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:19.045796",
+      "modified": "2026-10-05 07:37:19.297009",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005024",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:19.760357",
+      "modified": "2026-10-05 07:37:20.153076",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005025",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:20.884302",
+      "modified": "2026-10-05 07:37:21.393801",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005026",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:22.248559",
+      "modified": "2026-10-05 07:37:22.717567",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005027",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:23.548866",
+      "modified": "2026-10-05 07:37:23.757031",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005028",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:24.149173",
+      "modified": "2026-10-05 07:37:24.588094",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005029",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:25.249522",
+      "modified": "2026-10-05 07:37:25.395645",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005030",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:25.606045",
+      "modified": "2026-10-05 07:37:25.955001",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005031",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:26.571992",
+      "modified": "2026-10-05 07:37:26.985674",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005032",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:27.923989",
+      "modified": "2026-10-05 07:37:28.407981",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005033",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:29.353120",
+      "modified": "2026-10-05 07:37:29.785481",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005034",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:30.389565",
+      "modified": "2026-10-05 07:37:30.612620",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005035",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:31.020586",
+      "modified": "2026-10-05 07:41:18.384495",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005036",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:32.165064",
+      "modified": "2026-10-05 07:37:32.634548",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005037",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:33.592684",
+      "modified": "2026-10-05 07:41:19.207515",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005038",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:35.053488",
+      "modified": "2026-10-05 07:37:35.562889",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005039",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:36.331131",
+      "modified": "2026-10-05 07:37:36.741877",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005040",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:37.504180",
+      "modified": "2026-10-05 07:37:37.700394",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005041",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:38.035856",
+      "modified": "2026-10-05 07:41:20.537141",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005042",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:39.220037",
+      "modified": "2026-10-05 07:41:21.355375",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005043",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:40.496508",
+      "modified": "2026-10-05 07:41:22.212792",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005044",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:41.623842",
+      "modified": "2026-10-05 07:37:41.892956",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005045",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:37:42.309697",
+      "modified": "2026-10-05 07:37:42.550621",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "DN-JURI-261005046",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:23.161316",
+      "modified": "2026-10-05 07:41:23.400567",
+      "company": "PT. JUARA ROTI INDONESIA"
+    }
+  ],
+  "Sales Order": [
+    {
+      "name": "SORD-JURI-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:19.999015",
+      "modified": "2026-10-05 07:33:20.582364",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:21.216429",
+      "modified": "2026-10-05 07:33:21.611556",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:22.172985",
+      "modified": "2026-10-05 07:33:22.425892",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:22.778362",
+      "modified": "2026-10-05 07:33:23.550157",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005005",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:24.169296",
+      "modified": "2026-10-05 07:33:24.169296",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:24.426756",
+      "modified": "2026-10-05 07:33:24.985493",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005007",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:25.601797",
+      "modified": "2026-10-05 07:33:26.216505",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005008",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:26.852948",
+      "modified": "2026-10-05 07:33:27.709936",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005009",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:28.597413",
+      "modified": "2026-10-05 07:33:29.241844",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005010",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:29.947323",
+      "modified": "2026-10-05 07:33:30.510257",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005011",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:31.014050",
+      "modified": "2026-10-05 07:33:31.236102",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005012",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:31.565423",
+      "modified": "2026-10-05 07:33:32.214472",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005013",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:32.905036",
+      "modified": "2026-10-05 07:33:33.598217",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005014",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:34.332073",
+      "modified": "2026-10-05 07:33:34.979823",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005015",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:35.750940",
+      "modified": "2026-10-05 07:33:36.127529",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005016",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:36.563842",
+      "modified": "2026-10-05 07:33:36.850360",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SORD-JURI-261005017",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:37.281642",
+      "modified": "2026-10-05 07:33:37.537304",
+      "company": "PT. JUARA ROTI INDONESIA"
+    }
+  ],
+  "Purchase Receipt": [
+    {
+      "name": "PR-JURI-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:38.140821",
+      "modified": "2026-10-05 07:33:38.310728",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:38.706535",
+      "modified": "2026-10-05 07:33:38.860604",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:39.173613",
+      "modified": "2026-10-05 07:33:39.319170",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:39.629971",
+      "modified": "2026-10-05 07:33:39.798353",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005005",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:40.143781",
+      "modified": "2026-10-05 07:33:40.351061",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:40.603781",
+      "modified": "2026-10-05 07:33:40.773880",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005007",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:41.262677",
+      "modified": "2026-10-05 07:33:41.407040",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005008",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:41.648600",
+      "modified": "2026-10-05 07:33:41.880006",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005009",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:42.174283",
+      "modified": "2026-10-05 07:33:42.326026",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005010",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:42.563770",
+      "modified": "2026-10-05 07:33:42.822902",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005011",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:43.050402",
+      "modified": "2026-10-05 07:33:43.318446",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005012",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:43.553901",
+      "modified": "2026-10-05 07:33:43.748942",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005013",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:44.027642",
+      "modified": "2026-10-05 07:33:44.176501",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005014",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:44.636364",
+      "modified": "2026-10-05 07:33:44.849237",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005015",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:45.100373",
+      "modified": "2026-10-05 07:33:45.321571",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005016",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:45.670151",
+      "modified": "2026-10-05 07:33:45.907523",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005017",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:46.168306",
+      "modified": "2026-10-05 07:33:46.369296",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005018",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:46.722468",
+      "modified": "2026-10-05 07:33:46.963440",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005019",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:47.241401",
+      "modified": "2026-10-05 07:33:47.544028",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005020",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:47.846355",
+      "modified": "2026-10-05 07:33:48.020088",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005021",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:48.258094",
+      "modified": "2026-10-05 07:33:48.512995",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005022",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:48.847637",
+      "modified": "2026-10-05 07:33:49.046292",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005023",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:49.391919",
+      "modified": "2026-10-05 07:33:49.582687",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005024",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:50.044133",
+      "modified": "2026-10-05 07:33:50.268940",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005025",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:16.873028",
+      "modified": "2026-10-05 07:41:17.018890",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005026",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:17.359518",
+      "modified": "2026-10-05 07:41:17.516602",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PR-JURI-261005027",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:17.832749",
+      "modified": "2026-10-05 07:41:18.006308",
+      "company": "PT. JUARA ROTI INDONESIA"
+    }
+  ],
+  "Purchase Order": [
+    {
+      "name": "PO-JURI-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:40.718243",
+      "modified": "2026-10-05 07:33:38.412089",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:41.369527",
+      "modified": "2026-10-05 07:32:41.526406",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:41.768064",
+      "modified": "2026-10-05 07:32:41.945079",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:42.233126",
+      "modified": "2026-10-05 07:32:42.407065",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005005",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:42.694885",
+      "modified": "2026-10-05 07:32:42.849221",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:43.036581",
+      "modified": "2026-10-05 07:32:43.228933",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005007",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:43.875842",
+      "modified": "2026-10-05 07:32:44.042965",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005008",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:44.242279",
+      "modified": "2026-10-05 07:32:44.581727",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005009",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:44.868835",
+      "modified": "2026-10-05 07:32:45.140578",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005010",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:45.317016",
+      "modified": "2026-10-05 07:32:45.466093",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005011",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:45.656939",
+      "modified": "2026-10-05 07:32:45.817714",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005012",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:46.138172",
+      "modified": "2026-10-05 07:32:46.297731",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005013",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:46.561846",
+      "modified": "2026-10-05 07:32:46.561846",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005014",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:46.727518",
+      "modified": "2026-10-05 07:32:46.727518",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005015",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:46.881923",
+      "modified": "2026-10-05 07:32:46.881923",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005016",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:47.160015",
+      "modified": "2026-10-05 07:32:47.160015",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005017",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:47.313687",
+      "modified": "2026-10-05 07:32:47.313687",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005018",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:47.468581",
+      "modified": "2026-10-05 07:32:47.468581",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005019",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:47.647150",
+      "modified": "2026-10-05 07:32:47.647150",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005020",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:47.816989",
+      "modified": "2026-10-05 07:32:47.816989",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005021",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:47.966681",
+      "modified": "2026-10-05 07:32:47.966681",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005022",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:48.172695",
+      "modified": "2026-10-05 07:32:48.172695",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005023",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:48.325889",
+      "modified": "2026-10-05 07:32:48.325889",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005024",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:48.465120",
+      "modified": "2026-10-05 07:32:48.465120",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005025",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:48.630245",
+      "modified": "2026-10-05 07:32:48.630245",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005026",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:48.841288",
+      "modified": "2026-10-05 07:32:48.841288",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005027",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:49.001001",
+      "modified": "2026-10-05 07:32:49.001001",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005028",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:49.146336",
+      "modified": "2026-10-05 07:32:49.146336",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005029",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:49.285389",
+      "modified": "2026-10-05 07:32:49.285389",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005030",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:49.442477",
+      "modified": "2026-10-05 07:32:49.442477",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005031",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:49.578791",
+      "modified": "2026-10-05 07:32:49.578791",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005032",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:49.806476",
+      "modified": "2026-10-05 07:32:49.806476",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005033",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:49.964785",
+      "modified": "2026-10-05 07:32:49.964785",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005034",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:50.103041",
+      "modified": "2026-10-05 07:33:50.356516",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005035",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:50.524133",
+      "modified": "2026-10-05 07:33:48.102382",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005036",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:50.875320",
+      "modified": "2026-10-05 07:33:49.680283",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005037",
+      "docstatus": 2,
+      "creation": "2026-10-05 07:32:51.236299",
+      "modified": "2026-10-05 07:33:19.734078",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005038",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:51.600527",
+      "modified": "2026-10-05 07:32:51.764055",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005039",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:51.959164",
+      "modified": "2026-10-05 07:32:52.137934",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005040",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:52.481701",
+      "modified": "2026-10-05 07:32:52.481701",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005041",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:52.642667",
+      "modified": "2026-10-05 07:32:52.642667",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005042",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:52.799941",
+      "modified": "2026-10-05 07:32:52.799941",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005043",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:52.952340",
+      "modified": "2026-10-05 07:32:52.952340",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005044",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:53.106607",
+      "modified": "2026-10-05 07:32:53.106607",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005045",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:13.335821",
+      "modified": "2026-10-05 07:41:17.105323",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005046",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:13.704236",
+      "modified": "2026-10-05 07:41:18.127337",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005047",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:14.169358",
+      "modified": "2026-10-05 07:41:14.310685",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005048",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:14.540849",
+      "modified": "2026-10-05 07:41:14.703916",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005049",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:14.900518",
+      "modified": "2026-10-05 07:41:15.053280",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005050",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:15.252401",
+      "modified": "2026-10-05 07:41:15.397496",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005051",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:15.585873",
+      "modified": "2026-10-05 07:41:15.751003",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005052",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:16.018474",
+      "modified": "2026-10-05 07:41:16.216330",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-JURI-261005053",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:41:16.423131",
+      "modified": "2026-10-05 07:41:16.587867",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "PO-RACB-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:53.263368",
+      "modified": "2026-10-05 07:32:53.547013",
+      "company": "RSI AYSHA CIBINONG BOGOR"
+    },
+    {
+      "name": "PO-RAK-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:54.006166",
+      "modified": "2026-10-05 07:32:54.006166",
+      "company": "RSU AISYIYAH KLATEN"
+    },
+    {
+      "name": "PO-RAMS-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:54.336759",
+      "modified": "2026-10-05 07:32:54.875075",
+      "company": "RS ASSAKINAH MEDIKA SIDOARJO"
+    },
+    {
+      "name": "PO-RASFS-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:55.644169",
+      "modified": "2026-10-05 07:32:55.644169",
+      "company": "RS AISYIYAH SITI FATIMAH SIDOARJO"
+    },
+    {
+      "name": "PO-RAT-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:55.794471",
+      "modified": "2026-10-05 07:32:56.035468",
+      "company": "RS ANNISA TANGERANG"
+    },
+    {
+      "name": "PO-RBKP-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:56.303653",
+      "modified": "2026-10-05 07:32:56.841028",
+      "company": "RSUD BANGIL KABUPATEN PASURUAN"
+    },
+    {
+      "name": "PO-RBWK-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:57.536946",
+      "modified": "2026-10-05 07:32:57.536946",
+      "company": "RSUD BAGAS WARAS KLATEN"
+    },
+    {
+      "name": "PO-RDHL-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:32:57.844316",
+      "modified": "2026-10-05 07:32:57.844316",
+      "company": "RSUD DR. HARYOTO LUMAJANG"
+    },
+    {
+      "name": "PO-RDHL-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:58.469651",
+      "modified": "2026-10-05 07:32:59.089165",
+      "company": "RSUD DR. HARYOTO LUMAJANG"
+    },
+    {
+      "name": "PO-RDIJ-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:59.932130",
+      "modified": "2026-10-05 07:33:00.490608",
+      "company": "RS DUTA INDAH JAKARTA"
+    },
+    {
+      "name": "PO-RHCB-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:01.141267",
+      "modified": "2026-10-05 07:33:01.514070",
+      "company": "RADJAK HOSPITAL CILEUNGSI BOGOR"
+    },
+    {
+      "name": "PO-RIDL-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:02.043919",
+      "modified": "2026-10-05 07:33:02.665219",
+      "company": "RS IHC DJATIROTO LUMAJANG"
+    },
+    {
+      "name": "PO-RMMB-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:03.443143",
+      "modified": "2026-10-05 07:33:03.443143",
+      "company": "RS MARZOEKI MAHDI BOGOR"
+    },
+    {
+      "name": "PO-RNASKP-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:03.994063",
+      "modified": "2026-10-05 07:33:03.994063",
+      "company": "RSUD NYI AGENG SERANG KULON PROGO"
+    },
+    {
+      "name": "PO-RNT-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:04.429840",
+      "modified": "2026-10-05 07:33:05.121772",
+      "company": "RS NU TUBAN"
+    },
+    {
+      "name": "PO-RPMD-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:06.064701",
+      "modified": "2026-10-05 07:33:06.064701",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "PO-RPMG-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:06.378199",
+      "modified": "2026-10-05 07:33:06.378199",
+      "company": "RS PKU MUHAMMADIYAH GAMPING"
+    },
+    {
+      "name": "PO-RPMG-261005002",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:06.861681",
+      "modified": "2026-10-05 07:33:06.861681",
+      "company": "RS PKU MUHAMMADIYAH GAMPING"
+    },
+    {
+      "name": "PO-RQLY-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:07.130656",
+      "modified": "2026-10-05 07:33:07.130656",
+      "company": "RSU QUEEN LATIFA YOGYAKARTA"
+    },
+    {
+      "name": "PO-RRKJ-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:07.698885",
+      "modified": "2026-10-05 07:33:07.698885",
+      "company": "RS RESTU KASIH JAKARTA"
+    },
+    {
+      "name": "PO-RRT-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:08.210626",
+      "modified": "2026-10-05 07:33:08.210626",
+      "company": "RSUD RAA TJOKRONEGORO"
+    },
+    {
+      "name": "PO-RS-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:08.708107",
+      "modified": "2026-10-05 07:33:08.708107",
+      "company": "RSUD SLEMAN"
+    },
+    {
+      "name": "PO-RSDMN-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:09.170117",
+      "modified": "2026-10-05 07:33:09.833758",
+      "company": "RS DARMAYU MADIUN"
+    },
+    {
+      "name": "PO-RSKP-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:10.720818",
+      "modified": "2026-10-05 07:33:10.720818",
+      "company": "RSI SITI KHADIJAH PALEMBANG"
+    },
+    {
+      "name": "PO-RSMK-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:11.144904",
+      "modified": "2026-10-05 07:33:11.396446",
+      "company": "RSI MUHAMMADIYAH KENDAL"
+    },
+    {
+      "name": "PO-RSMLN-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:11.698236",
+      "modified": "2026-10-05 07:33:12.393378",
+      "company": "RS MUHAMMADIYAH LAMONGAN"
+    },
+    {
+      "name": "PO-RSMLN-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:13.264327",
+      "modified": "2026-10-05 07:33:13.866219",
+      "company": "RS MUHAMMADIYAH LAMONGAN"
+    },
+    {
+      "name": "PO-RSMLN-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:14.540243",
+      "modified": "2026-10-05 07:33:14.761704",
+      "company": "RS MUHAMMADIYAH LAMONGAN"
+    },
+    {
+      "name": "PO-RSMLN-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:15.174115",
+      "modified": "2026-10-05 07:33:15.867539",
+      "company": "RS MUHAMMADIYAH LAMONGAN"
+    },
+    {
+      "name": "PO-RSPMS-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:17.008212",
+      "modified": "2026-10-05 07:33:17.008212",
+      "company": "RS PKU MUHAMMADIYAH SURABAYA"
+    },
+    {
+      "name": "PO-RSUPS-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:17.263173",
+      "modified": "2026-10-05 07:33:17.263173",
+      "company": "RSU PUSAT SURAKARTA"
+    },
+    {
+      "name": "PO-RTKM-261005001",
+      "docstatus": 0,
+      "creation": "2026-10-05 07:33:17.727893",
+      "modified": "2026-10-05 07:33:17.727893",
+      "company": "RSUD TIDAR KOTA MAGELANG"
+    },
+    {
+      "name": "PO-RUD-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:18.325221",
+      "modified": "2026-10-05 07:33:18.803546",
+      "company": "RS UI DEPOK"
+    }
+  ],
+  "Stock Entry": [
+    {
+      "name": "SE-MFG-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:30:15.014861",
+      "modified": "2026-10-05 07:30:15.227476",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:38.709456",
+      "modified": "2026-10-05 07:34:38.867842",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:39.378569",
+      "modified": "2026-10-05 07:34:39.539291",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:39.938144",
+      "modified": "2026-10-05 07:34:40.110698",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005005",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:40.466028",
+      "modified": "2026-10-05 07:34:40.615833",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:41.099781",
+      "modified": "2026-10-05 07:34:41.267902",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005007",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:41.656761",
+      "modified": "2026-10-05 07:34:41.826979",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005008",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:42.299782",
+      "modified": "2026-10-05 07:34:42.555878",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005009",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:43.211298",
+      "modified": "2026-10-05 07:34:43.423144",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005010",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:43.871884",
+      "modified": "2026-10-05 07:34:44.098381",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005011",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:44.657257",
+      "modified": "2026-10-05 07:34:44.879348",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005012",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:45.518626",
+      "modified": "2026-10-05 07:34:45.730355",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005013",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:46.295941",
+      "modified": "2026-10-05 07:34:46.490649",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005014",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:47.013437",
+      "modified": "2026-10-05 07:34:47.251688",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005015",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:47.835787",
+      "modified": "2026-10-05 07:34:48.030391",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005016",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:48.522153",
+      "modified": "2026-10-05 07:34:48.760944",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005017",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:49.433851",
+      "modified": "2026-10-05 07:34:49.625424",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005018",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:50.087348",
+      "modified": "2026-10-05 07:34:50.331762",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005019",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:50.782174",
+      "modified": "2026-10-05 07:34:50.950587",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005020",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:51.486386",
+      "modified": "2026-10-05 07:34:51.665945",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005021",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:52.170007",
+      "modified": "2026-10-05 07:34:52.429201",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005022",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:53.073633",
+      "modified": "2026-10-05 07:34:53.273912",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005023",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:53.861471",
+      "modified": "2026-10-05 07:34:54.084278",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005024",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:54.673138",
+      "modified": "2026-10-05 07:34:54.865402",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005025",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:34.956468",
+      "modified": "2026-10-05 07:35:35.129366",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005026",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:35.540378",
+      "modified": "2026-10-05 07:35:35.698431",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005027",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:36.159225",
+      "modified": "2026-10-05 07:35:36.321788",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005028",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:36.685116",
+      "modified": "2026-10-05 07:35:36.847229",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005029",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:37.233731",
+      "modified": "2026-10-05 07:35:37.393718",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005030",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:37.806287",
+      "modified": "2026-10-05 07:35:38.046536",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005031",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:38.422310",
+      "modified": "2026-10-05 07:35:38.626392",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005032",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:39.015466",
+      "modified": "2026-10-05 07:35:39.186666",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005033",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:39.540632",
+      "modified": "2026-10-05 07:35:39.690085",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005034",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:40.253158",
+      "modified": "2026-10-05 07:35:40.410627",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005035",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:40.737251",
+      "modified": "2026-10-05 07:35:40.895112",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005036",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:41.273380",
+      "modified": "2026-10-05 07:35:41.441994",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005037",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:41.901551",
+      "modified": "2026-10-05 07:35:42.068484",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005038",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:42.411655",
+      "modified": "2026-10-05 07:35:42.568398",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005039",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:42.927845",
+      "modified": "2026-10-05 07:35:43.087917",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005040",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:43.465378",
+      "modified": "2026-10-05 07:35:43.637706",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005041",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:44.020016",
+      "modified": "2026-10-05 07:35:44.184275",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005042",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:44.595793",
+      "modified": "2026-10-05 07:35:44.775886",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005043",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:45.097215",
+      "modified": "2026-10-05 07:35:45.259607",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005044",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:46.150975",
+      "modified": "2026-10-05 07:35:46.327749",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005045",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:46.734305",
+      "modified": "2026-10-05 07:35:46.953543",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005046",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:47.327706",
+      "modified": "2026-10-05 07:35:47.542270",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005047",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:48.008802",
+      "modified": "2026-10-05 07:35:48.188476",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005048",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:48.606315",
+      "modified": "2026-10-05 07:35:48.776019",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005049",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:49.170401",
+      "modified": "2026-10-05 07:35:49.333931",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005050",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:49.747764",
+      "modified": "2026-10-05 07:35:49.900216",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005051",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:50.235255",
+      "modified": "2026-10-05 07:35:50.391716",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005052",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:50.742786",
+      "modified": "2026-10-05 07:35:50.902767",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005053",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:51.278531",
+      "modified": "2026-10-05 07:35:51.433532",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005054",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:51.791007",
+      "modified": "2026-10-05 07:35:51.950070",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005055",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:52.486750",
+      "modified": "2026-10-05 07:35:52.646634",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005056",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:53.057595",
+      "modified": "2026-10-05 07:35:53.246629",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005057",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:53.643382",
+      "modified": "2026-10-05 07:35:53.840064",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005058",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:54.215272",
+      "modified": "2026-10-05 07:35:54.388310",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005059",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:54.819397",
+      "modified": "2026-10-05 07:35:54.983528",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005060",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:55.462157",
+      "modified": "2026-10-05 07:35:55.632189",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005061",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:56.055565",
+      "modified": "2026-10-05 07:35:56.213873",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005062",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:56.640651",
+      "modified": "2026-10-05 07:35:56.806667",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005063",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:57.161927",
+      "modified": "2026-10-05 07:35:57.339906",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005064",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:57.699648",
+      "modified": "2026-10-05 07:35:57.882284",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005065",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:58.295434",
+      "modified": "2026-10-05 07:35:58.489896",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005066",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:58.842380",
+      "modified": "2026-10-05 07:35:59.078899",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005067",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:59.541099",
+      "modified": "2026-10-05 07:35:59.729894",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005068",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:00.207511",
+      "modified": "2026-10-05 07:36:00.758498",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005069",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:02.078868",
+      "modified": "2026-10-05 07:36:02.286526",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005070",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:02.837681",
+      "modified": "2026-10-05 07:36:03.026939",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005071",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:03.477882",
+      "modified": "2026-10-05 07:36:03.733072",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005072",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:04.153441",
+      "modified": "2026-10-05 07:36:04.342457",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005073",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:04.702955",
+      "modified": "2026-10-05 07:36:04.869356",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005074",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:05.230740",
+      "modified": "2026-10-05 07:36:05.417919",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005075",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:06.019253",
+      "modified": "2026-10-05 07:36:06.189682",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005076",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:06.582424",
+      "modified": "2026-10-05 07:36:06.751593",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005077",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:07.222683",
+      "modified": "2026-10-05 07:36:07.467005",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005078",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:07.925459",
+      "modified": "2026-10-05 07:36:08.096420",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005079",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:08.513676",
+      "modified": "2026-10-05 07:36:08.671771",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005080",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:09.121838",
+      "modified": "2026-10-05 07:36:09.285097",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005081",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:09.605015",
+      "modified": "2026-10-05 07:36:09.762534",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005082",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:10.254990",
+      "modified": "2026-10-05 07:36:10.413824",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005083",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:10.792239",
+      "modified": "2026-10-05 07:36:10.957761",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005084",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:11.332337",
+      "modified": "2026-10-05 07:36:11.487741",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005085",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:11.894514",
+      "modified": "2026-10-05 07:36:12.123389",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005086",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:12.509427",
+      "modified": "2026-10-05 07:36:12.712118",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005087",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:13.169088",
+      "modified": "2026-10-05 07:36:13.334073",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005088",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:13.753170",
+      "modified": "2026-10-05 07:36:13.919536",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005089",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:14.451423",
+      "modified": "2026-10-05 07:36:14.643080",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005090",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:15.277360",
+      "modified": "2026-10-05 07:36:15.450689",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005091",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:15.903599",
+      "modified": "2026-10-05 07:36:16.122323",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005092",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:16.725824",
+      "modified": "2026-10-05 07:36:16.912799",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005093",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:17.457296",
+      "modified": "2026-10-05 07:36:17.653912",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005094",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:18.259695",
+      "modified": "2026-10-05 07:36:18.485823",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005095",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:19.118716",
+      "modified": "2026-10-05 07:36:19.316825",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005096",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:19.885027",
+      "modified": "2026-10-05 07:36:20.070929",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005097",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:20.507567",
+      "modified": "2026-10-05 07:36:20.682608",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005098",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:21.156478",
+      "modified": "2026-10-05 07:36:21.340904",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005099",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:21.829620",
+      "modified": "2026-10-05 07:36:22.082192",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005100",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:22.531730",
+      "modified": "2026-10-05 07:36:22.714267",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005101",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:23.238474",
+      "modified": "2026-10-05 07:36:23.419436",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005102",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:23.857860",
+      "modified": "2026-10-05 07:36:24.037655",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005103",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:24.384483",
+      "modified": "2026-10-05 07:36:24.560460",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005104",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:24.925636",
+      "modified": "2026-10-05 07:36:25.119201",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005105",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:25.589085",
+      "modified": "2026-10-05 07:36:25.820366",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005106",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:26.278805",
+      "modified": "2026-10-05 07:36:26.461329",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005107",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:26.869015",
+      "modified": "2026-10-05 07:36:27.046659",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005108",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:27.421640",
+      "modified": "2026-10-05 07:36:27.606648",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005109",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:28.075743",
+      "modified": "2026-10-05 07:36:28.262941",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005110",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:28.749561",
+      "modified": "2026-10-05 07:36:28.965801",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005111",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:29.421091",
+      "modified": "2026-10-05 07:36:29.591543",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005112",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:30.022284",
+      "modified": "2026-10-05 07:36:30.212569",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005113",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:30.566766",
+      "modified": "2026-10-05 07:36:30.795538",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005114",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:31.249537",
+      "modified": "2026-10-05 07:36:31.419949",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005115",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:31.875738",
+      "modified": "2026-10-05 07:36:32.107723",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005116",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:32.565911",
+      "modified": "2026-10-05 07:36:32.744367",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005117",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:48.112099",
+      "modified": "2026-10-05 07:36:48.363495",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005118",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:48.750796",
+      "modified": "2026-10-05 07:36:48.939427",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005119",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:49.346085",
+      "modified": "2026-10-05 07:36:49.518686",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005120",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:49.993051",
+      "modified": "2026-10-05 07:36:50.178352",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MFG-261005121",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:50.551382",
+      "modified": "2026-10-05 07:36:50.750939",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MI-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:50.842715",
+      "modified": "2026-10-05 07:33:50.967128",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MI-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:51.175701",
+      "modified": "2026-10-05 07:33:51.281901",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MI-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:33.152933",
+      "modified": "2026-10-05 07:36:33.269741",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MI-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:47.772904",
+      "modified": "2026-10-05 07:36:47.891637",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MR-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:52.819257",
+      "modified": "2026-10-05 07:33:52.943572",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MR-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:53.428679",
+      "modified": "2026-10-05 07:33:53.545061",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MR-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:33.427264",
+      "modified": "2026-10-05 07:36:33.539284",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:51.505867",
+      "modified": "2026-10-05 07:33:51.745672",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:53.185205",
+      "modified": "2026-10-05 07:33:53.290708",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:53.807702",
+      "modified": "2026-10-05 07:33:54.038200",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:45.638083",
+      "modified": "2026-10-05 07:36:53.014668",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005005",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:45.906479",
+      "modified": "2026-10-05 07:36:53.157846",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:33.748197",
+      "modified": "2026-10-05 07:36:33.866092",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005007",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:34.168088",
+      "modified": "2026-10-05 07:36:34.275996",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005008",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:34.431129",
+      "modified": "2026-10-05 07:36:34.544735",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005009",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:34.732715",
+      "modified": "2026-10-05 07:36:34.842584",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005010",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:34.975199",
+      "modified": "2026-10-05 07:36:35.076767",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005011",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:35.247048",
+      "modified": "2026-10-05 07:36:35.357403",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005012",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:35.578305",
+      "modified": "2026-10-05 07:36:35.712562",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005013",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:35.858182",
+      "modified": "2026-10-05 07:36:35.967624",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005014",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:36.120309",
+      "modified": "2026-10-05 07:36:36.236153",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005015",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:36.391506",
+      "modified": "2026-10-05 07:36:36.494801",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005016",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:36.659442",
+      "modified": "2026-10-05 07:36:36.828010",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005017",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:37.040961",
+      "modified": "2026-10-05 07:36:37.157606",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005018",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:37.351267",
+      "modified": "2026-10-05 07:36:37.462394",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005019",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:37.596921",
+      "modified": "2026-10-05 07:36:37.710976",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005020",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:37.871183",
+      "modified": "2026-10-05 07:36:37.977848",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005021",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:38.118470",
+      "modified": "2026-10-05 07:36:38.223834",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005022",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:38.452725",
+      "modified": "2026-10-05 07:36:38.561507",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005023",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:38.696202",
+      "modified": "2026-10-05 07:36:38.859505",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005024",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:39.015845",
+      "modified": "2026-10-05 07:36:39.128628",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005025",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:39.291152",
+      "modified": "2026-10-05 07:36:39.446772",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005026",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:39.596989",
+      "modified": "2026-10-05 07:36:39.702759",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005027",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:39.954597",
+      "modified": "2026-10-05 07:36:40.061559",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005028",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:40.208128",
+      "modified": "2026-10-05 07:36:40.316819",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005029",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:40.495265",
+      "modified": "2026-10-05 07:36:40.610390",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005030",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:40.765151",
+      "modified": "2026-10-05 07:36:40.878767",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005031",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:41.013942",
+      "modified": "2026-10-05 07:36:41.121708",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005032",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:41.324849",
+      "modified": "2026-10-05 07:36:41.481842",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005033",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:41.624618",
+      "modified": "2026-10-05 07:36:41.731905",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005034",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:41.869825",
+      "modified": "2026-10-05 07:36:42.004070",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005035",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:42.143250",
+      "modified": "2026-10-05 07:36:42.256339",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005036",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:42.404728",
+      "modified": "2026-10-05 07:36:42.526694",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005037",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:42.720831",
+      "modified": "2026-10-05 07:36:42.825604",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005038",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:42.961852",
+      "modified": "2026-10-05 07:36:43.115404",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005039",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:43.275605",
+      "modified": "2026-10-05 07:36:43.389555",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005040",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:43.580336",
+      "modified": "2026-10-05 07:36:43.720861",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005041",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:43.877654",
+      "modified": "2026-10-05 07:36:44.001799",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005042",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:44.248794",
+      "modified": "2026-10-05 07:36:44.362953",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005043",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:44.501547",
+      "modified": "2026-10-05 07:36:44.624794",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005044",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:44.760726",
+      "modified": "2026-10-05 07:36:44.866212",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005045",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:45.003250",
+      "modified": "2026-10-05 07:36:45.151854",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005046",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:45.291685",
+      "modified": "2026-10-05 07:36:45.394956",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005047",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:45.601747",
+      "modified": "2026-10-05 07:36:45.745428",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005048",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:45.902616",
+      "modified": "2026-10-05 07:36:46.010687",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005049",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:46.197332",
+      "modified": "2026-10-05 07:36:46.322114",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005050",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:46.475802",
+      "modified": "2026-10-05 07:36:46.581907",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005051",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:46.795044",
+      "modified": "2026-10-05 07:36:47.246771",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005052",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:47.472161",
+      "modified": "2026-10-05 07:36:47.585118",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005053",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:51.225920",
+      "modified": "2026-10-05 07:36:51.335373",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005054",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:51.505614",
+      "modified": "2026-10-05 07:36:51.613864",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005055",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:51.774029",
+      "modified": "2026-10-05 07:36:51.888845",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005056",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:52.101631",
+      "modified": "2026-10-05 07:36:52.215035",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005057",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:52.368832",
+      "modified": "2026-10-05 07:36:52.551360",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTF-261005058",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:36:52.690223",
+      "modified": "2026-10-05 07:36:52.800021",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:30:15.794095",
+      "modified": "2026-10-05 07:34:01.705051",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:54.844207",
+      "modified": "2026-10-05 07:33:55.077415",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:55.711600",
+      "modified": "2026-10-05 07:33:55.905289",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:56.523361",
+      "modified": "2026-10-05 07:33:56.684659",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005005",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:57.109198",
+      "modified": "2026-10-05 07:33:57.274264",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:57.643355",
+      "modified": "2026-10-05 07:33:57.803886",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005007",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:58.200946",
+      "modified": "2026-10-05 07:33:58.457821",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005008",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:58.950444",
+      "modified": "2026-10-05 07:33:59.130389",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005009",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:59.694295",
+      "modified": "2026-10-05 07:33:59.887051",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005010",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:00.628362",
+      "modified": "2026-10-05 07:34:00.774258",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005011",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:01.187752",
+      "modified": "2026-10-05 07:34:01.339366",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005012",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:02.316793",
+      "modified": "2026-10-05 07:34:02.493400",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005013",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:03.144784",
+      "modified": "2026-10-05 07:34:03.318582",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005014",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:03.913901",
+      "modified": "2026-10-05 07:34:04.111479",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005015",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:04.621525",
+      "modified": "2026-10-05 07:34:04.798870",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005016",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:05.351091",
+      "modified": "2026-10-05 07:34:05.524807",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005017",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:06.290975",
+      "modified": "2026-10-05 07:34:06.470327",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005018",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:07.071613",
+      "modified": "2026-10-05 07:34:07.255768",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005019",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:07.791004",
+      "modified": "2026-10-05 07:34:07.980353",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005020",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:08.632043",
+      "modified": "2026-10-05 07:34:08.828889",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005021",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:09.523029",
+      "modified": "2026-10-05 07:34:09.705137",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005022",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:10.298913",
+      "modified": "2026-10-05 07:34:10.486497",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005023",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:11.076025",
+      "modified": "2026-10-05 07:34:11.248471",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005024",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:11.700231",
+      "modified": "2026-10-05 07:34:11.879959",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005025",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:12.388793",
+      "modified": "2026-10-05 07:34:12.583896",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005026",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:13.205472",
+      "modified": "2026-10-05 07:34:13.398199",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005027",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:14.028593",
+      "modified": "2026-10-05 07:34:14.234394",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005028",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:14.822339",
+      "modified": "2026-10-05 07:34:15.008418",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005029",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:15.828970",
+      "modified": "2026-10-05 07:34:16.041835",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005030",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:16.554021",
+      "modified": "2026-10-05 07:34:16.793838",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005031",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:17.410930",
+      "modified": "2026-10-05 07:34:17.596840",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005032",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:18.600535",
+      "modified": "2026-10-05 07:34:19.398332",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005033",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:20.073043",
+      "modified": "2026-10-05 07:34:20.255984",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005034",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:20.845265",
+      "modified": "2026-10-05 07:34:21.047863",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005035",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:21.602667",
+      "modified": "2026-10-05 07:34:21.798617",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005036",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:22.430413",
+      "modified": "2026-10-05 07:34:22.620920",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005037",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:23.230349",
+      "modified": "2026-10-05 07:34:23.406914",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005038",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:24.121485",
+      "modified": "2026-10-05 07:34:24.311689",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005039",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:24.828413",
+      "modified": "2026-10-05 07:34:25.000766",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005040",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:25.501749",
+      "modified": "2026-10-05 07:34:25.689760",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005041",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:26.218710",
+      "modified": "2026-10-05 07:34:26.413360",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005042",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:27.116937",
+      "modified": "2026-10-05 07:34:27.485827",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005043",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:28.066512",
+      "modified": "2026-10-05 07:34:28.312345",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005044",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:28.954247",
+      "modified": "2026-10-05 07:34:29.137850",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005045",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:29.692327",
+      "modified": "2026-10-05 07:34:29.942472",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005046",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:30.538100",
+      "modified": "2026-10-05 07:34:30.697632",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005047",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:31.282919",
+      "modified": "2026-10-05 07:34:31.517008",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005048",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:32.062293",
+      "modified": "2026-10-05 07:34:32.239988",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005049",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:32.739909",
+      "modified": "2026-10-05 07:34:32.906596",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005050",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:33.359429",
+      "modified": "2026-10-05 07:34:33.554416",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005051",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:34.150214",
+      "modified": "2026-10-05 07:34:34.350000",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005052",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:34.980158",
+      "modified": "2026-10-05 07:34:35.193852",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005053",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:35.765434",
+      "modified": "2026-10-05 07:34:35.952772",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005054",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:36.509498",
+      "modified": "2026-10-05 07:34:36.708327",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005055",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:37.226144",
+      "modified": "2026-10-05 07:34:37.406619",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005056",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:38.001678",
+      "modified": "2026-10-05 07:34:38.198780",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005057",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:55.302285",
+      "modified": "2026-10-05 07:34:55.445977",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005058",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:55.818693",
+      "modified": "2026-10-05 07:34:55.967744",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005059",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:56.413539",
+      "modified": "2026-10-05 07:34:56.623668",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005060",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:57.038757",
+      "modified": "2026-10-05 07:34:57.206823",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005061",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:57.674729",
+      "modified": "2026-10-05 07:34:57.836076",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005062",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:58.257021",
+      "modified": "2026-10-05 07:34:58.404603",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005063",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:58.875025",
+      "modified": "2026-10-05 07:34:59.046287",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005064",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:34:59.502508",
+      "modified": "2026-10-05 07:34:59.646291",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005065",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:00.061932",
+      "modified": "2026-10-05 07:35:00.212196",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005066",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:00.601524",
+      "modified": "2026-10-05 07:35:00.818768",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005067",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:01.267921",
+      "modified": "2026-10-05 07:35:01.418415",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005068",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:01.865746",
+      "modified": "2026-10-05 07:35:02.026230",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005069",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:02.517581",
+      "modified": "2026-10-05 07:35:02.672725",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005070",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:03.188904",
+      "modified": "2026-10-05 07:35:03.349914",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005071",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:03.762206",
+      "modified": "2026-10-05 07:35:03.910202",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005072",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:04.305518",
+      "modified": "2026-10-05 07:35:04.488100",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005073",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:04.850662",
+      "modified": "2026-10-05 07:35:05.135468",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005074",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:05.586084",
+      "modified": "2026-10-05 07:35:05.736468",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005075",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:06.257768",
+      "modified": "2026-10-05 07:35:06.419275",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005076",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:06.872000",
+      "modified": "2026-10-05 07:35:07.193179",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005077",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:07.552403",
+      "modified": "2026-10-05 07:35:07.725828",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005078",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:08.158602",
+      "modified": "2026-10-05 07:35:08.336094",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005079",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:08.887669",
+      "modified": "2026-10-05 07:35:09.105601",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005080",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:09.510155",
+      "modified": "2026-10-05 07:35:09.683908",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005081",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:10.091659",
+      "modified": "2026-10-05 07:35:10.319174",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005082",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:10.847589",
+      "modified": "2026-10-05 07:35:11.010678",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005083",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:11.399389",
+      "modified": "2026-10-05 07:35:11.558965",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005084",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:12.038615",
+      "modified": "2026-10-05 07:35:12.210068",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005085",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:12.609490",
+      "modified": "2026-10-05 07:35:12.760592",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005086",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:13.160562",
+      "modified": "2026-10-05 07:35:13.310372",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005087",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:13.681004",
+      "modified": "2026-10-05 07:35:13.830419",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005088",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:14.299531",
+      "modified": "2026-10-05 07:35:14.529909",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005089",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:15.064470",
+      "modified": "2026-10-05 07:35:15.218844",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005090",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:15.700001",
+      "modified": "2026-10-05 07:35:15.842389",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005091",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:16.198433",
+      "modified": "2026-10-05 07:35:16.551767",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005092",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:17.072654",
+      "modified": "2026-10-05 07:35:17.219310",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005093",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:17.774170",
+      "modified": "2026-10-05 07:35:17.926419",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005094",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:18.311477",
+      "modified": "2026-10-05 07:35:18.462697",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005095",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:18.891965",
+      "modified": "2026-10-05 07:35:19.038841",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005096",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:19.435282",
+      "modified": "2026-10-05 07:35:19.589886",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005097",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:20.076934",
+      "modified": "2026-10-05 07:35:20.278196",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005098",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:20.790241",
+      "modified": "2026-10-05 07:35:20.936682",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005099",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:21.407561",
+      "modified": "2026-10-05 07:35:21.561893",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005100",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:22.031932",
+      "modified": "2026-10-05 07:35:22.184829",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005101",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:22.609172",
+      "modified": "2026-10-05 07:35:22.747962",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005102",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:23.154050",
+      "modified": "2026-10-05 07:35:23.358930",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005103",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:23.788613",
+      "modified": "2026-10-05 07:35:23.949904",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005104",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:24.410434",
+      "modified": "2026-10-05 07:35:24.553426",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005105",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:25.101192",
+      "modified": "2026-10-05 07:35:25.249349",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005106",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:25.588280",
+      "modified": "2026-10-05 07:35:25.737144",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005107",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:26.121780",
+      "modified": "2026-10-05 07:35:26.284738",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005108",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:26.708234",
+      "modified": "2026-10-05 07:35:26.872895",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005109",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:27.356028",
+      "modified": "2026-10-05 07:35:27.554872",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005110",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:27.949165",
+      "modified": "2026-10-05 07:35:28.139785",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005111",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:28.604449",
+      "modified": "2026-10-05 07:35:28.754178",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005112",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:29.188380",
+      "modified": "2026-10-05 07:35:29.334043",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005113",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:29.829474",
+      "modified": "2026-10-05 07:35:29.986873",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005114",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:30.522704",
+      "modified": "2026-10-05 07:35:30.702426",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005115",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:31.097982",
+      "modified": "2026-10-05 07:35:31.342289",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005116",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:31.811385",
+      "modified": "2026-10-05 07:35:31.957017",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005117",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:32.366495",
+      "modified": "2026-10-05 07:35:32.518571",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005118",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:32.921519",
+      "modified": "2026-10-05 07:35:33.069573",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005119",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:33.466165",
+      "modified": "2026-10-05 07:35:33.654183",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-MTFM-261005120",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:35:34.156539",
+      "modified": "2026-10-05 07:35:34.371833",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-RPK-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:50.561470",
+      "modified": "2026-10-05 07:33:50.681701",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "SE-RPK-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:33:52.422952",
+      "modified": "2026-10-05 07:33:52.665997",
+      "company": "PT. JUARA ROTI INDONESIA"
+    }
+  ],
+  "Work Order": [
+    {
+      "name": "WO-JURI-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:30:14.690982",
+      "modified": "2026-10-05 07:34:01.854343",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:53.843634",
+      "modified": "2026-10-05 07:36:19.510015",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:54.168408",
+      "modified": "2026-10-05 07:36:20.218956",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:54.498189",
+      "modified": "2026-10-05 07:36:20.847319",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005005",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:54.798118",
+      "modified": "2026-10-05 07:34:52.588887",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:55.121263",
+      "modified": "2026-10-05 07:34:51.867502",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005007",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:55.565460",
+      "modified": "2026-10-05 07:34:51.110081",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005008",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:55.937359",
+      "modified": "2026-10-05 07:35:59.906357",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005009",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:56.309306",
+      "modified": "2026-10-05 07:34:50.513068",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005010",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:56.594655",
+      "modified": "2026-10-05 07:34:49.791246",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005011",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:56.913078",
+      "modified": "2026-10-05 07:34:48.955180",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005012",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:57.201390",
+      "modified": "2026-10-05 07:34:48.227469",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005013",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:57.535036",
+      "modified": "2026-10-05 07:34:47.459878",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005014",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:57.993656",
+      "modified": "2026-10-05 07:34:46.694246",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005015",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:58.362312",
+      "modified": "2026-10-05 07:34:45.943494",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005016",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:58.673722",
+      "modified": "2026-10-05 07:35:59.242256",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005017",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:58.979843",
+      "modified": "2026-10-05 07:34:44.283058",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005018",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:59.276982",
+      "modified": "2026-10-05 07:34:42.812410",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005019",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:59.656333",
+      "modified": "2026-10-05 07:34:43.601612",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005020",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:31:59.999865",
+      "modified": "2026-10-05 07:34:45.108529",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005021",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:00.462492",
+      "modified": "2026-10-05 07:36:14.842519",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005022",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:01.630531",
+      "modified": "2026-10-05 07:36:15.620873",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005023",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:03.003634",
+      "modified": "2026-10-05 07:36:16.320186",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005024",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:04.605245",
+      "modified": "2026-10-05 07:36:17.072219",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005025",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:05.290069",
+      "modified": "2026-10-05 07:36:17.875085",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005026",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:05.927829",
+      "modified": "2026-10-05 07:36:18.637563",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005027",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:06.585280",
+      "modified": "2026-10-05 07:34:38.978358",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005028",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:07.314958",
+      "modified": "2026-10-05 07:34:39.687890",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005029",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:07.971437",
+      "modified": "2026-10-05 07:35:46.454009",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005030",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:08.544153",
+      "modified": "2026-10-05 07:35:47.075683",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005031",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:09.182218",
+      "modified": "2026-10-05 07:34:40.241755",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005032",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:09.708041",
+      "modified": "2026-10-05 07:35:47.674263",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005033",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:10.101902",
+      "modified": "2026-10-05 07:34:55.565677",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005034",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:10.580400",
+      "modified": "2026-10-05 07:35:48.304468",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005035",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:10.948932",
+      "modified": "2026-10-05 07:35:48.904317",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005036",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:11.278568",
+      "modified": "2026-10-05 07:34:57.339890",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005037",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:11.649498",
+      "modified": "2026-10-05 07:35:49.463995",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005038",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:11.996117",
+      "modified": "2026-10-05 07:34:58.508770",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005039",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:12.426622",
+      "modified": "2026-10-05 07:35:50.012472",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005040",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:12.769094",
+      "modified": "2026-10-05 07:35:35.253699",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005041",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:13.192875",
+      "modified": "2026-10-05 07:35:35.844863",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005042",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:13.634088",
+      "modified": "2026-10-05 07:35:50.517781",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005043",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:13.950273",
+      "modified": "2026-10-05 07:35:51.043516",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005044",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:14.439889",
+      "modified": "2026-10-05 07:35:51.560986",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005045",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:14.961508",
+      "modified": "2026-10-05 07:35:52.091457",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005046",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:15.436858",
+      "modified": "2026-10-05 07:35:52.786248",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005047",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:15.849004",
+      "modified": "2026-10-05 07:35:36.442627",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005048",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:16.187238",
+      "modified": "2026-10-05 07:35:53.389300",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005049",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:16.514452",
+      "modified": "2026-10-05 07:35:53.979387",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005050",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:16.799864",
+      "modified": "2026-10-05 07:35:36.980148",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005051",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:17.065304",
+      "modified": "2026-10-05 07:35:54.508591",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005052",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:17.523442",
+      "modified": "2026-10-05 07:35:55.110993",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005053",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:17.825134",
+      "modified": "2026-10-05 07:35:37.505467",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005054",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:18.290827",
+      "modified": "2026-10-05 07:35:55.784247",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005055",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:18.571243",
+      "modified": "2026-10-05 07:35:56.351314",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005056",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:18.931076",
+      "modified": "2026-10-05 07:35:38.175218",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005057",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:19.192873",
+      "modified": "2026-10-05 07:35:56.931545",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005058",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:19.480453",
+      "modified": "2026-10-05 07:35:38.742934",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005059",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:19.864401",
+      "modified": "2026-10-05 07:35:57.464816",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005060",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:20.127685",
+      "modified": "2026-10-05 07:35:58.010501",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005061",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:20.465238",
+      "modified": "2026-10-05 07:36:21.515776",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005062",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:20.742455",
+      "modified": "2026-10-05 07:34:25.165118",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005063",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:21.188550",
+      "modified": "2026-10-05 07:34:25.850002",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005064",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:21.662340",
+      "modified": "2026-10-05 07:34:26.559349",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005065",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:22.019418",
+      "modified": "2026-10-05 07:34:27.683393",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005066",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:22.343302",
+      "modified": "2026-10-05 07:34:28.477522",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005067",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:22.719481",
+      "modified": "2026-10-05 07:34:29.292907",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005068",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:23.059425",
+      "modified": "2026-10-05 07:34:20.446986",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005069",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:23.385984",
+      "modified": "2026-10-05 07:34:21.228234",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005070",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:23.695559",
+      "modified": "2026-10-05 07:34:30.126465",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005071",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:24.052580",
+      "modified": "2026-10-05 07:34:30.865588",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005072",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:24.357617",
+      "modified": "2026-10-05 07:34:31.688149",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005073",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:24.766654",
+      "modified": "2026-10-05 07:34:32.411318",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005074",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:25.225414",
+      "modified": "2026-10-05 07:34:33.045875",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005075",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:25.537839",
+      "modified": "2026-10-05 07:34:33.744305",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005076",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:25.949167",
+      "modified": "2026-10-05 07:35:33.825047",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005077",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:26.260899",
+      "modified": "2026-10-05 07:35:34.518308",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005078",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:26.555188",
+      "modified": "2026-10-05 07:34:53.474702",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005079",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:26.989144",
+      "modified": "2026-10-05 07:34:54.260082",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005080",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:27.278147",
+      "modified": "2026-10-05 07:34:55.038921",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005081",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:27.633262",
+      "modified": "2026-10-05 07:34:34.519525",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005082",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:27.960394",
+      "modified": "2026-10-05 07:34:35.368852",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005083",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:28.307246",
+      "modified": "2026-10-05 07:34:36.137144",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005084",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:28.725249",
+      "modified": "2026-10-05 07:34:36.890096",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005085",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:29.053375",
+      "modified": "2026-10-05 07:34:37.593974",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005086",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:29.369225",
+      "modified": "2026-10-05 07:34:38.353414",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005087",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:29.654634",
+      "modified": "2026-10-05 07:35:39.314642",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005088",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:29.981835",
+      "modified": "2026-10-05 07:35:39.827937",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005089",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:30.374050",
+      "modified": "2026-10-05 07:35:58.602382",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005090",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:30.665094",
+      "modified": "2026-10-05 07:35:40.526785",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005091",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:30.931772",
+      "modified": "2026-10-05 07:36:01.690453",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005092",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:31.218281",
+      "modified": "2026-10-05 07:36:02.451786",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005093",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:31.556371",
+      "modified": "2026-10-05 07:36:03.198511",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005094",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:32.037971",
+      "modified": "2026-10-05 07:36:03.895094",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005095",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:32.302242",
+      "modified": "2026-10-05 07:36:04.483850",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005096",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:32.583312",
+      "modified": "2026-10-05 07:35:41.007927",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005097",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:32.862836",
+      "modified": "2026-10-05 07:35:41.585781",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005098",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:33.208153",
+      "modified": "2026-10-05 07:36:04.998984",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005099",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:33.609554",
+      "modified": "2026-10-05 07:36:05.546311",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005100",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:33.906853",
+      "modified": "2026-10-05 07:36:06.307520",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005101",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:34.232195",
+      "modified": "2026-10-05 07:35:42.185743",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005102",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:34.536882",
+      "modified": "2026-10-05 07:36:06.874987",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005103",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:34.803357",
+      "modified": "2026-10-05 07:35:42.679289",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005104",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:35.183206",
+      "modified": "2026-10-05 07:36:07.603771",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005105",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:35.442414",
+      "modified": "2026-10-05 07:35:43.215125",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005106",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:35.756497",
+      "modified": "2026-10-05 07:36:08.255115",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005107",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:36.038038",
+      "modified": "2026-10-05 07:35:43.782255",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005108",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:36.438265",
+      "modified": "2026-10-05 07:36:08.805596",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005109",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:36.779057",
+      "modified": "2026-10-05 07:36:09.395753",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005110",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:37.050665",
+      "modified": "2026-10-05 07:36:09.899435",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005111",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:37.361348",
+      "modified": "2026-10-05 07:35:44.304985",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005112",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:37.682354",
+      "modified": "2026-10-05 07:36:10.543088",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005113",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:37.976792",
+      "modified": "2026-10-05 07:36:11.083348",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005114",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:38.336511",
+      "modified": "2026-10-05 07:36:11.599823",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005115",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:38.589020",
+      "modified": "2026-10-05 07:35:44.885299",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005116",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:38.872334",
+      "modified": "2026-10-05 07:36:12.278367",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005117",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:39.144334",
+      "modified": "2026-10-05 07:36:12.860059",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005118",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:39.562323",
+      "modified": "2026-10-05 07:36:13.466395",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005119",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:39.903117",
+      "modified": "2026-10-05 07:36:14.061978",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "WO-JURI-261005120",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:32:40.174312",
+      "modified": "2026-10-05 07:35:45.387593",
+      "company": "PT. JUARA ROTI INDONESIA"
+    }
+  ],
+  "Stock Reconciliation": [
+    {
+      "name": "RECO-JURI-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:12:40.035603",
+      "modified": "2026-10-05 07:29:43.128721",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "RECO-JURI-261005002",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:12:40.863646",
+      "modified": "2026-10-05 07:29:43.813422",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "RECO-JURI-261005003",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:12:43.692982",
+      "modified": "2026-10-05 07:29:46.299995",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "RECO-JURI-261005004",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:12:49.648955",
+      "modified": "2026-10-05 07:29:48.010709",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "RECO-JURI-261005005",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:12:49.915263",
+      "modified": "2026-10-05 07:29:48.192889",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "RECO-JURI-261005006",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:12:52.430821",
+      "modified": "2026-10-05 07:29:50.311568",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "RECO-JURI-261005007",
+      "docstatus": 0,
+      "creation": "2026-10-05 16:09:30.620122",
+      "modified": "2026-10-05 16:09:30.620122",
+      "company": "PT. JUARA ROTI INDONESIA"
+    },
+    {
+      "name": "RECO-RPMD-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:12:50.883830",
+      "modified": "2026-10-05 07:29:48.913778",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    },
+    {
+      "name": "RECO-RQLY-261005001",
+      "docstatus": 1,
+      "creation": "2026-10-05 07:12:51.670939",
+      "modified": "2026-10-05 07:29:49.609199",
+      "company": "RSU QUEEN LATIFA YOGYAKARTA"
+    }
+  ],
+  "Journal Entry": [
+    {
+      "name": "ACC-JV-2026-00001",
+      "docstatus": 1,
+      "creation": "2026-10-05 16:45:14.350449",
+      "modified": "2026-10-05 16:49:05.153417",
+      "company": "RS PKU MUHAMMADIYAH DELANGGU"
+    }
+  ]
+}

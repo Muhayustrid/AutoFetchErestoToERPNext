@@ -1,0 +1,2447 @@
+{
+ "MENU ROPI 12K 15 JULI 2026": {
+  "PR001": {
+   "price": 12000.0,
+   "n": 104,
+   "n_total": 104,
+   "name": "Ropi Butter",
+   "variants": {
+    "12000": 104
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "BCN01": {
+   "price": 10000.0,
+   "n": 10,
+   "n_total": 10,
+   "name": "Black Coffee Hot",
+   "variants": {
+    "10000": 10
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "PR002": {
+   "price": 12000.0,
+   "n": 109,
+   "n_total": 109,
+   "name": "Ropi Coklat",
+   "variants": {
+    "12000": 109
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "PR003": {
+   "price": 12000.0,
+   "n": 98,
+   "n_total": 98,
+   "name": "Ropi Keju",
+   "variants": {
+    "12000": 98
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "PR00142": {
+   "price": 19000.0,
+   "n": 8,
+   "n_total": 8,
+   "name": "Hemat 1 NEW",
+   "variants": {
+    "19000": 8
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx"
+   ]
+  },
+  "TJN02": {
+   "price": 6000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Jasmine Tea Hot",
+   "variants": {
+    "6000": 4
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "CPN02": {
+   "price": 15000.0,
+   "n": 40,
+   "n_total": 40,
+   "name": "Cappucino Ice",
+   "variants": {
+    "15000": 40
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "PR00140": {
+   "price": 26000.0,
+   "n": 16,
+   "n_total": 16,
+   "name": "Hemat 3 NEW",
+   "variants": {
+    "26000": 16
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "CKN01": {
+   "price": 15000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Chocolate Ice",
+   "variants": {
+    "15000": 4
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "BCN02": {
+   "price": 12000.0,
+   "n": 7,
+   "n_total": 7,
+   "name": "Americano",
+   "variants": {
+    "12000": 7
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "PR00143": {
+   "price": 21000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Hemat 2 NEW",
+   "variants": {
+    "21000": 3
+   },
+   "src": [
+    "POS_Orders_045_2026-10-02_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03"
+   ]
+  },
+  "CPN01": {
+   "price": 12000.0,
+   "n": 14,
+   "n_total": 14,
+   "name": "Cappucino Hot",
+   "variants": {
+    "12000": 14
+   },
+   "src": [
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "TJN01": {
+   "price": 8000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Jasmine Tea Ice",
+   "variants": {
+    "8000": 3
+   },
+   "src": [
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "PG001": {
+   "price": 17000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Roti Gempi Original",
+   "variants": {
+    "17000": 2
+   },
+   "src": [
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03"
+   ]
+  },
+  "P0010": {
+   "price": 5000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Extra Keju",
+   "variants": {
+    "5000": 2
+   },
+   "src": [
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "PG003": {
+   "price": 28000.0,
+   "n": 5,
+   "n_total": 5,
+   "name": "Roti Gempi Dark Choco",
+   "variants": {
+    "28000": 5
+   },
+   "src": [
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "PR00039": {
+   "price": 72000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Goodie Bag isi 6 pcs",
+   "variants": {
+    "72000": 3
+   },
+   "src": [
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "CR02": {
+   "price": 17000.0,
+   "n": 13,
+   "n_total": 13,
+   "name": "Croissant",
+   "variants": {
+    "17000": 13
+   },
+   "src": [
+    "POS_Orders_045_2026-10-03_v2_detail.xlsx",
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "TJ02": {
+   "price": 5000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Hot Tea",
+   "variants": {
+    "5000": 2
+   },
+   "src": [
+    "RSUD Bangil 2026-10-03"
+   ]
+  },
+  "AIR01": {
+   "price": 5000.0,
+   "n": 16,
+   "n_total": 16,
+   "name": "Air Mineral Cryistaline",
+   "variants": {
+    "5000": 16
+   },
+   "src": [
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "CKN02": {
+   "price": 12000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Chocolate Hot",
+   "variants": {
+    "12000": 1
+   },
+   "src": [
+    "RSUD Bangil 2026-10-03"
+   ]
+  },
+  "PR00141": {
+   "price": 26000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Hemat 4 NEW",
+   "variants": {
+    "26000": 4
+   },
+   "src": [
+    "RSUD Bangil 2026-10-03",
+    "RSUD Sekayu 2026-10-02"
+   ]
+  },
+  "PR00075": {
+   "price": 18000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Hemat 1",
+   "variants": {
+    "18000": 4
+   },
+   "src": [
+    "RSUD Bangil 2026-10-03"
+   ]
+  },
+  "TJ01": {
+   "price": 7000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Ice Tea",
+   "variants": {
+    "7000": 2
+   },
+   "src": [
+    "RSUD Bangil 2026-10-03"
+   ]
+  },
+  "PG004": {
+   "price": 23000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Roti Gempi Tiramisu",
+   "variants": {
+    "23000": 1
+   },
+   "src": [
+    "RSUD Sekayu 2026-10-02"
+   ]
+  }
+ },
+ "ROPI BANGKA TENGAH FRC": {
+  "AIR03": {
+   "price": 5000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Aqua 330ml",
+   "variants": {
+    "5000": 6
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "P0012": {
+   "price": 26000.0,
+   "n": 10,
+   "n_total": 10,
+   "name": "Gempi Dark Choco",
+   "variants": {
+    "26000": 10
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "PR00039": {
+   "price": 70000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Goodie Bag isi 6 pcs",
+   "variants": {
+    "70000": 6
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "P0017": {
+   "price": 26000.0,
+   "n": 8,
+   "n_total": 8,
+   "name": "Gempi Tiramisu",
+   "variants": {
+    "26000": 8
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "P0002": {
+   "price": 12000.0,
+   "n": 12,
+   "n_total": 12,
+   "name": "Roti Ropi Keju",
+   "variants": {
+    "12000": 12
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "P0001": {
+   "price": 12000.0,
+   "n": 12,
+   "n_total": 12,
+   "name": "Roti Ropi Coklat",
+   "variants": {
+    "12000": 12
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "PR00074": {
+   "price": 26000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Hemat 4",
+   "variants": {
+    "26000": 4
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "MC05": {
+   "price": 20000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Moccacino (250ml)",
+   "variants": {
+    "20000": 2
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "MC01": {
+   "price": 17000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Moccacino",
+   "variants": {
+    "17000": 2
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "P0011": {
+   "price": 28000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Gempi Choco Cruncy",
+   "variants": {
+    "28000": 2
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "P0014": {
+   "price": 22000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Gempi Pineapple",
+   "variants": {
+    "22000": 2
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  },
+  "P0004": {
+   "price": 12000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Roti Ropi Butter",
+   "variants": {
+    "12000": 2
+   },
+   "src": [
+    "POS_Orders_097_2026-10-03_v2_detail.xlsx",
+    "Bangka Tengah FRC 2026-10-03"
+   ]
+  }
+ },
+ "MENU ROPI 14K 15 JULI 2026": {
+  "CPN01": {
+   "price": 12000.0,
+   "n": 8,
+   "n_total": 8,
+   "name": "Cappucino Hot",
+   "variants": {
+    "12000": 8
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "BCN02": {
+   "price": 12000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Americano",
+   "variants": {
+    "12000": 3
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03"
+   ]
+  },
+  "CPN02": {
+   "price": 15000.0,
+   "n": 9,
+   "n_total": 9,
+   "name": "Cappucino Ice",
+   "variants": {
+    "15000": 9
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "CR02": {
+   "price": 17000.0,
+   "n": 8,
+   "n_total": 8,
+   "name": "Croissant",
+   "variants": {
+    "17000": 8
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "PG004": {
+   "price": 23000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Roti Gempi Tiramisu",
+   "variants": {
+    "23000": 6
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "TJN01": {
+   "price": 8000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Jasmine Tea Ice",
+   "variants": {
+    "8000": 3
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03"
+   ]
+  },
+  "PR00140": {
+   "price": 28000.0,
+   "n": 8,
+   "n_total": 8,
+   "name": "Hemat 3 NEW",
+   "variants": {
+    "28000": 8
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "PR002": {
+   "price": 14000.0,
+   "n": 17,
+   "n_total": 17,
+   "name": "Ropi Coklat",
+   "variants": {
+    "14000": 17
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "PR003": {
+   "price": 14000.0,
+   "n": 18,
+   "n_total": 18,
+   "name": "Ropi Keju",
+   "variants": {
+    "14000": 18
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "TJN02": {
+   "price": 6000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Jasmine Tea Hot",
+   "variants": {
+    "6000": 4
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "PR001": {
+   "price": 14000.0,
+   "n": 21,
+   "n_total": 21,
+   "name": "Ropi Butter",
+   "variants": {
+    "14000": 21
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "AIR01": {
+   "price": 5000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Air Mineral Cryistaline",
+   "variants": {
+    "5000": 3
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "PG002": {
+   "price": 30000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Roti Gempi Choco Crunchy",
+   "variants": {
+    "30000": 1
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03"
+   ]
+  },
+  "PR00141": {
+   "price": 28000.0,
+   "n": 5,
+   "n_total": 5,
+   "name": "Hemat 4 NEW",
+   "variants": {
+    "28000": 5
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "PG003": {
+   "price": 28000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Roti Gempi Dark Choco",
+   "variants": {
+    "28000": 1
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03"
+   ]
+  },
+  "P0010": {
+   "price": 5000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Extra Keju",
+   "variants": {
+    "5000": 1
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03"
+   ]
+  },
+  "PR00142": {
+   "price": 21000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Hemat 1 NEW",
+   "variants": {
+    "21000": 4
+   },
+   "src": [
+    "RSCM Jakarta 2026-10-03",
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "BCN01": {
+   "price": 10000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Black Coffee Hot",
+   "variants": {
+    "10000": 2
+   },
+   "src": [
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "PR00039": {
+   "price": 84000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Goodie Bag isi 6 pcs",
+   "variants": {
+    "84000": 2
+   },
+   "src": [
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  },
+  "PR00143": {
+   "price": 23000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hemat 2 NEW",
+   "variants": {
+    "23000": 1
+   },
+   "src": [
+    "RS Yos Sudarso 2026-10-03"
+   ]
+  }
+ },
+ "ROPI 12K MARET 2026": {
+  "PR003": {
+   "price": 12000.0,
+   "n": 16,
+   "n_total": 16,
+   "name": "Ropi Keju",
+   "variants": {
+    "12000": 16
+   },
+   "src": [
+    "RSI Jakarta Sukapura 2026-10-03",
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "PR001": {
+   "price": 12000.0,
+   "n": 17,
+   "n_total": 17,
+   "name": "Ropi Butter",
+   "variants": {
+    "12000": 17
+   },
+   "src": [
+    "RSI Jakarta Sukapura 2026-10-03",
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "PR002": {
+   "price": 12000.0,
+   "n": 15,
+   "n_total": 15,
+   "name": "Ropi Coklat",
+   "variants": {
+    "12000": 15
+   },
+   "src": [
+    "RSI Jakarta Sukapura 2026-10-03",
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "PR00075": {
+   "price": 18000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Hemat 1",
+   "variants": {
+    "18000": 2
+   },
+   "src": [
+    "RSI Jakarta Sukapura 2026-10-03"
+   ]
+  },
+  "PR00074": {
+   "price": 31000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Hemat 4",
+   "variants": {
+    "31000": 2
+   },
+   "src": [
+    "RSI Jakarta Sukapura 2026-10-03",
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "CR02": {
+   "price": 17000.0,
+   "n": 7,
+   "n_total": 7,
+   "name": "Croissant",
+   "variants": {
+    "17000": 7
+   },
+   "src": [
+    "RSI Jakarta Sukapura 2026-10-03",
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "PR00039": {
+   "price": 72000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Goodie Bag isi 6 pcs",
+   "variants": {
+    "72000": 1
+   },
+   "src": [
+    "RSI Jakarta Sukapura 2026-10-03"
+   ]
+  },
+  "PR00073": {
+   "price": 31000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Hemat 3",
+   "variants": {
+    "31000": 6
+   },
+   "src": [
+    "RSI Jakarta Sukapura 2026-10-03",
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "TJ01": {
+   "price": 7000.0,
+   "n": 16,
+   "n_total": 16,
+   "name": "Ice Tea",
+   "variants": {
+    "7000": 16
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "CK02": {
+   "price": 12000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Coklat Panas",
+   "variants": {
+    "12000": 1
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "CM02": {
+   "price": 12000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Hot Caramel Macchiato (Small)",
+   "variants": {
+    "12000": 2
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "CM01": {
+   "price": 20000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Caramel Mocchiato",
+   "variants": {
+    "20000": 4
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "CK01": {
+   "price": 20000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Es Coklat",
+   "variants": {
+    "20000": 1
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "PG003": {
+   "price": 28000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Roti Gempi Dark Choco",
+   "variants": {
+    "28000": 1
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "P0010": {
+   "price": 5000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Extra Keju",
+   "variants": {
+    "5000": 1
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "PG004": {
+   "price": 23000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Roti Gempi Tiramisu",
+   "variants": {
+    "23000": 1
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "PR00072": {
+   "price": 23000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hemat 2",
+   "variants": {
+    "23000": 1
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "BC01": {
+   "price": 12000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Black Coffee",
+   "variants": {
+    "12000": 2
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "MC01": {
+   "price": 20000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Moccacino",
+   "variants": {
+    "20000": 4
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  },
+  "TJ02": {
+   "price": 5000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Hot Tea",
+   "variants": {
+    "5000": 3
+   },
+   "src": [
+    "Plaza Haji alQosbah FRC 2026-10-03"
+   ]
+  }
+ },
+ "MENU 12K 24 MEI 2026": {
+  "PR002": {
+   "price": 12000.0,
+   "n": 25,
+   "n_total": 25,
+   "name": "Ropi Coklat",
+   "variants": {
+    "12000": 25
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03",
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "PR001": {
+   "price": 12000.0,
+   "n": 14,
+   "n_total": 14,
+   "name": "Ropi Butter",
+   "variants": {
+    "12000": 14
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03",
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "PR00140": {
+   "price": 31000.0,
+   "n": 5,
+   "n_total": 5,
+   "name": "Hemat 3 NEW",
+   "variants": {
+    "31000": 5
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03",
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "PR003": {
+   "price": 12000.0,
+   "n": 12,
+   "n_total": 12,
+   "name": "Ropi Keju",
+   "variants": {
+    "12000": 12
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03",
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "CR02": {
+   "price": 17000.0,
+   "n": 9,
+   "n_total": 9,
+   "name": "Croissant",
+   "variants": {
+    "17000": 9
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03",
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "AIR01": {
+   "price": 5000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Air Mineral Cryistaline",
+   "variants": {
+    "5000": 6
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03"
+   ]
+  },
+  "CPN01": {
+   "price": 12000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Cappucino Hot",
+   "variants": {
+    "12000": 2
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03"
+   ]
+  },
+  "CPN02": {
+   "price": 20000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Cappucino Ice",
+   "variants": {
+    "20000": 4
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03",
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "BCN01": {
+   "price": 12000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Black Coffee Hot",
+   "variants": {
+    "12000": 1
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03"
+   ]
+  },
+  "PR00143": {
+   "price": 23000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Hemat 2 NEW",
+   "variants": {
+    "23000": 2
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03",
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "PR00142": {
+   "price": 18000.0,
+   "n": 7,
+   "n_total": 7,
+   "name": "Hemat 1 NEW",
+   "variants": {
+    "18000": 7
+   },
+   "src": [
+    "RSUD Soegiri 2026-10-03",
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "PR00141": {
+   "price": 31000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hemat 4 NEW",
+   "variants": {
+    "31000": 1
+   },
+   "src": [
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "BCN02": {
+   "price": 20000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Americano",
+   "variants": {
+    "20000": 1
+   },
+   "src": [
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "TJN01": {
+   "price": 7000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Jasmine Tea Ice",
+   "variants": {
+    "7000": 2
+   },
+   "src": [
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  },
+  "PR00039": {
+   "price": 72000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Goodie Bag isi 6 pcs",
+   "variants": {
+    "72000": 1
+   },
+   "src": [
+    "RS Rahman Rahim Sidoarjo 2026-10-03"
+   ]
+  }
+ },
+ "JAMBI SOROLANGUN FRC": {
+  "P0001": {
+   "price": 12000.0,
+   "n": 11,
+   "n_total": 11,
+   "name": "Roti Ropi Coklat",
+   "variants": {
+    "12000": 11
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "AIR02": {
+   "price": 6000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Air Mineral",
+   "variants": {
+    "6000": 2
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "CP01": {
+   "price": 16000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Cappucino",
+   "variants": {
+    "16000": 1
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "CR01": {
+   "price": 15000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Croissant Original",
+   "variants": {
+    "15000": 3
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "CP02": {
+   "price": 10000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hot Cappucino (Small)",
+   "variants": {
+    "10000": 1
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "P0017": {
+   "price": 23000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Gempi Tiramisu",
+   "variants": {
+    "23000": 2
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "P0005": {
+   "price": 12000.0,
+   "n": 5,
+   "n_total": 5,
+   "name": "Roti Ropi Tiramisu",
+   "variants": {
+    "12000": 5
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "P0004": {
+   "price": 12000.0,
+   "n": 9,
+   "n_total": 9,
+   "name": "Roti Ropi Butter",
+   "variants": {
+    "12000": 9
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "SK002": {
+   "price": 8000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Ice Cream Coklat",
+   "variants": {
+    "8000": 3
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "P0013": {
+   "price": 18000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Gempi Original",
+   "variants": {
+    "18000": 1
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "CM01": {
+   "price": 16000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Caramel Mocchiato",
+   "variants": {
+    "16000": 2
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "P0002": {
+   "price": 12000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Roti Ropi Keju",
+   "variants": {
+    "12000": 1
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  },
+  "SK001": {
+   "price": 8000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Ice Cream Vanila",
+   "variants": {
+    "8000": 1
+   },
+   "src": [
+    "Jambi Sarulangun FRC 2026-10-03"
+   ]
+  }
+ },
+ "MENU 12K 11 JUNI 2026": {
+  "PR002": {
+   "price": 12000.0,
+   "n": 9,
+   "n_total": 9,
+   "name": "Ropi Coklat",
+   "variants": {
+    "12000": 9
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "AIR01": {
+   "price": 5000.0,
+   "n": 9,
+   "n_total": 9,
+   "name": "Air Mineral Cryistaline",
+   "variants": {
+    "5000": 9
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "CPN02": {
+   "price": 15000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Cappucino Ice",
+   "variants": {
+    "15000": 6
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "CR02": {
+   "price": 17000.0,
+   "n": 11,
+   "n_total": 11,
+   "name": "Croissant",
+   "variants": {
+    "17000": 11
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "PR00140": {
+   "price": 26000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Hemat 3 NEW",
+   "variants": {
+    "26000": 6
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "PR00142": {
+   "price": 19000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Hemat 1 NEW",
+   "variants": {
+    "19000": 4
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "BCN02": {
+   "price": 12000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Americano",
+   "variants": {
+    "12000": 2
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "CPN01": {
+   "price": 12000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Cappucino Hot",
+   "variants": {
+    "12000": 2
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "TJN01": {
+   "price": 8000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Jasmine Tea Ice",
+   "variants": {
+    "8000": 2
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "PR001": {
+   "price": 12000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Ropi Butter",
+   "variants": {
+    "12000": 4
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  },
+  "PR003": {
+   "price": 12000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Ropi Keju",
+   "variants": {
+    "12000": 1
+   },
+   "src": [
+    "RS Annisa Tangerang 2026-10-03"
+   ]
+  }
+ },
+ "ROPI 10 K": {
+  "P0004": {
+   "price": 10000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Roti Ropi Butter",
+   "variants": {
+    "10000": 2
+   },
+   "src": [
+    "Mitra Swalayan Gombong 2026-10-03"
+   ]
+  },
+  "P0002": {
+   "price": 10000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Roti Ropi Keju",
+   "variants": {
+    "10000": 1
+   },
+   "src": [
+    "Mitra Swalayan Gombong 2026-10-03"
+   ]
+  }
+ },
+ "ROPI RS MEDINA GARUT": {
+  "P0001": {
+   "price": 9000.0,
+   "n": 17,
+   "n_total": 17,
+   "name": "Roti Ropi Coklat",
+   "variants": {
+    "9000": 17
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "PR00073": {
+   "price": 22000.0,
+   "n": 5,
+   "n_total": 5,
+   "name": "Hemat 3",
+   "variants": {
+    "22000": 5
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "P0002": {
+   "price": 9000.0,
+   "n": 13,
+   "n_total": 13,
+   "name": "Roti Ropi Keju",
+   "variants": {
+    "9000": 13
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "PR00072": {
+   "price": 16000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Hemat 2",
+   "variants": {
+    "16000": 2
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "P0004": {
+   "price": 9000.0,
+   "n": 7,
+   "n_total": 7,
+   "name": "Roti Ropi Butter",
+   "variants": {
+    "9000": 7
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "CP02": {
+   "price": 8000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hot Cappucino (Small)",
+   "variants": {
+    "8000": 1
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "PR00074": {
+   "price": 22000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hemat 4",
+   "variants": {
+    "22000": 1
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "PR00075": {
+   "price": 14000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Hemat 1",
+   "variants": {
+    "14000": 3
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "PR00039": {
+   "price": 54000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Goodie Bag isi 6 pcs",
+   "variants": {
+    "54000": 2
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "CP01": {
+   "price": 14000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Cappucino",
+   "variants": {
+    "14000": 1
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "TJ01": {
+   "price": 6000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Ice Tea",
+   "variants": {
+    "6000": 1
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "P0017": {
+   "price": 20000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Gempi Tiramisu",
+   "variants": {
+    "20000": 1
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "P0012": {
+   "price": 25000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Gempi Dark Choco",
+   "variants": {
+    "25000": 1
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  },
+  "MC02": {
+   "price": 8000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hot Moccacino (Small)",
+   "variants": {
+    "8000": 1
+   },
+   "src": [
+    "RS Medina Garut FRC 2026-10-03"
+   ]
+  }
+ },
+ "ROPI SAN MEDICA CENTER": {
+  "P0004": {
+   "price": 12000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Roti Ropi Butter",
+   "variants": {
+    "12000": 6
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "PR00039": {
+   "price": 60000.0,
+   "n": 5,
+   "n_total": 5,
+   "name": "Goodie Bag isi 6 pcs",
+   "variants": {
+    "60000": 5
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "P0012": {
+   "price": 30000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Gempi Dark Choco",
+   "variants": {
+    "30000": 1
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "P0011": {
+   "price": 30000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Gempi Choco Cruncy",
+   "variants": {
+    "30000": 1
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "P0001": {
+   "price": 12000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Roti Ropi Coklat",
+   "variants": {
+    "12000": 6
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "P0002": {
+   "price": 12000.0,
+   "n": 8,
+   "n_total": 8,
+   "name": "Roti Ropi Keju",
+   "variants": {
+    "12000": 8
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "PR00037": {
+   "price": 17000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Promo Hemat 1",
+   "variants": {
+    "17000": 1
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "TJ02": {
+   "price": 5000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Hot Tea",
+   "variants": {
+    "5000": 2
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "MC02": {
+   "price": 8000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hot Moccacino (Small)",
+   "variants": {
+    "8000": 1
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "PR00034": {
+   "price": 25000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Promo Hemat 4",
+   "variants": {
+    "25000": 1
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "BC01": {
+   "price": 8000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Black Coffee",
+   "variants": {
+    "8000": 1
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  },
+  "P0017": {
+   "price": 25000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Gempi Tiramisu",
+   "variants": {
+    "25000": 1
+   },
+   "src": [
+    "RSU San Medica FRC 2026-10-03"
+   ]
+  }
+ },
+ "ROPI SUNGAI PENUH": {
+  "P0001": {
+   "price": 12000.0,
+   "n": 11,
+   "n_total": 11,
+   "name": "Roti Ropi Coklat",
+   "variants": {
+    "12000": 11
+   },
+   "src": [
+    "Sungai Penuh FRC 2026-10-03"
+   ]
+  },
+  "P0004": {
+   "price": 12000.0,
+   "n": 5,
+   "n_total": 5,
+   "name": "Roti Ropi Butter",
+   "variants": {
+    "12000": 5
+   },
+   "src": [
+    "Sungai Penuh FRC 2026-10-03"
+   ]
+  },
+  "CP02": {
+   "price": 7000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Hot Cappucino (Small)",
+   "variants": {
+    "7000": 2
+   },
+   "src": [
+    "Sungai Penuh FRC 2026-10-03"
+   ]
+  },
+  "PR00037": {
+   "price": 16000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Promo Hemat 1",
+   "variants": {
+    "16000": 2
+   },
+   "src": [
+    "Sungai Penuh FRC 2026-10-03"
+   ]
+  },
+  "CM02": {
+   "price": 7000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hot Caramel Macchiato (Small)",
+   "variants": {
+    "7000": 1
+   },
+   "src": [
+    "Sungai Penuh FRC 2026-10-03"
+   ]
+  },
+  "AIR01": {
+   "price": 5000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Air Mineral Cryistaline",
+   "variants": {
+    "5000": 1
+   },
+   "src": [
+    "Sungai Penuh FRC 2026-10-03"
+   ]
+  }
+ },
+ "RSUP Palembang": {
+  "P0004": {
+   "price": 12000.0,
+   "n": 5,
+   "n_total": 5,
+   "name": "Roti Ropi Butter",
+   "variants": {
+    "12000": 5
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "PR00075": {
+   "price": 19000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Hemat 1",
+   "variants": {
+    "19000": 3
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "P0002": {
+   "price": 12000.0,
+   "n": 7,
+   "n_total": 7,
+   "name": "Roti Ropi Keju",
+   "variants": {
+    "12000": 7
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "BC01": {
+   "price": 10000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Black Coffee",
+   "variants": {
+    "10000": 4
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "MC01": {
+   "price": 15000.0,
+   "n": 7,
+   "n_total": 7,
+   "name": "Moccacino",
+   "variants": {
+    "15000": 7
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "PR00073": {
+   "price": 26000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Hemat 3",
+   "variants": {
+    "26000": 1
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "PR00072": {
+   "price": 21000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Hemat 2",
+   "variants": {
+    "21000": 2
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "P0001": {
+   "price": 12000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Roti Ropi Coklat",
+   "variants": {
+    "12000": 4
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "CR01": {
+   "price": 17000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Croissant Original",
+   "variants": {
+    "17000": 3
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "CM01": {
+   "price": 15000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Caramel Mocchiato",
+   "variants": {
+    "15000": 2
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "TJ01": {
+   "price": 8000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Ice Tea",
+   "variants": {
+    "8000": 1
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "P0012": {
+   "price": 30000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Gempi Dark Choco",
+   "variants": {
+    "30000": 2
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "PR00039": {
+   "price": 72000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Goodie Bag isi 6 pcs",
+   "variants": {
+    "72000": 1
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  },
+  "P0011": {
+   "price": 30000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Gempi Choco Cruncy",
+   "variants": {
+    "30000": 1
+   },
+   "src": [
+    "RSUP Palembang 2026-10-03"
+   ]
+  }
+ },
+ "UMBUL PELEM": {
+  "PR003": {
+   "price": 10000.0,
+   "n": 6,
+   "n_total": 6,
+   "name": "Ropi Keju",
+   "variants": {
+    "10000": 6
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "PR002": {
+   "price": 10000.0,
+   "n": 12,
+   "n_total": 12,
+   "name": "Ropi Coklat",
+   "variants": {
+    "10000": 12
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "CKN01": {
+   "price": 20000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Chocolate Ice",
+   "variants": {
+    "20000": 2
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "PR001": {
+   "price": 10000.0,
+   "n": 16,
+   "n_total": 16,
+   "name": "Ropi Butter",
+   "variants": {
+    "10000": 16
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "CPN02": {
+   "price": 20000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Cappucino Ice",
+   "variants": {
+    "20000": 3
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "TJN01": {
+   "price": 5000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "Jasmine Tea Ice",
+   "variants": {
+    "5000": 4
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "BCN02": {
+   "price": 20000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Americano",
+   "variants": {
+    "20000": 1
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "CKN02": {
+   "price": 12000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Chocolate Hot",
+   "variants": {
+    "12000": 1
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "CR02": {
+   "price": 18000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "Croissant",
+   "variants": {
+    "18000": 3
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "AIR01": {
+   "price": 5000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "Air Mineral Cryistaline",
+   "variants": {
+    "5000": 2
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  },
+  "PR00039": {
+   "price": 60000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "Goodie Bag isi 6 pcs",
+   "variants": {
+    "60000": 1
+   },
+   "src": [
+    "ROPI Umbul Pelem 2026-10-03"
+   ]
+  }
+ },
+ "MENU 10K 11 JUNI 2026": {
+  "CR02": {
+   "price": 17000.0,
+   "n": 7,
+   "n_total": 7,
+   "name": "",
+   "variants": {
+    "17000": 7
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "PR001": {
+   "price": 10000.0,
+   "n": 11,
+   "n_total": 11,
+   "name": "",
+   "variants": {
+    "10000": 11
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "AIR01": {
+   "price": 5000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "",
+   "variants": {
+    "5000": 1
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "PR003": {
+   "price": 10000.0,
+   "n": 10,
+   "n_total": 10,
+   "name": "",
+   "variants": {
+    "10000": 10
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "CPN02": {
+   "price": 15000.0,
+   "n": 3,
+   "n_total": 3,
+   "name": "",
+   "variants": {
+    "15000": 3
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "PR002": {
+   "price": 10000.0,
+   "n": 9,
+   "n_total": 9,
+   "name": "",
+   "variants": {
+    "10000": 9
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "BCN01": {
+   "price": 10000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "",
+   "variants": {
+    "10000": 1
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "PR00140": {
+   "price": 24000.0,
+   "n": 4,
+   "n_total": 4,
+   "name": "",
+   "variants": {
+    "24000": 4
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "PR00141": {
+   "price": 24000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "",
+   "variants": {
+    "24000": 1
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "PR00039": {
+   "price": 60000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "",
+   "variants": {
+    "60000": 1
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "PG004": {
+   "price": 23000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "",
+   "variants": {
+    "23000": 1
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "CKN01": {
+   "price": 15000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "",
+   "variants": {
+    "15000": 2
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  },
+  "PR00143": {
+   "price": 19000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "",
+   "variants": {
+    "19000": 1
+   },
+   "src": [
+    "RS Hosana Medica"
+   ]
+  }
+ },
+ "RSJD DR ARIF ZAINUDDIN SURAKARTA 10K MARET 2026": {
+  "PR002": {
+   "price": 10000.0,
+   "n": 20,
+   "n_total": 20,
+   "name": "",
+   "variants": {
+    "10000": 20
+   },
+   "src": [
+    "RSJD Arif Zainuddin"
+   ]
+  },
+  "PR001": {
+   "price": 10000.0,
+   "n": 15,
+   "n_total": 15,
+   "name": "",
+   "variants": {
+    "10000": 15
+   },
+   "src": [
+    "RSJD Arif Zainuddin"
+   ]
+  },
+  "PG001": {
+   "price": 17000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "",
+   "variants": {
+    "17000": 2
+   },
+   "src": [
+    "RSJD Arif Zainuddin"
+   ]
+  },
+  "PR003": {
+   "price": 10000.0,
+   "n": 9,
+   "n_total": 9,
+   "name": "",
+   "variants": {
+    "10000": 9
+   },
+   "src": [
+    "RSJD Arif Zainuddin"
+   ]
+  },
+  "CR02": {
+   "price": 17000.0,
+   "n": 2,
+   "n_total": 2,
+   "name": "",
+   "variants": {
+    "17000": 2
+   },
+   "src": [
+    "RSJD Arif Zainuddin"
+   ]
+  },
+  "PG004": {
+   "price": 23000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "",
+   "variants": {
+    "23000": 1
+   },
+   "src": [
+    "RSJD Arif Zainuddin"
+   ]
+  },
+  "PG002": {
+   "price": 30000.0,
+   "n": 1,
+   "n_total": 1,
+   "name": "",
+   "variants": {
+    "30000": 1
+   },
+   "src": [
+    "RSJD Arif Zainuddin"
+   ]
+  }
+ }
+}

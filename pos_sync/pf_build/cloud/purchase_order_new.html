@@ -1,0 +1,1123 @@
+{# Header (logo/judul/meta) dirender Letter Head "Company Letterhead - Grey" — docs/11. #}
+{{ letter_head }}
+<div class="po-print-format">
+<style>
+    .po-print-format {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        font-size: 12px;
+        background: #ffffff;
+        padding: 0;
+        line-height: 1.4;
+    }
+
+    .po-print-format table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* SUPPLIER / SHIP TO */
+    .po-parties {
+        border-top: 1px solid #1a1a1a;
+        padding: 10px 0;
+        margin-bottom: 12px;
+    }
+
+    .po-parties table td {
+        width: 50%;
+        vertical-align: top;
+        padding-right: 24px;
+    }
+
+    .po-parties .section-title {
+        font-weight: bold;
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 4px;
+    }
+
+    .po-parties .party-name {
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+
+    .po-parties .party-line {
+        font-size: 12px;
+        color: #333;
+    }
+
+    .po-parties .main-contact {
+        margin-top: 8px;
+    }
+
+    /* ITEMS TABLE */
+    .po-items table {
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    .po-items th {
+        text-align: left;
+        padding: 6px 5px;
+        border-bottom: 1px solid #1a1a1a;
+        font-size: 10.5px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #444;
+    }
+
+    .po-items td {
+        padding: 7px 5px;
+        vertical-align: top;
+        font-size: 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .po-items tr:last-child td {
+        border-bottom: none;
+    }
+
+    .po-items th.text-right,
+    .po-items td.text-right {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .item-code {
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .item-desc {
+        color: #666;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    /* DESCRIPTION */
+    .item-description,
+    .item-description * {
+        color: #666 !important;
+        font-size: 12px !important;
+        line-height: 1.3 !important;
+        font-weight: 400 !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .item-description {
+        margin: 0;
+        padding: 0;
+    }
+
+    .item-description p,
+    .item-description div {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .item-description br {
+        line-height: 1.3 !important;
+    }
+
+    /* TOTALS */
+    .po-totals-wrap table {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .po-totals-wrap td {
+        vertical-align: bottom;
+        width: 50%;
+    }
+
+    .po-totals-wrap td.totals-left-cell {
+        vertical-align: top;
+        padding-right: 24px;
+    }
+
+    .po-summary-left {
+        font-size: 11.5px;
+        color: #555;
+        padding-top: 4px;
+    }
+
+    .po-totals {
+        width: 300px;
+        margin-left: auto;
+    }
+
+    .po-totals .total-row {
+        text-align: right;
+        margin-bottom: 6px;
+        white-space: nowrap;
+    }
+
+    .po-totals .po-label {
+        display: inline-block;
+        width: 140px;
+        text-align: left;
+        color: #555;
+        font-size: 12.5px;
+        vertical-align: middle;
+        border: none;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .po-totals .po-value {
+        display: inline-block;
+        width: 140px;
+        text-align: right;
+        font-size: 12.5px;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: none;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .po-totals .grand-total {
+        border-top: 1.5px solid #1a1a1a;
+        padding-top: 8px;
+        margin-top: 4px;
+    }
+
+    .po-totals .grand-total .po-label,
+    .po-totals .grand-total .po-value {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* TERMS */
+    .po-terms {
+        margin-top: 22px;
+        border-top: 1px solid #ddd;
+        padding-top: 12px;
+    }
+
+    .po-terms .section-title {
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .po-terms-content {
+        font-size: 11.5px;
+        color: #333;
+    }
+
+    /* NOTE */
+    .po-note {
+        margin-top: 10px;
+        border: 1px solid #1a1a1a;
+        padding: 10px 12px;
+    }
+
+    .po-note .section-title {
+        font-weight: bold;
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 4px;
+    }
+
+    .po-note-content {
+        font-size: 11.5px;
+        color: #333;
+        white-space: pre-line;
+        min-height: 60px;
+    }
+
+    /* SIGNATURES */
+    .po-signatures {
+        margin-top: 45px;
+    }
+
+    .po-signatures table td {
+        width: 33.33%;
+        text-align: center;
+        padding: 0 20px;
+        vertical-align: top;
+    }
+
+    .po-signatures .sig-role {
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 45px;
+    }
+
+    .po-signatures .sig-name {
+        font-size: 11.5px;
+        color: #444;
+    }</style>
+
+
+{% macro format_party_address(addr) %}
+
+{% set ns = namespace(
+    output="",
+    addr_lines=[],
+    contact_lines=[]
+) %}
+
+{% for l in addr.split("<br>") %}
+
+    {% set l = l.strip() %}
+
+    {% if l %}
+
+        {% if l.startswith("Phone") or l.startswith("Email") %}
+
+            {% set _ = ns.contact_lines.append(
+                l.rstrip(",").strip()
+            ) %}
+
+        {% else %}
+
+            {% set _ = ns.addr_lines.append(
+                l.rstrip(",").strip()
+            ) %}
+
+        {% endif %}
+
+    {% endif %}
+
+{% endfor %}
+
+
+{% set ns.output = ns.addr_lines | join(", ") %}
+
+
+{% for cl in ns.contact_lines %}
+
+    {% set ns.output =
+        ns.output
+        ~ "<br>"
+        ~ cl
+        ~ ("." if loop.last else ",")
+    %}
+
+{% endfor %}
+
+
+{% if not ns.contact_lines %}
+    {% set ns.output = ns.output ~ "." %}
+{% endif %}
+
+
+{{ ns.output }}
+
+{% endmacro %}
+
+
+
+{% macro build_address_lines(a) %}
+
+{% set ns = namespace(lines=[]) %}
+
+
+{% if a.address_line1 %}
+    {% set _ = ns.lines.append(a.address_line1) %}
+{% endif %}
+
+
+{% if a.address_line2 %}
+    {% set _ = ns.lines.append(a.address_line2) %}
+{% endif %}
+
+
+{% if a.city %}
+    {% set _ = ns.lines.append(a.city) %}
+{% endif %}
+
+
+{% if a.county %}
+    {% set _ = ns.lines.append(a.county) %}
+{% endif %}
+
+
+{% if a.state %}
+    {% set _ = ns.lines.append(a.state) %}
+{% endif %}
+
+
+{% if a.pincode %}
+    {% set _ = ns.lines.append(a.pincode) %}
+{% endif %}
+
+
+{% if a.country %}
+    {% set _ = ns.lines.append(a.country) %}
+{% endif %}
+
+
+{% if a.phone %}
+    {% set _ = ns.lines.append(
+        "Phone: " ~ a.phone
+    ) %}
+{% endif %}
+
+
+{% if a.email_id %}
+    {% set _ = ns.lines.append(
+        "Email: " ~ a.email_id
+    ) %}
+{% endif %}
+
+
+{{ ns.lines | join("<br>") }}
+
+{% endmacro %}
+
+
+
+<!-- HEADER -->
+
+
+
+
+
+
+
+
+<!-- SUPPLIER / SHIP TO -->
+
+
+{% set warehouse_name = doc.set_warehouse %}
+
+
+{% if not warehouse_name and doc.items %}
+
+    {% set warehouse_name =
+        doc.items[0].warehouse
+    %}
+
+{% endif %}
+
+
+
+{% set warehouse_address_doc =
+    namespace(value=None)
+%}
+
+
+
+{% if warehouse_name %}
+
+
+    {% set addr_links =
+        frappe.db.get_all(
+            "Dynamic Link",
+            filters={
+                "link_doctype": "Warehouse",
+                "link_name": warehouse_name,
+                "parenttype": "Address"
+            },
+            fields=["parent"]
+        )
+    %}
+
+
+    {% for al in addr_links %}
+
+        {% set a =
+            frappe.get_doc(
+                "Address",
+                al.parent
+            )
+        %}
+
+
+        {% if not warehouse_address_doc.value %}
+
+            {% set warehouse_address_doc.value = a %}
+
+        {% endif %}
+
+
+        {% if a.is_shipping_address %}
+
+            {% set warehouse_address_doc.value = a %}
+
+        {% endif %}
+
+
+    {% endfor %}
+
+
+{% endif %}
+
+
+
+{% set ship_to_address = (
+    build_address_lines(
+        warehouse_address_doc.value
+    )
+    if warehouse_address_doc.value
+    else ""
+).strip() %}
+
+
+
+{% if not ship_to_address %}
+
+    {% set ship_to_address =
+        doc.shipping_address_display
+    %}
+
+{% endif %}
+
+
+
+<div class="po-parties">
+
+    <table>
+
+        <tr>
+
+
+            <td>
+
+                <div class="section-title">
+                    Supplier
+                </div>
+
+
+                <div class="party-name">
+
+                    {{
+                        doc.supplier_name
+                        or doc.supplier
+                    }}
+
+                </div>
+
+
+                {% if doc.address_display %}
+
+                <div class="party-line">
+
+                    {{
+                        format_party_address(
+                            doc.address_display
+                        )
+                        | safe
+                    }}
+
+                </div>
+
+                {% endif %}
+
+
+                {% if doc.contact_mobile %}
+
+                <div class="party-line">
+                    Phone: {{ doc.contact_mobile }}
+                </div>
+
+
+                {% elif doc.contact_phone %}
+
+                <div class="party-line">
+                    Phone: {{ doc.contact_phone }}
+                </div>
+
+                {% endif %}
+
+            </td>
+
+
+
+            <td>
+
+                <div class="section-title">
+                    Ship To
+                </div>
+
+
+                <div class="party-name">
+                    {{ doc.company }}
+                </div>
+
+
+                {% if ship_to_address %}
+
+                <div class="party-line">
+
+                    {{
+                        format_party_address(
+                            ship_to_address
+                        )
+                        | safe
+                    }}
+
+                </div>
+
+                {% endif %}
+
+            </td>
+
+
+        </tr>
+
+    </table>
+
+</div>
+
+
+
+<!--
+    CEK DESCRIPTION
+
+    Kalau minimal 1 item punya description:
+    has_description = true
+
+    Kalau semua kosong:
+    has_description = false
+-->
+
+{% set item_state =
+    namespace(
+        has_description=false
+    )
+%}
+
+
+{% for item in doc.items %}
+
+    {% if item.description
+        and (
+            item.description
+            | striptags
+            | trim
+        )
+    %}
+
+        {% set item_state.has_description = true %}
+
+    {% endif %}
+
+{% endfor %}
+
+
+
+<!-- ITEMS TABLE -->
+
+<div class="po-items">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+
+                <th style="width:5%">
+                    Sr
+                </th>
+
+
+                {% if item_state.has_description %}
+
+                    <th style="width:28%">
+                        Item
+                    </th>
+
+                    <th style="width:20%">
+                        Description
+                    </th>
+
+                    <th
+                        class="text-right"
+                        style="width:15%"
+                    >
+                        Qty
+                    </th>
+
+                    <th
+                        class="text-right"
+                        style="width:15%"
+                    >
+                        Rate
+                    </th>
+
+                    <th
+                        class="text-right"
+                        style="width:17%"
+                    >
+                        Amount
+                    </th>
+
+
+                {% else %}
+
+
+                    <th style="width:45%">
+                        Item
+                    </th>
+
+                    <th
+                        class="text-right"
+                        style="width:17%"
+                    >
+                        Qty
+                    </th>
+
+                    <th
+                        class="text-right"
+                        style="width:16%"
+                    >
+                        Rate
+                    </th>
+
+                    <th
+                        class="text-right"
+                        style="width:17%"
+                    >
+                        Amount
+                    </th>
+
+
+                {% endif %}
+
+
+            </tr>
+
+        </thead>
+
+
+
+        <tbody>
+
+
+            {% for item in doc.items %}
+
+
+            <tr>
+
+
+                <td>
+
+                    {{ loop.index }}
+
+                </td>
+
+
+
+                <td>
+
+
+                    <span class="item-code">
+
+                        {{ item.item_code }}
+
+                    </span>
+
+
+
+                    {% if item.item_name
+                        and item.item_name
+                        != item.item_code
+                    %}
+
+
+                        <br>
+
+
+                        <span class="item-desc">
+
+                            {{ item.item_name }}
+
+                        </span>
+
+
+                    {% endif %}
+
+
+                </td>
+
+
+
+                {% if item_state.has_description %}
+
+
+                <td>
+
+
+                    {% if item.description
+                        and (
+                            item.description
+                            | striptags
+                            | trim
+                        )
+                    %}
+
+
+                        <div class="item-description">
+
+                            {{ item.description | safe }}
+
+                        </div>
+
+
+                    {% endif %}
+
+
+                </td>
+
+
+                {% endif %}
+
+
+
+                <td class="text-right">
+
+                    {{
+                        item.qty | int
+                        if item.qty == item.qty | int
+                        else item.qty
+                    }}
+
+                    {{ item.uom }}
+
+                </td>
+
+
+
+                <td class="text-right">
+
+                    {{
+                        frappe.utils.fmt_money(
+                            item.rate,
+                            currency=doc.currency
+                        )
+                    }}
+
+                </td>
+
+
+
+                <td class="text-right">
+
+                    {{
+                        frappe.utils.fmt_money(
+                            item.amount,
+                            currency=doc.currency
+                        )
+                    }}
+
+                </td>
+
+
+            </tr>
+
+
+            {% endfor %}
+
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+
+<!-- TOTALS -->
+
+<div class="po-totals-wrap">
+
+    <table>
+
+        <tr>
+
+
+            <td class="totals-left-cell">
+
+
+                <div class="po-summary-left">
+
+                    Total Qty: {{ doc.total_qty }}
+
+                </div>
+
+
+
+                <div class="po-note">
+
+
+                    <div class="section-title">
+
+                        Note
+
+                    </div>
+
+
+                    <div class="po-note-content">
+
+                        {{ doc.custom_note or "" }}
+
+                    </div>
+
+
+                </div>
+
+
+            </td>
+
+
+
+            <td>
+
+
+                <div class="po-totals">
+
+
+                    <div class="total-row">
+
+
+                        <span class="po-label">
+
+                            Net Total
+
+                        </span>
+
+
+                        <span class="po-value">
+
+                            {{
+                                frappe.utils.fmt_money(
+                                    doc.net_total,
+                                    currency=doc.currency
+                                )
+                            }}
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    {% for tax in doc.taxes %}
+
+
+                    <div class="total-row">
+
+
+                        <span class="po-label">
+
+                            {{ tax.description }}
+
+                        </span>
+
+
+                        <span class="po-value">
+
+                            {{
+                                frappe.utils.fmt_money(
+                                    tax.tax_amount,
+                                    currency=doc.currency
+                                )
+                            }}
+
+                        </span>
+
+
+                    </div>
+
+
+                    {% endfor %}
+
+
+
+                    {% if doc.discount_amount %}
+
+
+                    <div class="total-row">
+
+
+                        <span class="po-label">
+
+                            Discount
+
+                        </span>
+
+
+                        <span class="po-value">
+
+                            {{
+                                frappe.utils.fmt_money(
+                                    doc.discount_amount,
+                                    currency=doc.currency
+                                )
+                            }}
+
+                        </span>
+
+
+                    </div>
+
+
+                    {% endif %}
+
+
+
+                    <div class="total-row grand-total">
+
+
+                        <span class="po-label">
+
+                            Grand Total
+
+                        </span>
+
+
+                        <span class="po-value">
+
+                            {{
+                                frappe.utils.fmt_money(
+                                    doc.grand_total,
+                                    currency=doc.currency
+                                )
+                            }}
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </td>
+
+
+        </tr>
+
+    </table>
+
+</div>
+
+
+
+<!-- TERMS -->
+
+{% if doc.terms %}
+
+
+<div class="po-terms">
+
+
+    <div class="section-title">
+
+        Terms &amp; Conditions
+
+    </div>
+
+
+    <div class="po-terms-content">
+
+        {{ doc.terms | safe }}
+
+    </div>
+
+
+</div>
+
+
+{% endif %}
+
+
+
+<!-- SIGNATURES -->
+
+
+{% set creator_name =
+    frappe.db.get_value(
+        "User",
+        doc.owner,
+        "full_name"
+    )
+    or doc.owner
+%}
+
+
+
+<div class="po-signatures">
+
+    <table>
+
+        <tr>
+
+
+            <td>
+
+                <div class="sig-role">
+
+                    Created by
+
+                </div>
+
+                <div class="sig-name">
+
+                    {{ creator_name }}
+
+                </div>
+
+            </td>
+
+
+
+            <td>
+
+                <div class="sig-role">
+
+                    Checked By
+
+                </div>
+
+                <div class="sig-name">
+
+                    ( ................. )
+
+                </div>
+
+            </td>
+
+
+
+            <td>
+
+                <div class="sig-role">
+
+                    Approved by
+
+                </div>
+
+                <div class="sig-name">
+
+                    ( ................. )
+
+                </div>
+
+            </td>
+
+
+        </tr>
+
+    </table>
+
+</div>
+
+
+</div>

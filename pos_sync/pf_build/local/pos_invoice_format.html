@@ -1,0 +1,225 @@
+<div class="receipt-print-format">
+<style>
+    .receipt-print-format {
+        font-family: 'Thermal Sans Mono', 'Courier New', monospace;
+        color: #1a1a1a;
+        font-size: 11px;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.6px;
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+        background: #ffffff;
+    }
+    .receipt-print-format * {
+        box-sizing: border-box;
+    }
+    @media (max-width: 300px) {
+        .receipt-print-format {
+            font-size: 9.5px;
+        }
+        .receipt-parent-company,
+        .receipt-company-name {
+            font-size: 12.5px;
+        }
+        .receipt-company-sub {
+            font-size: 9.5px;
+        }
+        .receipt-items .item-amount {
+            width: 75px;
+        }
+        .receipt-totals .grand-total {
+            font-size: 11.5px;
+        }
+    }
+
+    .receipt-divider {
+        border-top: 1px solid #000;
+        margin: 2px 0;
+    }
+
+    /* HEADER */
+    .receipt-header {
+        text-align: center;
+    }
+    .receipt-parent-company {
+        font-weight: 900;
+        font-size: 14px;
+        margin-bottom: -2px;
+        line-height: 1;
+        letter-spacing: -1.2px; 
+        word-spacing: -3px;
+    }
+    .receipt-company-name {
+        font-weight: 900;
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+    .receipt-company-sub {
+        font-size: 11px;
+        color: #222;
+        font-weight: 900;
+        margin-bottom: 0px;
+    }
+    .receipt-company-line {
+        font-size: 9.5px;
+        font-weight: 800;
+        color: #222;
+        line-height: 1.1;
+    }
+    .receipt-outlet {
+        font-size: 9.5px;
+        font-weight: 800;
+        color: #333;
+        margin-top: 0px;
+    }
+
+    /* META */
+    .receipt-meta .meta-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10.5px;
+        font-weight: 800;
+        margin-bottom: 0px;
+    }
+    .receipt-meta .meta-label {
+        color: #333;
+    }
+    .receipt-meta .meta-val {
+        font-weight: 900;
+        text-align: right;
+        padding-left: 10px;
+    }
+
+    /* ITEMS */
+    .receipt-items .item-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0px;
+        font-size: 11px;
+        font-weight: 800;
+    }
+    .receipt-items .item-name {
+        flex: 1;
+        padding-right: 6px;
+    }
+    .receipt-items .item-qty {
+        width: 32px;
+        text-align: center;
+        color: #333;
+        flex-shrink: 0;
+    }
+    .receipt-items .item-amount {
+        width: 90px;
+        text-align: right;
+        flex-shrink: 0;
+    }
+
+    /* TOTALS */
+    .receipt-totals .total-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        font-weight: 800;
+        margin-bottom: 0px;
+    }
+    .receipt-totals .grand-total {
+        font-weight: 900;
+        font-size: 13px;
+        border-top: 2px solid #000;
+        padding-top: 2px;
+        margin-top: 1px;
+    }
+
+    /* PAYMENTS */
+    .receipt-payments .pay-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        font-weight: 800;
+        margin-bottom: 0px;
+    }
+
+    /* FOOTER */
+    .receipt-footer {
+        text-align: center;
+        font-size: 9.5px;
+        font-weight: 800;
+        color: #222;
+    }
+
+</style>
+{% set company_doc = frappe.get_doc("Company", doc.company) %}
+{% set cashier_name = frappe.db.get_value("User", doc.owner, "full_name") or doc.owner %}
+
+
+{% set parent_company_name = company_doc.parent_company or "" %}
+
+<div class="receipt-header">
+    {% if parent_company_name %}
+        <div class="receipt-parent-company">{{ parent_company_name }}</div>
+        <div class="receipt-company-sub">{{ doc.company }}</div>
+    {% else %}
+        <div class="receipt-company-name">{{ doc.company }}</div>
+    {% endif %}
+    {% if doc.company_address_display %}
+        <div class="receipt-company-line">{{ doc.company_address_display | safe }}</div>
+    {% elif company_doc.phone_no %}
+        <div class="receipt-company-line">Phone: {{ company_doc.phone_no }}</div>
+    {% endif %}
+</div>
+<div class="receipt-divider"></div>
+<div class="receipt-meta">
+    <div class="meta-row">
+        <span class="meta-label">No. Struk</span><span class="meta-val">{{ doc.name }}</span>
+    </div>
+    <div class="meta-row">
+        <span class="meta-label">Tanggal</span><span class="meta-val">{{ frappe.utils.formatdate(doc.posting_date) }} {{ (doc.posting_time | string).split(".")[0] if doc.posting_time else "" }}</span>
+    </div>
+    <div class="meta-row">
+        <span class="meta-label">Kasir</span><span class="meta-val">{{ cashier_name }}</span>
+    </div>
+    <div class="meta-row">
+        <span class="meta-label">Pelanggan</span><span class="meta-val">{{ doc.custom_nama_customer if doc.custom_nama_customer else (doc.customer_name or doc.customer) }}</span>
+    </div>
+</div>
+<div class="receipt-divider"></div>
+<div class="receipt-items">
+    {% for item in doc.items %}
+    <div class="item-row">
+        <span class="item-name">{{ item.item_name }}</span>
+        <span class="item-qty">x{{ item.qty | int if item.qty == item.qty | int else item.qty }}</span>
+        <span class="item-amount">{{ frappe.utils.fmt_money(item.amount, currency=doc.currency) | replace(",00", "") | replace(".00", "") }}</span>
+    </div>
+    {% endfor %}
+</div>
+<div class="receipt-divider"></div>
+<div class="receipt-totals">
+    {% if doc.discount_amount %}
+    <div class="total-row">
+        <span>Diskon</span><span>{{ frappe.utils.fmt_money(doc.discount_amount, currency=doc.currency) | replace(",00", "") | replace(".00", "") }}</span>
+    </div>
+    {% endif %}
+    <div class="total-row grand-total">
+        <span>Total</span><span>{{ frappe.utils.fmt_money(doc.rounded_total or doc.grand_total, currency=doc.currency) | replace(",00", "") | replace(".00", "") }}</span>
+    </div>
+</div>
+<div class="receipt-divider"></div>
+<div class="receipt-payments">
+    {% for pay in doc.payments %}
+    <div class="pay-row">
+        <span>{{ pay.mode_of_payment }}</span><span>{{ frappe.utils.fmt_money(pay.amount, currency=doc.currency) | replace(",00", "") | replace(".00", "") }}</span>
+    </div>
+    {% endfor %}
+    {% if doc.change_amount %}
+    <div class="pay-row">
+        <span>Kembali</span><span>{{ frappe.utils.fmt_money(doc.change_amount, currency=doc.currency) | replace(",00", "") | replace(".00", "") }}</span>
+    </div>
+    {% endif %}
+</div>
+<div class="receipt-divider"></div>
+<div class="receipt-footer">
+    Terima kasih atas kunjungan Anda
+</div>
+</div>

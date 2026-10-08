@@ -1,0 +1,92 @@
+{
+ "checked": [
+  {
+   "profile": "SHIFT 1 - RS KARTIKA ASIH SUKABUMI",
+   "company": "RS KARTIKA ASIH SUKABUMI",
+   "clean": true
+  },
+  {
+   "profile": "SHIFT 1 - RS MEDIROSSA - CIKARANG",
+   "company": "RS MEDIROSSA - CIKARANG",
+   "clean": true
+  },
+  {
+   "profile": "SHIFT 1 - RS MUHAMMADIYAH MARDATILAH PEMALANG",
+   "company": "RS MUHAMMADIYAH MARDATILAH PEMALANG",
+   "clean": true
+  },
+  {
+   "profile": "SHIFT 1 - RS RAHMAN RAHIM",
+   "company": "RS RAHMAN RAHIM",
+   "clean": true
+  },
+  {
+   "profile": "SHIFT 1 - RS RAHMAN RAHIM SIDOREJO",
+   "company": "RS RAHMAN RAHIM SIDOREJO",
+   "clean": true
+  },
+  {
+   "profile": "SHIFT 1 - RSI MUH. KENDAL",
+   "company": "RSI MUH. KENDAL",
+   "clean": true
+  }
+ ],
+ "group": {
+  "members_before": 167,
+  "members_after": 161,
+  "http": 200,
+  "body": "{\"data\":{\"name\":\"ALL TIME\",\"owner\":\"ropierpnext@gmail.com\",\"creation\":\"2026-10-04 16:39:45.266775\",\"modified\":\"2026-10-04 16:57:48.835133\",\"modified_by\":\"ropierpnext@gmail.com\",\"docstatus\":0,\"idx\":0,\"",
+  "final_members": 161
+ },
+ "deleted": [
+  "SHIFT 1 - RS KARTIKA ASIH SUKABUMI",
+  "SHIFT 1 - RS MEDIROSSA - CIKARANG",
+  "SHIFT 1 - RS MUHAMMADIYAH MARDATILAH PEMALANG",
+  "SHIFT 1 - RS RAHMAN RAHIM",
+  "SHIFT 1 - RS RAHMAN RAHIM SIDOREJO",
+  "SHIFT 1 - RSI MUH. KENDAL"
+ ],
+ "skipped": [],
+ "failed": [],
+ "company_history": {
+  "RS KARTIKA ASIH SUKABUMI": {},
+  "RS MEDIROSSA - CIKARANG": {},
+  "RS MUHAMMADIYAH MARDATILAH PEMALANG": {},
+  "RS RAHMAN RAHIM": {},
+  "RS RAHMAN RAHIM SIDOREJO": {},
+  "RSI MUH. KENDAL": {}
+ },
+ "verify_after": [
+  {
+   "profile": "SHIFT 1 - RS KARTIKA ASIH SUKABUMI",
+   "http": 404,
+   "hilang": true
+  },
+  {
+   "profile": "SHIFT 1 - RS MEDIROSSA - CIKARANG",
+   "http": 404,
+   "hilang": true
+  },
+  {
+   "profile": "SHIFT 1 - RS MUHAMMADIYAH MARDATILAH PEMALANG",
+   "http": 404,
+   "hilang": true
+  },
+  {
+   "profile": "SHIFT 1 - RS RAHMAN RAHIM",
+   "http": 404,
+   "hilang": true
+  },
+  {
+   "profile": "SHIFT 1 - RS RAHMAN RAHIM SIDOREJO",
+   "http": 404,
+   "hilang": true
+  },
+  {
+   "profile": "SHIFT 1 - RSI MUH. KENDAL",
+   "http": 404,
+   "hilang": true
+  }
+ ],
+ "profiles_total": 162
+}

@@ -1,0 +1,226 @@
+{# Header (logo/judul/meta) dirender Letter Head "Company Letterhead - Grey" — docs/11. #}
+{{ letter_head }}
+<div class="mr-print-format">
+<style>
+    .mr-print-format {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        font-size: 12px;
+        background: #ffffff;
+        padding: 0;
+        line-height: 1.4;
+    }
+    .mr-print-format table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* WAREHOUSE INFO SECTION */
+    .mr-parties {
+        border-top: 1px solid #1a1a1a;
+        padding: 10px 0;
+        margin-bottom: 12px;
+    }
+    .mr-parties table td {
+        width: 50%;
+        vertical-align: top;
+        padding-right: 24px;
+    }
+    .mr-parties .section-title {
+        font-weight: bold;
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 4px;
+    }
+    .mr-parties .party-name {
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    .mr-parties .party-line {
+        font-size: 12px;
+        color: #333;
+    }
+
+    /* ITEMS TABLE */
+    .mr-items table {
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+    }
+    .mr-items th {
+        text-align: left;
+        padding: 6px 5px;
+        border-bottom: 1px solid #1a1a1a;
+        font-size: 10.5px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #444;
+    }
+    .mr-items td {
+        padding: 7px 5px;
+        vertical-align: top;
+        font-size: 12px;
+        border-bottom: 1px solid #eee;
+    }
+    .mr-items tr:last-child td {
+        border-bottom: none;
+    }
+    .mr-items th.text-right, .mr-items td.text-right {
+        text-align: right;
+        white-space: nowrap;
+    }
+    .item-code {
+        font-weight: 600;
+    }
+    .item-desc {
+        color: #666;
+        font-weight: 400;
+    }
+
+    /* SUMMARY / NOTES */
+    .mr-summary-wrap {
+        margin-top: 10px;
+    }
+    .mr-summary-left {
+        font-size: 11.5px;
+        color: #555;
+        padding-top: 4px;
+        font-weight: bold;
+    }
+    .mr-note {
+        margin-top: 10px;
+        border: 1px solid #1a1a1a;
+        padding: 10px 12px;
+    }
+    .mr-note .section-title {
+        font-weight: bold;
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 4px;
+    }
+    .mr-note-content {
+        font-size: 11.5px;
+        color: #333;
+        white-space: pre-line;
+        min-height: 40px;
+    }
+
+    /* SIGNATURES */
+    .mr-signatures {
+        margin-top: 45px;
+    }
+    .mr-signatures table td {
+        width: 25%;
+        text-align: center;
+        padding: 0 10px;
+        vertical-align: top;
+    }
+    .mr-signatures .sig-role {
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 45px;
+    }
+    .mr-signatures .sig-name {
+        font-size: 11.5px;
+        color: #444;
+    }</style>
+
+
+
+
+<div class="mr-parties">
+    <table>
+        <tr>
+            <td>
+                <div class="section-title">Set Source Warehouse</div>
+                {% if doc.set_from_warehouse %}
+                    <div class="party-name">{{ doc.set_from_warehouse }}</div>
+                {% else %}
+                    <div class="party-line">Sesuai baris item</div>
+                {% endif %}
+            </td>
+            <td>
+                <div class="section-title">Set Target Warehouse</div>
+                {% if doc.set_warehouse %}
+                    <div class="party-name">{{ doc.set_warehouse }}</div>
+                {% else %}
+                    <div class="party-line">Sesuai baris item</div>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="mr-items">
+    <table>
+        <thead>
+            <tr>
+                <th style="width:5%">Sr</th>
+                <th style="width:25%">Item</th>
+                <th style="width:25%">Source Warehouse</th>
+                <th style="width:25%">Target Warehouse</th>
+                <th class="text-right" style="width:10%">UOM</th>
+                <th class="text-right" style="width:10%">Qty</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in doc.items %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>
+                    <span class="item-code">{{ item.item_code }}</span>
+                    {% if item.item_name and item.item_name != item.item_code %}
+                        <br><span class="item-desc">{{ item.item_name }}</span>
+                    {% endif %}
+                </td>
+                <td>{{ item.from_warehouse or doc.set_from_warehouse or "" }}</td>
+                <td>{{ item.warehouse or doc.set_warehouse or "" }}</td>
+                <td class="text-right">{{ item.uom }}</td>
+                <td class="text-right">{{ item.qty | int if item.qty == item.qty | int else item.qty }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="mr-summary-wrap">
+    <div class="mr-summary-left">
+        Total Qty: {{ doc.items | sum(attribute='qty') }}
+    </div>
+    {% if doc.custom_note or doc.reason_for_request %}
+    <div class="mr-note">
+        <div class="section-title">Note</div>
+        <div class="mr-note-content">{{ doc.custom_note or doc.reason_for_request or "" }}</div>
+    </div>
+    {% endif %}
+</div>
+
+{% set creator_name = frappe.db.get_value("User", doc.owner, "full_name") or doc.owner %}
+<div class="mr-signatures">
+    <table>
+        <tr>
+            <td>
+                <div class="sig-role">Requested by</div>
+                <div class="sig-name">{{ creator_name }}</div>
+            </td>
+            <td>
+                <div class="sig-role">Checked by</div>
+                <div class="sig-name">( ................. )</div>
+            </td>
+            <td>
+                <div class="sig-role">Approved by</div>
+                <div class="sig-name">( ................. )</div>
+            </td>
+            <td>
+                <div class="sig-role">Received by</div>
+                <div class="sig-name">( ................. )</div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</div>

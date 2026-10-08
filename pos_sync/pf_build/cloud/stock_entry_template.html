@@ -1,0 +1,243 @@
+{# Header (logo/judul/meta) dirender Letter Head "Company Letterhead - Grey" — docs/11. #}
+{{ letter_head }}
+<div class="ste-print-format">
+<style>
+    .ste-print-format {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        font-size: 12px;
+        background: #ffffff;
+        padding: 0;
+        line-height: 1.4;
+    }
+    .ste-print-format table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* ADDITIONAL INFO SECTION */
+    .ste-parties {
+        border-top: 1px solid #1a1a1a;
+        padding: 10px 0;
+        margin-bottom: 12px;
+    }
+    .ste-parties table td {
+        width: 33.33%;
+        vertical-align: top;
+        padding-right: 15px;
+    }
+    .ste-parties .section-title {
+        font-weight: bold;
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 4px;
+    }
+    .ste-parties .party-name {
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    .ste-parties .party-line {
+        font-size: 12px;
+        color: #333;
+    }
+
+    /* ITEMS TABLE */
+    .ste-items table {
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+    }
+    .ste-items th {
+        text-align: left;
+        padding: 6px 5px;
+        border-bottom: 1px solid #1a1a1a;
+        font-size: 10.5px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #444;
+    }
+    .ste-items td {
+        padding: 7px 5px;
+        vertical-align: top;
+        font-size: 12px;
+        border-bottom: 1px solid #eee;
+    }
+    .ste-items tr:last-child td {
+        border-bottom: none;
+    }
+    .ste-items th.text-right, .ste-items td.text-right {
+        text-align: right;
+        white-space: nowrap;
+    }
+    .ste-items th.text-center, .ste-items td.text-center {
+        text-align: center;
+    }
+    .item-code {
+        font-weight: 600;
+    }
+    .item-desc {
+        color: #666;
+        font-weight: 400;
+    }
+    .finished-item-badge {
+        display: inline-block;
+        background: #eef;
+        color: #338;
+        font-size: 10px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-top: 4px;
+    }
+
+    /* SUMMARY / NOTES */
+    .ste-summary-wrap {
+        margin-top: 10px;
+    }
+    .ste-summary-left {
+        font-size: 11.5px;
+        color: #555;
+        padding-top: 4px;
+        font-weight: bold;
+    }
+    .ste-note {
+        margin-top: 10px;
+        border: 1px solid #1a1a1a;
+        padding: 10px 12px;
+    }
+    .ste-note .section-title {
+        font-weight: bold;
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 4px;
+    }
+    .ste-note-content {
+        font-size: 11.5px;
+        color: #333;
+        white-space: pre-line;
+        min-height: 40px;
+    }
+
+    /* SIGNATURES */
+    .ste-signatures {
+        margin-top: 45px;
+    }
+    .ste-signatures table td {
+        width: 33.33%;
+        text-align: center;
+        padding: 0 20px;
+        vertical-align: top;
+    }
+    .ste-signatures .sig-role {
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 45px;
+    }
+    .ste-signatures .sig-name {
+        font-size: 11.5px;
+        color: #444;
+    }</style>
+
+
+
+
+<div class="ste-parties">
+    <table>
+        <tr>
+            <td>
+                <div class="section-title">Type & BOM</div>
+                <div class="party-name">{{ doc.stock_entry_type }}</div>
+                {% if doc.bom_no %}
+                    <div class="party-line">BOM No: {{ doc.bom_no }}</div>
+                {% endif %}
+            </td>
+            <td>
+                <div class="section-title">Default Source</div>
+                <div class="party-name">{{ doc.from_warehouse or "N/A" }}</div>
+            </td>
+            <td>
+                <div class="section-title">Default Target</div>
+                <div class="party-name">{{ doc.to_warehouse or "N/A" }}</div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="ste-items">
+    <table>
+        <thead>
+            <tr>
+                <th style="width:5%">Sr</th>
+                <th style="width:30%">Item</th>
+                <th style="width:20%">Source Warehouse</th>
+                <th style="width:20%">Target Warehouse</th>
+                <th class="text-right" style="width:10%">Qty</th>
+                <th class="text-right" style="width:15%">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in doc.items %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>
+                    <span class="item-code">{{ item.item_code }}</span>
+                    {% if item.item_name and item.item_name != item.item_code %}
+                        <br><span class="item-desc">{{ item.item_name }}</span>
+                    {% endif %}
+                    {% if item.is_finished_item %}
+                        <br><span class="finished-item-badge">Finished Item</span>
+                    {% endif %}
+                </td>
+                <td>{{ item.s_warehouse or "" }}</td>
+                <td>{{ item.t_warehouse or "" }}</td>
+                <td class="text-right">{{ item.qty | int if item.qty == item.qty | int else item.qty }} {{ item.uom }}</td>
+                <td class="text-right">{{ frappe.utils.fmt_money(item.amount, currency=doc.company_currency) if item.amount else "0.00" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="ste-summary-wrap">
+    <div class="ste-summary-left">
+        Total Value: {{ frappe.utils.fmt_money(doc.total_amount, currency=doc.company_currency) if doc.total_amount else "0.00" }}
+    </div>
+    
+    {% if doc.process_loss_qty %}
+    <div class="ste-summary-left">
+        Process Loss: {{ doc.process_loss_percentage }}% (Qty: {{ doc.process_loss_qty }})
+    </div>
+    {% endif %}
+
+    {% if doc.remarks %}
+    <div class="ste-note">
+        <div class="section-title">Remarks</div>
+        <div class="ste-note-content">{{ doc.remarks }}</div>
+    </div>
+    {% endif %}
+</div>
+
+{% set creator_name = frappe.db.get_value("User", doc.owner, "full_name") or doc.owner %}
+<div class="ste-signatures">
+    <table>
+        <tr>
+            <td>
+                <div class="sig-role">Prepared by</div>
+                <div class="sig-name">{{ creator_name }}</div>
+            </td>
+            <td>
+                <div class="sig-role">Checked by</div>
+                <div class="sig-name">( ................. )</div>
+            </td>
+            <td>
+                <div class="sig-role">Received / Approved by</div>
+                <div class="sig-name">( ................. )</div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</div>

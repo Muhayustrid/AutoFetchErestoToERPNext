@@ -1,0 +1,52 @@
+sku_eresto,item_code_erpnext,item_name_erpnext,item_group,sumber
+AIR01,AM001,Crystalin 600 ml,Air Mineral,keputusan-user
+AIR02,AM001,Crystalin 600 ml,Air Mineral,keputusan-user
+BCN01,BC002,Black Coffee Hot,Black Coffee,cocok
+BCN02,BC001,Americano Ice,Black Coffee,tebakan
+CKN01,CK001,Chocolate Ice,Chocolate,cocok
+CPN01,CP002,Cappucino Hot,Cappucino,cocok
+CPN02,CP001,Cappucino Ice,Cappucino,cocok
+PKG001,PEL260083,Plastik Seal Ropi,Perlengkapan,keputusan-user
+CR02,CR001,Croissant,Croissant Fancy,tebakan
+P0001,RP002,Ropi Coklat,Ropi Fancy,gabung-frc
+P0002,RP003,Ropi Keju,Ropi Fancy,gabung-frc
+P0004,RP001,Ropi Butter,Ropi Fancy,gabung-frc
+P0010,ADD26-001,Extra Keju,Add-on,tebakan
+P0011,GM005,Gempi Choco Crunchy,Gempi,tebakan
+P0012,GM003,Gempi Dark Choco,Gempi,tebakan
+P0017,GM004,Gempi Tiramisu,Gempi,tebakan
+PG001,GM001,Gempi Original,Gempi,tebakan
+PR00039,PAKET010926-005,Paket Goodiebag 6 Roti,Paket,keputusan-user
+PR001,RP001,Ropi Butter,Ropi Fancy,cocok
+PR00140,PAKET26-003,Hemat 3 New,Paket,tebakan
+PR00141,PAKET26-006,Hemat 4 New,Paket,tebakan
+PR00142,PAKET26-004,Hemat 1 NEW,Paket,tebakan
+PR00143,PAKET26-005,Hemat 2 New,Paket,tebakan
+PR002,RP002,Ropi Coklat,Ropi Fancy,cocok
+PR003,RP003,Ropi Keju,Ropi Fancy,cocok
+TJN01,JT001,Jasmine Tea Ice,Jasmine Tea,cocok
+TJN02,JT002,Jasmine Tea Hot,Jasmine Tea,cocok
+PG004,GM004,Gempi Tiramisu,Gempi,acc-user
+PG003,GM003,Gempi Dark Choco,Gempi,acc-user
+PG002,GM005,Gempi Choco Crunchy,Gempi,acc-user
+PR00075,PAKET26-004,Hemat 1 NEW,Paket,acc-user
+CKN02,CK002,Chocolate Hot,Chocolate,acc-user
+PR00073,PAKET26-003,Hemat 3 New,Paket,acc-user
+PR00038,PAKET26-002,Paket Box Ropi Isi 20,Paket,acc-user
+TJ01,JT001,Jasmine Tea Ice,Jasmine Tea,acc-user
+PR00074,PAKET26-006,Hemat 4 New,Paket,acc-user
+CR01,CR001,Croissant,Croissant Fancy,acc-user
+TJ02,JT002,Jasmine Tea Hot,Jasmine Tea,acc-user
+PR00072,PAKET26-005,Hemat 2 New,Paket,acc-user
+CK01,CK001,Chocolate Ice,Chocolate,acc-user
+BC02,BC001,Americano Ice,Black Coffee,acc-user
+P0013,GM001,Gempi Original,Gempi,acc-user
+TR03,TR003,Kunir Asem,Tradisional,acc-user
+TR01,TR001,Beras Kencur,Tradisional,acc-user
+PKG01,PEL260072,Goodie Bag,Perlengkapan,acc-user
+PR00034,PAKET26-006,Hemat 4 New,Paket,acc-user-promo-hemat
+PR00037,PAKET26-004,Hemat 1 NEW,Paket,acc-user-promo-hemat
+PR00033,PAKET26-003,Hemat 3 New,Paket,acc-user-promo-hemat
+BC01,BC002,Black Coffee Hot,Black Coffee,bukti-harga+acc
+CK02,CK002,Chocolate Hot,Chocolate,bukti-harga+acc
+CP01,CP001,Cappucino Ice,Cappucino,bukti-harga+acc

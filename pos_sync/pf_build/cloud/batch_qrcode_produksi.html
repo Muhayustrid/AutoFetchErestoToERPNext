@@ -1,0 +1,111 @@
+<style>
+    /* ============================================================
+       RESET WAJIB untuk custom page size sekecil 50x30mm.
+       Frappe selalu nge-load CSS bawaan (Print Settings / Print
+       Style / standard.css) di SETIAP render PDF, baik lewat
+       /printview maupun download_multi_pdf. Kalau CSS bawaan itu
+       kasih margin/padding sekecil apapun di html/body/wrapper,
+       di kanvas sekecil ini bisa dorong seluruh konten keluar area
+       cetak (jadi kelihatan blank walau ukuran halamannya udah benar).
+       ============================================================ */
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 50mm !important;
+        height: 30mm !important;
+        overflow: hidden !important;
+    }
+    .print-format,
+    .page-break {
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        min-height: 0 !important;
+    }
+    @page {
+        size: 50mm 30mm;
+        margin: 0;
+    }
+    .batch-label {
+        width: 189px;
+        height: 113px;
+        box-sizing: border-box;
+        /* Padding atas diubah dari 5px menjadi 12px agar posisi turun */
+        padding: 12px 6px 5px 6px; 
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000;
+        overflow: hidden;
+        position: relative;
+    }
+    /* LEFT: QR + Batch ID (float, no table, no object-fit) */
+    .qr-block {
+        float: left;
+        width: 74px;
+        text-align: center;
+    }
+    .qr-block img {
+        width: 74px;
+        height: 74px;
+        display: block;
+        border: 0;
+    }
+    .batch-id-small {
+        font-size: 8px; /* Diperkecil dari 9px */
+        font-weight: 800; /* Dinaikkan dari 700 */
+        line-height: 1.05;
+        margin-top: 2px;
+        letter-spacing: -0.2px;
+        word-break: break-all;
+        text-align: center;
+    }
+    /* RIGHT: item name + details (pushed right of the floated QR) */
+    .info-block {
+        margin-left: 84px;
+        margin-top: 2px; /* Tambahan sedikit margin agar teks kanan ikut seimbang */
+    }
+    .item-name {
+        font-size: 13px; /* Diperkecil dari 15px */
+        font-weight: 900; /* Dinaikkan ke maksimal (900) dari 800 */
+        line-height: 1.05;
+        margin-bottom: 4px;
+    }
+    .detail-row {
+        font-size: 10px; /* Diperkecil dari 11.5px */
+        font-weight: 800; /* Dinaikkan dari 600 */
+        line-height: 1.1;
+        margin-bottom: 2px;
+        white-space: nowrap;
+    }
+    .detail-row .dt-label {
+        display: inline-block;
+        width: 30px;
+        vertical-align: top;
+    }
+    .detail-row .dt-colon {
+        display: inline-block;
+        width: 8px;
+        vertical-align: top;
+    }
+    .detail-row .dt-value {
+        font-weight: 900; /* Dinaikkan dari 700 */
+        white-space: normal;
+    }
+</style>
+<div class="batch-label">
+    <div class="qr-block">
+        <img src="https://bwipjs-api.metafloor.com/?bcid=qrcode&text={{ doc.name | urlencode }}&scale=4">
+        <div class="batch-id-small">{{ doc.name }}</div>
+    </div>
+    <div class="info-block">
+        <div class="item-name">{{ doc.item_name }}</div>
+        <div class="detail-row">
+            <span class="dt-label">SKU</span><span class="dt-colon">:</span><span class="dt-value">{{ doc.item }}</span>
+        </div>
+        <div class="detail-row">
+            <span class="dt-label">MFG</span><span class="dt-colon">:</span><span class="dt-value">{{ frappe.utils.formatdate(doc.manufacturing_date, "dd-MM-yy") if doc.manufacturing_date else "-" }}</span>
+        </div>
+        <div class="detail-row">
+            <span class="dt-label">EXP</span><span class="dt-colon">:</span><span class="dt-value">{{ frappe.utils.formatdate(doc.expiry_date, "dd-MM-yy") if doc.expiry_date else "-" }}</span>
+        </div>
+    </div>
+</div>
