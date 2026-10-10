@@ -120,7 +120,8 @@ SKU_TO_ITEM = {
     "BCN02": "BC001",
     "CPN02": "CP001",
     "CKN01": "CK001",
-    "PKG01": "PG001",
+    # PKG01 = Goodie Bag; PEL260072 kanonik (PG001 legacy salah & sudah di-merge 2026-10-09)
+    "PKG01": "PEL260072",
 }
 
 

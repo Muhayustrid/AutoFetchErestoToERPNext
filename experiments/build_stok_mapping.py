@@ -84,8 +84,8 @@ MAP = {
     "BB0346": ("BB260052", "COCOK", "1 Pack = 960 g", "Milo Activ"),
     "BB0347": ("BB260054", "COCOK", "1 Pack = 960 g", "Teh Tarik"),
     "BB0349": ("BB260051", "COCOK", "1 Pack = 640 g", "Lemonade"),
-    # --- TEBAKAN: perlu konfirmasi ---
-    "BB0066": ("PG001", "TEBAKAN", "1:1", "Goodie Bag -> 'Goodie Bag 6 Roti'? konfirmasi"),
+    # --- keputusan user 2026-10-09: Goodie Bag = PEL260072 (PG001 legacy di-merge) ---
+    "BB0066": ("PEL260072", "COCOK", "1:1", "Goodie Bag = PEL260072 'Goodie Bag' (keputusan user 2026-10-09; PG001 di-merge)"),
     # --- SKIP: keputusan user ---
     "BB0052": (None, "SKIP", "", "Dough Srikaya: tidak ada padanan, stok 0"),
     "BB0053": (None, "SKIP", "", "Dough Tiramisu: tidak ada padanan, stok 0"),
@@ -178,7 +178,7 @@ def main():
         {"topik": "Bubuk tanpa padanan", "keputusan": "Dibuat item baru BB260057-62 (BB0308/09/10/11/BB0322/BB0145)."},
         {"topik": "Sisa tanpa padanan", "keputusan": "SKIP dulu: Olesan Blueberry/Sarikaya, RR0004, RR0010, Dough Srikaya/Tiramisu/Vanilla, item TIDAK AKTIF."},
         {"topik": "Konversi satuan", "keputusan": "Stok SO disimpan dalam stock_uom ERPNext: Pack->g pakai gramasi nama, kg->g x1000, Pack dough->Pcs 1:1."},
-        {"topik": "Masih terbuka", "keputusan": "BB0066 Goodie Bag -> PG001 'Goodie Bag 6 Roti' (perlu konfirmasi user)."},
+        {"topik": "Goodie Bag (dulu terbuka)", "keputusan": "BB0066 Goodie Bag -> PEL260072 'Goodie Bag' (keputusan user 2026-10-09). Item legacy PG001 'Goodie Bag 6 Roti' sudah DI-MERGE ke PEL260072 & dihapus; jangan pakai PG001."},
     ])
     with pd.ExcelWriter(OUT_XLSX, engine="openpyxl") as w:
         df.to_excel(w, sheet_name="Mapping", index=False)

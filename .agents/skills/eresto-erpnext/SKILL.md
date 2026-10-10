@@ -1,6 +1,6 @@
 ---
 name: eresto-erpnext
-description: Ropi's POS system map and hard rules — eResto (ropi.eresto.id) API/UI routes, ERPNext baru (ropierpnext.frappe.cloud) vs lama (rotiropi.j.frappe.cloud), SKU mapping, POS Invoice / Work Order / PO-SO-DN migration, stock chain dough→matang→bundle. Use whenever the user mentions eResto, ERPNext Ropi, ropi.eresto.id, ropierpnext, rotiropi.j, AutoFetchErestoToERPNext, "inject POS invoice", "migrasi PO/WO/SO", SKU mapping, POSNext, or asks to fetch Ropi sales/production/purchase data — even if they don't name the repo.
+description: Ropi's POS system map and hard rules — eResto (ropi.eresto.id) API/UI routes, ERPNext baru (ropierpnext.frappe.cloud) vs lama (rotiropi.j.frappe.cloud), SKU mapping, POS Invoice / Work Order / PO-SO-DN migration, stock chain dough→matang→bundle, RECO/opening stock, stock minus policy. Use whenever the user mentions eResto, ERPNext Ropi, ropi.eresto.id, ropierpnext, rotiropi.j, AutoFetchErestoToERPNext, "inject POS invoice", "migrasi PO/WO/SO/PI", SKU mapping, POSNext, Stock Reconciliation/RECO, "stock minus", Goodie Bag, or asks to fetch Ropi sales/production/purchase data — even if they don't name the repo.
 ---
 
 # eResto ↔ ERPNext (Ropi)
@@ -30,12 +30,34 @@ Kode: `pos_sync/` (migrasi & injeksi, idempoten) dan `experiments/` (setup + pro
 - Jangan menyentuh `Backup SIte Production/`.
 - Setiap akhir sesi kerja: update `PROJECT_STATE.md`.
 
+## Keputusan user yang dikunci (2026-10-09/10) — jangan langgar
+
+- **Stock minus DILARANG**: `Stock Settings.allow_negative_stock = 0`
+  permanen di cloud baru. Jangan nyalakan tanpa izin user; bila terpaksa
+  utk backfill, hanya sementara + restore di `finally`. Kekurangan stok
+  = catat pergerakan riil (repack/receipt/transfer), bukan buka izin minus.
+- **PI site LAMA = trial saja, JANGAN dimigrasi** (audit 2026-10-09:
+  5 PI lama, 0 di BARU). Faktur riil = PI di site BARU dari eResto.
+- **Dokumen cancelled DIHAPUS, bukan dibiarkan menumpuk** — pakai
+  `pos_sync/bersih_dokumen_cancelled.py` (dry-run default, `--execute`,
+  guard backup + link-check + ledger sweep).
+- **RECO kanonik**: opening = `1171.000 Pembukaan sementara`, satu dokumen
+  per gudang @ 30 Sep 23:00; penyesuaian operasional = `5110.020 Penyesuaian
+  Stock`. Cancel RECO v16 menggeser trail — jangan cancel/recreate asal;
+  zero-out di atas minus → substitusi Material Receipt.
+- **Warehouse testing DIHAPUS di kedua site** (LAMA `- ROPI` & BARU
+  `- JURI`) — jangan dibuat ulang di script migrasi/opening.
+- **Goodie Bag = `PEL260072`** (legacy `PG001` di-merge & dihapus;
+  jangan pakai `PG001` lagi).
+
 ## Peta cepat
 
 | Butuh | Tempat |
 |---|---|
 | URL & endpoint eResto (API v3/v2 + route Manager) | `KNOWLEDGE.md` §2–4 |
 | Jebakan Frappe/ERPNext (rename_doc, posting_date, mlb=0, dst) | `KNOWLEDGE.md` §6 |
+| Ganti WO & error "Persiapan Gagal" (gate qty baris plan, rebind) | `KNOWLEDGE.md` §5 "Work Order & Production Plan" |
+| Konsolidasi RECO/opening (akun, cancel v16, substitusi MR) | `docs/12-konsolidasi-reco-opening.md` |
 | Rantai produk dough→matang→bundle + resep yield | `docs/05-alur-dough-ke-bundle.md` |
 | Mapping SKU/outlet/payment/void/refund | `docs/02-erpnext-mapping.md` |
 | Alur kasir POSNext | `docs/04-posnext-cara-kerja-penjualan.md` |

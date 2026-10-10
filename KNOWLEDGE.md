@@ -86,8 +86,8 @@ ERPNext PO → PR → PI → Payment → Return; ini layar asal migrasi "PO Outl
 | `#/inventory_sales/purchase_return/return_received` | Retur diterima |
 
 > Layar `purchasing/*` dan `inventory_sales/*` di atas sudah dikatalogkan
-> sebagai acuan navigasi; API counterpart-nya belum di-probe script di repo ini
-> (yang terbukti via API baru `/v2/purchases` legacy, §4). Cara menambah route
+> sebagai acuan navigasi; API counterpart-nya sebagian sudah di-probe
+> (`/v2/purchases`, `/v2/purchase_invoices` — §4). Cara menambah route
 > baru: buka layar di browser, lihat hash URL + capture request API-nya
 > (metode yang dipakai membangun docs/01).
 
@@ -158,6 +158,7 @@ Aturan yang terbukti (docs/01):
 | Production list | GET | `/v2/productions` | `production_number` (`045.DDMMYY.NNNNNN`), `division_id`, `date`, `note` ("Masak shift 3"), `transaction_group.transactions[]` (jurnal otomatis: Dr Finished Good `1 1 03 03` / Cr Semi Finished `1 1 03 02`). Detail BOM per produk belum dipetakan. |
 | PO list (legacy) | GET | `/v2/purchases` | dipakai CLI PO legacy |
 | PO detail (legacy) | GET | `/v2/purchases/{id}/detail` | fallback `/v2/purchases/{id}` |
+| **Faktur pembelian (list)** | GET | `/v2/purchase_invoices` | root `{"purchase_invoices":[...],"meta":{...}}`. Filter `transaction_date[geq/leq]` format **ISO** (`YYYY-MM-DD HH:mm:ss.SSS`, day-name juga jalan) + `division_id`, `sort[property]=transaction_date`. Row: `transaction_number` (`INV<branch>.<DDMMYY>.<seq>`), `transaction_date`, `status` (`paid`/`unpaid`), `total_amount`, `balance_due`, **`purchase_id`** + `purchase.purchase_number` (link ke PO), `purchase_invoice_items[]` (embed `inventory_id` + item), `vendor_ref_no`. Tanpa filter: 13.203 faktur / 2.641 halaman. **Jebakan: `purchase` embedded TIDAK memuat tanggal PO** → tanggal PO harus diambil dari `/v2/purchases/{purchase_id}/detail`. |
 | Stock adjustment list | GET | `/v2/stock_adjustments` | `reason` = catatan dokumen (`SO Monthly September`, `Auto stock balancing`). Detail dokumen hanya jurnal agregat. |
 | Stock adjustment items | GET | `/v2/stock_adjustment_items?stock_adjustment_id={id}` | `current_quantity` (sistem), `real_quantity` (fisik), `adjustment_quantity` = real−current, `adjustment_value` (Rp), embed `inventory` + `division`. `meta.total_value` = checksum. Item selisih 0 tetap termuat → `real_quantity` = stok fisik utuh. |
 | Inventories (live) | GET | `/v2/inventories` | tiap inventory punya `division_inventories[]` (`division_id`, `quantity`). Stok berjalan, bukan snapshot opname. |
@@ -177,13 +178,36 @@ untuk POS, `stok_sku_to_item.csv` untuk inventory — jangan menebak):
   Produk sama bisa beda SKU per tipe outlet: `PR001/PR002/PR003` (owned) vs
   `P0004/P0001/P0002` (franchise) → semuanya ke `RP001/002/003`.
 - Kode eResto ≠ kode ERPNext (jebakan nyata: eResto `PG001` = Roti Gempi,
-  ERPNext `PG001` = Goodie Bag).
+  ERPNext dulu `PG001` = "Goodie Bag 6 Roti" — **item legacy ini sudah
+  di-merge ke `PEL260072` "Goodie Bag" & dihapus 2026-10-09**).
+- Goodie Bag kanonik = **`PEL260072`** (keputusan user 2026-10-09):
+  eResto `BB0066`/`PKG01` → `PEL260072`; jangan pakai `PG001` lagi
+  (sudah tidak ada; `POS Package` "Paket Goodiebag 6 ROPI" memakai
+  `PEL260072`).
 - Item POS = **Product Bundle non-stok**; stok ada di komponen.
 - Rantai barang tetap (docs/05): **dough (Pabrik `PJ*`) → matang (Outlet `PJO*`)
   → bundle jual (`RP00x`/`CR001`/`GM00x`)**. Yield terukur: 1 pack Ropi → 12 pcs,
   Gempi → 3, Croissant → 6. Pengecualian: `PJ260015` Dubai Dough dijual sebagai
   dough (tanpa matang/bundle) — jangan dibuatkan PJO.
 - `PJO2601–2605` tidak punya SKU POS; jangan dipetakan sebagai item jual.
+- **Alur repack bahan baku (Gula Cair & Olesan Pastry):**
+  - **Gula Cair:** dibeli purchasing dalam kg, gudang receipt dalam ctn (25 kg/ctn) dan disimpan dalam ctn. Gudang merepack ke botol 250 g untuk kiriman PO outlet. Master bulk = `BB26008` (kg); master hasil repack = `BB26009` (Gula Cair 250 g, Botol).
+  - **Olesan Pastry:** gudang merepack ke botol 250 g. Untuk PO ke supplier PT. Juara Roti Indonesia sebelum 7 Oktober 2026, item name "Olesan Pastry" (kode lama `BB260046`) diganti dengan `BB26012` (`Olesan Pastry (250 g)`).
+
+**Work Order & Production Plan (pabrik, `production_app`):**
+
+- **1 baris Production Plan = 1 WO.** Menghapus WO lalu membuat ulang dari UI
+  bisa salah nempel ke baris plan lain (kasus nyata 2026-10-09: WO-061 Krim Kopi
+  rebind ke baris 60 milik WO-060 → submit WO-060 ditolak *"... exceeds the
+  remaining allowed quantity 12.5"*).
+- **Ganti WO = jangan cancel-hapus-recreate dari UI.** Rebind eksplisit
+  `production_plan_item` WO yang ada, lalu luruskan `ordered_qty` baris plan
+  (Σ qty WO submitted per baris). Pola script + verifikasi:
+  `pos_sync/fix_wo_061_rebind_9okt.py`.
+- **Gate qty native v16** (`ProductionPlanWorkOrderQuantities`, jalan saat
+  `before_submit`): `max = planned_qty × (1 + overproduction%/100) − Σ WO
+  submitted lain di baris itu`. Overproduction JURI = 50. Pesan error di app
+  produksi tampil sebagai **"Persiapan Gagal"**.
 
 **Order & uang:**
 
@@ -218,6 +242,64 @@ untuk POS, `stok_sku_to_item.csv` untuk inventory — jangan menebak):
 | PO/SO/DN (tak punya field `remarks`) | taruh di **`title`** + check-then-skip by name |
 | Semua migrasi `pos_sync/` | `rename_doc` ke ID lama + `SKIP_EXISTS` bila sudah ada |
 
+**Sumber input pembelian (keputusan user 2026-10-08):**
+
+- **PI site LAMA = test/trial saja; site BARU = data sebenarnya.** Jangan
+  pakai PI lama sebagai acuan pembayaran; yang mengikat = dokumen BARU.
+  **Jangan migrasi PI dari site lama ke site baru** (audit 2026-10-09:
+  5 PI lama — `PI-011026-001/002`, `PI-270826-001`, 2 downstream
+  `PI-250926-*` — 0 ada di BARU; sudah dicek nama/total/supplier/item).
+- Sebelum input PO/pembelian dari eResto: **cek dua site dulu** (lama + baru,
+  cocokkan supplier + tanggal + item/qty sadar-UOM). Dokumen yang sudah ada
+  menang; eResto hanya acuan silang (nomor faktur, tanggal, harga).
+- eResto = transaksi nyata (PO, penerimaan, faktur supplier, penjualan) tapi
+  TANPA jurnal/PPN/hutang/valuasi — akuntansinya hanya ada di ERPNext.
+- Dua pintu input tanpa cek silang = akar duplikat (kasus nyata: 26 draft PO
+  eResto duplikat PO native + 3 pasangan stok dobel, dibersihkan 2026-10-08
+  via `pos_sync/bersih_po_juri.py`).
+- Antrean `Repost Item Valuation` bisa tertunda — poll sampai `Completed`
+  sebelum menyimpulkan angka stok/valuasi dari Bin. Bila worker tidak jalan:
+  `POST /api/method/erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.execute_repost_item_valuation`
+  (whitelisted, memaksa enqueue job).
+
+**Stock & item kanonik (keputusan user 2026-10-09):**
+
+- **Stock minus DILARANG** — `Stock Settings.allow_negative_stock = 0`
+  permanen di cloud baru (dikunci setelah 0 Bin negatif; submit yang membuat
+  minus ditolak `NegativeStockError` — terverifikasi smoke test). Jangan
+  menyalakannya tanpa izin user; kalau terpaksa (backfill), sementara +
+  restore di `finally`. Kekurangan stok = catat pergerakan riil
+  (repack/receipt/transfer), bukan buka izin minus.
+- **Goodie Bag kanonik = `PEL260072`.** Item legacy `PG001` "Goodie Bag 6
+  Roti" sudah **di-merge** ke `PEL260072` (rename_doc merge=1: SLE, POS
+  Invoice, SE, RECO, POS Package ikut pindah) lalu dihapus 2026-10-09 —
+  jangan pakai `PG001`. POS Package "Paket Goodiebag 6 ROPI" memakai
+  komponen `PEL260072`; `PKG01` (eResto) -> `PEL260072`.
+- **Dokumen cancelled tidak dibiarkan menumpuk**: `pos_sync/bersih_dokumen_cancelled.py`
+  menghapus permanen dokumen docstatus=2 (scope company, dry-run default).
+
+- **Urutan hapus dokumen cancelled**: backup JSON per dokumen -> purge
+  POS Print Log -> `Accounts Settings.delete_linked_ledger_entries=1`
+  (sementara) -> hapus berurutan dependency-safe (SE amended dulu, PR
+  sebelum PO) -> restore setting -> verifikasi `docstatus=2` sisa 0,
+  Bin net-zero, GL/SLE/PLE per nama 0.
+
+- **Akun RECO (kanonik, 2026-10-09):** dokumen `Stock Reconciliation`
+  ber-`purpose = "Opening Stock"` (pembukaan 30 Sep 2026 23:00) memakai
+  `1171.000 - Pembukaan sementara` — **satu dokumen per gudang**, posting
+  `2026-09-30 23:00:00`. Dokumen penyesuaian/operasional (purpose
+  `"Stock Reconciliation"`) memakai `5110.020 - Penyesuaian Stock`.
+  Jangan campur; konsolidasi awal 2026-10-09 memakai
+  `pos_sync/konsolidasi_opening_reco.py` (plan/execute/cleanup/report).
+
+- **Warehouse testing DIHAPUS (keputusan user 2026-10-09):** "Gudang
+  Finished Goods Testing / Gudang Testing Manufacture / WIP Testing — stock
+  di web lama cuma testing aja, hapus ajaa." Ketiganya dihapus di **LAMA**
+  (`- ROPI`) dan 2 padanannya di **BARU** (`Gudang Testing Manufacture -
+  JURI`, `WIP Testing - JURI`) via `pos_sync/hapus_warehouse_testing.py`;
+  4 SE + 2 draft testing LAMA & 2 RECO opening testing BARU ikut dihapus.
+  Jangan buat ulang ketiga gudang ini di script migrasi/opening.
+
 ---
 
 ## 6. Jebakan API Frappe/ERPNext (terbukti, sering kena)
@@ -238,11 +320,38 @@ untuk POS, `stok_sku_to_item.csv` untuk inventory — jangan menebak):
 7. **Stock Reconciliation = qty ABSOLUT** pada timestamp posting-nya. RECO
    backdated lalu di-cancel merusak Bin vs ledger; perbaikan = RECO baru yang
    sesuai ledger, bukan koreksi lama.
+7a. **Cancel RECO di ERPNext v16 menggeser seluruh trail setelahnya**
+    (`update_qty_in_future_sle`: shift `-qty`, dipotong di "RECO berikutnya"
+    yang masih visible). Konsekuensi: (a) membatalkan RECO lama bisa
+    memunculkan kembali saldo minus yang dulu ditutupnya dan **submit ulang
+    RECO di timestamp lama bisa DITOLAK `NegativeStockError`** bila anchor
+    (saldo sebelum timestamp itu) negatif — bahkan dengan baris zero-out;
+    (b) urutan cancel harus **ascending creation** agar batas "RECO berikutnya"
+    tetap terjaga. Kalau recreate ditolak karena anchor negatif: jangan paksa
+    flag — pulihkan efeknya via **SE Material Receipt** (qty = |saldo minus|,
+    rate sama, expense 5110) supaya Bin → 0; jalur ini setara dan tidak butuh
+    `allow_negative_stock`.
+7b. **RECO zero-out (`qty=0`) tak bisa di-recreate tanpa flag** bila saldo
+    saat itu negatif (validasi anchor v16). Untuk dokumen semacam ini:
+    biarkan cancelled (dihapus), ganti efeknya dengan Material Receipt
+    (lihat `pos_sync/restore_sr7_zeroouts.py` sebagai contoh).
 8. **Update setelah submit:** `before_save` tidak jalan → pakai Property Setter
    `allow_on_submit=1` sementara + `frappe.client.set_value`, lalu pulihkan ke 0.
 9. **Payment Ledger Entry read-only via API** (403). Hapus dokumen ber-ledger:
    cancel → purge Print Log → set `delete_linked_ledger_entries=1` sementara di
    Accounts Settings → delete → pulihkan 0.
+9a. **Hapus Warehouse:** (i) `on_trash` menolak bila masih ada SLE (walau
+    cancelled), Bin ber-qty, atau child warehouse; Bin kosong & Item Default
+    di-unlink otomatis. (ii) Link-check Frappe menolak delete bila ada dok
+    lain docstatus≠2 yang merefer: termasuk **Repost Item Valuation** (jejak
+    repost) — RIV `Queued` tak bisa di-cancel (before_cancel menolak), jadi
+    set status→`Skipped` via **Property Setter `allow_on_submit` sementara**
+    (pola #8) → cancel → delete → buang setter. (iii) Di site LAMA
+    `Accounts Settings.delete_linked_ledger_entries` **tak bisa disetel**
+    (doc settings rusak: "Row #6 Doctype: Expense Claim"); jalur gantinya:
+    **hapus langsung baris GL Entry & SLE yang `is_cancelled=1`** via REST
+    (mereka tak lagi berdampak saldo tapi tetap dianggap link) → baru
+    dokumennya bisa dihapus. Skrip: `pos_sync/hapus_warehouse_testing.py`.
 10. **Validasi intercompany:** customer internal untuk SO butuh
     `represents_company` = **company outlet (sisi pembeli)**, bukan JURI; salah
     arah → `Invalid Customer for Inter Company Transaction`. Supplier JURI juga
@@ -264,6 +373,11 @@ untuk POS, `stok_sku_to_item.csv` untuk inventory — jangan menebak):
     `*.frappe.cloud` — pakai `curl` untuk call API dari shell.
 17. **Queue Repost Item Valuation macet** → jalankan `repost_entries()` manual
     via `bench execute`.
+18. **Ganti WO: jangan cancel-hapus-recreate dari UI** — pengganti bisa rebind
+    ke baris plan lain → baris asal kehilangan WO, baris tetangga dobel →
+    submit ditolak "*... exceeds the remaining allowed quantity ...*" (tampil
+    di app sebagai "Persiapan Gagal"). Rebind `production_plan_item` + luruskan
+    `ordered_qty` (lihat §5 "Work Order & Production Plan").
 
 ---
 

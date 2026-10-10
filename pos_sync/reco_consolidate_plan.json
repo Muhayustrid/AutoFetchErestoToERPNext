@@ -1,0 +1,5455 @@
+{
+ "generated": "2026-10-09 21:51:44",
+ "cancel_docs": [
+  "RECO-JURI-261006001",
+  "RECO-JURI-261006003",
+  "RECO-JURI-261006005",
+  "RECO-JURI-261006006",
+  "RECO-JURI-261006007",
+  "RECO-JURI-261006008",
+  "RECO-JURI-261007001",
+  "RECO-JURI-261007002",
+  "RECO-JURI-261007003",
+  "RECO-JURI-261007007",
+  "RECO-JURI-261008001",
+  "RECO-JURI-261009001",
+  "RECO-JURI-261009002",
+  "RECO-JURI-261009003",
+  "RECO-JURI-261009004",
+  "RECO-JURI-261009005",
+  "RECO-JURI-261009006",
+  "RECO-JURI-261009008",
+  "RECO-JURI-261009009",
+  "RECO-JURI-261009010",
+  "RECO-JURI-261009011",
+  "RECO-JURI-261009012",
+  "RECO-JURI-261009013",
+  "RECO-JURI-261009017",
+  "RECO-JURI-261009018",
+  "RECO-JURI-261009020",
+  "RECO-JURI-261009022",
+  "RECO-JURI-261009035",
+  "RECO-JURI-261009036",
+  "RECO-JURI-261009037",
+  "RECO-JURI-261009039"
+ ],
+ "keep_docs": [
+  "RECO-JURI-261006002",
+  "RECO-JURI-261009014",
+  "RECO-JURI-261009040",
+  "RECO-JURI-261009041"
+ ],
+ "sr7_docs": [
+  "RECO-JURI-261009026",
+  "RECO-JURI-261009029",
+  "RECO-JURI-261009030",
+  "RECO-JURI-261009031",
+  "RECO-JURI-261009032",
+  "RECO-JURI-261009033",
+  "RECO-JURI-261009034"
+ ],
+ "consolidated": {
+  "Goods In Transit - JURI": [
+   {
+    "item_code": "PEL260087",
+    "warehouse": "Goods In Transit - JURI",
+    "qty": 10000.0,
+    "valuation_rate": 124.0
+   }
+  ],
+  "Gudang Bahan Baku - JURI": [
+   {
+    "item_code": "BB260002",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 92400.0,
+    "valuation_rate": 23.08
+   },
+   {
+    "item_code": "BB260004",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 589000.0,
+    "valuation_rate": 0.894736842
+   },
+   {
+    "item_code": "BB260005",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 75000.0,
+    "valuation_rate": 29.49
+   },
+   {
+    "item_code": "BB260007",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 252000.0,
+    "valuation_rate": 38.96
+   },
+   {
+    "item_code": "BB260008",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 730000.0,
+    "valuation_rate": 41.43
+   },
+   {
+    "item_code": "BB260009",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 560000.0,
+    "valuation_rate": 72.159
+   },
+   {
+    "item_code": "BB260010",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 210000.0,
+    "valuation_rate": 7.25
+   },
+   {
+    "item_code": "BB260011",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 2530000.0,
+    "valuation_rate": 18.018003771
+   },
+   {
+    "item_code": "BB260012",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 1950000.0,
+    "valuation_rate": 17.179487185
+   },
+   {
+    "item_code": "BB260014",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 1410000.0,
+    "valuation_rate": 17.12
+   },
+   {
+    "item_code": "BB260016",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 816000.0,
+    "valuation_rate": 234.0
+   },
+   {
+    "item_code": "BB260017",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 50000.0,
+    "valuation_rate": 81.9275
+   },
+   {
+    "item_code": "BB260018",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 3000.0,
+    "valuation_rate": 413.266
+   },
+   {
+    "item_code": "BB260019",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 30000.0,
+    "valuation_rate": 395.54
+   },
+   {
+    "item_code": "BB260020",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 30400.0,
+    "valuation_rate": 240.300441383
+   },
+   {
+    "item_code": "BB260021",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 82000.0,
+    "valuation_rate": 13.465147439
+   },
+   {
+    "item_code": "BB260022",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 658920.0,
+    "valuation_rate": 17.482607904
+   },
+   {
+    "item_code": "BB260025",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 250000.0,
+    "valuation_rate": 53.0
+   },
+   {
+    "item_code": "BB260026",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 25000.0,
+    "valuation_rate": 80.67
+   },
+   {
+    "item_code": "BB260027",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 300000.0,
+    "valuation_rate": 20.8
+   },
+   {
+    "item_code": "BB260028",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 1850000.0,
+    "valuation_rate": 8.88
+   },
+   {
+    "item_code": "BB260029",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 1975000.0,
+    "valuation_rate": 6.66
+   },
+   {
+    "item_code": "BHP260024",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 548.0,
+    "valuation_rate": 20962.4
+   },
+   {
+    "item_code": "BHP260027",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 33.0,
+    "valuation_rate": 21374.07
+   },
+   {
+    "item_code": "BHP260028",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 43.0,
+    "valuation_rate": 6396.0
+   }
+  ],
+  "Gudang Barang Jadi - JURI": [
+   {
+    "item_code": "ATK260027",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 19.0,
+    "valuation_rate": 3846.45
+   },
+   {
+    "item_code": "ATK260029",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 14.0,
+    "valuation_rate": 4312.48
+   },
+   {
+    "item_code": "ATK260035",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 3.0,
+    "valuation_rate": 26133.34
+   },
+   {
+    "item_code": "ATK260038",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 67.0,
+    "valuation_rate": 2226.15
+   },
+   {
+    "item_code": "ATK260041",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 13.0,
+    "valuation_rate": 1822.34
+   },
+   {
+    "item_code": "ATK260043",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 7.0,
+    "valuation_rate": 7299.14
+   },
+   {
+    "item_code": "ATK260044",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 32.0,
+    "valuation_rate": 3352.11
+   },
+   {
+    "item_code": "ATK260045",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 4.0,
+    "valuation_rate": 22409.71
+   },
+   {
+    "item_code": "ATK260046",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 16.0,
+    "valuation_rate": 1545.0
+   },
+   {
+    "item_code": "BB260030",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 379500.0,
+    "valuation_rate": 84.99
+   },
+   {
+    "item_code": "BB260031",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 464500.0,
+    "valuation_rate": 106.48
+   },
+   {
+    "item_code": "BB260032",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 36600.0,
+    "valuation_rate": 397.3
+   },
+   {
+    "item_code": "BB260033",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 421000.0,
+    "valuation_rate": 78.58
+   },
+   {
+    "item_code": "BB260034",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 100.0,
+    "valuation_rate": 2500.0
+   },
+   {
+    "item_code": "BB260035",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 107.0,
+    "valuation_rate": 2500.0
+   },
+   {
+    "item_code": "BB260036",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 103.0,
+    "valuation_rate": 2500.0
+   },
+   {
+    "item_code": "BB260037",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 100.0,
+    "valuation_rate": 2500.0
+   },
+   {
+    "item_code": "BB260038",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 5700.0,
+    "valuation_rate": 265.31
+   },
+   {
+    "item_code": "BB260039",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 1000.0,
+    "valuation_rate": 249.8
+   },
+   {
+    "item_code": "BB260040",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 50750.0,
+    "valuation_rate": 43.75
+   },
+   {
+    "item_code": "BB260041",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 15000.0,
+    "valuation_rate": 23.56
+   },
+   {
+    "item_code": "BB260042",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 18000.0,
+    "valuation_rate": 22.0
+   },
+   {
+    "item_code": "BB260043",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 179000.0,
+    "valuation_rate": 49.56
+   },
+   {
+    "item_code": "BB260044",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 121000.0,
+    "valuation_rate": 57.08
+   },
+   {
+    "item_code": "BB260045",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 10250.0,
+    "valuation_rate": 29.49
+   },
+   {
+    "item_code": "BB260047",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 23000.0,
+    "valuation_rate": 50.88
+   },
+   {
+    "item_code": "BB260048",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 10500.0,
+    "valuation_rate": 55.77
+   },
+   {
+    "item_code": "BB260060",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 5340.0,
+    "valuation_rate": 1031.27
+   },
+   {
+    "item_code": "BB260061",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 4930.0,
+    "valuation_rate": 723.5
+   },
+   {
+    "item_code": "BB260062",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 56000.0,
+    "valuation_rate": 62.57
+   },
+   {
+    "item_code": "BB26008",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 200.0,
+    "valuation_rate": 12432.43245
+   },
+   {
+    "item_code": "BHP260020",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 15.0,
+    "valuation_rate": 3270.7
+   },
+   {
+    "item_code": "BHP260023",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 26.0,
+    "valuation_rate": 12137.82
+   },
+   {
+    "item_code": "BHP260025",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 33299.01
+   },
+   {
+    "item_code": "BHP260027",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 7.0,
+    "valuation_rate": 29400.15
+   },
+   {
+    "item_code": "BHP260033",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 5.0,
+    "valuation_rate": 17970.89
+   },
+   {
+    "item_code": "BHP260034",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 5.0,
+    "valuation_rate": 8500.0
+   },
+   {
+    "item_code": "BHP260035",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 2.0,
+    "valuation_rate": 11020.0
+   },
+   {
+    "item_code": "PEL260003",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 8.0,
+    "valuation_rate": 195889.93
+   },
+   {
+    "item_code": "PEL260004",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 11.0,
+    "valuation_rate": 128286.0
+   },
+   {
+    "item_code": "PEL260005",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 45.0,
+    "valuation_rate": 35000.0
+   },
+   {
+    "item_code": "PEL260006",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 77.0,
+    "valuation_rate": 35000.0
+   },
+   {
+    "item_code": "PEL260008",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 4.0,
+    "valuation_rate": 145612.49
+   },
+   {
+    "item_code": "PEL260009",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 67708.89
+   },
+   {
+    "item_code": "PEL260010",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 9.0,
+    "valuation_rate": 4417.33
+   },
+   {
+    "item_code": "PEL260011",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 11.0,
+    "valuation_rate": 9605.452857143
+   },
+   {
+    "item_code": "PEL260012",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 311562.24
+   },
+   {
+    "item_code": "PEL260013",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 2.0,
+    "valuation_rate": 171261.39
+   },
+   {
+    "item_code": "PEL260014",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 5.0,
+    "valuation_rate": 14681.16
+   },
+   {
+    "item_code": "PEL260015",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 5.0,
+    "valuation_rate": 43800.0
+   },
+   {
+    "item_code": "PEL260016",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 2.0,
+    "valuation_rate": 13302.0
+   },
+   {
+    "item_code": "PEL260017",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 29619.63
+   },
+   {
+    "item_code": "PEL260018",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 21.0,
+    "valuation_rate": 6442.5
+   },
+   {
+    "item_code": "PEL260020",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 19230.95
+   },
+   {
+    "item_code": "PEL260021",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 7.0,
+    "valuation_rate": 8997.56
+   },
+   {
+    "item_code": "PEL260022",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 7.0,
+    "valuation_rate": 9997.17
+   },
+   {
+    "item_code": "PEL260023",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 8.0,
+    "valuation_rate": 12358.81
+   },
+   {
+    "item_code": "PEL260024",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 11.0,
+    "valuation_rate": 44000.0
+   },
+   {
+    "item_code": "PEL260025",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 15.0,
+    "valuation_rate": 4556.14
+   },
+   {
+    "item_code": "PEL260026",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 326.0,
+    "valuation_rate": 25723.74
+   },
+   {
+    "item_code": "PEL260027",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 321.0,
+    "valuation_rate": 52840.94
+   },
+   {
+    "item_code": "PEL260028",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 13.0,
+    "valuation_rate": 10950.93
+   },
+   {
+    "item_code": "PEL260029",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 7.0,
+    "valuation_rate": 27460.0
+   },
+   {
+    "item_code": "PEL260030",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 13.0,
+    "valuation_rate": 59360.004285714
+   },
+   {
+    "item_code": "PEL260031",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 7.0,
+    "valuation_rate": 2373.23
+   },
+   {
+    "item_code": "PEL260032",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 22376.45
+   },
+   {
+    "item_code": "PEL260033",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 8300.52
+   },
+   {
+    "item_code": "PEL260034",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 1.0,
+    "valuation_rate": 40600.0
+   },
+   {
+    "item_code": "PEL260035",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 1.0,
+    "valuation_rate": 126420.0
+   },
+   {
+    "item_code": "PEL260036",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 9.0,
+    "valuation_rate": 506000.0
+   },
+   {
+    "item_code": "PEL260037",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 23466.67
+   },
+   {
+    "item_code": "PEL260039",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 26.0,
+    "valuation_rate": 24715.15
+   },
+   {
+    "item_code": "PEL260040",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 8.0,
+    "valuation_rate": 29875.0
+   },
+   {
+    "item_code": "PEL260041",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 3.0,
+    "valuation_rate": 12890.4
+   },
+   {
+    "item_code": "PEL260042",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 13.0,
+    "valuation_rate": 2140.36
+   },
+   {
+    "item_code": "PEL260043",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 7.0,
+    "valuation_rate": 700.0
+   },
+   {
+    "item_code": "PEL260044",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 8.0,
+    "valuation_rate": 17218.65
+   },
+   {
+    "item_code": "PEL260045",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 11.0,
+    "valuation_rate": 3280.72
+   },
+   {
+    "item_code": "PEL260046",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 1.0,
+    "valuation_rate": 15531.75
+   },
+   {
+    "item_code": "PEL260047",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 9328.71
+   },
+   {
+    "item_code": "PEL260048",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 6.0,
+    "valuation_rate": 170029.83
+   },
+   {
+    "item_code": "PEL260049",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 10.0,
+    "valuation_rate": 11000.0
+   },
+   {
+    "item_code": "PEL260050",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 12.0,
+    "valuation_rate": 67323.01
+   },
+   {
+    "item_code": "PEL260051",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 5.0,
+    "valuation_rate": 81000.0
+   },
+   {
+    "item_code": "PEL260052",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 19.0,
+    "valuation_rate": 17546.83
+   },
+   {
+    "item_code": "PEL260053",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 26.0,
+    "valuation_rate": 4301.11
+   },
+   {
+    "item_code": "PEL260054",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 24.0,
+    "valuation_rate": 5828.3675
+   },
+   {
+    "item_code": "PEL260063",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 1.0,
+    "valuation_rate": 56900.0
+   },
+   {
+    "item_code": "PEL260067",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 2.0,
+    "valuation_rate": 10003.82
+   },
+   {
+    "item_code": "PEL260068",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 201.0,
+    "valuation_rate": 55000.0
+   },
+   {
+    "item_code": "PEL260069",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 17800.0,
+    "valuation_rate": 1942.96
+   },
+   {
+    "item_code": "PEL260070",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 104100.0,
+    "valuation_rate": 379.95
+   },
+   {
+    "item_code": "PEL260071",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 18900.0,
+    "valuation_rate": 332.67
+   },
+   {
+    "item_code": "PEL260073",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 2700.0,
+    "valuation_rate": 7599.51
+   },
+   {
+    "item_code": "PEL260074",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 55.0,
+    "valuation_rate": 4167.12
+   },
+   {
+    "item_code": "PEL260075",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 370.0,
+    "valuation_rate": 2454.59
+   },
+   {
+    "item_code": "PEL260076",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 64400.0,
+    "valuation_rate": 217.59
+   },
+   {
+    "item_code": "PEL260077",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 37205.0,
+    "valuation_rate": 106.67
+   },
+   {
+    "item_code": "PEL260078",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 353.0,
+    "valuation_rate": 3915.74
+   },
+   {
+    "item_code": "PEL260079",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 86.0,
+    "valuation_rate": 4043.78
+   },
+   {
+    "item_code": "PEL260080",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 131.0,
+    "valuation_rate": 6004.71
+   },
+   {
+    "item_code": "PEL260081",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 566.0,
+    "valuation_rate": 5564.29
+   },
+   {
+    "item_code": "PEL260083",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 418000.0,
+    "valuation_rate": 97.45
+   },
+   {
+    "item_code": "PEL260084",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 5000.0,
+    "valuation_rate": 34.7528992
+   },
+   {
+    "item_code": "PEL260085",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 12000.0,
+    "valuation_rate": 21.985657737
+   },
+   {
+    "item_code": "PEL260089",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 14.0,
+    "valuation_rate": 55000.0
+   },
+   {
+    "item_code": "PEL260097",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 100.0,
+    "valuation_rate": 1063.0
+   },
+   {
+    "item_code": "SG260012",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 71.0,
+    "valuation_rate": 22807.26
+   }
+  ],
+  "Gudang GA - JURI": [
+   {
+    "item_code": "ATK260039",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 37.0,
+    "valuation_rate": 38831.92
+   },
+   {
+    "item_code": "BHP260008",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 6.0,
+    "valuation_rate": 92343.08
+   },
+   {
+    "item_code": "PEL260091-Biru-L",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 8.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Biru-M",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 6.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Biru-S",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Biru-XL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 3.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Biru-XXL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Hitam-L",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 63222.0
+   },
+   {
+    "item_code": "PEL260091-Hitam-M",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 63222.0
+   },
+   {
+    "item_code": "PEL260091-Hitam-S",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 63222.0
+   },
+   {
+    "item_code": "PEL260091-Hitam-XL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 50100.0
+   },
+   {
+    "item_code": "PEL260091-Hitam-XXL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 6.0,
+    "valuation_rate": 63222.0
+   },
+   {
+    "item_code": "PEL260091-Kuning-L",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Kuning-M",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Kuning-S",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Kuning-XL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 4.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Kuning-XXL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 4.0,
+    "valuation_rate": 77518.0
+   },
+   {
+    "item_code": "PEL260091-Merah-L",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 11.0,
+    "valuation_rate": 63222.0
+   },
+   {
+    "item_code": "PEL260091-Merah-M",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 4.0,
+    "valuation_rate": 63222.0
+   },
+   {
+    "item_code": "PEL260091-Merah-S",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 63222.0
+   },
+   {
+    "item_code": "PEL260091-Merah-XL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 8.0,
+    "valuation_rate": 63222.0
+   },
+   {
+    "item_code": "PEL260091-Merah-XXL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 63222.0
+   },
+   {
+    "item_code": "PEL260092-Abu-L",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 8.0,
+    "valuation_rate": 60070.0
+   },
+   {
+    "item_code": "PEL260092-Abu-M",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 5.0,
+    "valuation_rate": 60070.0
+   },
+   {
+    "item_code": "PEL260092-Abu-XL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 6.0,
+    "valuation_rate": 60070.0
+   },
+   {
+    "item_code": "PEL260092-Abu-XXL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 1.0,
+    "valuation_rate": 60070.0
+   },
+   {
+    "item_code": "PEL260092-Hitam-L",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 6.0,
+    "valuation_rate": 60070.0
+   },
+   {
+    "item_code": "PEL260092-Hitam-M",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 7.0,
+    "valuation_rate": 60070.0
+   },
+   {
+    "item_code": "PEL260092-Hitam-XL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 3.0,
+    "valuation_rate": 60070.0
+   },
+   {
+    "item_code": "PEL260092-Hitam-XXL",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 2.0,
+    "valuation_rate": 60070.0
+   },
+   {
+    "item_code": "PEL260093-L",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 2.0,
+    "valuation_rate": 88000.0
+   },
+   {
+    "item_code": "PEL260093-S",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 1.0,
+    "valuation_rate": 88000.0
+   },
+   {
+    "item_code": "PEL260094-Oranye",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 6.0,
+    "valuation_rate": 14000.0
+   },
+   {
+    "item_code": "PEL260094-Putih",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 10.0,
+    "valuation_rate": 14000.0
+   },
+   {
+    "item_code": "SG260005",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 8.0,
+    "valuation_rate": 106995.2
+   },
+   {
+    "item_code": "SG260013",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 28.0,
+    "valuation_rate": 69635.26
+   },
+   {
+    "item_code": "SG260014",
+    "warehouse": "Gudang GA - JURI",
+    "qty": 89.0,
+    "valuation_rate": 102665.3
+   }
+  ],
+  "Gudang Jakarta - JURI": [
+   {
+    "item_code": "ATK260029",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 7.0,
+    "valuation_rate": 4473.83
+   },
+   {
+    "item_code": "ATK260049",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 17.0,
+    "valuation_rate": 11384.01
+   },
+   {
+    "item_code": "BB260019",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 1370.0,
+    "valuation_rate": 440.0
+   },
+   {
+    "item_code": "BB260030",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 147750.0,
+    "valuation_rate": 84.99
+   },
+   {
+    "item_code": "BB260031",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 130000.0,
+    "valuation_rate": 106.48
+   },
+   {
+    "item_code": "BB260032",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 27360.0,
+    "valuation_rate": 397.3
+   },
+   {
+    "item_code": "BB260033",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 262000.0,
+    "valuation_rate": 78.58
+   },
+   {
+    "item_code": "BB260038",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 6240.0,
+    "valuation_rate": 265.31
+   },
+   {
+    "item_code": "BB260039",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 2750.0,
+    "valuation_rate": 227.42
+   },
+   {
+    "item_code": "BB260040",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 8500.0,
+    "valuation_rate": 42.73
+   },
+   {
+    "item_code": "BB260041",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 11000.0,
+    "valuation_rate": 24.54
+   },
+   {
+    "item_code": "BB260042",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 22000.0,
+    "valuation_rate": 22.0
+   },
+   {
+    "item_code": "BB260043",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 32000.0,
+    "valuation_rate": 50.9
+   },
+   {
+    "item_code": "BB260044",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 35000.0,
+    "valuation_rate": 57.08
+   },
+   {
+    "item_code": "BB260045",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 7000.0,
+    "valuation_rate": 29.63
+   },
+   {
+    "item_code": "BB260046",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 16500.0,
+    "valuation_rate": 34.15
+   },
+   {
+    "item_code": "BB260047",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 23000.0,
+    "valuation_rate": 51.91
+   },
+   {
+    "item_code": "BB260048",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 6500.0,
+    "valuation_rate": 61.76
+   },
+   {
+    "item_code": "BB260050",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 13500.0,
+    "valuation_rate": 64.47
+   },
+   {
+    "item_code": "BB260051",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 16640.0,
+    "valuation_rate": 76.15
+   },
+   {
+    "item_code": "BB260052",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 37440.0,
+    "valuation_rate": 98.54
+   },
+   {
+    "item_code": "BB260053",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 3500.0,
+    "valuation_rate": 363.96
+   },
+   {
+    "item_code": "BB260054",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 9600.0,
+    "valuation_rate": 101.87
+   },
+   {
+    "item_code": "BHP260023",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 66.0,
+    "valuation_rate": 10624.48137931
+   },
+   {
+    "item_code": "BHP260025",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 20.0,
+    "valuation_rate": 32983.08
+   },
+   {
+    "item_code": "BHP260027",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 80.0,
+    "valuation_rate": 28377.75
+   },
+   {
+    "item_code": "PEL260005",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 24.0,
+    "valuation_rate": 35000.0
+   },
+   {
+    "item_code": "PEL260006",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 14.0,
+    "valuation_rate": 35000.0
+   },
+   {
+    "item_code": "PEL260007",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 200.0,
+    "valuation_rate": 1065.98
+   },
+   {
+    "item_code": "PEL260008",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 3.0,
+    "valuation_rate": 155693.37
+   },
+   {
+    "item_code": "PEL260010",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 11.0,
+    "valuation_rate": 3895.05
+   },
+   {
+    "item_code": "PEL260011",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 4.0,
+    "valuation_rate": 9516.44
+   },
+   {
+    "item_code": "PEL260013",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 10.0,
+    "valuation_rate": 211368.98
+   },
+   {
+    "item_code": "PEL260016",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 1.0,
+    "valuation_rate": 13581.55
+   },
+   {
+    "item_code": "PEL260017",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 12.0,
+    "valuation_rate": 35211.31
+   },
+   {
+    "item_code": "PEL260018",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 16.0,
+    "valuation_rate": 7922.6
+   },
+   {
+    "item_code": "PEL260019",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 20.0,
+    "valuation_rate": 50000.0
+   },
+   {
+    "item_code": "PEL260021",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 7.0,
+    "valuation_rate": 9055.4
+   },
+   {
+    "item_code": "PEL260022",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 7.0,
+    "valuation_rate": 10016.32
+   },
+   {
+    "item_code": "PEL260023",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 7.0,
+    "valuation_rate": 12777.04
+   },
+   {
+    "item_code": "PEL260026",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 106.0,
+    "valuation_rate": 24955.5
+   },
+   {
+    "item_code": "PEL260027",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 80.0,
+    "valuation_rate": 52840.94
+   },
+   {
+    "item_code": "PEL260029",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 6.0,
+    "valuation_rate": 26937.99
+   },
+   {
+    "item_code": "PEL260031",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 6.0,
+    "valuation_rate": 2314.72
+   },
+   {
+    "item_code": "PEL260033",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 6.0,
+    "valuation_rate": 7739.37
+   },
+   {
+    "item_code": "PEL260038",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 7.0,
+    "valuation_rate": 77646.6
+   },
+   {
+    "item_code": "PEL260039",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 22.0,
+    "valuation_rate": 25326.68
+   },
+   {
+    "item_code": "PEL260041",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 7.0,
+    "valuation_rate": 14438.03
+   },
+   {
+    "item_code": "PEL260042",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 7.0,
+    "valuation_rate": 2480.24
+   },
+   {
+    "item_code": "PEL260043",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 24.0,
+    "valuation_rate": 802.68
+   },
+   {
+    "item_code": "PEL260044",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 8.0,
+    "valuation_rate": 16793.32
+   },
+   {
+    "item_code": "PEL260048",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 4.0,
+    "valuation_rate": 160600.0
+   },
+   {
+    "item_code": "PEL260050",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 3.0,
+    "valuation_rate": 67008.88
+   },
+   {
+    "item_code": "PEL260052",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 29.0,
+    "valuation_rate": 14596.67
+   },
+   {
+    "item_code": "PEL260053",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 13.0,
+    "valuation_rate": 3849.62
+   },
+   {
+    "item_code": "PEL260054",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 7.0,
+    "valuation_rate": 6500.0
+   },
+   {
+    "item_code": "PEL260063",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 2.0,
+    "valuation_rate": 57682.92
+   },
+   {
+    "item_code": "PEL260066",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 2.0,
+    "valuation_rate": 85150.0
+   },
+   {
+    "item_code": "PEL260067",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 5.0,
+    "valuation_rate": 10081.82
+   },
+   {
+    "item_code": "PEL260068",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 16.0,
+    "valuation_rate": 55000.0
+   },
+   {
+    "item_code": "PEL260069",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 5389.0,
+    "valuation_rate": 1942.89
+   },
+   {
+    "item_code": "PEL260070",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 2600.0,
+    "valuation_rate": 380.99
+   },
+   {
+    "item_code": "PEL260071",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 9250.0,
+    "valuation_rate": 323.84
+   },
+   {
+    "item_code": "PEL260072",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 6664.0,
+    "valuation_rate": 1367.24
+   },
+   {
+    "item_code": "PEL260073",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 163.0,
+    "valuation_rate": 6806.01
+   },
+   {
+    "item_code": "PEL260074",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 100.0,
+    "valuation_rate": 4167.12
+   },
+   {
+    "item_code": "PEL260076",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 117059.0,
+    "valuation_rate": 219.38
+   },
+   {
+    "item_code": "PEL260077",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 5800.0,
+    "valuation_rate": 106.67
+   },
+   {
+    "item_code": "PEL260078",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 131.0,
+    "valuation_rate": 3932.56
+   },
+   {
+    "item_code": "PEL260079",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 127.0,
+    "valuation_rate": 3951.09
+   },
+   {
+    "item_code": "PEL260080",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 144.0,
+    "valuation_rate": 6085.94
+   },
+   {
+    "item_code": "PEL260081",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 360.0,
+    "valuation_rate": 5640.47
+   },
+   {
+    "item_code": "PEL260083",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 32500.0,
+    "valuation_rate": 96.06
+   },
+   {
+    "item_code": "PEL260084",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 19750.0,
+    "valuation_rate": 29.89
+   },
+   {
+    "item_code": "PEL260085",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 14000.0,
+    "valuation_rate": 23.94
+   },
+   {
+    "item_code": "PEL260086",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 12000.0,
+    "valuation_rate": 97.02966381
+   },
+   {
+    "item_code": "PEL260096",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 100.0,
+    "valuation_rate": 1063.0
+   },
+   {
+    "item_code": "PEL260097",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 498.0,
+    "valuation_rate": 1063.0
+   },
+   {
+    "item_code": "PEL260098",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 200.0,
+    "valuation_rate": 1063.0
+   },
+   {
+    "item_code": "PJ260009",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 264.0,
+    "valuation_rate": 1697.29
+   },
+   {
+    "item_code": "PJ260010",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 2076.0,
+    "valuation_rate": 1918.06
+   },
+   {
+    "item_code": "PJ260011",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 3447.0,
+    "valuation_rate": 2459.19
+   },
+   {
+    "item_code": "PJ260012",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 13476.0,
+    "valuation_rate": 772.46
+   },
+   {
+    "item_code": "PJ260013",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 17016.0,
+    "valuation_rate": 795.16
+   },
+   {
+    "item_code": "PJ260014",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 11076.0,
+    "valuation_rate": 905.8
+   },
+   {
+    "item_code": "PJ260016",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 2330.0,
+    "valuation_rate": 14186.71
+   },
+   {
+    "item_code": "SG260012",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 40.0,
+    "valuation_rate": 24500.0
+   }
+  ],
+  "Gudang Outlet - JURI": [
+   {
+    "item_code": "PEL260056",
+    "warehouse": "Gudang Outlet - JURI",
+    "qty": 14.0,
+    "valuation_rate": 341970.155454545
+   },
+   {
+    "item_code": "PEL260057",
+    "warehouse": "Gudang Outlet - JURI",
+    "qty": 7.0,
+    "valuation_rate": 3243243.242272727
+   },
+   {
+    "item_code": "PEL260058",
+    "warehouse": "Gudang Outlet - JURI",
+    "qty": 5.0,
+    "valuation_rate": 398829.760857143
+   },
+   {
+    "item_code": "PEL260059",
+    "warehouse": "Gudang Outlet - JURI",
+    "qty": 8.0,
+    "valuation_rate": 414865.367045454
+   },
+   {
+    "item_code": "PEL260060",
+    "warehouse": "Gudang Outlet - JURI",
+    "qty": 6.0,
+    "valuation_rate": 19766.671388889
+   }
+  ],
+  "Gudang Peralatan - JURI": [
+   {
+    "item_code": "PEL260064",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 2.0,
+    "valuation_rate": 6246667.0
+   },
+   {
+    "item_code": "PER260003",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 2.0,
+    "valuation_rate": 1344400.0
+   },
+   {
+    "item_code": "PER260004",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 21.0,
+    "valuation_rate": 1683652.89
+   },
+   {
+    "item_code": "PER260006",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 3.0,
+    "valuation_rate": 1105742.0
+   },
+   {
+    "item_code": "PER260008",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 3.0,
+    "valuation_rate": 5115199.79
+   },
+   {
+    "item_code": "PER260009",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 2.0,
+    "valuation_rate": 6126126.2
+   },
+   {
+    "item_code": "PER260011",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 3.0,
+    "valuation_rate": 2000000.0
+   },
+   {
+    "item_code": "PER260012",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 1.0,
+    "valuation_rate": 2000000.0
+   },
+   {
+    "item_code": "PER260014",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 2.0,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "PER260016",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 3.0,
+    "valuation_rate": 5705907.94
+   },
+   {
+    "item_code": "PER260017",
+    "warehouse": "Gudang Peralatan - JURI",
+    "qty": 7.0,
+    "valuation_rate": 4500000.0
+   }
+  ],
+  "Gudang Produksi - JURI": [
+   {
+    "item_code": "BB260004",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 77330.0,
+    "valuation_rate": 0.55
+   },
+   {
+    "item_code": "BB260005",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 8030.0,
+    "valuation_rate": 29.49
+   },
+   {
+    "item_code": "BB260006",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 124320.0,
+    "valuation_rate": 0.54
+   },
+   {
+    "item_code": "BB260007",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 23520.0,
+    "valuation_rate": 38.97
+   },
+   {
+    "item_code": "BB260008",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 33080.0,
+    "valuation_rate": 41.43
+   },
+   {
+    "item_code": "BB260009",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 1812.0,
+    "valuation_rate": 72.158995042
+   },
+   {
+    "item_code": "BB260010",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 5640.0,
+    "valuation_rate": 7.25
+   },
+   {
+    "item_code": "BB260011",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 41900.0,
+    "valuation_rate": 18.02
+   },
+   {
+    "item_code": "BB260012",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 81436.0,
+    "valuation_rate": 17.200000461
+   },
+   {
+    "item_code": "BB260013",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 55000.0,
+    "valuation_rate": 61.2
+   },
+   {
+    "item_code": "BB260014",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 25500.0,
+    "valuation_rate": 17.12
+   },
+   {
+    "item_code": "BB260015",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 33000.0,
+    "valuation_rate": 17.12
+   },
+   {
+    "item_code": "BB260016",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 5070.0,
+    "valuation_rate": 231.88
+   },
+   {
+    "item_code": "BB260017",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 600400.0,
+    "valuation_rate": 129.56847306
+   },
+   {
+    "item_code": "BB260018",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 2500.0,
+    "valuation_rate": 413.27
+   },
+   {
+    "item_code": "BB260019",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 1652.0,
+    "valuation_rate": 396.0
+   },
+   {
+    "item_code": "BB260020",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 1280.0,
+    "valuation_rate": 238.64
+   },
+   {
+    "item_code": "BB260021",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 166000.0,
+    "valuation_rate": 15.267569086
+   },
+   {
+    "item_code": "BB260022",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 88880.0,
+    "valuation_rate": 17.64
+   },
+   {
+    "item_code": "BB260023",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 176330.0,
+    "valuation_rate": 23.87
+   },
+   {
+    "item_code": "BB260025",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 3028.0,
+    "valuation_rate": 53.000000613
+   },
+   {
+    "item_code": "BB260026",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 30200.0,
+    "valuation_rate": 80.000003845
+   },
+   {
+    "item_code": "BB260027",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 361980.0,
+    "valuation_rate": 22.65
+   },
+   {
+    "item_code": "BB260028",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 219000.0,
+    "valuation_rate": 8.88
+   },
+   {
+    "item_code": "BB260029",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 106250.0,
+    "valuation_rate": 6.65
+   },
+   {
+    "item_code": "BB260055",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 32460.0,
+    "valuation_rate": 28.801486556
+   },
+   {
+    "item_code": "BHP260022",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 53.0,
+    "valuation_rate": 59000.0
+   },
+   {
+    "item_code": "BHP260027",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 9.5,
+    "valuation_rate": 26915.68
+   },
+   {
+    "item_code": "BHP260028",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 9.25,
+    "valuation_rate": 6396.005390072
+   },
+   {
+    "item_code": "BHP260029",
+    "warehouse": "Gudang Produksi - JURI",
+    "qty": 31.9,
+    "valuation_rate": 48339.353605016
+   }
+  ],
+  "Gudang R&D - JURI": [
+   {
+    "item_code": "BB260010",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 10.0,
+    "valuation_rate": 7.25
+   },
+   {
+    "item_code": "BB260011",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 1424.0,
+    "valuation_rate": 18.017998596
+   },
+   {
+    "item_code": "BB260012",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 113.0,
+    "valuation_rate": 17.09985229
+   },
+   {
+    "item_code": "BB260015",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 1540.0,
+    "valuation_rate": 17.266012987
+   },
+   {
+    "item_code": "BB260016",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 266.0,
+    "valuation_rate": 231.294586466
+   },
+   {
+    "item_code": "BB260022",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 400.0,
+    "valuation_rate": 17.4342
+   },
+   {
+    "item_code": "BB260023",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 38.0,
+    "valuation_rate": 23.87380772
+   },
+   {
+    "item_code": "BB260025",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 22.0,
+    "valuation_rate": 53.0
+   },
+   {
+    "item_code": "BB260026",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 30.0,
+    "valuation_rate": 82.698333333
+   },
+   {
+    "item_code": "BB260027",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 748.0,
+    "valuation_rate": 23.553475936
+   },
+   {
+    "item_code": "BB260028",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 1000.0,
+    "valuation_rate": 8.88
+   },
+   {
+    "item_code": "BB260029",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 2750.0,
+    "valuation_rate": 6.60792
+   },
+   {
+    "item_code": "PJ260016",
+    "warehouse": "Gudang R&D - JURI",
+    "qty": 2.0,
+    "valuation_rate": 15631.7
+   }
+  ],
+  "Gudang Vendor - JURI": [
+   {
+    "item_code": "PER260004",
+    "warehouse": "Gudang Vendor - JURI",
+    "qty": 3.0,
+    "valuation_rate": 1958000.0
+   },
+   {
+    "item_code": "PER260008",
+    "warehouse": "Gudang Vendor - JURI",
+    "qty": 7.0,
+    "valuation_rate": 5450000.0
+   },
+   {
+    "item_code": "PER260009",
+    "warehouse": "Gudang Vendor - JURI",
+    "qty": 1.0,
+    "valuation_rate": 8360000.0
+   },
+   {
+    "item_code": "PER260016",
+    "warehouse": "Gudang Vendor - JURI",
+    "qty": 13.0,
+    "valuation_rate": 5705907.94
+   },
+   {
+    "item_code": "PER260017",
+    "warehouse": "Gudang Vendor - JURI",
+    "qty": 20.0,
+    "valuation_rate": 4500000.0
+   }
+  ],
+  "Mini Outlet - JURI": [
+   {
+    "item_code": "BB260019",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 10.0,
+    "valuation_rate": 287.0
+   },
+   {
+    "item_code": "BB260038",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 200.0,
+    "valuation_rate": 265.31
+   },
+   {
+    "item_code": "BB260039",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 250.0,
+    "valuation_rate": 248.186666667
+   },
+   {
+    "item_code": "BB260040",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 750.0,
+    "valuation_rate": 43.75
+   },
+   {
+    "item_code": "BB260041",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 1000.0,
+    "valuation_rate": 23.945736125
+   },
+   {
+    "item_code": "BB260042",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 1000.0,
+    "valuation_rate": 21.195
+   },
+   {
+    "item_code": "BB260043",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 3000.0,
+    "valuation_rate": 49.5495
+   },
+   {
+    "item_code": "BB260044",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 3000.0,
+    "valuation_rate": 57.081
+   },
+   {
+    "item_code": "BB260045",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 500.0,
+    "valuation_rate": 29.489467972
+   },
+   {
+    "item_code": "BB260046",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 250.0,
+    "valuation_rate": 34.193749377
+   },
+   {
+    "item_code": "BB260047",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 2000.0,
+    "valuation_rate": 49.873833333
+   },
+   {
+    "item_code": "BB260048",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 1000.0,
+    "valuation_rate": 56.06
+   },
+   {
+    "item_code": "BHP260027",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 1.0,
+    "valuation_rate": 28540.0
+   },
+   {
+    "item_code": "PEL260069",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 200.0,
+    "valuation_rate": 1943.0
+   },
+   {
+    "item_code": "PEL260070",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 900.0,
+    "valuation_rate": 415.931527753
+   },
+   {
+    "item_code": "PEL260071",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 300.0,
+    "valuation_rate": 304.5
+   },
+   {
+    "item_code": "PEL260072",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 40.0,
+    "valuation_rate": 1370.0
+   },
+   {
+    "item_code": "PEL260074",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 25.0,
+    "valuation_rate": 4167.0
+   },
+   {
+    "item_code": "PEL260075",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 40.0,
+    "valuation_rate": 2450.0
+   },
+   {
+    "item_code": "PEL260076",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 3000.0,
+    "valuation_rate": 216.219999502
+   },
+   {
+    "item_code": "PEL260077",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 300.0,
+    "valuation_rate": 107.0
+   },
+   {
+    "item_code": "PEL260078",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 5.0,
+    "valuation_rate": 3603.741909669
+   },
+   {
+    "item_code": "PEL260079",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 5.0,
+    "valuation_rate": 4025.666666667
+   },
+   {
+    "item_code": "PEL260080",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 10.0,
+    "valuation_rate": 6004.709988221
+   },
+   {
+    "item_code": "PEL260081",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 10.0,
+    "valuation_rate": 5213.333333333
+   },
+   {
+    "item_code": "PEL260083",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 1000.0,
+    "valuation_rate": 96.326848791
+   },
+   {
+    "item_code": "PEL260084",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 1250.0,
+    "valuation_rate": 30.036757039
+   },
+   {
+    "item_code": "PEL260085",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 1000.0,
+    "valuation_rate": 20.01945
+   },
+   {
+    "item_code": "PJ260009",
+    "warehouse": "Mini Outlet - JURI",
+    "qty": 72.0,
+    "valuation_rate": 1697.291665447
+   }
+  ],
+  "Work In Progress - JURI": [
+   {
+    "item_code": "BB260004",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 85953.54,
+    "valuation_rate": 0.836320633
+   },
+   {
+    "item_code": "BB260005",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 6981.65,
+    "valuation_rate": 29.489463379
+   },
+   {
+    "item_code": "BB260006",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 143526.85,
+    "valuation_rate": 0.541684918
+   },
+   {
+    "item_code": "BB260007",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 22705.92,
+    "valuation_rate": 39.039038383
+   },
+   {
+    "item_code": "BB260008",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 68992.58,
+    "valuation_rate": 41.441441217
+   },
+   {
+    "item_code": "BB260009",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 21888.0,
+    "valuation_rate": 72.159
+   },
+   {
+    "item_code": "BB260010",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 7113.34,
+    "valuation_rate": 7.249996485
+   },
+   {
+    "item_code": "BB260012",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 72749.88,
+    "valuation_rate": 17.000001512
+   },
+   {
+    "item_code": "BB260013",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 4653.02,
+    "valuation_rate": 59.459392738
+   },
+   {
+    "item_code": "BB260014",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 94997.47,
+    "valuation_rate": 17.117117607
+   },
+   {
+    "item_code": "BB260017",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 25387.8,
+    "valuation_rate": 68.271999937
+   },
+   {
+    "item_code": "BB260018",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 852.7,
+    "valuation_rate": 413.265962238
+   },
+   {
+    "item_code": "BB260020",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 721.56,
+    "valuation_rate": 237.054921825
+   },
+   {
+    "item_code": "BB260023",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 24709.03,
+    "valuation_rate": 23.873874253
+   },
+   {
+    "item_code": "BB260025",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 10436.4,
+    "valuation_rate": 53.0
+   },
+   {
+    "item_code": "BB260026",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 8140.56,
+    "valuation_rate": 80.0
+   },
+   {
+    "item_code": "BB260028",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 670920.57,
+    "valuation_rate": 8.880000013
+   },
+   {
+    "item_code": "BB260055",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 110147.87,
+    "valuation_rate": 28.532949124
+   }
+  ]
+ },
+ "wh_docs": {
+  "Gudang Barang Jadi - JURI": [
+   "RECO-JURI-261006001",
+   "RECO-JURI-261007007",
+   "RECO-JURI-261009037"
+  ],
+  "Gudang Produksi - JURI": [
+   "RECO-JURI-261006003",
+   "RECO-JURI-261007001",
+   "RECO-JURI-261007003",
+   "RECO-JURI-261009020",
+   "RECO-JURI-261009035"
+  ],
+  "Gudang Peralatan - JURI": [
+   "RECO-JURI-261006005",
+   "RECO-JURI-261009006"
+  ],
+  "Gudang Vendor - JURI": [
+   "RECO-JURI-261006006",
+   "RECO-JURI-261009010"
+  ],
+  "Gudang GA - JURI": [
+   "RECO-JURI-261006007",
+   "RECO-JURI-261009003"
+  ],
+  "Gudang Bahan Baku - JURI": [
+   "RECO-JURI-261006008",
+   "RECO-JURI-261008001",
+   "RECO-JURI-261009001",
+   "RECO-JURI-261009002",
+   "RECO-JURI-261009018"
+  ],
+  "Work In Progress - JURI": [
+   "RECO-JURI-261007002",
+   "RECO-JURI-261009013"
+  ],
+  "Gudang Jakarta - JURI": [
+   "RECO-JURI-261009004",
+   "RECO-JURI-261009022",
+   "RECO-JURI-261009036",
+   "RECO-JURI-261009039"
+  ],
+  "Gudang Outlet - JURI": [
+   "RECO-JURI-261009005"
+  ],
+  "Gudang R&D - JURI": [
+   "RECO-JURI-261009008"
+  ],
+  "Mini Outlet - JURI": [
+   "RECO-JURI-261009011"
+  ],
+  "Goods In Transit - JURI": [
+   "RECO-JURI-261009017"
+  ]
+ },
+ "cons_meta": {
+  "Goods In Transit - JURI|PEL260087": {
+   "src": "RECO-JURI-261009017",
+   "qty": 10000.0,
+   "rate": 124.0,
+   "v2300": 10000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260002": {
+   "src": "RECO-JURI-261006008",
+   "qty": 92400.0,
+   "rate": 23.08,
+   "v2300": 92400.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260004": {
+   "src": "RECO-JURI-261009018",
+   "qty": 589000.0,
+   "rate": 0.894736842,
+   "v2300": 589000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260005": {
+   "src": "RECO-JURI-261006008",
+   "qty": 75000.0,
+   "rate": 29.49,
+   "v2300": 75000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260007": {
+   "src": "RECO-JURI-261006008",
+   "qty": 252000.0,
+   "rate": 38.96,
+   "v2300": 252000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260008": {
+   "src": "RECO-JURI-261006008",
+   "qty": 730000.0,
+   "rate": 41.43,
+   "v2300": 730000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260009": {
+   "src": "RECO-JURI-261009018",
+   "qty": 560000.0,
+   "rate": 72.159,
+   "v2300": 560000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260010": {
+   "src": "RECO-JURI-261006008",
+   "qty": 210000.0,
+   "rate": 7.25,
+   "v2300": 210000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260011": {
+   "src": "RECO-JURI-261008001",
+   "qty": 2530000.0,
+   "rate": 18.018003771,
+   "v2300": 2530000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260012": {
+   "src": "RECO-JURI-261008001",
+   "qty": 1950000.0,
+   "rate": 17.179487185,
+   "v2300": 1950000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260014": {
+   "src": "RECO-JURI-261006008",
+   "qty": 1410000.0,
+   "rate": 17.12,
+   "v2300": 1410000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260016": {
+   "src": "RECO-JURI-261009018",
+   "qty": 816000.0,
+   "rate": 234.0,
+   "v2300": 816000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260017": {
+   "src": "RECO-JURI-261009002",
+   "qty": 50000.0,
+   "rate": 81.9275,
+   "v2300": 50000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260018": {
+   "src": "RECO-JURI-261008001",
+   "qty": 3000.0,
+   "rate": 413.266,
+   "v2300": 3000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260019": {
+   "src": "RECO-JURI-261006008",
+   "qty": 30000.0,
+   "rate": 395.54,
+   "v2300": 30000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260020": {
+   "src": "RECO-JURI-261009018",
+   "qty": 30400.0,
+   "rate": 240.300441383,
+   "v2300": 30400.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260021": {
+   "src": "RECO-JURI-261008001",
+   "qty": 82000.0,
+   "rate": 13.465147439,
+   "v2300": 82000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260022": {
+   "src": "RECO-JURI-261008001",
+   "qty": 658920.0,
+   "rate": 17.482607904,
+   "v2300": 658920.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260025": {
+   "src": "RECO-JURI-261006008",
+   "qty": 250000.0,
+   "rate": 53.0,
+   "v2300": 250000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260026": {
+   "src": "RECO-JURI-261006008",
+   "qty": 25000.0,
+   "rate": 80.67,
+   "v2300": 25000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260027": {
+   "src": "RECO-JURI-261009002",
+   "qty": 300000.0,
+   "rate": 20.8,
+   "v2300": 300000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260028": {
+   "src": "RECO-JURI-261006008",
+   "qty": 1850000.0,
+   "rate": 8.88,
+   "v2300": 1850000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BB260029": {
+   "src": "RECO-JURI-261006008",
+   "qty": 1975000.0,
+   "rate": 6.66,
+   "v2300": 1975000.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BHP260024": {
+   "src": "RECO-JURI-261006008",
+   "qty": 548.0,
+   "rate": 20962.4,
+   "v2300": 548.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BHP260027": {
+   "src": "RECO-JURI-261006008",
+   "qty": 33.0,
+   "rate": 21374.07,
+   "v2300": 33.0,
+   "chg2300": false
+  },
+  "Gudang Bahan Baku - JURI|BHP260028": {
+   "src": "RECO-JURI-261009001",
+   "qty": 43.0,
+   "rate": 6396.0,
+   "v2300": 43.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|ATK260027": {
+   "src": "RECO-JURI-261006001",
+   "qty": 19.0,
+   "rate": 3846.45,
+   "v2300": 19.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|ATK260029": {
+   "src": "RECO-JURI-261006001",
+   "qty": 14.0,
+   "rate": 4312.48,
+   "v2300": 14.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|ATK260035": {
+   "src": "RECO-JURI-261006001",
+   "qty": 3.0,
+   "rate": 26133.34,
+   "v2300": 3.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|ATK260038": {
+   "src": "RECO-JURI-261006001",
+   "qty": 67.0,
+   "rate": 2226.15,
+   "v2300": 67.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|ATK260041": {
+   "src": "RECO-JURI-261006001",
+   "qty": 13.0,
+   "rate": 1822.34,
+   "v2300": 13.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|ATK260043": {
+   "src": "RECO-JURI-261006001",
+   "qty": 7.0,
+   "rate": 7299.14,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|ATK260044": {
+   "src": "RECO-JURI-261006001",
+   "qty": 32.0,
+   "rate": 3352.11,
+   "v2300": 32.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|ATK260045": {
+   "src": "RECO-JURI-261006001",
+   "qty": 4.0,
+   "rate": 22409.71,
+   "v2300": 4.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|ATK260046": {
+   "src": "RECO-JURI-261006001",
+   "qty": 16.0,
+   "rate": 1545.0,
+   "v2300": 16.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260030": {
+   "src": "RECO-JURI-261006001",
+   "qty": 379500.0,
+   "rate": 84.99,
+   "v2300": 379500.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260031": {
+   "src": "RECO-JURI-261006001",
+   "qty": 464500.0,
+   "rate": 106.48,
+   "v2300": 464500.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260032": {
+   "src": "RECO-JURI-261006001",
+   "qty": 36600.0,
+   "rate": 397.3,
+   "v2300": 36600.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260033": {
+   "src": "RECO-JURI-261006001",
+   "qty": 421000.0,
+   "rate": 78.58,
+   "v2300": 421000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260034": {
+   "src": "RECO-JURI-261009037",
+   "qty": 100.0,
+   "rate": 2500.0,
+   "v2300": 100.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260035": {
+   "src": "RECO-JURI-261009037",
+   "qty": 107.0,
+   "rate": 2500.0,
+   "v2300": 107.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260036": {
+   "src": "RECO-JURI-261009037",
+   "qty": 103.0,
+   "rate": 2500.0,
+   "v2300": 103.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260037": {
+   "src": "RECO-JURI-261009037",
+   "qty": 100.0,
+   "rate": 2500.0,
+   "v2300": 100.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260038": {
+   "src": "RECO-JURI-261006001",
+   "qty": 5700.0,
+   "rate": 265.31,
+   "v2300": 5700.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260039": {
+   "src": "RECO-JURI-261006001",
+   "qty": 1000.0,
+   "rate": 249.8,
+   "v2300": 1000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260040": {
+   "src": "RECO-JURI-261009037",
+   "qty": 50750.0,
+   "rate": 43.75,
+   "v2300": 50750.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260041": {
+   "src": "RECO-JURI-261006001",
+   "qty": 15000.0,
+   "rate": 23.56,
+   "v2300": 15000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260042": {
+   "src": "RECO-JURI-261006001",
+   "qty": 18000.0,
+   "rate": 22.0,
+   "v2300": 18000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260043": {
+   "src": "RECO-JURI-261006001",
+   "qty": 179000.0,
+   "rate": 49.56,
+   "v2300": 179000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260044": {
+   "src": "RECO-JURI-261006001",
+   "qty": 121000.0,
+   "rate": 57.08,
+   "v2300": 121000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260045": {
+   "src": "RECO-JURI-261006001",
+   "qty": 10250.0,
+   "rate": 29.49,
+   "v2300": 10250.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260047": {
+   "src": "RECO-JURI-261006001",
+   "qty": 23000.0,
+   "rate": 50.88,
+   "v2300": 23000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260048": {
+   "src": "RECO-JURI-261006001",
+   "qty": 10500.0,
+   "rate": 55.77,
+   "v2300": 10500.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260060": {
+   "src": "RECO-JURI-261006001",
+   "qty": 5340.0,
+   "rate": 1031.27,
+   "v2300": 5340.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260061": {
+   "src": "RECO-JURI-261006001",
+   "qty": 4930.0,
+   "rate": 723.5,
+   "v2300": 4930.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB260062": {
+   "src": "RECO-JURI-261006001",
+   "qty": 56000.0,
+   "rate": 62.57,
+   "v2300": 56000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BB26008": {
+   "src": "RECO-JURI-261007007",
+   "qty": 200.0,
+   "rate": 12432.43245,
+   "v2300": 0.0,
+   "chg2300": true
+  },
+  "Gudang Barang Jadi - JURI|BHP260020": {
+   "src": "RECO-JURI-261006001",
+   "qty": 15.0,
+   "rate": 3270.7,
+   "v2300": 15.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BHP260023": {
+   "src": "RECO-JURI-261006001",
+   "qty": 26.0,
+   "rate": 12137.82,
+   "v2300": 26.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BHP260025": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 33299.01,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BHP260027": {
+   "src": "RECO-JURI-261006001",
+   "qty": 7.0,
+   "rate": 29400.15,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BHP260033": {
+   "src": "RECO-JURI-261006001",
+   "qty": 5.0,
+   "rate": 17970.89,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BHP260034": {
+   "src": "RECO-JURI-261009037",
+   "qty": 5.0,
+   "rate": 8500.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|BHP260035": {
+   "src": "RECO-JURI-261009037",
+   "qty": 2.0,
+   "rate": 11020.0,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260003": {
+   "src": "RECO-JURI-261006001",
+   "qty": 8.0,
+   "rate": 195889.93,
+   "v2300": 8.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260004": {
+   "src": "RECO-JURI-261006001",
+   "qty": 11.0,
+   "rate": 128286.0,
+   "v2300": 11.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260005": {
+   "src": "RECO-JURI-261006001",
+   "qty": 45.0,
+   "rate": 35000.0,
+   "v2300": 45.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260006": {
+   "src": "RECO-JURI-261006001",
+   "qty": 77.0,
+   "rate": 35000.0,
+   "v2300": 77.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260008": {
+   "src": "RECO-JURI-261006001",
+   "qty": 4.0,
+   "rate": 145612.49,
+   "v2300": 4.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260009": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 67708.89,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260010": {
+   "src": "RECO-JURI-261006001",
+   "qty": 9.0,
+   "rate": 4417.33,
+   "v2300": 9.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260011": {
+   "src": "RECO-JURI-261009037",
+   "qty": 11.0,
+   "rate": 9605.452857143,
+   "v2300": 11.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260012": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 311562.24,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260013": {
+   "src": "RECO-JURI-261006001",
+   "qty": 2.0,
+   "rate": 171261.39,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260014": {
+   "src": "RECO-JURI-261006001",
+   "qty": 5.0,
+   "rate": 14681.16,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260015": {
+   "src": "RECO-JURI-261006001",
+   "qty": 5.0,
+   "rate": 43800.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260016": {
+   "src": "RECO-JURI-261006001",
+   "qty": 2.0,
+   "rate": 13302.0,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260017": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 29619.63,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260018": {
+   "src": "RECO-JURI-261009037",
+   "qty": 21.0,
+   "rate": 6442.5,
+   "v2300": 21.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260020": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 19230.95,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260021": {
+   "src": "RECO-JURI-261006001",
+   "qty": 7.0,
+   "rate": 8997.56,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260022": {
+   "src": "RECO-JURI-261006001",
+   "qty": 7.0,
+   "rate": 9997.17,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260023": {
+   "src": "RECO-JURI-261006001",
+   "qty": 8.0,
+   "rate": 12358.81,
+   "v2300": 8.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260024": {
+   "src": "RECO-JURI-261006001",
+   "qty": 11.0,
+   "rate": 44000.0,
+   "v2300": 11.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260025": {
+   "src": "RECO-JURI-261006001",
+   "qty": 15.0,
+   "rate": 4556.14,
+   "v2300": 15.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260026": {
+   "src": "RECO-JURI-261006001",
+   "qty": 326.0,
+   "rate": 25723.74,
+   "v2300": 326.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260027": {
+   "src": "RECO-JURI-261006001",
+   "qty": 321.0,
+   "rate": 52840.94,
+   "v2300": 321.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260028": {
+   "src": "RECO-JURI-261006001",
+   "qty": 13.0,
+   "rate": 10950.93,
+   "v2300": 13.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260029": {
+   "src": "RECO-JURI-261006001",
+   "qty": 7.0,
+   "rate": 27460.0,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260030": {
+   "src": "RECO-JURI-261009037",
+   "qty": 13.0,
+   "rate": 59360.004285714,
+   "v2300": 13.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260031": {
+   "src": "RECO-JURI-261006001",
+   "qty": 7.0,
+   "rate": 2373.23,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260032": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 22376.45,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260033": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 8300.52,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260034": {
+   "src": "RECO-JURI-261006001",
+   "qty": 1.0,
+   "rate": 40600.0,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260035": {
+   "src": "RECO-JURI-261006001",
+   "qty": 1.0,
+   "rate": 126420.0,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260036": {
+   "src": "RECO-JURI-261006001",
+   "qty": 9.0,
+   "rate": 506000.0,
+   "v2300": 9.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260037": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 23466.67,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260039": {
+   "src": "RECO-JURI-261006001",
+   "qty": 26.0,
+   "rate": 24715.15,
+   "v2300": 26.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260040": {
+   "src": "RECO-JURI-261006001",
+   "qty": 8.0,
+   "rate": 29875.0,
+   "v2300": 8.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260041": {
+   "src": "RECO-JURI-261006001",
+   "qty": 3.0,
+   "rate": 12890.4,
+   "v2300": 3.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260042": {
+   "src": "RECO-JURI-261006001",
+   "qty": 13.0,
+   "rate": 2140.36,
+   "v2300": 13.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260043": {
+   "src": "RECO-JURI-261006001",
+   "qty": 7.0,
+   "rate": 700.0,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260044": {
+   "src": "RECO-JURI-261006001",
+   "qty": 8.0,
+   "rate": 17218.65,
+   "v2300": 8.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260045": {
+   "src": "RECO-JURI-261006001",
+   "qty": 11.0,
+   "rate": 3280.72,
+   "v2300": 11.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260046": {
+   "src": "RECO-JURI-261006001",
+   "qty": 1.0,
+   "rate": 15531.75,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260047": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 9328.71,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260048": {
+   "src": "RECO-JURI-261006001",
+   "qty": 6.0,
+   "rate": 170029.83,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260049": {
+   "src": "RECO-JURI-261006001",
+   "qty": 10.0,
+   "rate": 11000.0,
+   "v2300": 10.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260050": {
+   "src": "RECO-JURI-261006001",
+   "qty": 12.0,
+   "rate": 67323.01,
+   "v2300": 12.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260051": {
+   "src": "RECO-JURI-261006001",
+   "qty": 5.0,
+   "rate": 81000.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260052": {
+   "src": "RECO-JURI-261006001",
+   "qty": 19.0,
+   "rate": 17546.83,
+   "v2300": 19.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260053": {
+   "src": "RECO-JURI-261006001",
+   "qty": 26.0,
+   "rate": 4301.11,
+   "v2300": 26.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260054": {
+   "src": "RECO-JURI-261009037",
+   "qty": 24.0,
+   "rate": 5828.3675,
+   "v2300": 24.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260063": {
+   "src": "RECO-JURI-261006001",
+   "qty": 1.0,
+   "rate": 56900.0,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260067": {
+   "src": "RECO-JURI-261006001",
+   "qty": 2.0,
+   "rate": 10003.82,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260068": {
+   "src": "RECO-JURI-261009037",
+   "qty": 201.0,
+   "rate": 55000.0,
+   "v2300": 201.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260069": {
+   "src": "RECO-JURI-261006001",
+   "qty": 17800.0,
+   "rate": 1942.96,
+   "v2300": 17800.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260070": {
+   "src": "RECO-JURI-261006001",
+   "qty": 104100.0,
+   "rate": 379.95,
+   "v2300": 104100.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260071": {
+   "src": "RECO-JURI-261006001",
+   "qty": 18900.0,
+   "rate": 332.67,
+   "v2300": 18900.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260073": {
+   "src": "RECO-JURI-261006001",
+   "qty": 2700.0,
+   "rate": 7599.51,
+   "v2300": 2700.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260074": {
+   "src": "RECO-JURI-261006001",
+   "qty": 55.0,
+   "rate": 4167.12,
+   "v2300": 55.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260075": {
+   "src": "RECO-JURI-261006001",
+   "qty": 370.0,
+   "rate": 2454.59,
+   "v2300": 370.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260076": {
+   "src": "RECO-JURI-261006001",
+   "qty": 64400.0,
+   "rate": 217.59,
+   "v2300": 64400.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260077": {
+   "src": "RECO-JURI-261006001",
+   "qty": 37205.0,
+   "rate": 106.67,
+   "v2300": 37205.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260078": {
+   "src": "RECO-JURI-261006001",
+   "qty": 353.0,
+   "rate": 3915.74,
+   "v2300": 353.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260079": {
+   "src": "RECO-JURI-261006001",
+   "qty": 86.0,
+   "rate": 4043.78,
+   "v2300": 86.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260080": {
+   "src": "RECO-JURI-261006001",
+   "qty": 131.0,
+   "rate": 6004.71,
+   "v2300": 131.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260081": {
+   "src": "RECO-JURI-261006001",
+   "qty": 566.0,
+   "rate": 5564.29,
+   "v2300": 566.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260083": {
+   "src": "RECO-JURI-261006001",
+   "qty": 418000.0,
+   "rate": 97.45,
+   "v2300": 418000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260084": {
+   "src": "RECO-JURI-261009037",
+   "qty": 5000.0,
+   "rate": 34.7528992,
+   "v2300": 5000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260085": {
+   "src": "RECO-JURI-261009037",
+   "qty": 12000.0,
+   "rate": 21.985657737,
+   "v2300": 12000.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260089": {
+   "src": "RECO-JURI-261006001",
+   "qty": 14.0,
+   "rate": 55000.0,
+   "v2300": 14.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|PEL260097": {
+   "src": "RECO-JURI-261006001",
+   "qty": 100.0,
+   "rate": 1063.0,
+   "v2300": 100.0,
+   "chg2300": false
+  },
+  "Gudang Barang Jadi - JURI|SG260012": {
+   "src": "RECO-JURI-261006001",
+   "qty": 71.0,
+   "rate": 22807.26,
+   "v2300": 71.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|ATK260039": {
+   "src": "RECO-JURI-261006007",
+   "qty": 37.0,
+   "rate": 38831.92,
+   "v2300": 0.0,
+   "chg2300": true
+  },
+  "Gudang GA - JURI|BHP260008": {
+   "src": "RECO-JURI-261006007",
+   "qty": 6.0,
+   "rate": 92343.08,
+   "v2300": 0.0,
+   "chg2300": true
+  },
+  "Gudang GA - JURI|PEL260091-Biru-L": {
+   "src": "RECO-JURI-261009003",
+   "qty": 8.0,
+   "rate": 77518.0,
+   "v2300": 8.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Biru-M": {
+   "src": "RECO-JURI-261009003",
+   "qty": 6.0,
+   "rate": 77518.0,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Biru-S": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 77518.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Biru-XL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 3.0,
+   "rate": 77518.0,
+   "v2300": 3.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Biru-XXL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 77518.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Hitam-L": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 63222.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Hitam-M": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 63222.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Hitam-S": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 63222.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Hitam-XL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 50100.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Hitam-XXL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 6.0,
+   "rate": 63222.0,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Kuning-L": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 77518.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Kuning-M": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 77518.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Kuning-S": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 77518.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Kuning-XL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 4.0,
+   "rate": 77518.0,
+   "v2300": 4.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Kuning-XXL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 4.0,
+   "rate": 77518.0,
+   "v2300": 4.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Merah-L": {
+   "src": "RECO-JURI-261009003",
+   "qty": 11.0,
+   "rate": 63222.0,
+   "v2300": 11.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Merah-M": {
+   "src": "RECO-JURI-261009003",
+   "qty": 4.0,
+   "rate": 63222.0,
+   "v2300": 4.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Merah-S": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 63222.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Merah-XL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 8.0,
+   "rate": 63222.0,
+   "v2300": 8.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260091-Merah-XXL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 63222.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260092-Abu-L": {
+   "src": "RECO-JURI-261009003",
+   "qty": 8.0,
+   "rate": 60070.0,
+   "v2300": 8.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260092-Abu-M": {
+   "src": "RECO-JURI-261009003",
+   "qty": 5.0,
+   "rate": 60070.0,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260092-Abu-XL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 6.0,
+   "rate": 60070.0,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260092-Abu-XXL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 1.0,
+   "rate": 60070.0,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260092-Hitam-L": {
+   "src": "RECO-JURI-261009003",
+   "qty": 6.0,
+   "rate": 60070.0,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260092-Hitam-M": {
+   "src": "RECO-JURI-261009003",
+   "qty": 7.0,
+   "rate": 60070.0,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260092-Hitam-XL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 3.0,
+   "rate": 60070.0,
+   "v2300": 3.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260092-Hitam-XXL": {
+   "src": "RECO-JURI-261009003",
+   "qty": 2.0,
+   "rate": 60070.0,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260093-L": {
+   "src": "RECO-JURI-261009003",
+   "qty": 2.0,
+   "rate": 88000.0,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260093-S": {
+   "src": "RECO-JURI-261009003",
+   "qty": 1.0,
+   "rate": 88000.0,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260094-Oranye": {
+   "src": "RECO-JURI-261009003",
+   "qty": 6.0,
+   "rate": 14000.0,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|PEL260094-Putih": {
+   "src": "RECO-JURI-261009003",
+   "qty": 10.0,
+   "rate": 14000.0,
+   "v2300": 10.0,
+   "chg2300": false
+  },
+  "Gudang GA - JURI|SG260005": {
+   "src": "RECO-JURI-261006007",
+   "qty": 8.0,
+   "rate": 106995.2,
+   "v2300": 0.0,
+   "chg2300": true
+  },
+  "Gudang GA - JURI|SG260013": {
+   "src": "RECO-JURI-261006007",
+   "qty": 28.0,
+   "rate": 69635.26,
+   "v2300": 0.0,
+   "chg2300": true
+  },
+  "Gudang GA - JURI|SG260014": {
+   "src": "RECO-JURI-261006007",
+   "qty": 89.0,
+   "rate": 102665.3,
+   "v2300": 0.0,
+   "chg2300": true
+  },
+  "Gudang Jakarta - JURI|ATK260029": {
+   "src": "RECO-JURI-261009022",
+   "qty": 7.0,
+   "rate": 4473.83,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|ATK260049": {
+   "src": "RECO-JURI-261009004",
+   "qty": 17.0,
+   "rate": 11384.01,
+   "v2300": 17.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260019": {
+   "src": "RECO-JURI-261009022",
+   "qty": 1370.0,
+   "rate": 440.0,
+   "v2300": 1370.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260030": {
+   "src": "RECO-JURI-261009022",
+   "qty": 147750.0,
+   "rate": 84.99,
+   "v2300": 147750.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260031": {
+   "src": "RECO-JURI-261009022",
+   "qty": 130000.0,
+   "rate": 106.48,
+   "v2300": 130000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260032": {
+   "src": "RECO-JURI-261009022",
+   "qty": 27360.0,
+   "rate": 397.3,
+   "v2300": 27360.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260033": {
+   "src": "RECO-JURI-261009022",
+   "qty": 262000.0,
+   "rate": 78.58,
+   "v2300": 262000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260038": {
+   "src": "RECO-JURI-261009022",
+   "qty": 6240.0,
+   "rate": 265.31,
+   "v2300": 6240.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260039": {
+   "src": "RECO-JURI-261009022",
+   "qty": 2750.0,
+   "rate": 227.42,
+   "v2300": 2750.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260040": {
+   "src": "RECO-JURI-261009022",
+   "qty": 8500.0,
+   "rate": 42.73,
+   "v2300": 8500.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260041": {
+   "src": "RECO-JURI-261009022",
+   "qty": 11000.0,
+   "rate": 24.54,
+   "v2300": 11000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260042": {
+   "src": "RECO-JURI-261009022",
+   "qty": 22000.0,
+   "rate": 22.0,
+   "v2300": 22000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260043": {
+   "src": "RECO-JURI-261009022",
+   "qty": 32000.0,
+   "rate": 50.9,
+   "v2300": 32000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260044": {
+   "src": "RECO-JURI-261009022",
+   "qty": 35000.0,
+   "rate": 57.08,
+   "v2300": 35000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260045": {
+   "src": "RECO-JURI-261009022",
+   "qty": 7000.0,
+   "rate": 29.63,
+   "v2300": 7000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260046": {
+   "src": "RECO-JURI-261009022",
+   "qty": 16500.0,
+   "rate": 34.15,
+   "v2300": 16500.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260047": {
+   "src": "RECO-JURI-261009022",
+   "qty": 23000.0,
+   "rate": 51.91,
+   "v2300": 23000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260048": {
+   "src": "RECO-JURI-261009022",
+   "qty": 6500.0,
+   "rate": 61.76,
+   "v2300": 6500.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260050": {
+   "src": "RECO-JURI-261009022",
+   "qty": 13500.0,
+   "rate": 64.47,
+   "v2300": 13500.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260051": {
+   "src": "RECO-JURI-261009022",
+   "qty": 16640.0,
+   "rate": 76.15,
+   "v2300": 16640.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260052": {
+   "src": "RECO-JURI-261009022",
+   "qty": 37440.0,
+   "rate": 98.54,
+   "v2300": 37440.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260053": {
+   "src": "RECO-JURI-261009022",
+   "qty": 3500.0,
+   "rate": 363.96,
+   "v2300": 3500.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BB260054": {
+   "src": "RECO-JURI-261009022",
+   "qty": 9600.0,
+   "rate": 101.87,
+   "v2300": 9600.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BHP260023": {
+   "src": "RECO-JURI-261009039",
+   "qty": 66.0,
+   "rate": 10624.48137931,
+   "v2300": 66.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BHP260025": {
+   "src": "RECO-JURI-261009022",
+   "qty": 20.0,
+   "rate": 32983.08,
+   "v2300": 20.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|BHP260027": {
+   "src": "RECO-JURI-261009022",
+   "qty": 80.0,
+   "rate": 28377.75,
+   "v2300": 80.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260005": {
+   "src": "RECO-JURI-261009022",
+   "qty": 24.0,
+   "rate": 35000.0,
+   "v2300": 24.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260006": {
+   "src": "RECO-JURI-261009022",
+   "qty": 14.0,
+   "rate": 35000.0,
+   "v2300": 14.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260007": {
+   "src": "RECO-JURI-261009004",
+   "qty": 200.0,
+   "rate": 1065.98,
+   "v2300": 200.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260008": {
+   "src": "RECO-JURI-261009022",
+   "qty": 3.0,
+   "rate": 155693.37,
+   "v2300": 3.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260010": {
+   "src": "RECO-JURI-261009022",
+   "qty": 11.0,
+   "rate": 3895.05,
+   "v2300": 11.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260011": {
+   "src": "RECO-JURI-261009022",
+   "qty": 4.0,
+   "rate": 9516.44,
+   "v2300": 4.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260013": {
+   "src": "RECO-JURI-261009022",
+   "qty": 10.0,
+   "rate": 211368.98,
+   "v2300": 10.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260016": {
+   "src": "RECO-JURI-261009022",
+   "qty": 1.0,
+   "rate": 13581.55,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260017": {
+   "src": "RECO-JURI-261009022",
+   "qty": 12.0,
+   "rate": 35211.31,
+   "v2300": 12.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260018": {
+   "src": "RECO-JURI-261009022",
+   "qty": 16.0,
+   "rate": 7922.6,
+   "v2300": 16.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260019": {
+   "src": "RECO-JURI-261009022",
+   "qty": 20.0,
+   "rate": 50000.0,
+   "v2300": 20.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260021": {
+   "src": "RECO-JURI-261009022",
+   "qty": 7.0,
+   "rate": 9055.4,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260022": {
+   "src": "RECO-JURI-261009022",
+   "qty": 7.0,
+   "rate": 10016.32,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260023": {
+   "src": "RECO-JURI-261009022",
+   "qty": 7.0,
+   "rate": 12777.04,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260026": {
+   "src": "RECO-JURI-261009022",
+   "qty": 106.0,
+   "rate": 24955.5,
+   "v2300": 106.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260027": {
+   "src": "RECO-JURI-261009022",
+   "qty": 80.0,
+   "rate": 52840.94,
+   "v2300": 80.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260029": {
+   "src": "RECO-JURI-261009022",
+   "qty": 6.0,
+   "rate": 26937.99,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260031": {
+   "src": "RECO-JURI-261009022",
+   "qty": 6.0,
+   "rate": 2314.72,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260033": {
+   "src": "RECO-JURI-261009022",
+   "qty": 6.0,
+   "rate": 7739.37,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260038": {
+   "src": "RECO-JURI-261009022",
+   "qty": 7.0,
+   "rate": 77646.6,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260039": {
+   "src": "RECO-JURI-261009022",
+   "qty": 22.0,
+   "rate": 25326.68,
+   "v2300": 22.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260041": {
+   "src": "RECO-JURI-261009022",
+   "qty": 7.0,
+   "rate": 14438.03,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260042": {
+   "src": "RECO-JURI-261009022",
+   "qty": 7.0,
+   "rate": 2480.24,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260043": {
+   "src": "RECO-JURI-261009022",
+   "qty": 24.0,
+   "rate": 802.68,
+   "v2300": 24.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260044": {
+   "src": "RECO-JURI-261009022",
+   "qty": 8.0,
+   "rate": 16793.32,
+   "v2300": 8.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260048": {
+   "src": "RECO-JURI-261009022",
+   "qty": 4.0,
+   "rate": 160600.0,
+   "v2300": 4.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260050": {
+   "src": "RECO-JURI-261009022",
+   "qty": 3.0,
+   "rate": 67008.88,
+   "v2300": 3.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260052": {
+   "src": "RECO-JURI-261009022",
+   "qty": 29.0,
+   "rate": 14596.67,
+   "v2300": 29.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260053": {
+   "src": "RECO-JURI-261009022",
+   "qty": 13.0,
+   "rate": 3849.62,
+   "v2300": 13.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260054": {
+   "src": "RECO-JURI-261009022",
+   "qty": 7.0,
+   "rate": 6500.0,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260063": {
+   "src": "RECO-JURI-261009022",
+   "qty": 2.0,
+   "rate": 57682.92,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260066": {
+   "src": "RECO-JURI-261009004",
+   "qty": 2.0,
+   "rate": 85150.0,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260067": {
+   "src": "RECO-JURI-261009022",
+   "qty": 5.0,
+   "rate": 10081.82,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260068": {
+   "src": "RECO-JURI-261009022",
+   "qty": 16.0,
+   "rate": 55000.0,
+   "v2300": 16.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260069": {
+   "src": "RECO-JURI-261009022",
+   "qty": 5389.0,
+   "rate": 1942.89,
+   "v2300": 5389.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260070": {
+   "src": "RECO-JURI-261009022",
+   "qty": 2600.0,
+   "rate": 380.99,
+   "v2300": 2600.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260071": {
+   "src": "RECO-JURI-261009022",
+   "qty": 9250.0,
+   "rate": 323.84,
+   "v2300": 9250.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260072": {
+   "src": "RECO-JURI-261009022",
+   "qty": 6664.0,
+   "rate": 1367.24,
+   "v2300": 6664.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260073": {
+   "src": "RECO-JURI-261009022",
+   "qty": 163.0,
+   "rate": 6806.01,
+   "v2300": 163.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260074": {
+   "src": "RECO-JURI-261009022",
+   "qty": 100.0,
+   "rate": 4167.12,
+   "v2300": 100.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260076": {
+   "src": "RECO-JURI-261009022",
+   "qty": 117059.0,
+   "rate": 219.38,
+   "v2300": 117059.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260077": {
+   "src": "RECO-JURI-261009022",
+   "qty": 5800.0,
+   "rate": 106.67,
+   "v2300": 5800.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260078": {
+   "src": "RECO-JURI-261009022",
+   "qty": 131.0,
+   "rate": 3932.56,
+   "v2300": 131.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260079": {
+   "src": "RECO-JURI-261009022",
+   "qty": 127.0,
+   "rate": 3951.09,
+   "v2300": 127.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260080": {
+   "src": "RECO-JURI-261009022",
+   "qty": 144.0,
+   "rate": 6085.94,
+   "v2300": 144.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260081": {
+   "src": "RECO-JURI-261009022",
+   "qty": 360.0,
+   "rate": 5640.47,
+   "v2300": 360.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260083": {
+   "src": "RECO-JURI-261009022",
+   "qty": 32500.0,
+   "rate": 96.06,
+   "v2300": 32500.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260084": {
+   "src": "RECO-JURI-261009022",
+   "qty": 19750.0,
+   "rate": 29.89,
+   "v2300": 19750.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260085": {
+   "src": "RECO-JURI-261009022",
+   "qty": 14000.0,
+   "rate": 23.94,
+   "v2300": 14000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260086": {
+   "src": "RECO-JURI-261009004",
+   "qty": 12000.0,
+   "rate": 97.02966381,
+   "v2300": 12000.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260096": {
+   "src": "RECO-JURI-261009004",
+   "qty": 100.0,
+   "rate": 1063.0,
+   "v2300": 100.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260097": {
+   "src": "RECO-JURI-261009036",
+   "qty": 498.0,
+   "rate": 1063.0,
+   "v2300": 498.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PEL260098": {
+   "src": "RECO-JURI-261009004",
+   "qty": 200.0,
+   "rate": 1063.0,
+   "v2300": 200.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PJ260009": {
+   "src": "RECO-JURI-261009022",
+   "qty": 264.0,
+   "rate": 1697.29,
+   "v2300": 264.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PJ260010": {
+   "src": "RECO-JURI-261009022",
+   "qty": 2076.0,
+   "rate": 1918.06,
+   "v2300": 2076.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PJ260011": {
+   "src": "RECO-JURI-261009022",
+   "qty": 3447.0,
+   "rate": 2459.19,
+   "v2300": 3447.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PJ260012": {
+   "src": "RECO-JURI-261009022",
+   "qty": 13476.0,
+   "rate": 772.46,
+   "v2300": 13476.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PJ260013": {
+   "src": "RECO-JURI-261009022",
+   "qty": 17016.0,
+   "rate": 795.16,
+   "v2300": 17016.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PJ260014": {
+   "src": "RECO-JURI-261009022",
+   "qty": 11076.0,
+   "rate": 905.8,
+   "v2300": 11076.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|PJ260016": {
+   "src": "RECO-JURI-261009022",
+   "qty": 2330.0,
+   "rate": 14186.71,
+   "v2300": 2330.0,
+   "chg2300": false
+  },
+  "Gudang Jakarta - JURI|SG260012": {
+   "src": "RECO-JURI-261009022",
+   "qty": 40.0,
+   "rate": 24500.0,
+   "v2300": 40.0,
+   "chg2300": false
+  },
+  "Gudang Outlet - JURI|PEL260056": {
+   "src": "RECO-JURI-261009005",
+   "qty": 14.0,
+   "rate": 341970.155454545,
+   "v2300": 14.0,
+   "chg2300": false
+  },
+  "Gudang Outlet - JURI|PEL260057": {
+   "src": "RECO-JURI-261009005",
+   "qty": 7.0,
+   "rate": 3243243.242272727,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Outlet - JURI|PEL260058": {
+   "src": "RECO-JURI-261009005",
+   "qty": 5.0,
+   "rate": 398829.760857143,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Gudang Outlet - JURI|PEL260059": {
+   "src": "RECO-JURI-261009005",
+   "qty": 8.0,
+   "rate": 414865.367045454,
+   "v2300": 8.0,
+   "chg2300": false
+  },
+  "Gudang Outlet - JURI|PEL260060": {
+   "src": "RECO-JURI-261009005",
+   "qty": 6.0,
+   "rate": 19766.671388889,
+   "v2300": 6.0,
+   "chg2300": false
+  },
+  "Gudang Peralatan - JURI|PEL260064": {
+   "src": "RECO-JURI-261009006",
+   "qty": 2.0,
+   "rate": 6246667.0,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Peralatan - JURI|PER260003": {
+   "src": "RECO-JURI-261006005",
+   "qty": 2.0,
+   "rate": 1344400.0,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Peralatan - JURI|PER260004": {
+   "src": "RECO-JURI-261006005",
+   "qty": 21.0,
+   "rate": 1683652.89,
+   "v2300": 3.0,
+   "chg2300": true
+  },
+  "Gudang Peralatan - JURI|PER260006": {
+   "src": "RECO-JURI-261009006",
+   "qty": 3.0,
+   "rate": 1105742.0,
+   "v2300": 3.0,
+   "chg2300": false
+  },
+  "Gudang Peralatan - JURI|PER260008": {
+   "src": "RECO-JURI-261006005",
+   "qty": 3.0,
+   "rate": 5115199.79,
+   "v2300": 1.0,
+   "chg2300": true
+  },
+  "Gudang Peralatan - JURI|PER260009": {
+   "src": "RECO-JURI-261006005",
+   "qty": 2.0,
+   "rate": 6126126.2,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Peralatan - JURI|PER260011": {
+   "src": "RECO-JURI-261006005",
+   "qty": 3.0,
+   "rate": 2000000.0,
+   "v2300": 3.0,
+   "chg2300": false
+  },
+  "Gudang Peralatan - JURI|PER260012": {
+   "src": "RECO-JURI-261006005",
+   "qty": 1.0,
+   "rate": 2000000.0,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Gudang Peralatan - JURI|PER260014": {
+   "src": "RECO-JURI-261006005",
+   "qty": 2.0,
+   "rate": 0.0,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Peralatan - JURI|PER260016": {
+   "src": "RECO-JURI-261006005",
+   "qty": 3.0,
+   "rate": 5705907.94,
+   "v2300": 1.0,
+   "chg2300": true
+  },
+  "Gudang Peralatan - JURI|PER260017": {
+   "src": "RECO-JURI-261006005",
+   "qty": 7.0,
+   "rate": 4500000.0,
+   "v2300": 4.0,
+   "chg2300": true
+  },
+  "Gudang Produksi - JURI|BB260004": {
+   "src": "RECO-JURI-261006003",
+   "qty": 77330.0,
+   "rate": 0.55,
+   "v2300": 77330.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260005": {
+   "src": "RECO-JURI-261006003",
+   "qty": 8030.0,
+   "rate": 29.49,
+   "v2300": 8030.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260006": {
+   "src": "RECO-JURI-261006003",
+   "qty": 124320.0,
+   "rate": 0.54,
+   "v2300": 124320.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260007": {
+   "src": "RECO-JURI-261006003",
+   "qty": 23520.0,
+   "rate": 38.97,
+   "v2300": 23520.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260008": {
+   "src": "RECO-JURI-261006003",
+   "qty": 33080.0,
+   "rate": 41.43,
+   "v2300": 33080.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260009": {
+   "src": "RECO-JURI-261009020",
+   "qty": 1812.0,
+   "rate": 72.158995042,
+   "v2300": 1812.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260010": {
+   "src": "RECO-JURI-261006003",
+   "qty": 5640.0,
+   "rate": 7.25,
+   "v2300": 5640.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260011": {
+   "src": "RECO-JURI-261006003",
+   "qty": 41900.0,
+   "rate": 18.02,
+   "v2300": 41900.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260012": {
+   "src": "RECO-JURI-261009020",
+   "qty": 81436.0,
+   "rate": 17.200000461,
+   "v2300": 81436.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260013": {
+   "src": "RECO-JURI-261006003",
+   "qty": 55000.0,
+   "rate": 61.2,
+   "v2300": 55000.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260014": {
+   "src": "RECO-JURI-261006003",
+   "qty": 25500.0,
+   "rate": 17.12,
+   "v2300": 25500.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260015": {
+   "src": "RECO-JURI-261006003",
+   "qty": 33000.0,
+   "rate": 17.12,
+   "v2300": 33000.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260016": {
+   "src": "RECO-JURI-261006003",
+   "qty": 5070.0,
+   "rate": 231.88,
+   "v2300": 5070.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260017": {
+   "src": "RECO-JURI-261009020",
+   "qty": 600400.0,
+   "rate": 129.56847306,
+   "v2300": 600400.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260018": {
+   "src": "RECO-JURI-261006003",
+   "qty": 2500.0,
+   "rate": 413.27,
+   "v2300": 2500.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260019": {
+   "src": "RECO-JURI-261009020",
+   "qty": 1652.0,
+   "rate": 396.0,
+   "v2300": 1652.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260020": {
+   "src": "RECO-JURI-261006003",
+   "qty": 1280.0,
+   "rate": 238.64,
+   "v2300": 1280.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260021": {
+   "src": "RECO-JURI-261009020",
+   "qty": 166000.0,
+   "rate": 15.267569086,
+   "v2300": 166000.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260022": {
+   "src": "RECO-JURI-261006003",
+   "qty": 88880.0,
+   "rate": 17.64,
+   "v2300": 88880.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260023": {
+   "src": "RECO-JURI-261006003",
+   "qty": 176330.0,
+   "rate": 23.87,
+   "v2300": 176330.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260025": {
+   "src": "RECO-JURI-261009020",
+   "qty": 3028.0,
+   "rate": 53.000000613,
+   "v2300": 3028.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260026": {
+   "src": "RECO-JURI-261009020",
+   "qty": 30200.0,
+   "rate": 80.000003845,
+   "v2300": 30200.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260027": {
+   "src": "RECO-JURI-261006003",
+   "qty": 361980.0,
+   "rate": 22.65,
+   "v2300": 361980.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260028": {
+   "src": "RECO-JURI-261006003",
+   "qty": 219000.0,
+   "rate": 8.88,
+   "v2300": 219000.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260029": {
+   "src": "RECO-JURI-261006003",
+   "qty": 106250.0,
+   "rate": 6.65,
+   "v2300": 106250.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BB260055": {
+   "src": "RECO-JURI-261007001",
+   "qty": 32460.0,
+   "rate": 28.801486556,
+   "v2300": 32460.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BHP260022": {
+   "src": "RECO-JURI-261007003",
+   "qty": 53.0,
+   "rate": 59000.0,
+   "v2300": 53.0,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BHP260027": {
+   "src": "RECO-JURI-261006003",
+   "qty": 9.5,
+   "rate": 26915.68,
+   "v2300": 9.5,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BHP260028": {
+   "src": "RECO-JURI-261009035",
+   "qty": 9.25,
+   "rate": 6396.005390072,
+   "v2300": 9.25,
+   "chg2300": false
+  },
+  "Gudang Produksi - JURI|BHP260029": {
+   "src": "RECO-JURI-261009035",
+   "qty": 31.9,
+   "rate": 48339.353605016,
+   "v2300": 31.9,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260010": {
+   "src": "RECO-JURI-261009008",
+   "qty": 10.0,
+   "rate": 7.25,
+   "v2300": 10.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260011": {
+   "src": "RECO-JURI-261009008",
+   "qty": 1424.0,
+   "rate": 18.017998596,
+   "v2300": 1424.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260012": {
+   "src": "RECO-JURI-261009008",
+   "qty": 113.0,
+   "rate": 17.09985229,
+   "v2300": 113.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260015": {
+   "src": "RECO-JURI-261009008",
+   "qty": 1540.0,
+   "rate": 17.266012987,
+   "v2300": 1540.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260016": {
+   "src": "RECO-JURI-261009008",
+   "qty": 266.0,
+   "rate": 231.294586466,
+   "v2300": 266.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260022": {
+   "src": "RECO-JURI-261009008",
+   "qty": 400.0,
+   "rate": 17.4342,
+   "v2300": 400.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260023": {
+   "src": "RECO-JURI-261009008",
+   "qty": 38.0,
+   "rate": 23.87380772,
+   "v2300": 38.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260025": {
+   "src": "RECO-JURI-261009008",
+   "qty": 22.0,
+   "rate": 53.0,
+   "v2300": 22.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260026": {
+   "src": "RECO-JURI-261009008",
+   "qty": 30.0,
+   "rate": 82.698333333,
+   "v2300": 30.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260027": {
+   "src": "RECO-JURI-261009008",
+   "qty": 748.0,
+   "rate": 23.553475936,
+   "v2300": 748.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260028": {
+   "src": "RECO-JURI-261009008",
+   "qty": 1000.0,
+   "rate": 8.88,
+   "v2300": 1000.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|BB260029": {
+   "src": "RECO-JURI-261009008",
+   "qty": 2750.0,
+   "rate": 6.60792,
+   "v2300": 2750.0,
+   "chg2300": false
+  },
+  "Gudang R&D - JURI|PJ260016": {
+   "src": "RECO-JURI-261009008",
+   "qty": 2.0,
+   "rate": 15631.7,
+   "v2300": 2.0,
+   "chg2300": false
+  },
+  "Gudang Vendor - JURI|PER260004": {
+   "src": "RECO-JURI-261009010",
+   "qty": 3.0,
+   "rate": 1958000.0,
+   "v2300": 3.0,
+   "chg2300": false
+  },
+  "Gudang Vendor - JURI|PER260008": {
+   "src": "RECO-JURI-261006006",
+   "qty": 7.0,
+   "rate": 5450000.0,
+   "v2300": 7.0,
+   "chg2300": false
+  },
+  "Gudang Vendor - JURI|PER260009": {
+   "src": "RECO-JURI-261009010",
+   "qty": 1.0,
+   "rate": 8360000.0,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Gudang Vendor - JURI|PER260016": {
+   "src": "RECO-JURI-261006006",
+   "qty": 13.0,
+   "rate": 5705907.94,
+   "v2300": 13.0,
+   "chg2300": false
+  },
+  "Gudang Vendor - JURI|PER260017": {
+   "src": "RECO-JURI-261006006",
+   "qty": 20.0,
+   "rate": 4500000.0,
+   "v2300": 20.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260019": {
+   "src": "RECO-JURI-261009011",
+   "qty": 10.0,
+   "rate": 287.0,
+   "v2300": 10.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260038": {
+   "src": "RECO-JURI-261009011",
+   "qty": 200.0,
+   "rate": 265.31,
+   "v2300": 200.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260039": {
+   "src": "RECO-JURI-261009011",
+   "qty": 250.0,
+   "rate": 248.186666667,
+   "v2300": 250.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260040": {
+   "src": "RECO-JURI-261009011",
+   "qty": 750.0,
+   "rate": 43.75,
+   "v2300": 750.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260041": {
+   "src": "RECO-JURI-261009011",
+   "qty": 1000.0,
+   "rate": 23.945736125,
+   "v2300": 1000.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260042": {
+   "src": "RECO-JURI-261009011",
+   "qty": 1000.0,
+   "rate": 21.195,
+   "v2300": 1000.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260043": {
+   "src": "RECO-JURI-261009011",
+   "qty": 3000.0,
+   "rate": 49.5495,
+   "v2300": 3000.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260044": {
+   "src": "RECO-JURI-261009011",
+   "qty": 3000.0,
+   "rate": 57.081,
+   "v2300": 3000.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260045": {
+   "src": "RECO-JURI-261009011",
+   "qty": 500.0,
+   "rate": 29.489467972,
+   "v2300": 500.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260046": {
+   "src": "RECO-JURI-261009011",
+   "qty": 250.0,
+   "rate": 34.193749377,
+   "v2300": 250.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260047": {
+   "src": "RECO-JURI-261009011",
+   "qty": 2000.0,
+   "rate": 49.873833333,
+   "v2300": 2000.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BB260048": {
+   "src": "RECO-JURI-261009011",
+   "qty": 1000.0,
+   "rate": 56.06,
+   "v2300": 1000.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|BHP260027": {
+   "src": "RECO-JURI-261009011",
+   "qty": 1.0,
+   "rate": 28540.0,
+   "v2300": 1.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260069": {
+   "src": "RECO-JURI-261009011",
+   "qty": 200.0,
+   "rate": 1943.0,
+   "v2300": 200.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260070": {
+   "src": "RECO-JURI-261009011",
+   "qty": 900.0,
+   "rate": 415.931527753,
+   "v2300": 900.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260071": {
+   "src": "RECO-JURI-261009011",
+   "qty": 300.0,
+   "rate": 304.5,
+   "v2300": 300.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260072": {
+   "src": "RECO-JURI-261009011",
+   "qty": 40.0,
+   "rate": 1370.0,
+   "v2300": 40.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260074": {
+   "src": "RECO-JURI-261009011",
+   "qty": 25.0,
+   "rate": 4167.0,
+   "v2300": 25.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260075": {
+   "src": "RECO-JURI-261009011",
+   "qty": 40.0,
+   "rate": 2450.0,
+   "v2300": 40.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260076": {
+   "src": "RECO-JURI-261009011",
+   "qty": 3000.0,
+   "rate": 216.219999502,
+   "v2300": 3000.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260077": {
+   "src": "RECO-JURI-261009011",
+   "qty": 300.0,
+   "rate": 107.0,
+   "v2300": 300.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260078": {
+   "src": "RECO-JURI-261009011",
+   "qty": 5.0,
+   "rate": 3603.741909669,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260079": {
+   "src": "RECO-JURI-261009011",
+   "qty": 5.0,
+   "rate": 4025.666666667,
+   "v2300": 5.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260080": {
+   "src": "RECO-JURI-261009011",
+   "qty": 10.0,
+   "rate": 6004.709988221,
+   "v2300": 10.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260081": {
+   "src": "RECO-JURI-261009011",
+   "qty": 10.0,
+   "rate": 5213.333333333,
+   "v2300": 10.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260083": {
+   "src": "RECO-JURI-261009011",
+   "qty": 1000.0,
+   "rate": 96.326848791,
+   "v2300": 1000.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260084": {
+   "src": "RECO-JURI-261009011",
+   "qty": 1250.0,
+   "rate": 30.036757039,
+   "v2300": 1250.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PEL260085": {
+   "src": "RECO-JURI-261009011",
+   "qty": 1000.0,
+   "rate": 20.01945,
+   "v2300": 1000.0,
+   "chg2300": false
+  },
+  "Mini Outlet - JURI|PJ260009": {
+   "src": "RECO-JURI-261009011",
+   "qty": 72.0,
+   "rate": 1697.291665447,
+   "v2300": 72.0,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260004": {
+   "src": "RECO-JURI-261007002",
+   "qty": 85953.54,
+   "rate": 0.836320633,
+   "v2300": 85953.54,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260005": {
+   "src": "RECO-JURI-261007002",
+   "qty": 6981.65,
+   "rate": 29.489463379,
+   "v2300": 6981.65,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260006": {
+   "src": "RECO-JURI-261007002",
+   "qty": 143526.85,
+   "rate": 0.541684918,
+   "v2300": 143526.85,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260007": {
+   "src": "RECO-JURI-261007002",
+   "qty": 22705.92,
+   "rate": 39.039038383,
+   "v2300": 22705.92,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260008": {
+   "src": "RECO-JURI-261007002",
+   "qty": 68992.58,
+   "rate": 41.441441217,
+   "v2300": 68992.58,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260009": {
+   "src": "RECO-JURI-261007002",
+   "qty": 21888.0,
+   "rate": 72.159,
+   "v2300": 21888.0,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260010": {
+   "src": "RECO-JURI-261007002",
+   "qty": 7113.34,
+   "rate": 7.249996485,
+   "v2300": 7113.34,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260012": {
+   "src": "RECO-JURI-261007002",
+   "qty": 72749.88,
+   "rate": 17.000001512,
+   "v2300": 72749.88,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260013": {
+   "src": "RECO-JURI-261007002",
+   "qty": 4653.02,
+   "rate": 59.459392738,
+   "v2300": 4653.02,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260014": {
+   "src": "RECO-JURI-261007002",
+   "qty": 94997.47,
+   "rate": 17.117117607,
+   "v2300": 94997.47,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260017": {
+   "src": "RECO-JURI-261007002",
+   "qty": 25387.8,
+   "rate": 68.271999937,
+   "v2300": 25387.8,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260018": {
+   "src": "RECO-JURI-261007002",
+   "qty": 852.7,
+   "rate": 413.265962238,
+   "v2300": 852.7,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260020": {
+   "src": "RECO-JURI-261007002",
+   "qty": 721.56,
+   "rate": 237.054921825,
+   "v2300": 721.56,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260023": {
+   "src": "RECO-JURI-261007002",
+   "qty": 24709.03,
+   "rate": 23.873874253,
+   "v2300": 24709.03,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260025": {
+   "src": "RECO-JURI-261007002",
+   "qty": 10436.4,
+   "rate": 53.0,
+   "v2300": 10436.4,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260026": {
+   "src": "RECO-JURI-261007002",
+   "qty": 8140.56,
+   "rate": 80.0,
+   "v2300": 8140.56,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260028": {
+   "src": "RECO-JURI-261007002",
+   "qty": 670920.57,
+   "rate": 8.880000013,
+   "v2300": 670920.57,
+   "chg2300": false
+  },
+  "Work In Progress - JURI|BB260055": {
+   "src": "RECO-JURI-261007002",
+   "qty": 110147.87,
+   "rate": 28.532949124,
+   "v2300": 110147.87,
+   "chg2300": false
+  }
+ },
+ "pred_cancel_blocks": {
+  "RECO-JURI-261006001": 76,
+  "RECO-JURI-261006003": 20,
+  "RECO-JURI-261006005": 1,
+  "RECO-JURI-261006006": 0,
+  "RECO-JURI-261006007": 0,
+  "RECO-JURI-261006008": 13,
+  "RECO-JURI-261007001": 1,
+  "RECO-JURI-261007002": 25,
+  "RECO-JURI-261007003": 0,
+  "RECO-JURI-261007007": 1,
+  "RECO-JURI-261008001": 5,
+  "RECO-JURI-261009001": 0,
+  "RECO-JURI-261009002": 0,
+  "RECO-JURI-261009003": 0,
+  "RECO-JURI-261009004": 0,
+  "RECO-JURI-261009005": 1,
+  "RECO-JURI-261009006": 0,
+  "RECO-JURI-261009008": 0,
+  "RECO-JURI-261009009": 0,
+  "RECO-JURI-261009010": 0,
+  "RECO-JURI-261009011": 0,
+  "RECO-JURI-261009012": 0,
+  "RECO-JURI-261009013": 23,
+  "RECO-JURI-261009017": 0,
+  "RECO-JURI-261009018": 4,
+  "RECO-JURI-261009020": 7,
+  "RECO-JURI-261009022": 61,
+  "RECO-JURI-261009035": 0,
+  "RECO-JURI-261009036": 0,
+  "RECO-JURI-261009037": 10,
+  "RECO-JURI-261009039": 0
+ },
+ "pred_sr7_blocks": {
+  "RECO-JURI-261009026": 0,
+  "RECO-JURI-261009029": 0,
+  "RECO-JURI-261009030": 0,
+  "RECO-JURI-261009031": 0,
+  "RECO-JURI-261009032": 1,
+  "RECO-JURI-261009033": 0,
+  "RECO-JURI-261009034": 7
+ },
+ "pred_new_blocks": {
+  "Goods In Transit - JURI": 0,
+  "Gudang Bahan Baku - JURI": 0,
+  "Gudang Barang Jadi - JURI": 0,
+  "Gudang GA - JURI": 0,
+  "Gudang Jakarta - JURI": 0,
+  "Gudang Outlet - JURI": 0,
+  "Gudang Peralatan - JURI": 0,
+  "Gudang Produksi - JURI": 13,
+  "Gudang R&D - JURI": 0,
+  "Gudang Vendor - JURI": 0,
+  "Mini Outlet - JURI": 0,
+  "Work In Progress - JURI": 16
+ },
+ "skipped": [
+  [
+   "Gudang Bahan Baku - JURI",
+   "BB260015",
+   "RECO-JURI-261006008",
+   "dipegang reco lain: RECO-JURI-261009031"
+  ],
+  [
+   "Gudang Barang Jadi - JURI",
+   "BB260019",
+   "RECO-JURI-261006001",
+   "dipegang reco lain: RECO-JURI-261009030"
+  ],
+  [
+   "Gudang Barang Jadi - JURI",
+   "BB260046",
+   "RECO-JURI-261006001",
+   "dipegang reco lain: RECO-JURI-261009030"
+  ],
+  [
+   "Gudang Barang Jadi - JURI",
+   "PEL260072",
+   "RECO-JURI-261006001",
+   "dipegang reco lain: RECO-JURI-261009014"
+  ],
+  [
+   "Gudang Jakarta - JURI",
+   "PEL260075",
+   "RECO-JURI-261009039",
+   "dipegang reco lain: RECO-JURI-261009026"
+  ],
+  [
+   "Gudang Jakarta - JURI",
+   "PEL260087",
+   "RECO-JURI-261009004",
+   "dipegang reco lain: RECO-JURI-261009033"
+  ],
+  [
+   "Gudang Produksi - JURI",
+   "BB260002",
+   "RECO-JURI-261009020",
+   "dipegang reco lain: RECO-JURI-261009041"
+  ],
+  [
+   "Work In Progress - JURI",
+   "BB260002",
+   "RECO-JURI-261007002",
+   "dipegang reco lain: RECO-JURI-261009034"
+  ],
+  [
+   "Work In Progress - JURI",
+   "BB260011",
+   "RECO-JURI-261007002",
+   "dipegang reco lain: RECO-JURI-261009034"
+  ],
+  [
+   "Work In Progress - JURI",
+   "BB260015",
+   "RECO-JURI-261007002",
+   "dipegang reco lain: RECO-JURI-261009034"
+  ],
+  [
+   "Work In Progress - JURI",
+   "BB260016",
+   "RECO-JURI-261007002",
+   "dipegang reco lain: RECO-JURI-261009034"
+  ],
+  [
+   "Work In Progress - JURI",
+   "BB260019",
+   "RECO-JURI-261007002",
+   "dipegang reco lain: RECO-JURI-261009034"
+  ],
+  [
+   "Work In Progress - JURI",
+   "BB260022",
+   "RECO-JURI-261007002",
+   "dipegang reco lain: RECO-JURI-261009034"
+  ],
+  [
+   "Work In Progress - JURI",
+   "BB260029",
+   "RECO-JURI-261007002",
+   "dipegang reco lain: RECO-JURI-261009034"
+  ]
+ ],
+ "sr7_def": {
+  "RECO-JURI-261009026": {
+   "posting_date": "2026-10-09",
+   "posting_time": "12:48:39.836298",
+   "purpose": "Stock Reconciliation",
+   "set_warehouse": "Gudang Jakarta - JURI",
+   "cost_center": "Main - JURI"
+  },
+  "RECO-JURI-261009029": {
+   "posting_date": "2026-10-09",
+   "posting_time": "12:58:27.832355",
+   "purpose": "Stock Reconciliation",
+   "set_warehouse": "Stores - JURI",
+   "cost_center": "Main - JURI"
+  },
+  "RECO-JURI-261009030": {
+   "posting_date": "2026-10-09",
+   "posting_time": "12:58:28.478122",
+   "purpose": "Stock Reconciliation",
+   "set_warehouse": "Gudang Barang Jadi - JURI",
+   "cost_center": "Main - JURI"
+  },
+  "RECO-JURI-261009031": {
+   "posting_date": "2026-10-09",
+   "posting_time": "12:58:28.656191",
+   "purpose": "Stock Reconciliation",
+   "set_warehouse": "Gudang Bahan Baku - JURI",
+   "cost_center": "Main - JURI"
+  },
+  "RECO-JURI-261009032": {
+   "posting_date": "2026-10-01",
+   "posting_time": "0:00:00",
+   "purpose": "Stock Reconciliation",
+   "set_warehouse": "Gudang Barang Jadi - JURI",
+   "cost_center": "Main - JURI"
+  },
+  "RECO-JURI-261009033": {
+   "posting_date": "2026-10-01",
+   "posting_time": "0:00:00",
+   "purpose": "Stock Reconciliation",
+   "set_warehouse": "Gudang Jakarta - JURI",
+   "cost_center": "Main - JURI"
+  },
+  "RECO-JURI-261009034": {
+   "posting_date": "2026-10-09",
+   "posting_time": "13:02:29.738271",
+   "purpose": "Stock Reconciliation",
+   "set_warehouse": "Work In Progress - JURI",
+   "cost_center": "Main - JURI"
+  }
+ },
+ "sr7_rows": {
+  "RECO-JURI-261009026": [
+   {
+    "item_code": "PEL260075",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   }
+  ],
+  "RECO-JURI-261009029": [
+   {
+    "item_code": "BB260002",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260004",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260006",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260007",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260009",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260010",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260011",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260012",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260013",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260014",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260015",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260016",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260018",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260019",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260020",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260022",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260023",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260025",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260026",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260028",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260029",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260055",
+    "warehouse": "Stores - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   }
+  ],
+  "RECO-JURI-261009030": [
+   {
+    "item_code": "BB260019",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260046",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   }
+  ],
+  "RECO-JURI-261009031": [
+   {
+    "item_code": "BB260015",
+    "warehouse": "Gudang Bahan Baku - JURI",
+    "qty": 0.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   }
+  ],
+  "RECO-JURI-261009032": [
+   {
+    "item_code": "PEL260087",
+    "warehouse": "Gudang Barang Jadi - JURI",
+    "qty": 270150.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   }
+  ],
+  "RECO-JURI-261009033": [
+   {
+    "item_code": "PEL260087",
+    "warehouse": "Gudang Jakarta - JURI",
+    "qty": 26700.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   }
+  ],
+  "RECO-JURI-261009034": [
+   {
+    "item_code": "BB260002",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 63.84,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260011",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 3100.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260015",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 2800.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260016",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 502.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260019",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 32.92,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260022",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 2000.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   },
+   {
+    "item_code": "BB260029",
+    "warehouse": "Work In Progress - JURI",
+    "qty": 4000.0,
+    "valuation_rate": 0.0,
+    "uom": null,
+    "batch_no": null,
+    "allow_zero_valuation_rate": 1
+   }
+  ]
+ }
+}
