@@ -232,6 +232,11 @@ LUNAS 30 SEP 23:00 & EOD LAMA=BARU + HAPUS LOAN PINJAM STOCK OK (48+6+6+2+7 seli
 
 ## Next steps / TODO
 
+- **DEPLOY 2 fix stok ke cloud baru (2026-10-10)** — sudah di-merge ke `main`
+  dan SUDAH di-push ke origin: `pos_next` 8730100 dan `production_app` d5c0556.
+  Tinggal deploy di Frappe Cloud. Sebelum deploy,
+  POS tetap menolak bundle (Available minus palsu) & handover Krim Kopi tetap
+  ditolak (pool masih −2.613 dari 4 MR Transferred migrasi).
 0. **Catch-up migrasi WO/handover** (docs/10): keputusan scope user →
    eksekusi batch (7 WO pagi 7 Okt, 04130, feed Bahan Baku, PP261007001)
    + sinkron delta harian sampai cutover; keputusan WO September &
@@ -471,6 +476,45 @@ LUNAS 30 SEP 23:00 & EOD LAMA=BARU + HAPUS LOAN PINJAM STOCK OK (48+6+6+2+7 seli
 - Tidak ada build/test suite; verifikasi = Excel + cek stdout semua "OK".
 
 ## Changelog
+
+- **2026-10-10 (HANDOVER BULK = 1 MR + RAPIKAN HISTORY KRIM KOPI — SELESAI DI CLOUD):**
+  Instruksi user: handover grup cukup 1 Material Request (SE mengikuti MR, WO otomatis
+  Terkirim) dan history Krim Kopi 1-9 Okt dirapikan.
+  - **Kode** (main, ter-push): production_app `0bd2eaa` (`create_group_request` → 1 MR
+    1 baris/WO; `send_handover` → 1 SE ter-link `material_request_item`; board/cancel
+    per baris; guard 1 company & gudang asal per WO), warehouse_app `5057b06`. Test di
+    site lokal BARU `bulk.localhost` (dari backup 7 Okt): aksi 50 test/3 error baseline
+    (sama di `main`), board 18 OK, w19 gate OK, node 118/118. **Belum di-deploy ke cloud**
+    (aset workspace cloud masih versi lama) — user deploy lalu klik uji.
+  - **Data cloud** (`pos_sync/rapikan_handover_krim_kopi.py`, JURI saja; RPMD tidak
+    disentuh): 6 hari 1-8 Okt × 34 WO — SE+MR lama dicancel & dihapus, diganti
+    `MREQ-MTR-26-0227..0232` + `SE-MTF-261010001..006` (tanggal/jam posting sama, 1020 baris
+    SE ter-link MR). Verifikasi LOLOS: Bin identik, 0 Bin negatif, 0 SLE negatif, 204 WO
+    Terkirim, `allow_negative_stock=0`, rerun = SKIP_EXISTS. 9 Okt: 35 MR uji
+    (`0190`, `0193..0226`) dihapus → 1 MR bulk `MREQ-MTR-26-0233` (34 baris, 869),
+    34 WO "Diminta Gudang". docstatus=2 JURI sisa 0.
+  - **Insiden lokal**: script sweep saya di `erp.localhost` (daftar WO kosong → filter
+    `in ('')` mencocokkan semua SE) menghapus 109 SE non-WO. Cloud tidak terdampak;
+    `erp.localhost` dipensiunkan, pakai `bulk.localhost`.
+  - Open: 12 Repost Item Valuation Queued semuanya RPMD (bukan dari pekerjaan ini).
+
+- **2026-10-10 (FIX "STOCK ADA TAPI TRANSAKSI MINUS" — KODE SIAP, MENUNGGU DEPLOY):**
+  Instruksi user: stok di Stock Balance/Ledger ada, tapi transaksi bilang minus.
+  - **POS (RP002 @ Stores - RPMD, "Available -106 / -80")**: Bin benar (PJO2601=0,
+    PEL260076=200). ERPNext `get_pos_reserved_qty` mengurangi lagi semua POS
+    Invoice belum-konsolidasi (PJO2601 120, PEL260076 312 → 200−312 = −112/−80).
+    POS Next sudah memotong stok saat submit & tak pernah konsolidasi → terhitung
+    DOBEL. Fix `pos_next/overrides/pos_reserved_qty.py` (invoice dgn
+    `posa_pos_opening_shift` dikecualikan) + test; repro gagal→lolos di bench dev.
+    Catatan: PJO2601 memang 0 di RPMD — setelah fix, POS tetap menolak RP002
+    sampai ada transfer matang ke outlet (benar, bukan bug).
+  - **Handover Krim Kopi (PJ260016, "tersedia −3482")**: pool Cold Storage 869 −
+    `_pool_reserved_now` 4351 (4 MR migrasi `MAT-MR-2026-00821/890/929/965` status
+    Transferred tanpa link SE + `MREQ-MTR-26-0190` Pending manual). Fix
+    `production_app/api/handover.py`: MR Transferred/Issued tidak menahan pool
+    (+ test; repro FAIL→OK di container lokal, file container dikembalikan).
+    `MREQ-MTR-26-0190` DI-STOP via `pos_sync/stop_mr_krim_kopi_10okt.py` (LOLOS).
+    Item lain dgn MR hantu serupa: BB260028 1000, BB260014 167, BB260012 113, dll.
 
 - **2026-10-09 (HAPUS WAREHOUSE TESTING DI LAMA & BARU — SELESAI):**
   Atas instruksi user ("warehouse namanya Gudang Finished Goods Testing /
