@@ -5,7 +5,7 @@ BB0049,Dough Keju,,Pack,93,3706.0,PJ260014,Dough Ropi Keju,Pcs,1 Pack = 1 Pcs,CO
 BB0052,Dough Srikaya,,Pack,1,0.0,,,,,SKIP,"Dough Srikaya: tidak ada padanan, stok 0"
 BB0053,Dough Tiramisu,Produk Jadi PH,Pack,3,0.0,,,,,SKIP,"Dough Tiramisu: tidak ada padanan, stok 0"
 BB0054,Dough Vanilla,Produk Jadi PH,Pack,1,0.0,,,,,SKIP,"Dough Vanilla: tidak ada padanan, stok 0"
-BB0066,Goodie Bag,Perlengkapan Outlet,Pcs,93,5226.0,PG001,Goodie Bag 6 Roti,Pcs,1:1,TEBAKAN,Goodie Bag -> 'Goodie Bag 6 Roti'? konfirmasi
+BB0066,Goodie Bag,Perlengkapan Outlet,Pcs,93,5226.0,PEL260072,Goodie Bag,Pcs,1:1,COCOK,"Keputusan user 2026-10-09; PG001 'Goodie Bag 6 Roti' legacy SUDAH DI-MERGE ke PEL260072 & dihapus"
 BB0071,Gula Stik,Bahan Baku Outlet,Pcs,93,27699.0,BB260039,Gula Stik,Pcs,1:1,COCOK,Gula Stik
 BB0080,Kardus Ropi Kapasitas 20 roti (25 pcs/pack),Perlengkapan Outlet,Pcs,92,2089.0,PEL260074,Kardus Ropi 20 roti (25 pcs),Pcs,1:1,COCOK,Kardus Ropi 20 roti (25 pcs)
 BB0085,Krim Kopi,Produk Jadi PH,Pcs,93,6243.5,PJ260016,Krim Kopi,Pcs,1:1,FIX,"Krim Kopi (pilih PJ260016, bukan PJ260008 700gr)"

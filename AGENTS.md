@@ -74,10 +74,37 @@ ERPNext records sales, production, and purchase data from the eResto API.
 - Do not touch `Backup SIte Production/`.
 - Do not add npm/JS deps or frameworks (no Celery, no RQ, no dashboards)
   until the daily aggregate is proven short. See design doc for limits.
+- **Stock minus dilarang.** `Stock Settings.allow_negative_stock = 0`
+  permanen di cloud baru (dikunci 2026-10-09; smoke test `NegativeStockError`
+  terverifikasi). Jangan menyalakannya tanpa izin user — bila terpaksa utk
+  backfill/migrasi, hanya sementara dan WAJIB restore di `finally`.
+  Kekurangan stok diselesaikan dengan mencatat pergerakan riil
+  (repack/receipt/transfer), bukan dengan membuka izin minus.
+- **PI site LAMA = trial saja, JANGAN dimigrasi ke site baru.** Audit
+  2026-10-09: 5 PI lama, 0 yang ada di BARU (jangan buat ulang). Faktur
+  riil = PI di site BARU (dari eResto) — lihat `pos_sync/migrate_pi_central_okt.py`.
+- **Dokumen cancelled dihapus, bukan dibiarkan menumpuk** (keputusan user
+  2026-10-09): `pos_sync/bersih_dokumen_cancelled.py` (scope per company,
+  dry-run default, `--execute`; guard backup + link-check + ledger sweep).
+- **RECO (Stock Reconciliation) — akun & bentuk kanonik**: "Opening Stock"
+  = `1171.000 - Pembukaan sementara`, **satu dokumen per gudang** @
+  2026-09-30 23:00. Penyesuaian operasional = `5110.020 - Penyesuaian
+  Stock`, posting hari berjalan. Jangan bikin opening per gudang kedua.
+  Konsolidasi: `pos_sync/konsolidasi_opening_reco.py`. Cancel RECO di v16
+  menggeser trail setelahnya & recreate zero-out bisa ditolak bila anchor
+  minus → pakai substitusi Material Receipt (jangan buka flag).
+- **Warehouse testing DIHAPUS (keputusan user 2026-10-09)**: `Gudang
+  Finished Goods Testing`, `Gudang Testing Manufacture`, `WIP Testing` —
+  di LAMA (`- ROPI`) maupun BARU (`- JURI`). Stoknya cuma testing. Jangan
+  buat ulang di script migrasi/opening (`fill_opening_sep30.py` sudah
+  di-guard). Tool: `pos_sync/hapus_warehouse_testing.py`.
 - Do not POST to ERPNext before the mapping CSV is approved and the
   target site URL plus API key exist.
 - Do not guess Item Codes. Source of truth is
   `experiments/sku_to_item_code.csv`; conflicts stay flagged, not guessed.
+- Goodie Bag = **`PEL260072`** (keputusan user 2026-10-09). Legacy
+  `PG001` "Goodie Bag 6 Roti" sudah di-merge ke `PEL260072` & dihapus —
+  jangan pakai `PG001` di mapping/package baru.
 - Rate limit: max 10 parallel workers, 3 retries with backoff on
   429/5xx, 90s timeout. Never hammer the eResto API.
 - Token in shell history is exposed. Ask the user to rotate it if a
@@ -95,6 +122,9 @@ ERPNext records sales, production, and purchase data from the eResto API.
 - `docs/05-alur-dough-ke-bundle.md` — **rantai barang tetap**: dough
   (Pabrik/PJ*) → matang (Outlet/PJO*) → bundle jual (RP00x/CR001/GM00x).
   Semua keluarga dough mengikuti pola ini; jangan jual/seed di luar pola.
+- `docs/12-konsolidasi-reco-opening.md` — konsolidasi Stock Reconciliation
+  JURI (opening per gudang @30 Sep 23:00, akun 1171 vs 5110, jebakan
+  cancel/recreate v16, substitusi Material Receipt).
 - ERPNext REST API: `https://frappeframework.com/docs/user/en/api/rest`.
   POS Invoice flow: `POS Invoice` per order plus `POS Closing Entry`
   per outlet per day. Bulk alternative: Data Import Tool with parent/child

@@ -29,6 +29,7 @@ The PO-script pair is unproven for orders.
 | Production list | GET | `/v2/productions` |
 | PO list (legacy) | GET | `/v2/purchases` |
 | PO detail (legacy) | GET | `/v2/purchases/{id}/detail` (fallback `/v2/purchases/{id}`) |
+| Purchase invoice list | GET | `/v2/purchase_invoices` (`transaction_date[geq/leq]`, ISO format) |
 | Stock adjustment list | GET | `/v2/stock_adjustments` |
 | Stock adjustment items | GET | `/v2/stock_adjustment_items?stock_adjustment_id={id}` |
 | Inventories (SKU + stok per division) | GET | `/v2/inventories` (`division_inventories[]`) |

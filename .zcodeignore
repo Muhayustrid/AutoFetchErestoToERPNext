@@ -1,0 +1,60 @@
+# --- secrets & environments: NEVER commit ---
+.venv/
+.env
+*.env
+
+# --- OS / editor noise ---
+.DS_Store
+__pycache__/
+*.pyc
+~$*.xlsx
+
+# --- agent/session artifacts ---
+.zcode/
+
+# --- heavy regenerable raw dumps (re-create with each script's --dump) ---
+experiments/pos-fetch/.cache_details/
+experiments/pos-fetch/.cache_details_list_*.json
+pos_sync/prod_src/
+pos_sync/outlet_po_dump/
+pos_sync/outlet_sodn_dump/
+pos_sync/wo_dump/
+pos_sync/wo_dump_08okt/
+pos_sync/oct7_dump/
+pos_sync/wip_audit/
+pos_sync/pf_dump/
+pos_sync/window/
+
+# --- private production DB backup (contains tabUser api_key/api_secret) ---
+Backup SIte Production/
+
+# ===== ↑ 以上同步自 .gitignore（「从 .gitignore 同步」只重写以上部分）=====
+.git/
+.hg/
+.svn/
+node_modules/
+bower_components/
+jspm_packages/
+site-packages/
+venv/
+coverage/
+htmlcov/
+lcov-report/
+cmakefiles/
+cmake-build-*/
+bazel-*/
+pods/
+deriveddata/
+storybook-static/
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+cdk.out/
+*.egg-info/
+*.dist-info/
+eggs/
+pip-wheel-metadata/
+wheels/
+# ----- ↑ 以上为 ZCode 默认排除规则（自定义规则请写在本行下方，不会被同步/恢复改动）-----
+# 自定义规则写在下方（本行提示可删除）

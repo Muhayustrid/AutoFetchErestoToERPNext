@@ -56,14 +56,14 @@ REPORT = os.path.join(HERE, "Laporan_Migrasi_SO_DN_Outlet_ke_JURI.xlsx")
 
 OLD_BASE = "https://rotiropi.j.frappe.cloud"
 JURI = "PT. JUARA ROTI INDONESIA"
-DATE_FROM, DATE_TO = "2026-10-01", "2026-10-07"
+DATE_FROM, DATE_TO = "2026-10-01", "2026-10-08"
 
 # Delanggu sudah dimigrasi sesi intercompany
 SKIP_SO = {"SLS-051026-006"}
 SKIP_DN = {"DN-051026-008"}
 
 # bentrok kode lama->baru (pola catchup_oct7.py)
-ITEM_MAP = {"BB260057": "BB26001", "BB260058": "BB26008", "BB260059": "BB26009"}
+ITEM_MAP = {"BB260057": "BB26001", "BB260058": "BB26008", "BB260059": "BB26009", "BB260060": "BB260046"}
 UOM_MAP = {"Kg": "kg", "KG": "kg"}
 
 # fallback nama gudang site lama bila abbr tidak dipetakan

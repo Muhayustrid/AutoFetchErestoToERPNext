@@ -23,8 +23,9 @@ Item master: `experiments/Item.xlsx` (308 rows).
   "Roti Gempi Original" but ERPNext `PG001` is "Goodie Bag 6 Roti".
 - `PJ260009` (Air Mineral Outlet 600ml) is retired for sales;
   AIR01+AIR02 both map to `AM001` (Crystalin 600 ml).
-- `PG001` (Goodie Bag) has no sales SKU; `PR00039` goes to
-  `PAKET010926-005`, not `PG001`.
+- Goodie Bag kanonik = **`PEL260072`** (keputusan 2026-10-09; legacy `PG001`
+  sudah di-merge & dihapus). `PR00039` (Paket) -> `PAKET010926-005` dengan
+  komponen `PEL260072`.
 - `PJO2601–2605` ("... Matang") have no eResto POS counterpart.
   SKIP in POS mapping; they belong to production mapping.
 - Daftar unmapped per 2026-10-05: 43 SKU di
@@ -283,8 +284,11 @@ Sumber: 93 SA `SO Monthly September` (`experiments/fetch_so_monthly.py`,
 - **Skip dulu**: Olesan Blueberry BB0101, Olesan Sarikaya BB0107,
   RR0004, RR0010 Teh Enak Seduh, Dough Srikaya/Tiramisu/Vanilla
   (BB0052/53/54), item TIDAK AKTIF (BB0106/BB0108).
-- **Terbuka**: BB0066 Goodie Bag -> PG001 "Goodie Bag 6 Roti"
-  (status TEBAKAN, perlu konfirmasi user).
+- **SELESAI 2026-10-09**: BB0066 Goodie Bag -> **`PEL260072` "Goodie Bag"**
+  (keputusan user). Item legacy `PG001` "Goodie Bag 6 Roti" sudah
+  **DI-MERGE** ke `PEL260072` (semua referensi transaksi ikut pindah) dan
+  dihapus dari sistem; `POS Package` "Paket Goodiebag 6 ROPI" juga sudah
+  memakai `PEL260072`. Jangan pakai `PG001` lagi.
 - Jebakan teknis: Item doctype site ini ber-naming series
   `BB26-.###` yang menimpa `item_code` saat create; item harus
   di-`frappe.client.rename_doc` setelah dibuat agar kode konsisten.

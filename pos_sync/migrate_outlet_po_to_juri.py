@@ -46,7 +46,7 @@ REPORT = os.path.join(HERE, "Laporan_Migrasi_PO_Outlet_ke_JURI.xlsx")
 OLD_BASE = "https://rotiropi.j.frappe.cloud"
 JURI = "PT. JUARA ROTI INDONESIA"
 SUPPLIER_OLD = "SUP260008"
-DATE_FROM, DATE_TO = "2026-09-25", "2026-10-07"
+DATE_FROM, DATE_TO = "2026-09-25", "2026-10-08"
 
 ITEM_MAP = {"BB260059": "BB26009"}          # bentrok kode, lihat catchup_oct7.py
 UOM_MAP = {"Kg": "kg", "KG": "kg"}

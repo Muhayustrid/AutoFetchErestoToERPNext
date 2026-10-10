@@ -93,8 +93,8 @@
 
 ## Pertanyaan terbuka (tunggu keputusan user, JANGAN tebak)
 
-1. `BB0066` Goodie Bag → `PG001` "Goodie Bag 6 Roti"? (status TEBAKAN
-   di workbench stok).
+1. ~~`BB0066` Goodie Bag → `PG001` "Goodie Bag 6 Roti"?~~ **SELESAI 2026-10-09**:
+   BB0066 → `PEL260072` "Goodie Bag"; `PG001` di-merge & dihapus.
 2. Asumsi **1 Pack dough = 1 Pcs** untuk PJ260010–260014 — benar?
 3. 64 SKU POS unmapped (MC01/MC05, AIR03, TJ02, PR00072–75,
    PG002–004, dll) — tambah item, map ke terdekat, atau skip?
