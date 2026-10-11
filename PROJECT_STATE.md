@@ -477,6 +477,18 @@ LUNAS 30 SEP 23:00 & EOD LAMA=BARU + HAPUS LOAN PINJAM STOCK OK (48+6+6+2+7 seli
 
 ## Changelog
 
+- **2026-10-11 (POS NEXT: QRIS DELANGGU + PRINT ULANG — PUSHED `0b456af` ke Muhayustrid/POSNext main, BELUM DEPLOY):**
+  Investigasi RPMD 10 Okt: tidak ada QRIS hilang. Kasir shift 2 memasukkan QRIS shift 1
+  (64.000) sebagai saldo awal, lalu shift 2 dibuka ulang 17:38 (closing 003 kosong).
+  Perubahan pos_next (`6f32a08`..`0b456af`): saldo awal non-Cash dipaksa 0 (`api/shifts.py`
+  `create_opening_shift` + input terkunci di `ShiftOpeningDialog.vue`); print EOD
+  mencetak semua metode POS Profile (`pos_closing_print.py`); print gagal → panel
+  Print Ulang / Export PDF / Tutup (closing & SessionSummary), fallback `/printview`
+  diganti PDF. Verifikasi: vitest 754 lulus, build OK, py_compile OK.
+  Susulan `b0eb5f2` (main, pushed): ikon printer header tampil di mobile, berputar +
+  "Menghubungkan printer…" saat reconnect (toast di mobile), judul "POS Next" disembunyikan
+  < md. Semua BELUM DEPLOY ke ropierpnext.frappe.cloud.
+
 - **2026-10-10 (HANDOVER BULK = 1 MR + RAPIKAN HISTORY KRIM KOPI — SELESAI DI CLOUD):**
   Instruksi user: handover grup cukup 1 Material Request (SE mengikuti MR, WO otomatis
   Terkirim) dan history Krim Kopi 1-9 Okt dirapikan.
