@@ -24,6 +24,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from prod_common import Client, JURI  # noqa: E402
+import lengkapi_item_defaults_semua as lid  # noqa: E402
 
 
 def load_env_file(filepath):
@@ -203,6 +204,33 @@ def ensure_customer_internal(erp, company, dry_run, log):
     print(f"  [prep] customer internal dibuat: {company} -> {code}")
 
 
+def ensure_item_defaults(erp, company, dry_run, log):
+    """Baris item_defaults company baru utk item wajib-semua-outlet
+    (aturan akun di `lengkapi_item_defaults_semua.py`)."""
+    st, d = erp.get("/api/resource/Company/" + _q(company))
+    if st != 200:
+        log.append({"Company": company, "Step": "Item defaults",
+                    "Status": "DRY-RUN (company belum ada)"})
+        return
+    company = d["data"]["name"]  # nama kanonik (lookup MariaDB case-insensitive: 'HJ.' vs 'Hj.')
+    items, wajib, plan, skipped, no_rule = lid.build_plan(erp, [company], set())
+    n = sum(len(p["fill"]) + len(p["add"]) for p in plan.values())
+    if dry_run:
+        status = f"DRY-RUN ({n} baris akan ditulis)"
+    else:
+        for code, p in sorted(plan.items()):
+            lid.apply_item(erp, code, p)
+        # cek akhir: rencana ulang harus kosong (semua item wajib punya baris berakun)
+        left = lid.build_plan(erp, [company], set())[2]
+        status = f"DITULIS {n} baris" if not left else f"WARNING: {len(left)} item masih kurang"
+        if left:
+            print(f"  [prep] WARNING item_defaults {company} kurang: {sorted(left)[:10]}")
+    if no_rule:
+        status += f" | TANPA ATURAN: {no_rule}"
+    log.append({"Company": company, "Step": f"Item defaults ({len(wajib) - len(skipped)} item)",
+                "Status": status})
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dry-run", action="store_true", help="tanpa POST/PUT")
@@ -221,6 +249,7 @@ def main():
         ensure_fiscal_year(erp, company, args.dry_run, log)
         ensure_supplier_allowed(erp, company, args.dry_run, log)
         ensure_customer_internal(erp, company, args.dry_run, log)
+        ensure_item_defaults(erp, company, args.dry_run, log)
 
     print("\n" + "=" * 84)
     for row in log:
