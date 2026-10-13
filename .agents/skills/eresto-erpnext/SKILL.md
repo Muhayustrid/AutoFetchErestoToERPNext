@@ -34,7 +34,7 @@ Kode: `pos_sync/` (migrasi & injeksi, idempoten) dan `experiments/` (setup + pro
   `cheque_no = "ERESTO-<branch>-<date>"`, atau `SKIP_EXISTS` by name/ID lama.
   PO/SO/DN tidak punya field `remarks` — kunci idempotensi di `title`.
 - Mapping SKU by **`product_sku`**, bukan nama. Jangan menebak Item Code —
-  sumber kebenaran `experiments/sku_to_item_code.csv` & `stok_sku_to_item.csv`;
+  sumber kebenaran `docs/02-erpnext-mapping.md` (CSV experiments hanya arsip);
   bila padanan tak ada, **cari bukti** (PO identik di site LAMA) atau
   **keluarkan & catat** di sheet `Skipped` — jangan tebak.
 - Rate limit API: maks 10 worker, 3 retry backoff (429/5xx), timeout 90s.
@@ -175,7 +175,7 @@ default). Checklist idempoten per company:
 Saat banyak SKU keperluan outlet belum termapping (kasus: 28 SKU di PO 12 Okt
 — sabun, lakban, kuas, ATK, dll.):
 
-1. Sumber bukti berurutan: `experiments/stok_sku_to_item.csv` (COCOK) →
+1. Sumber bukti berurutan: `docs/02-erpnext-mapping.md` (tabel utama) →
    nama item master BARU exact-match → padanan nama jelas (mis. `Kuas Oles
    Loyang 1,5'` → `Kuas Oles Loyang (1,5 inch)`) → **tanya user** utk sisanya.
 2. Pencarian nama di BARU: filter API `like` sering gagal utk varian ejaan —
@@ -272,7 +272,8 @@ default. Checklist sebelum eksekusi:
 | Alur repack bahan baku (Gula Cair & **Olesan Pastry**) | `KNOWLEDGE.md` §5 "Alur repack bahan baku" |
 | Konsolidasi RECO/opening (akun, cancel v16, substitusi MR) | `docs/12-konsolidasi-reco-opening.md` |
 | Rantai produk dough→matang→bundle + resep yield | `docs/05-alur-dough-ke-bundle.md` |
-| Mapping SKU/outlet/payment/void/refund | `docs/02-erpnext-mapping.md` |
+| Mapping SKU/outlet/payment/void/refund (SINGLE SOURCE) | `docs/02-erpnext-mapping.md` |
+| Mapping SKU by `product_sku`, bukan nama; sumber kebenaran = dokumen mapping utama, bukan CSV | `docs/02-erpnext-mapping.md` |
 | Alur kasir POSNext | `docs/04-posnext-cara-kerja-penjualan.md` |
 | Cara menjalankan lane migrasi (flag CLI) | `PROJECT_STATE.md` §Cara jalanin |
 

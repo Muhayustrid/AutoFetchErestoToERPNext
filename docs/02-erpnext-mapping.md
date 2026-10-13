@@ -1,101 +1,263 @@
-# ERPNext mapping — eResto vs new site
+# Master Mapping — eResto ↔ ERPNext BARU (SATU SUMBER KEBENARAN)
 
-Source of truth for SKU mapping: `experiments/sku_to_item_code.csv`
-(51 entries, columns `sku_eresto, item_code_erpnext,
-item_name_erpnext, item_group, sumber`). Workbench with human edits:
-`experiments/Template_Mapping_SKU.xlsx` (column E is the edited one).
-Item master: `experiments/Item.xlsx` (308 rows).
+> **Dokumen ini adalah sumber mapping TUNGGAL.** Semua ITEM_MAP di skrip lane
+> (`pos_sync/migrate_*.py`) dan CSV lama (`experiments/sku_to_item_code.csv`,
+> `experiments/stok_sku_to_item.csv`) adalah TURUNAN dari tabel di bawah.
+> Saat menambah mapping baru: **tulis di sini dulu**, lalu sinkronkan ITEM_MAP
+> skrip yang butuh. Skrip tetap punya salinan agar rerun idempoten tanpa baca
+> file lain — tapi kebenaran = dokumen ini.
 
-## SKU → Item Code rules
+Cara baca tabel:
+- **SKU** = `product_sku` eResto (kunci mapping, JANGAN pernah by nama).
+- **Item Code** = master ERPNext site BARU (`ropierpnext.frappe.cloud`);
+  seluruh 166 kode diverifikasi ada di BARU per 2026-10-13 (0 broken link).
+- **Sumber** = bukti mapping:
+  - `skrip-lane` = sudah dipakai & terposting di lane migrasi PO/SO
+    (bukti transaksi; keputusan user 13 Okt ditandai `†`).
+  - `csv:cocok` = nama item identik.
+  - `csv:acc-user` / `csv:acc-user-promo-hemat` = ACC user 2026-10-05.
+  - `csv:bukti-harga+acc` = bukti harga + konfirmasi user.
+  - `csv:keputusan-user` = keputusan langsung user.
+  - `csv:gabung-frc` = merge varian franchise (batal bila produk beda).
+  - `csv:tebakan` = padanan otomatis, belum dikonfirmasi user (pakai hati-hati).
+  - `csv-stok` = mapping lane stok/SO Monthly September.
 
-- Key on `product_sku`, never on name. Zero duplicate SKU names
-  across 3 outlet-days of fetch data.
-- `sumber` values: `cocok` (name-identical, 9), `tebakan` (needs
-  confirm, 11), `gabung-frc` (franchise code merged, 3),
-  `keputusan-user` (4: AIR01+AIR02→AM001, PR00039→PAKET010926-005,
-  PKG001→PEL260083), plus hasil ACC user 2026-10-05: `acc-user` (18),
-  `acc-user-promo-hemat` (3), `bukti-harga+acc` (3).
-- Same product, different SKU per outlet type: `PR001/PR002/PR003`
-  (owned) and `P0004/P0001/P0002` (franchise, "Roti Ropi ...",
-  same Rp12k price) all map to `RP001/RP002/RP003`.
-  Cancel the merge if the products differ.
-- Do not use ERPNext codes across systems: eResto `PG001` is
-  "Roti Gempi Original" but ERPNext `PG001` is "Goodie Bag 6 Roti".
-- `PJ260009` (Air Mineral Outlet 600ml) is retired for sales;
-  AIR01+AIR02 both map to `AM001` (Crystalin 600 ml).
-- Goodie Bag kanonik = **`PEL260072`** (keputusan 2026-10-09; legacy `PG001`
-  sudah di-merge & dihapus). `PR00039` (Paket) -> `PAKET010926-005` dengan
-  komponen `PEL260072`.
-- `PJO2601–2605` ("... Matang") have no eResto POS counterpart.
-  SKIP in POS mapping; they belong to production mapping.
-- Daftar unmapped per 2026-10-05: 43 SKU di
-  `pos_sync/Mapping_SKU_vs_Item_Lokal.xlsx` (sheet `SKU_Belum_Termap`).
-  24 sudah di-ACC 2026-10-05 (bagian di bawah); sisa 19 SKU butuh
-  item baru (`CM01/MC01/MC02`, `CP02`, `P0005`, `CM02`, `CR03`,
-  `AIR03`, `PR00045`, `P0015`, `SK002`, `P0014`, `GD001`, `SU001`,
-  `CM06`, `MC06`, `P0016`, `MC05`, `SK001`).
-  Decide per SKU: create Item, map to nearest, or skip.
-- New outlets will surface new SKUs (Tradisional `TR01–TR04`,
-  `CK002`, more Paket). The CSV grows; it is never final.
+## Aturan yang tidak boleh dilanggar
 
-## ACC user 2026-10-05 — 24 SKU varian (item sudah ada)
+1. **Key = `product_sku`**, bukan nama produk.
+2. **Item Code harus ada di site BARU** — cek `/api/resource/Item/<code>`
+   sebelum POST; tidak ada = SKIP + catat, jangan tebak.
+3. **Satu SKU = satu Item** di tabel ini. Kalau dua sumber beda = KONFLIK,
+   stop dan minta keputusan user (jangan pilih diam-diam).
+4. **Olesan Pastry (keputusan 2026-10-12)**: PO > 2026-10-08 → `BB26012`;
+   PO ≤ 2026-10-08 → `BB260046`. Berlaku utk SKU `BB0174` & `BB0352`
+   (helper `prod_common.olesan_pastry_item`).
+5. **Goodie Bag = `PEL260072`** (`PG001` legacy sudah di-merge & dihapus —
+   jangan pakai lagi). eResto `PG001` adalah "Roti Gempi Original" → `GM001`,
+   beda arti dgn `PG001` ERPNext lama.
+6. **Varian nota (BCN/CKN/CPN/TJN) & varian FRC** memakai item sama dgn
+   varian reguler sesuai tabel (keputusan gabung).
+7. Mapping baru hasil keputusan user ditandai `†` + tanggal di tabel.
 
-`sku_to_item_code.csv` awal dibangun dari sampel 3 outlet-hari, sehingga
-SKU yang hanya muncul di outlet tipe lain (FRC vs reguler) jatuh ke
-`SKU_UNMAPPED`. User meninjau `pos_sync/Mapping_SKU_vs_Item_Lokal.xlsx`
-(sheet `Item_vs_SKU` + `SKU_Belum_Termap`) dan meng-ACC 24 SKU di mana
-item-nya ternyata sudah ada. Semua sudah tertulis di
-`sku_to_item_code.csv` (sumber `acc-user` / `acc-user-promo-hemat` /
-`bukti-harga+acc`) dan `Template_Mapping_SKU.xlsx` (Status
-`ACC 2026-10-05`). Dampak dry-run injeksi 1–5 Okt: rencana invoice
-29.919 → 32.315, skip order 2.960 → 564.
+## Tabel mapping (166 SKU, terurut SKU)
 
-### A. Varian kode outlet lain (18 SKU)
+| SKU | Nama eResto | Item Code | Sumber |
+|---|---|---|---|
 
-| SKU eResto | Nama di eResto | Item Code | Item Name (ERPNext) | Catatan |
-|---|---|---|---|---|
-| PG004 | Roti Gempi Tiramisu | GM004 | Gempi Tiramisu | varian FRC dari P0017 |
-| PG003 | Roti Gempi Dark Choco | GM003 | Gempi Dark Choco | varian FRC dari P0012 |
-| PG002 | Roti Gempi Choco Crunchy | GM005 | Gempi Choco Crunchy | varian FRC dari P0011 (eResto typo "Cruncy") |
-| P0013 | Gempi Original | GM001 | Gempi Original | melengkapi PG001 eResto |
-| CKN02 | Chocolate Hot | CK002 | Chocolate Hot | pasangan CKN01 (Ice) |
-| CK01 | Es Coklat | CK001 | Chocolate Ice | — |
-| TJ01 | Ice Tea | JT001 | Jasmine Tea Ice | dikonfirmasi user: Ice Tea = Jasmine Tea |
-| TJ02 | Hot Tea | JT002 | Jasmine Tea Hot | dikonfirmasi user: Hot Tea = Jasmine Tea |
-| TR03 | Kunir Asem | TR003 | Kunir Asem | — |
-| TR01 | Beras Kencur | TR001 | Beras Kencur | — |
-| CR01 | Croissant Original | CR001 | Croissant | stok fisik di PJO2605 |
-| BC02 | Es Kopi Hitam | BC001 | Americano Ice | user: beda produk dari Americano Ice, tetap digabung |
-| PR00075 | Hemat 1 | ITEM00001 | Hemat 1 NEW | keluarga paket hemat |
-| PR00073 | Hemat 3 | PAKET26-001 | Hemat 3 New | keluarga paket hemat |
-| PR00074 | Hemat 4 | PAKET26-006 | Paket Hemat 4 New | keluarga paket hemat |
-| PR00072 | Hemat 2 | PAKET26-005 | Paket Hemat 2 New | keluarga paket hemat |
-| PR00038 | Box Ropi isi 20 pcs | PAKET26-002 | Paket Box Ropi Isi 20 | — |
-| PKG01 | Goodie Bag | PEL260072 | Goodie Bag | item dibuat sesi sebelumnya |
+| AIR01 | Air Mineral 600ml | AM001 | csv:keputusan-user |
+| AIR02 | Air Mineral 600ml (FRC) | AM001 | csv:keputusan-user |
+| BB0006 | Apron | PEL260006 | skrip-lane |
+| BB0042 | Crispy Ball 500 gram | BB260048 | skrip-lane |
+| BB0046 | Dough Butter | PJ260012 | csv-stok |
+| BB0047 | Dough Coklat | PJ260013 | csv-stok |
+| BB0049 | Dough Keju | PJ260014 | csv-stok |
+| BB0055 | Es Kristal (12 kg) | BB260006 | skrip-lane |
+| BB0066 | Goodie Bag | PEL260072 | csv-stok |
+| BB0068 | Kuas Oles Loyang 1,5' | PEL260021 | skrip-lane (keputusan user 13 Okt)† |
+| BB0071 | Gula Stik | BB260039 | csv-stok |
+| BB0074 | Kanebo | PEL260018 | skrip-lane (keputusan user 13 Okt)† |
+| BB0076 | Kaos Panjang | PEL260068 | skrip-lane |
+| BB0078 | Kaos Polo | PEL260019 | skrip-lane |
+| BB0080 | Kardus Ropi Kapasitas 20 roti (25 pcs/pack) | PEL260074 | csv-stok |
+| BB0081 | Keju Chedar | BB260040 | skrip-lane |
+| BB0082 | Lakban Besar | BHP260023 | skrip-lane (keputusan user 13 Okt)† |
+| BB0085 | Krim Kopi | PJ260016 | csv-stok |
+| BB0087 | Lakban Kecil | BHP260020 | skrip-lane (keputusan user 13 Okt)† |
+| BB0090 | Kuas Oles Loyang 2' | PEL260022 | skrip-lane (keputusan user 13 Okt)† |
+| BB0096 | Meises Coklat 1kg | BB260041 | skrip-lane (keputusan user 13 Okt)† |
+| BB0100 | Minyak Oles 1 Kg | BB260042 | skrip-lane |
+| BB0102 | Olesan Choco Crunchy (1 Kg) | BB260043 | csv-stok |
+| BB0103 | Olesan Dark Choco (1 Kg) | BB260044 | csv-stok |
+| BB0105 | Olesan Margarine | BB260045 | skrip-lane |
+| BB0110 | Olesan Tiramisu (1 Kg) | BB260047 | csv-stok |
+| BB0112 | Paper Bag Kapasitas 1 Roti | PEL260076 | csv-stok |
+| BB0117 | Plastik Alas Gempi | PEL260077 | csv-stok |
+| BB0118 | Plastik Kresek Ukuran 17 | PEL260081 | skrip-lane |
+| BB0119 | Plastik Kresek Ukuran 24 | PEL260080 | skrip-lane |
+| BB0120 | Plastik Krim | BB260019 | skrip-lane |
+| BB0122 | Plastik Seal Roti | PEL260083 | skrip-lane |
+| BB0124 | Proofer | PER260017 | skrip-lane |
+| BB0126 | Ragi Basah | BB260023 | skrip-lane |
+| BB0131 | Sarung Tangan Oven | PEL260038 | skrip-lane (keputusan user 13 Okt)† |
+| BB0132 | Sarung Tangan Plastik | BHP260027 | skrip-lane |
+| BB0134 | Sedotan Teh | PEL260084 | skrip-lane |
+| BB0136 | Sendok Es Batu | PEL260041 | skrip-lane (keputusan user 13 Okt)† |
+| BB0141 | Solet Gempi | PEL260043 | skrip-lane (keputusan user 13 Okt)† |
+| BB0143 | Stirrer | PEL260085 | skrip-lane (keputusan user 13 Okt)† |
+| BB0145 | Susu Bubuk untuk Campuran Minuman (1 Kg) | BB260062 | csv-stok |
+| BB0153 | Telur Utuh | BB260027 | skrip-lane |
+| BB0158 | Tepung Krim | BB260029 | skrip-lane |
+| BB0159 | Timbangan | PEL260050 | skrip-lane |
+| BB0160 | Topi | PEL260052 | skrip-lane |
+| BB0163 | Improver | BB260013 | skrip-lane |
+| BB0168 | Dough Croissant | PJ260010 | csv-stok |
+| BB0171 | Box Gempi (Isi 100 pcs) | PEL260069 | csv-stok |
+| BB0174 | TIDAK AKTIF Olesan Pastry -> Olesan Pastry (lihat aturan tanggal) | BB260046 | skrip-lane |
+| BB0183 | 'Memory Card'        -> MMC CCTV (128 GB) | PEL260058 | skrip-lane |
+| BB0185 | Botol Spray | PEL260010 | skrip-lane |
+| BB0191 | Kertas Thermal | PEL260075 | skrip-lane |
+| BB0199 | 'USB Adapter' | PEL260060 | skrip-lane |
+| BB0217 | 'CCTV Outlet' | PEL260056 | skrip-lane |
+| BB0220 | Sapu Outlet | PEL260037 | skrip-lane (keputusan user 13 Okt)† |
+| BB0226 | Buku Tulis | ATK260044 | skrip-lane (keputusan user 13 Okt)† |
+| BB0228 | Keset | PEL260020 | skrip-lane (keputusan user 13 Okt)† |
+| BB0229 | Lap Microfiber | PEL260025 | skrip-lane (keputusan user 13 Okt)† |
+| BB0230 | Sticker Label Tom & Jerry | ATK260038 | skrip-lane (keputusan user 13 Okt)† |
+| BB0231 | Spidol | ATK260043 | skrip-lane (keputusan user 13 Okt)† |
+| BB0234 | Penggaris Merah | ATK260027 | skrip-lane (keputusan user 13 Okt)† |
+| BB0237 | Freezer | PER260008 | skrip-lane |
+| BB0238 | 'Alat Kasir'         -> Mesin Kasir POS | PEL260057 | skrip-lane |
+| BB0257 | Gelas Cup 9 Oz (Isi 50 pcs) | PEL260071 | csv-stok |
+| BB0260 | Bill Holder | PEL260009 | skrip-lane (keputusan user 13 Okt)† |
+| BB0261 | Dough Gempi | PJ260011 | csv-stok |
+| BB0262 | 'Orbit Outlet'       -> Modem WiFi Outlet | PEL260059 | skrip-lane |
+| BB0263 | Pulpen Outlet | ATK260041 | skrip-lane (keputusan user 13 Okt)† |
+| BB0264 | Isi Staples | ATK260046 | skrip-lane (keputusan user 13 Okt)† |
+| BB0267 | Tinta Isi Ulang Outlet | BHP260033 | skrip-lane (keputusan user 13 Okt)† |
+| BB0268 | Dispenser Sabun Cair | PEL260014 | skrip-lane (keputusan user 13 Okt)† |
+| BB0270 | Kuas Silikon | PEL260023 | skrip-lane |
+| BB0272 | Spons Cuci Outlet | PEL260045 | skrip-lane (keputusan user 13 Okt)† |
+| BB0273 | Sabun Lantai Outlet | BHP260035 | skrip-lane (keputusan user 13 Okt)† |
+| BB0274 | Sabun Cuci Outlet | BHP260034 | skrip-lane (keputusan user 13 Okt)† |
+| BB0277 | Meja Loyang Stainless | PER260011 | skrip-lane |
+| BB0278 | Meja Rak Oven | PER260012 | skrip-lane |
+| BB0279 | Meja Booth Outlet | PEL260064 | skrip-lane |
+| BB0280 | Etalase Outlet | PER260006 | skrip-lane |
+| BB0283 | Papan Menu Oultet | PEL260030 | skrip-lane (keputusan user 13 Okt)† |
+| BB0284 | Poster Dinding | PEL260061 | skrip-lane |
+| BB0285 | Neon Box Bulat Outlet | PER260013 | skrip-lane |
+| BB0289 | Oven 1 Deck 2 Tray | PER260016 | skrip-lane |
+| BB0291 | Panel 3 Phase | PER260004 | skrip-lane |
+| BB0293 | Stand Booth Outlet | PEL260062 | skrip-lane |
+| BB0294 | Huruf Dan Logo Timbul Ropi | PER260010 | skrip-lane |
+| BB0296 | Plastik Cup Isi 1 | PEL260078 | skrip-lane |
+| BB0297 | Plastik Cup Isi 2 | PEL260079 | skrip-lane |
+| BB0298 | Gelas 14 Oz (Isi 150 pcs) | PEL260070 | csv-stok |
+| BB0301 | Bubuk Beras Kencur | BB260034 | csv-stok |
+| BB0304 | Bubuk Susu Jahe | BB260037 | skrip-lane |
+| BB0305 | Gula Cair Sachet (Isi 100 Sachet) | BB260038 | csv-stok |
+| BB0307 | Mika Display | PEL260028 | skrip-lane (keputusan user 13 Okt)† |
+| BB0308 | Bubuk Hepi Drink Moccacino (30 Gr) | BB260057 | csv-stok |
+| BB0309 | Bubuk Hepi Drink Cappucino (30 Gr) | BB260058 | csv-stok |
+| BB0310 | Bubuk Hepi Drink Kopi Karamel (30 Gr) | BB260059 | csv-stok |
+| BB0311 | Bubuk Hepi Drink Chocolate | BB260060 | csv-stok |
+| BB0312 | Air Mineral Outlet 600 ml | PJ260009 | csv-stok |
+| BB0322 | Kopi Hitam @6gr (Isi 20 Sachet) | BB260061 | csv-stok |
+| BB0323 | Meja Minum Outlet | PEL260065 | skrip-lane |
+| BB0328 | Jilbab Outlet | SG260012 | skrip-lane |
+| BB0329 | Jasmine Green Tea 750g | BB260030 | csv-stok |
+| BB0340 | Coffee Latte 500g | BB260031 | csv-stok |
+| BB0341 | Coffee Classic 120g | BB260032 | csv-stok |
+| BB0342 | Dark Cocoa Drink 1Kg | BB260033 | csv-stok |
+| BB0345 | Coffeemate 450g | BB260050 | csv-stok |
+| BB0346 | Milo Activ 960g | BB260052 | csv-stok |
+| BB0347 | Teh Tarik 960g | BB260054 | csv-stok |
+| BB0349 | Lemonade 640g | BB260051 | csv-stok |
+| BB0351 | Kemoceng | PEL260095 | skrip-lane (keputusan user 13 Okt)† |
+| BB0352 | Olesan Pastry 250g | BB260046 | skrip-lane |
+| BB0353 | Gula Cair 250g | BB26009 | skrip-lane |
+| BC01 | Black Coffee | BC002 | csv:bukti-harga+acc |
+| BC02 | Es Kopi Hitam | BC001 | csv:acc-user |
+| BCN01 | Black Coffee Nota | BC002 | csv:cocok |
+| BCN02 | Americano Ice Nota | BC001 | csv:tebakan |
+| CK01 | Es Coklat | CK001 | csv:acc-user |
+| CK02 | Coklat Panas | CK002 | csv:bukti-harga+acc |
+| CKN01 | Chocolate Ice Nota | CK001 | csv:cocok |
+| CKN02 | Chocolate Hot Nota | CK002 | csv:acc-user |
+| CP01 | Cappucino | CP001 | csv:bukti-harga+acc |
+| CPN01 | Cappucino Hot Nota | CP002 | csv:cocok |
+| CPN02 | Cappucino Ice Nota | CP001 | csv:cocok |
+| CR01 | Croissant Original | CR001 | csv:acc-user |
+| CR02 | Croissant (nota) | CR001 | csv:tebakan |
+| P0001 | Roti Ropi Butter (FRC) | RP002 | csv:gabung-frc |
+| P0002 | Roti Ropi Keju (FRC) | RP003 | csv:gabung-frc |
+| P0004 | Roti Ropi Coklat (FRC) | RP001 | csv:gabung-frc |
+| P0010 | Extra Keju | ADD26-001 | csv:tebakan |
+| P0011 | Gempi Choco Crunchy (FRC) | GM005 | csv:tebakan |
+| P0012 | Gempi Dark Choco (FRC) | GM003 | csv:tebakan |
+| P0013 | Gempi Original | GM001 | csv:acc-user |
+| P0017 | Gempi Tiramisu (FRC) | GM004 | csv:tebakan |
+| PG001 | Roti Gempi Original (FRC) | GM001 | csv:tebakan |
+| PG002 | Roti Gempi Choco Crunchy (FRC) | GM005 | csv:acc-user |
+| PG003 | Roti Gempi Dark Choco (FRC) | GM003 | csv:acc-user |
+| PG004 | Roti Gempi Tiramisu (FRC) | GM004 | csv:acc-user |
+| PKG001 | Plastik Seal Roti | PEL260083 | csv:keputusan-user |
+| PKG01 | Goodie Bag | PEL260072 | csv:acc-user |
+| PR00033 | Promo Hemat 3 | PAKET26-003 | csv:acc-user-promo-hemat |
+| PR00034 | Promo Hemat 4 | PAKET26-006 | csv:acc-user-promo-hemat |
+| PR00037 | Promo Hemat 1 | PAKET26-004 | csv:acc-user-promo-hemat |
+| PR00038 | Box Ropi isi 20 pcs | PAKET26-002 | csv:acc-user |
+| PR00039 | Paket Goodiebag 6 Roti | PAKET010926-005 | csv:keputusan-user |
+| PR00072 | Hemat 2 | PAKET26-005 | csv:acc-user |
+| PR00073 | Hemat 3 | PAKET26-003 | csv:acc-user |
+| PR00074 | Hemat 4 | PAKET26-006 | csv:acc-user |
+| PR00075 | Hemat 1 | PAKET26-004 | csv:acc-user |
+| PR001 | Ropi Butter | RP001 | csv:cocok |
+| PR00140 | Hemat 3 (nota) | PAKET26-003 | csv:tebakan |
+| PR00141 | Hemat 4 (nota) | PAKET26-006 | csv:tebakan |
+| PR00142 | Hemat 1 (nota) | PAKET26-004 | csv:tebakan |
+| PR00143 | Hemat 2 (nota) | PAKET26-005 | csv:tebakan |
+| PR002 | Ropi Coklat | RP002 | csv:cocok |
+| PR003 | Ropi Keju | RP003 | csv:cocok |
+| RR0001 | Ropi Butter (stok outlet) | PJO2603 | csv-stok |
+| RR0002 | Ropi Coklat (stok outlet) | PJO2601 | csv-stok |
+| RR0003 | Ropi Keju (stok outlet) | PJO2602 | csv-stok |
+| RR0008 | Roti Croissant (stok outlet) | PJO2605 | csv-stok |
+| RR0009 | Roti Gempi (stok outlet) | PJO2604 | csv-stok |
+| TJ01 | Hot Tea | JT001 | csv:acc-user |
+| TJ02 | Ice Tea | JT002 | csv:acc-user |
+| TJN01 | Ice Tea Nota | JT001 | csv:cocok |
+| TJN02 | Hot Tea Nota | JT002 | csv:cocok |
+| TR01 | Beras Kencur | TR001 | csv:acc-user |
+| TR03 | Kunir Asem | TR003 | csv:acc-user |
 
-### B. Keluarga Promo Hemat (3 SKU — dikonfirmasi user)
+## SKU yang SENGAJA TIDAK dimapping (skip, jangan ditebak)
 
-| SKU eResto | Nama di eResto | Item Code | Item Name (ERPNext) | Catatan |
-|---|---|---|---|---|
-| PR00034 | Promo Hemat 4 | PAKET26-006 | Paket Hemat 4 New | = Hemat 4 |
-| PR00037 | Promo Hemat 1 | ITEM00001 | Hemat 1 NEW | = Hemat 1 |
-| PR00033 | Promo Hemat 3 | PAKET26-001 | Hemat 3 New | = Hemat 3 |
+| SKU | Nama eResto | Alasan |
+|---|---|---|
+| BB0052 | Dough Srikaya | tidak ada padanan, stok 0 |
+| BB0053 | Dough Tiramisu | tidak ada padanan |
+| BB0054 | Dough Vanilla | tidak ada padanan |
+| BB0101 | Olesan Blueberry | tidak ada padanan |
+| BB0106 | — | item tidak aktif |
+| BB0107 | Olesan Sarikaya | tidak ada padanan |
+| BB0108 | — | item tidak aktif |
+| BB0043 | Daun Teh Enak Kata Orang | belum ada padanan di BARU; hanya muncul di PO FRC Pasaman |
+| RR0004 | Ropi Tiramisu | tidak ada padanan |
+| RR0010 | Teh Enak Seduh | tidak ada padanan |
 
-### C. Kandidat "pilih varian" — bukti harga + konfirmasi user (3 SKU)
+SKU lain yang muncul baru di eResto (outlet/tipe baru) = otomatis belum
+termap → masuk sheet `Skipped` laporan migrasi dgn alasan, lalu diputuskan
+di sini (tambah baris + sumber bukti/keputusan user).
 
-| SKU eResto | Nama di eResto | Item Code | Item Name (ERPNext) | Catatan |
-|---|---|---|---|---|
-| BC01 | Black Coffee | BC002 | Black Coffee Hot | dikonfirmasi user 2026-10-05 |
-| CK02 | Coklat Panas | CK002 | Chocolate Hot | dikonfirmasi user 2026-10-05 |
-| CP01 | Cappucino | CP001 | Cappucino Ice | dikonfirmasi user 2026-10-05 |
+## Riwayat keputusan mapping
 
-Konfirmasi user 2026-10-05: TJ01/TJ02 memang Jasmine Tea (es & hot),
-ketiga pilihan varian di tabel C sudah benar, dan BC02 "Es Kopi Hitam"
-tetap digabung ke BC001 "Americano Ice" meski user menilai keduanya
-sebenarnya dua produk berbeda.
+| Tanggal | Keputusan |
+|---|---|
+| 2026-10-05 | ACC 24 SKU varian (tabel `acc-user*`, `bukti-harga+acc` di atas); 19 SKU butuh item baru |
+| 2026-10-09 | Goodie Bag kanonik = PEL260072; PG001 legacy di-merge & dihapus |
+| 2026-10-12 | Olesan Pastry: BB0174/BB0352 → BB26012 utk PO > 2026-10-08 (≤ → BB260046) |
+| 2026-10-13 | 28 SKU keperluan outlet dimapping (BB0263→ATK260041, BB0131→PEL260038, BB0136→PEL260041, BB0082→BHP260023, BB0087→BHP260020, BB0230→ATK260038, BB0267→BHP260033, sisanya bukti nama master BARU/stok csv); BB0080→PEL260074 & BB0117→PEL260077 ditambah juga ke lane SO FRC |
 
-Sisa belum diputuskan: 19 SKU butuh item baru (205 order masih
-`SKU_UNMAPPED` di rencana injeksi 1–5 Okt).
+## Jejak turunan (agar tidak kehilangan sync)
+
+ITEM_MAP aktif yang menyalin tabel ini:
+- `pos_sync/migrate_po_juri_9_12_okt.py` (74 SKU — lane PO outlet→JURI)
+- `pos_sync/migrate_so_frc_9_12_okt.py` (11 SKU — lane SO FRC)
+- `pos_sync/migrate_po_juri_eksternal_9_12_okt.py` (32 SKU — PO eksternal)
+- `pos_sync/migrate_po_gudang_jakarta_9okt.py`, `migrate_po_eresto_8_9_okt.py`,
+  `migrate_po_selogiri_9okt.py` (lane harian; salinan lama, masih konsisten)
+
+CSV lama (masih ada sebagai arsip, bukan sumber kebenaran):
+- `experiments/sku_to_item_code.csv` (51 SKU — subset POS, tanpa SKU BB/RR stok)
+- `experiments/stok_sku_to_item.csv` (47 SKU — subset stok outlet)
+
+Jika tabel ini dan salinan skrip/CSV beda → **tabel ini yang benar**;
+perbaiki salinannya.
+
+---
+
+# Bagian referensi (dipertahankan dari dokumen lama)
 
 ## Outlet mapping (to decide)
 

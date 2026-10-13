@@ -171,8 +171,9 @@ Volume acuan (terukur 1–4 Okt 2026): 27.053 order / 137 outlet / Rp709 jt;
 
 ## 5. Aturan bisnis yang tidak boleh dilanggar
 
-**Mapping SKU & item** (sumber kebenaran: `experiments/sku_to_item_code.csv`
-untuk POS, `stok_sku_to_item.csv` untuk inventory — jangan menebak):
+**Mapping SKU & item** (sumber kebenaran TUNGGAL sejak 2026-10-13:
+`docs/02-erpnext-mapping.md` — 166 SKU, semua kode diverifikasi ada di BARU;
+CSV `experiments/*.csv` hanya arsip/turunan — jangan menebak):
 
 - Kunci mapping = **`product_sku`**, tidak pernah nama. Satu SKU = satu nama.
   Produk sama bisa beda SKU per tipe outlet: `PR001/PR002/PR003` (owned) vs
@@ -480,7 +481,7 @@ Perintah utama (detail flag & urutan di `PROJECT_STATE.md` §Cara jalanin):
 | Doc | Isi |
 |---|---|
 | `docs/01-eresto-api.md` | Auth, endpoint, params, kontrak JSON eResto (dasar §3–4 di atas) |
-| `docs/02-erpnext-mapping.md` | Mapping SKU→Item, outlet, payment, aturan void/refund, pilot 1 order, mapping stok SO |
+| `docs/02-erpnext-mapping.md` | **Sumber tunggal mapping SKU→Item (166 SKU)** + outlet, payment, aturan void/refund, pilot 1 order, mapping stok SO |
 | `docs/03-production-sync-design.md` | Desain sync POS→produksi→purchase, fase 1–4, aturan cutover |
 | `docs/04-posnext-cara-kerja-penjualan.md` | Cara kerja POSNext: opening shift, invoice, closing |
 | `docs/05-alur-dough-ke-bundle.md` | Rantai tetap dough→matang→bundle + resep yield terukur |
