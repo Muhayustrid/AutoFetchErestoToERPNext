@@ -70,6 +70,10 @@ EMPTY_RULES = {
         "SG260008", "SG260009", "SG260010", "SG260011")},
 }
 
+# Item coverage kecil yang ada di beberapa outlet: hanya isi baris yang sudah ada,
+# tidak dibuatkan baris utk outlet lain (keputusan user 2026-10-14).
+FILL_ONLY = {"BB260061": HPP, "PEL260072": PERLENGKAPAN, "PEL260097": PERLENGKAPAN}
+
 # Item yang secara riil hanya dipakai pabrik (0 PO outlet) -> tidak diisi utk outlet.
 JURI_ONLY = {
     "BB260001", "BB260002", "BB260003", "BB260004", "BB260005", "BB260006",
@@ -98,7 +102,7 @@ def selftest():
     assert base_of("5220.016 - Biaya - RBYMS", "RB") is None
     assert base_of(None, "RB") is None
     assert mode([None, "a", "b", "a"]) == "a" and mode([None]) is None
-    assert not set(EMPTY_RULES) & JURI_ONLY
+    assert not set(EMPTY_RULES) & JURI_ONLY and not set(FILL_ONLY) & JURI_ONLY
 
 
 def under_inventories(group, parents):
@@ -145,7 +149,7 @@ def build_plan(erp, only_companies, only_items):
     warehouses = {w["name"] for w in erp.list_all("Warehouse", ["name"])}
 
     scope = only_companies or list(targets)
-    wajib = sorted(k for k in items if len(by_item[k]) >= WAJIB_MIN
+    wajib = sorted(k for k in items if (len(by_item[k]) >= WAJIB_MIN or k in FILL_ONLY)
                    and (not only_items or k in only_items))
     plan, skipped, no_rule, missing = {}, [], [], set()
     for code in wajib:
@@ -157,7 +161,8 @@ def build_plan(erp, only_companies, only_items):
         inv_base = mode(base_of(r["default_inventory_account"], targets[c])
                         for c, r in rows.items())
         if not exp_base:
-            exp_base = EMPTY_RULES.get(code) or EMPTY_RULES.get(items[code]["item_group"])
+            exp_base = (FILL_ONLY.get(code) or EMPTY_RULES.get(code)
+                        or EMPTY_RULES.get(items[code]["item_group"]))
         if not exp_base:
             no_rule.append(code)
             continue
@@ -166,7 +171,7 @@ def build_plan(erp, only_companies, only_items):
             abbr = targets[c]
             exp, wh = f"{exp_base} - {abbr}", f"Stores - {abbr}"
             inv = f"{inv_base} - {abbr}" if inv_base else None
-            if c in rows and rows[c]["expense_account"]:
+            if c in rows and rows[c]["expense_account"] or c not in rows and code in FILL_ONLY:
                 continue
             for nm in (exp, wh, inv) if c not in rows else (exp,):
                 if nm and nm not in accounts and nm not in warehouses:

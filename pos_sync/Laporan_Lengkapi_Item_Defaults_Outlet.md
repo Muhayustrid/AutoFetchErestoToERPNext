@@ -28,6 +28,9 @@ Baris baru: akun di atas + `Stores - <ABBR>` + `default_inventory_account` (mode
   RSMS, RSPY, RSUKJ, RRSC, RFB, RSUPP). Item Default total 48.772 → 49.954.
 - Verifikasi live: 230 item × 165 company → 0 baris hilang, 0 akun kosong,
   0 akun suffix salah, 0 duplikat (company, item). Rerun dry-run = 0 perubahan.
+- Susulan (`FILL_ONLY`): 5 baris outlet item coverage kecil diisi tanpa membuat baris outlet lain —
+  BB260061 Kopi Hitam (RPMD) → 4210.000; PEL260072 Goodie Bag & PEL260097 Balon Orange
+  (RPMD, RQLY) → 5220.016. Backup `audit_logs/item_defaults_261013_141711/`.
 
 ## Temuan, belum disentuh
 - 14 item tidak seragam: ATK260002/006/007/010/016/017/019/024/029/030/034 (5130.005 di 159
