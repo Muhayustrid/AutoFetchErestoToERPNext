@@ -157,6 +157,29 @@ def fetch_meta(client, doctypes):
     return out
 
 
+# ============================================================
+# ATURAN OLESAN PASTRY (keputusan user 2026-10-12)
+# ============================================================
+# PO ke supplier PT. JUARA ROTI INDONESIA bertanggal > 2026-10-08 memakai
+# BB26012 'Olesan Pastry (250 g)'; tanggal <= 2026-10-08 tetap BB260046
+# 'Olesan Pastry' (bulk, historis). Lihat KNOWLEDGE.md §5 + AGENTS.md.
+OLESAN_PASTRY_CUTOFF = "2026-10-08"   # PO_DATE > cutoff -> BB26012
+OLESAN_PASTRY_BULK = "BB260046"       # Olesan Pastry (bulk, kg/ctn)
+OLESAN_PASTRY_BOTOL = "BB26012"       # Olesan Pastry (250 g), UOM Botol
+
+
+def olesan_pastry_item(po_date, default=OLESAN_PASTRY_BULK):
+    """Item code Olesan Pastry sesuai tanggal PO (YYYY-MM-DD).
+
+    > 2026-10-08 -> BB26012; <= 2026-10-08 -> BB260046.
+    po_date None/kosong -> `default`.
+    """
+    d = "" if po_date is None else str(po_date)[:10]
+    if d and d > OLESAN_PASTRY_CUTOFF:
+        return OLESAN_PASTRY_BOTOL
+    return default
+
+
 # field bawaan server — jangan dikirim balik saat POST
 SERVER_FIELDS = {
     "name", "owner", "creation", "modified", "modified_by", "idx",

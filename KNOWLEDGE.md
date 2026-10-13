@@ -192,7 +192,16 @@ untuk POS, `stok_sku_to_item.csv` untuk inventory — jangan menebak):
 - `PJO2601–2605` tidak punya SKU POS; jangan dipetakan sebagai item jual.
 - **Alur repack bahan baku (Gula Cair & Olesan Pastry):**
   - **Gula Cair:** dibeli purchasing dalam kg, gudang receipt dalam ctn (25 kg/ctn) dan disimpan dalam ctn. Gudang merepack ke botol 250 g untuk kiriman PO outlet. Master bulk = `BB26008` (kg); master hasil repack = `BB26009` (Gula Cair 250 g, Botol).
-  - **Olesan Pastry:** gudang merepack ke botol 250 g. Untuk PO ke supplier PT. Juara Roti Indonesia sebelum 7 Oktober 2026, item name "Olesan Pastry" (kode lama `BB260046`) diganti dengan `BB26012` (`Olesan Pastry (250 g)`).
+  - **Olesan Pastry (aturan tanggal — keputusan user 2026-10-12):** untuk PO ke
+    supplier **PT. JUARA ROTI INDONESIA**, item "Olesan Pastry" pada PO
+    **BER-TANGGAL SETELAH 8 OKTOBER 2026** wajib memakai **`BB26012`
+    ("Olesan Pastry (250 g)", stock_uom `g`, UOM Botol = 250 g)** — BUKAN
+    `BB260046` ("Olesan Pastry", bulk). PO ber-tanggal **≤ 8 Okt 2026** tetap
+    `BB260046` (data historis, jangan diubah). Pemetaan SKU eResto:
+    `BB0174` ("TIDAK AKTIF Olesan Pastry") & `BB0352` ("Olesan Pastry 250g") →
+    `BB26012` bila tanggal PO > 2026-10-08, selain itu → `BB260046`.
+    Gudang merepack bulk `BB260046` (kg/ctn) ke botol 250 g `BB26012` untuk
+    kiriman ke outlet. Ambang batas: `PO_DATE > 2026-10-08`.
 
 **Work Order & Production Plan (pabrik, `production_app`):**
 
@@ -275,6 +284,23 @@ untuk POS, `stok_sku_to_item.csv` untuk inventory — jangan menebak):
   Invoice, SE, RECO, POS Package ikut pindah) lalu dihapus 2026-10-09 —
   jangan pakai `PG001`. POS Package "Paket Goodiebag 6 ROPI" memakai
   komponen `PEL260072`; `PKG01` (eResto) -> `PEL260072`.
+- **Barang in-transit (`Goods In Transit - JURI`) — jangan dibalikin lewat
+  transit lagi.** Dua SE migrasi 8 Okt (`SE-MTF-261009020/021`) berisi 12 item
+  kiriman ke Gudang Jakarta; kalau barang **sudah ada di GIT**, perbaikan =
+  **end-transit `GIT → Gudang Jakarta`** (satu Stock Entry), GBJ **tidak
+  disentuh**. Jalur `GBJ → GIT → Jakarta` membuat GBJ keluar **2× qty** →
+  minus (terukur `PJ260013` −17.832, `PJ260012` −13.716, `PJ260014` −20.856,
+  `PJ260010` −2.958 Pcs). Kalau GIT **kosong**, baru kompensasi RECO
+  penyesuaian (`5110.020`) ke GBJ lalu transfer. Skrip:
+  `pos_sync/endtransit_cloud_jakarta.py` (cloud),
+  `pos_sync/fix_git_jakarta_ke_gbj_transfer.py` (lokal),
+  audit: `pos_sync/audit_cloud_jakarta_git.py`.
+- **Konversi UOM dokumen LAMA → stok BARU**: dokumen LAMA memakai UOM baris
+  (`Pack`, `Kg`) dan site BARU `stock_uom` bisa beda (`Pcs`, `g`) dengan
+  `conversion_factor` **berbeda per item** (`PJ260010` cf=6, `PJ260011` cf=3,
+  `PJ26001x` lain cf=12; `BB260043` kg=1000). Ambil CF dari **master Item
+  site BARU** — jangan asumsikan 1:1, dan `Kg` (K besar) ≠ `kg` (lowercase).
+
 - **Dokumen cancelled tidak dibiarkan menumpuk**: `pos_sync/bersih_dokumen_cancelled.py`
   menghapus permanen dokumen docstatus=2 (scope company, dry-run default).
 
@@ -378,6 +404,34 @@ untuk POS, `stok_sku_to_item.csv` untuk inventory — jangan menebak):
     submit ditolak "*... exceeds the remaining allowed quantity ...*" (tampil
     di app sebagai "Persiapan Gagal"). Rebind `production_plan_item` + luruskan
     `ordered_qty` (lihat §5 "Work Order & Production Plan").
+19. **Field yang tidak ada di DocType membuat SELURUH query gagal, bukan
+    diabaikan.** Contoh nyata: `Material Request` menolak `custom_department`
+    di `fields` → HTTP 417 `Field not permitted in query` — helper yang
+    menelan error lalu mengembalikan `[]` membuat dokumen "hilang" tanpa
+    jejak. **Selalu cek status HTTP di list helper**, jangan asumsikan list
+    kosong = data kosong.
+20. **Normalisasi akun, bukan hanya gudang.** Baris dokumen pembelian
+    (`Material Request`, `Purchase Order`, `Purchase Receipt`) menyimpan
+    `expense_account` (`4210.000 - HPP Pembelian - ROPI`) dan `cost_center`
+    (`Main - ROPI`) — keduanya ikut `- ROPI` → `- JURI`, kalau tidak:
+    `LinkValidationError: Could not find Row #1: Expense Account`.
+21. **Template pajak beda NAMA antar site** (jangan andalkan suffix):
+    LAMA `Purchase Tax - ROPI` (= PPN 11% **di atas** net) → BARU
+    `Purchase Tax - JURI`; LAMA `Purchase Tax 11% (Include) - ROPI` →
+    BARU `Purchase Tax (Termasuk Pajak) - JURI`. Template "Include" **tidak
+    butuh baris pajak** (grand = net sudah benar); template "di atas net"
+    butuh baris `taxes` eksplisit.
+22. **Mengubah total dokumen ber-docstatus=1 butuh Property Setter untuk
+    SEMUA field turunannya sekaligus** — bukan hanya `taxes`. Untuk PO:
+    `taxes`, `total_taxes_and_charges`, `grand_total`, `rounded_total`,
+    `base_grand_total`, `base_rounded_total`, `in_words`, `taxes_and_charges`.
+    Lewat satu saja → `UpdateAfterSubmitError`. Dan `PUT` **tidak memicu
+    recalc pajak** di v16: hitung `tax_amount`/`total`/`base_*` manual, kalau
+    tidak barisnya masuk tapi bernilai 0.
+23. **Idempotensi `title` menyeberangi penamaan berbeda.** Dokumen yang dulu
+    dimigrasi dengan pola nama `PO-JURI-261004*` tetap dikenali lewat
+    `title = "ERESTO <id-lama>"` — cari by name **dan** title sebelum
+    menyimpulkan "belum ada".
 
 ---
 

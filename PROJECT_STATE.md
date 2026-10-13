@@ -9,7 +9,7 @@ Migrasi paralel POS eResto → ERPNext untuk ~160 outlet (Ropi). eResto tetap ja
 sampai cutover; ERPNext diisi data order, refund, produksi, dan pembelian via API.
 Target user: tim finance/operasional Ropi — single operator dibantu AI agent.
 
-## Status (2026-10-09)
+## Status (2026-10-13)
 
 Fase: **setup lokal + pilot OK + agregat OK + migrasi site-lama→baru OK +
 injeksi production 1–2 Okt OK + POS INVOICE LOKAL 1–5 Okt OK +
@@ -22,6 +22,7 @@ MIGRASI PRODUCTION PLAN & WORK ORDER 8 OKT JURI OK (PP261008001 / 62 WO) +
 INJEKSI STOK TRAINING VIA MATERIAL RECEIPT DELANGGU OK (SE-MR-261008001 / 30 ITEM) +
 TARIK PO DIFAKTUR OKT 2026 OK (66 PO sebelum Okt, `fetch_po_invoiced_okt.py`) +
 MIGRASI PI DIVISI SENTRAL OKT 2026 OK (7 faktur: 5 PI baru + 2 existing, PO+PR Sinar, `migrate_pi_central_okt.py`) +
+MIGRASI PO ERESTO INTERNAL JURI 12-13 OKT OK (29 PO internal di jendela: 5 SKIP_EXISTS + 19 baru (14 submitted + 5 draft) + 2 rejected skip + 3 FRC ke lane SO; nilai Rp 136.650.660 cocok persis; mapping +28 SKU baru (keputusan user: BB0263→ATK260041, BB0131→PEL260038, BB0136→PEL260041, Lakban Besar→BHP260023, Lakban Kecil→BHP260020 Selotip, Sticker Label→ATK260038, sisanya bukti nama master BARU/stok_sku_to_item.csv); onboarding 2 company RS (Anna Lasmanah sudah ada dgn abbr RHALB + CUST-260126; Prof H M Yamin dibuat RSPY + CUST-260214) via `onboard_company_rs_12okt.py`; jebakan: nama company eResto 'MUHAMMAD YAMIN' vs ERPNext 'MUHAMMADIYAH YAMIN' + 'HJ.' vs 'Hj.' → resolver case-insensitive + alias; PUT child-table supplier full-list = lost-update race → duplikat row Allowed dibersihkan (178→176); MIGRASI SO FRC 12 OKT OK (3 SO Draft: SORD-JURI-261013001..003, Rp 29.052.500; BB0080→PEL260074 & BB0117→PEL260077 ditambah ke ITEM_MAP SO FRC) +
 AUDIT BANDING PO PT. JURI LAMA↔BARU OK (280 vs 124; 26 draft eResto duplikat PO native submitted, 3 pasangan stok dobel, `compare_po_juri_lama_baru.py`) +
 BERSIH-BERSIH DUPLIKAT PO PT. JURI OK (26 draft dihapus + 12 dokumen di-cancel, Bin 3 item turun tepat, `bersih_po_juri.py`) +
 AUDIT STOCK BALANCE 30 SEP LAMA↔BARU OK (revisi scope 2026-10-09: HANYA company PT. JUARA ROTI INDONESIA — 418 posisi item×gudang: 232 sama persis, 186 beda semua terjelaskan per kategori, `compare_stock_sep30.py`; keputusan angka utk 16 drift buku-vs-fisik + PEL260087 menunggu user) +
@@ -39,9 +40,12 @@ LUNAS 30 SEP 23:00 & EOD LAMA=BARU + HAPUS LOAN PINJAM STOCK OK (48+6+6+2+7 seli
 	AUDIT PI SITE LAMA OK (5 PI lama, 0 termigrasi ke BARU — PI lama trial, jangan migrasi) +
 	KONSOLIDASI RECO JURI TAHAP-1 OK (akun 1171/5110 dibenahi; 7 gudang non-GBJ jadi 1 opening per gudang @30 Sep 23:00 `RECO-JURI-261009042..048`; SR7 026→049, 030→SE-MR-261009002, 031→SE-MR-261009003, 033→050, 029 no-op; 13 dok cancelled dihapus; sisa 7 gudang + SR7 032/034 MENUNGGU IZIN flag; `konsolidasi_opening_reco.py`) +
 	HAPUS WAREHOUSE TESTING DI 2 SITE OK (LAMA: Gudang Finished Goods Testing / Gudang Testing Manufacture / WIP Testing `- ROPI`; BARU: `Gudang Testing Manufacture - JURI` & `WIP Testing - JURI`; +4 SE +2 draft +2 RECO +26 RIV; semua 404 & 0 sisa; `hapus_warehouse_testing.py`) +
-	MIGRASI PO222.091026.001/.002 (RS MUHAMMADIYAH SELOGIRI) OK (2 PO / Rp 8.036.849, ID identik, submitted; company RSMS baru di-onboard + FY 2026 + allowed supplier + customer internal, `migrate_po_selogiri_9okt.py`)** —
+	MIGRASI PO222.091026.001/.002 (RS MUHAMMADIYAH SELOGIRI) OK (2 PO / Rp 8.036.849, ID identik, submitted; company RSMS baru di-onboard + FY 2026 + allowed supplier + customer internal, `migrate_po_selogiri_9okt.py`) +
+	MIGRASI PO OUTLET→JURI 9-12 OKT OK (21 PO / Rp 77.886.160, ID identik, 13 submitted + 8 draft; skip 6 rejected/canceled + 4 FRC; `migrate_po_juri_9_12_okt.py`) +
+	MIGRASI PO JURI-EKSTERNAL 9-12 OKT ANTI-DUPLIKAT-ISI OK (4 PO baru / Rp 35.631.260; 16 duplikat isi + 1 skip-user diidentifikasi vs ID purchasing `PO-JURI-261009004..019`; `migrate_po_juri_eksternal_9_12_okt.py`) +
+	MIGRASI SO FRC (PO outlet FRC → Sales Order JURI→Customer FRC) OK (Jogokariyan & Ugm sudah ada `SORD-JURI-261012008/012`; Pasaman dibuat 2 SO Draft `SORD-JURI-261012018/019` Rp100,96jt + Rp80,03jt, baris Daun Teh dikeluarkan; `migrate_so_frc_9_12_okt.py`) +
+	HAPUS DUPLIKAT PO PT. JURI OK (3 draft kembar dihapus: `PO-JURI-261009011`, `PO126.280926.002`, `POO53.300926.001`; audit kunci company+supplier+tgl+item-signature; sweep akhir 0 duplikat; backup JSON di `audit_logs/`)** —
 - **Injeksi Stok Company TRAINING via Material Receipt (SE-MR-261008001 / 30 Item): SELESAI 2026-10-08.**
-  Atas instruksi user ("memasukan stock di eprnext baru pada company training. pake stock reconcilation di pku delanggu, tapi ini material receipt aja!").
   - 1 Stock Entry berjenis Material Receipt `SE-MR-261008001` dibuat dan disubmit (`docstatus = 1`) pada Company `TRAINING` ke warehouse `Stores - TRNG`.
   - Seluruh 30 item persediaan fisik dari seluruh Stock Reconciliation Delanggu (`RECO-RPMD-261006001`, `002`, `003`, `261008001`) dimasukkan dengan quantity dan valuation rate persis (total Rp 6.277.422,89).
   - 30 SLE aktif diposting tanpa kendala akun GL (`enable_perpetual_inventory = 0` di TRAINING). Skrip: `pos_sync/create_training_material_receipt.py`.
@@ -286,6 +290,17 @@ LUNAS 30 SEP 23:00 & EOD LAMA=BARU + HAPUS LOAN PINJAM STOCK OK (48+6+6+2+7 seli
 
 ## Keputusan desain
 
+- **Olesan Pastry pada PO ke PT. JUARA ROTI INDONESIA (keputusan user 2026-10-12):**
+  PO bertanggal **> 2026-10-08** → item **`BB26012` (`Olesan Pastry (250 g)`)**,
+  BUKAN `BB260046` (bulk). PO tanggal ≤ 2026-10-08 tetap `BB260046`.
+  SKU eResto `BB0174` & `BB0352` mengikuti aturan tanggal ini. Ditegakkan lewat
+  helper `prod_common.olesan_pastry_item(po_date)` (cutoff `2026-10-08`),
+  dipakai di `migrate_po_juri_9_12_okt.py`, `migrate_po_juri_eksternal_9_12_okt.py`,
+  `migrate_po_gudang_jakarta_9okt.py`, `migrate_po_eresto_8_9_okt.py`.
+  Bukti cloud: 4 PO 9 Okt (`PO042.091026.001`, `PO046.091026.002`,
+  `POO81.091026.001`, `POO90.091026.001`) memakai `BB26012`; 0 PO ≥ 9 Okt
+  memakai `BB260046`. Lihat `KNOWLEDGE.md` §5 + `AGENTS.md`.
+
 - **Kunci mapping = `product_sku`**, bukan nama. Dua SKU bisa satu Item; satu produk
   bisa beda SKU per tipe outlet (FRC vs reguler).
 - **Harga per tier** dari sampling transaksi (`paid_quantity` > 0, non-void, modus
@@ -303,6 +318,71 @@ LUNAS 30 SEP 23:00 & EOD LAMA=BARU + HAPUS LOAN PINJAM STOCK OK (48+6+6+2+7 seli
 
 ## Known issues
 
+- **Audit eResto vs ERPNext 8–9 Okt (gudang pusat) — LAPORAN JADI 2026-10-13**
+  (`pos_sync/audit_eresto_erpnext_89okt.py`, data `eresto_stockcard_89okt.json`
+  [74.942 baris stock card eResto], `Audit_eResto_vs_ERPNext_8_9_Okt2026.xlsx`):
+  dari 4 gudang pusat (GBJ/Produksi/BB/Jakarta): 26 COCOK, 53 SELISIH RIIL
+  (mayoritas pola konversi UOM tidak seragam antar migrasi: dough ×12 Pack→Pcs,
+  olesan 1 kg ×1000 g, kemasan Pack→Pcs; + kasus riil: BB260019 GBJ eResto out
+  160 vs ERP 100/+108; Goodie Bag 260 vs 210; Krim Kopi Jakarta out 80 vs 20),
+  117 TANPA PADANAN (91 SKU BB0xxx eResto memang tidak ada item-nya di master
+  BARU — ATK/peralatan/internal, bukan error migrasi), 108 TIDAK ADA DI ERESTO
+  (item master BARU yang gerakannya berasal migrasi LAMA/aset — wajar; contoh
+  besar: BB260028 Tepung Dough karena migrasi pakai master BARU dgn UOM zak
+  conv 25.000, eResto pakai unit kg). Item produksi Gudang Produksi/BB
+  (BB0056/0154/0125 dll.) muncul "0 di ERP" karena konsumsinya dicatat lewat
+  master BARU (BB2600xx) lewat SE MTFM hasil replay — bukan hilang.
+  Keputusan lanjut menunggu user: normalisasi UOM per item di laporan, atau
+  injeksi koreksi untuk kasus riil (BB260019 dsb.).
+- **Revisi Olesan Pastry 8 Okt (DN/SO/PO) — SELESAI 2026-10-12 malam**
+  (`pos_sync/revisi_olesan_dn.py`, state `revisi_olesan_state.json`, backup
+  `audit_logs/backup_revisi_olesan.json`): 7 DN outlet 8 Okt
+  (006/007/015/018/008/009/011) salah pakai `BB260046` bulk (mapping lama
+  `BB260060->BB260046` di `migrate_outlet_so_dn_to_juri.py`; pasca-repack
+  `SE-RPK-261009001` seharusnya `BB26012` botol 250 g) → minus −2.750 ditutup
+  zero-out `SE-MR-261009002`. Revisi: temp MR kompensasi +500 g @ 07:59 (buka
+  deadlock cancel DN 015/018 yang sama-sama posting 08:00), cancel 7 DN +
+  zero-out, amend 2 PO intercompany (PO223.071026.006-1, POO80.071026.003-1,
+  baris `BB260060` salah label "Bubuk Hepi" → `BB26012`), amend 7 SO (-1, baris
+  → `BB26012`), rebuild 7 DN (`DN-JURI-261012019/020/024–028`, backdate 8 Okt
+  dipertahankan, item olesan → `BB26012`, so_detail & poi diremap). Baris
+  BB260019 (10+50 Pcs) DIKELUARKAN dari DN dan diganti `SE-MR-261012005`
+  (+108 penutup minus GBJ 9 Okt, pengganti baris BB260019 di zero-out lama);
+  pergerakan bahan antar gudang JURI jangan lewat DN (menabrak trail minus).
+  Semua dokumen cancelled DIHAPUS (GL+SLE is_cancelled disapu dulu, jebakan
+  #9a). SO/PO lama dibiarkan cancelled (dirujuk amended_from). Verifikasi
+  akhir: 0 bin minus GBJ, BB260046 GBJ=0, BB26012 GBJ=36.846 g, 7 SO+7 DN+2 PO
+  baru submitted (To Bill / To Deliver and Bill / To Receive and Bill).
+
+- **Rotasi kunci API cloud BARU (2026-10-12):** kunci `ERPNEXT_API_KEY` untuk
+  `ropierpnext.frappe.cloud` dikirim user lewat chat 2026-10-12 (terekspos) —
+  user akan merotasinya sendiri. Nilai kunci hanya di `/tmp/eresto_prod.env`
+  (volatile, tidak di repo). Jangan commit.
+- **Target site WAJIB dicek sebelum tulis** (aturan AGENTS baru 2026-10-12):
+  `/tmp/eresto_mig.env` → `ERPNEXT_URL` = **LOKAL** (`http://127.0.0.1:8081`);
+  `/tmp/eresto_prod.env` → **CLOUD** (`https://ropierpnext.frappe.cloud`).
+  Semua lane sesi 2026-10-12 sudah menulis ke CLOUD & cetak `TARGET SITE`.
+- **Draft lama yang berubah status di luar sesi (2026-10-12):** 3 PO outlet
+  yang tadi draft (PO101.091026.002, PO140.091026.001, PO202.091026.001)
+  ternyata sudah di-submit 10:50–11:10 oleh akun operator; batch SO
+  `SORD-JURI-261012001..017` juga dibuat 10:05–11:11. `PO122.121026.001`
+  (eResto `pending`) sudah `Submitted` di BARU pukul 11:11 — mismatch sengaja
+  DIBIARKAN (keputusan user: catat saja). 8 PO `pending` tetap Draft.
+
+- **SE-MTF-261012017 tidak bisa dicancel (backdate 2026-10-07 15:55) —
+  DISELESAIKAN via koreksi SE-MTF-261012018 (2026-10-12)**: dokumen duplikat
+  manual (tanpa remarks eResto) BB260019 Plastik Krim 3.000 Pcs Bahan Baku →
+  Produksi, backdate ke 7 Okt padahal saldo Produksi 7 Okt sore cuma 544 Pcs —
+  cancel via API kena NegativeStockError (SE-MTFM-261009156). Submit asli lolos
+  karena validasi submit hanya cek saldo sumber saat submit (12 Okt), bukan
+  replay trail backdate. Solusi (aturan locked: tidak buka minus): 1 SE
+  koreksi 2 baris posting 12 Okt — Produksi −3.000 → BB, lalu BB → **Gudang
+  Barang Jadi +3.000** (target warehouse yang diminta user). remarks marker
+  idempoten = `ERESTO SE-MTF-261012017-KOREKSI`. Saldo akhir BB260019:
+  BB 66.000 / GBJ 3.000 / Produksi 4.334. Dokumen asli (261012017) SENGAJA
+  dibiarkan submitted (cancel mustahil tanpa membuka minus historis + membatal
+  puluhan MTFM backdated 7–10 Okt). SE-MTF-261012002 & SE-MTF-261008001
+  (remarks ERESTO MAT-STE-2026-09669) dikonfirmasi user SAH — bukan duplikat.
 - ~~**Telur Cair `BB260055` minus 12,49 kg di `Gudang Produksi - JURI`**~~ — **SUDAH SELESAI 2026-10-07**
   via `RECO-JURI-261007001` (+32,46 kg opening) & SE Repack 09605 (+143,36 kg) → saldo sekarang +163,33 kg positif.
 - ~~**13 Bin negatif persediaan JURI & RPMD**~~ — **SUDAH SELESAI 2026-10-08** via 3 RECO
@@ -411,6 +491,33 @@ LUNAS 30 SEP 23:00 & EOD LAMA=BARU + HAPUS LOAN PINJAM STOCK OK (48+6+6+2+7 seli
   (`--dry-run`/`--verify`/`--only`; onboard company anak `OUTLET` + FY 2026 +
   allowed supplier + customer internal, lalu migrasi PO222.091026.001/.002
   ID identik → laporan `Laporan_Migrasi_PO_Selogiri_9Okt2026.xlsx`).
+- Migrasi PO Outlet→JURI 9-12 Okt: `python pos_sync/migrate_po_juri_9_12_okt.py`
+  (`--dump`/`--refresh`/`--dry-run`/`--verify`/`--only`; internal_supplier=true,
+  ID = nomor PO eResto, status processing/completed→submit, pending→draft,
+  skip rejected/canceled + company FRC belum ada; idempoten) →
+  laporan `Laporan_Migrasi_PO_JURI_9_12_Okt2026.xlsx`.
+- Migrasi PO JURI↔supplier EKSTERNAL 9-12 Okt (anti-duplikat by ISI):
+  `python pos_sync/migrate_po_juri_eksternal_9_12_okt.py`
+  (`--dump`/`--refresh`/`--dry-run`/`--verify`/`--only`; company JURI, gudang
+  JURI padanan divisi, supplier alias `Tokopedia Shopee - Kemitraan`→
+  `Tokopedia - Shopee`; dedup total ±Rp100 + tanggal ±1 hari + multiset qty;
+  charge non-pajak via template Investasi/Ongkir/Packaging/Admin; idempoten) →
+  laporan `Laporan_Migrasi_PO_JURI_Eksternal_9_12_Okt2026.xlsx`. WAJIB jalankan
+  lane ini SEBELUM input manual baru (risiko duplikat dgn ID purchasing).
+- Migrasi SO FRC (PO outlet FRC → Sales Order JURI→Customer FRC):
+  `python pos_sync/migrate_so_frc_9_12_okt.py`
+  (`--dry-run`/`--verify`/`--only`; default **DRAFT**, `--submit` utk submit;
+  customer = `Customer` FRC (group Outlet Franchise), `set_warehouse`
+  Gudang Barang Jadi - JURI, TANPA `inter_company_order_reference`; idempoten
+  by customer+total) → laporan `Laporan_Migrasi_SO_FRC_9_12_Okt2026.xlsx`.
+  Baris SKU tanpa padanan (mis. `BB0043 Daun Teh`) dikeluarkan & dicatat.
+- Hapus duplikat PO PT. JURI (draft kembar, CLOUD): dry-run default,
+  `--execute`. `python pos_sync/hapus_po_juri_261009011.py` (kasus 011↔012);
+  `python pos_sync/hapus_po_juri_duplikat.py` (PO126 + POO53). Guard:
+  docstatus draft + cek rujukan PR/PI + backup JSON (`audit_logs/`) +
+  verifikasi 404 & dokumen penjaga tetap ada; idempoten.
+  **Cara audit duplikat:** kunci = company + supplier + tanggal + signature
+  item (qty,rate) — BUKAN total saja (banyak PO beda outlet nominalnya sama).
 - Audit banding PO PT JURI LAMA↔BARU: `python pos_sync/compare_po_juri_lama_baru.py`
   (`--refresh`; read-only) → `Laporan_Banding_PO_PT_JURI.xlsx` (Baru_eRestoID,
   Draft_Item_Detail, Rekap_Lama, Rekap_Baru, Duplikat_Submitted,
@@ -470,12 +577,243 @@ LUNAS 30 SEP 23:00 & EOD LAMA=BARU + HAPUS LOAN PINJAM STOCK OK (48+6+6+2+7 seli
   REFUSE tanpa `--enable-negative-window` (restore 0 di finally). State:
   `reco_consolidate_state.json`. Substitusi zero-out:
   `python pos_sync/restore_sr7_zeroouts.py [--execute]`.
+- Perbaikan alokasi Goods In Transit → Gudang Jakarta **LOKAL** (8 Okt):
+  ⚠️ jalur ini menulis ke LOKAL (`/tmp/eresto_mig.env`). Untuk CLOUD pakai
+  baris `endtransit_cloud_jakarta.py` di bawah.
+  `python pos_sync/fix_git_jakarta_ke_gbj_transfer.py [--plan|--reco|--transfer|--verify] [--execute]`
+  (dry-run default; idempoten marker `ERESTO-GBJ-ALOKASI-8OKT` /
+  `ERESTO ALOKASI 8 OKT -> JAKARTA`). Audit read-only pendukung:
+  `audit_goodintransit_juri.py`, `audit_gtj_landing.py`,
+  `cek_ketersediaan_gbj_jakarta.py`, `audit_gbj_dough_7okt.py`,
+  `probe_lama_git_jakarta.py`, `probe_kurang_pj260014.py`,
+  `rencana_kompensasi_gbj_jakarta.py`, `cek_skenario_balik_gbj.py`.
+- **End-transit GIT → Gudang Jakarta di CLOUD** (8 Okt, barang sudah di GIT
+  dari `SE-MTF-261009020/021`): `python pos_sync/endtransit_cloud_jakarta.py
+  [--execute|--verify]` (dry-run default; idempoten `remarks = "ERESTO
+  END-TRANSIT KE JAKARTA 8 OKT"`; GBJ tidak disentuh; `PEL260087` di-skip).
+  Audit cloud read-only: `python pos_sync/audit_cloud_jakarta_git.py
+  [--json out.json]` (isi GIT cloud, SLE, posisi cloud vs LAMA).
+- Migrasi Material Request (Purchase) + Purchase Order 25 Sep–7 Okt:
+  `python pos_sync/migrate_mr_po_25sep_7okt.py [--execute|--verify|--only <id>|--limit N]`
+  (dry-run default; retry 3x; idempotensi `title=ERESTO <name>`; skip cancelled).
+  Perbaikan baris pajak PPN 11% PO: `python pos_sync/fix_tax_rows_po_25sep_7okt.py
+  [--execute|--verify|--only <id>]` (Property Setter `allow_on_submit` 8 field
+  sementara — WAJIB dihapus di `finally`). Verifikasi dua sisi:
+  `python pos_sync/verify_mr_po_25sep_7okt.py`. Audit scope:
+  `python pos_sync/audit_mr_mp_25sep_7okt.py [--json out.json]`.
 - Hapus warehouse testing (LAMA & BARU): `python pos_sync/hapus_warehouse_testing.py`
   (`--plan` dry-run; `--execute [--only baru|lama]`; `--patch-state` utk
   bersihkan state konsolidasi) → `Laporan_Hapus_Warehouse_Testing.xlsx`.
 - Tidak ada build/test suite; verifikasi = Excel + cek stdout semua "OK".
 
 ## Changelog
+
+- **2026-10-12 (END-TRANSIT GIT → GUDANG JAKARTA DI **CLOUD** — SELESAI + KOREKSI SALAH SITE):**
+  Atas laporan user ("terkait jakarta gimana? kok aku cek ga ada perubahan"):
+  - **Akar masalah — SALAH SITE:** seluruh pekerjaan Jakarta sebelumnya
+    (`RECO-JURI-261012001` + `SE-MTF-261012001`, lihat entri di bawah) tertulis ke
+    **LOKAL `http://127.0.0.1:8081`** karena `ERPNEXT_URL` di `/tmp/eresto_mig.env`
+    menunjuk ke sana, sedangkan user memeriksa **CLOUD
+    `ropierpnext.frappe.cloud`**. Cloud sama sekali belum tersentuh.
+  - **Audit cloud (read-only, `pos_sync/audit_cloud_jakarta_git.py`):** ternyata
+    barangnya **SUDAH ADA di cloud** — `SE-MTF-261009020` (6 item dough) &
+    `SE-MTF-261009021` (6 item BB/PEL), keduanya `GBJ → Goods In Transit - JURI`,
+    posting 8 Okt 12:00, `remarks = "ERESTO MAT-STE-2026-09748/09752 | Migrasi Site
+    Lama In-Transit Barang Jadi ke Gudang Jakarta"`. `add_to_transit=0` dan
+    **end-transit pasangan kosong** → barang nyangkut di GIT cloud sejak 8 Okt.
+    Isi GIT cloud = **persis** GIT LAMA (12 item) + `PEL260087` 10.000 Pcs
+    (dari opening 30 Sep, bukan bagian kiriman).
+  - **Eksekusi (`pos_sync/endtransit_cloud_jakarta.py`, dry-run default):**
+    `SE-MTF-261012027` — Material Transfer `Goods In Transit - JURI` →
+    `Gudang Jakarta - JURI`, 12 baris, posting **2026-10-08 12:00**, qty persis
+    dokumen sumber (Pack/kg/Pcs), Rp 28.244.796,53. **Gudang Barang Jadi TIDAK
+    disentuh** (barang sudah keluar dari GBJ ke GIT). `PEL260087` tidak diikutkan
+    (keputusan user).
+  - **Hasil & verifikasi cloud:** GIT → **0** untuk 12 item (sisa `PEL260087`
+    10.000 Pcs); Jakarta naik tepat (`PJ260013` 3.276→**24.792**, `PJ260012`
+    1.296→**18.168**, `PJ260014` 180→**20.148**, `PJ260011` 2.310→**3.390**,
+    `PJ260010` 24→**3.024**, `PJ260016` 809→**2.169**, `BB260043` 3.000→**33.000**,
+    `BB260044` 15.000→**36.000**, `BB260045` 3.250→**5.750**, `PEL260006` 1→**11**,
+    `PEL260068` 3→**33**, `PEL260077` 4.600→**12.100**); **0 Bin negatif gudang
+    JURI**; rerun = SKIP (idempoten). Backup
+    `audit_logs/backup_endtransit_jakarta_20261012_143040.json`.
+  - **Pelajaran:** SELALU pastikan target site (BARU cloud vs LOKAL) sebelum
+    menulis — cek `ERPNEXT_URL` yang benar-benar dipakai, jangan asumsikan.
+    Audit ulang menembus marker (`remarks`/`remark`) & nama dokumen untuk
+    memastikan jejak ada di **site yang diperiksa user**.
+  - **Artefak:** `pos_sync/endtransit_cloud_jakarta.py`,
+    `pos_sync/audit_cloud_jakarta_git.py`.
+
+- **2026-10-12 (MIGRASI MATERIAL REQUEST (PURCHASE) + PURCHASE ORDER 25 SEP – 7 OKT — SELESAI):**
+  Atas instruksi user ("import material request dan material purchase dari site lama
+  ke site baru sebelum tanggal 8; 25 September 2026 hingga 7 Oktober 2026"):
+  - **Scope (keputusan user):** MR tipe **Purchase** dalam window + 2 MR rujukan di
+    luar window (`MAT-MR-2026-00448` 21 Sep, `MAT-MR-2026-00583` 24 Sep) demi link
+    PO→MR; **dokumen cancelled di-skip**; ID identik (`rename_doc`); idempotensi
+    `title = "ERESTO <name>"`; gudang `- ROPI`→`- JURI`; UOM `Kg`→`kg`.
+  - **Hasil:** **130 Material Request** (dari 131 submitted) + **111 Purchase Order**
+    ID identik dibuat; **28 PO** ternyata sudah ada dari sesi sebelumnya dengan pola
+    nama `PO-JURI-261004*` (title `ERESTO <id-lama>` → idempotensi men-skip).
+    **11 MR + 1 PO cancelled** dilewati. Relink baris PO→MR: **115/115 valid, 0 patah**.
+  - **Temuan & perbaikan PPN:** 27 PO ber-template `Purchase Tax - ROPI` (PPN 11% DI
+    ATAS net) dimigrasi dengan `taxes=[]` → grand_total BARU = net (kurang 11%).
+    Dibetulkan via `pos_sync/fix_tax_rows_po_25sep_7okt.py` (Property Setter
+    `allow_on_submit` sementara untuk `taxes`, `grand_total`, `total_taxes_and_charges`,
+    `rounded_total`, `base_*`, `in_words`, `taxes_and_charges` — lalu dihapus;
+    `tax_amount` dihitung manual karena PUT tidak memicu recalc pajak v16). Termasuk
+    **6 PO warisan sesi sebelumnya** (`PO-JURI-261004004/019/021/023/047/048`).
+    Hasil: **grand_total 0 selisih** (sisa Rp 3,33 dari `POCK2.021026.002` yang masih
+    draft & beda pembulatan rate Rp 3).
+  - **Catatan penting:** 6 PO "Include" (`Purchase Tax 11% (Include) - ROPI`) memang
+    benar tanpa baris pajak — LAMA menyimpan net sebelum pajak, BARU sesudah, grand
+    sama-sama benar.
+  - **Tertunda (keputusan user: tunda + laporkan):** `MAT-MR-2026-00613` +
+    `PO-250926-003` butuh item **`BB260021` "Plastik Wayang"** yang belum ada di BARU
+    (stock_uom Pcs; konversi LAMA Kg=4000/Pack=1000).
+  - **Verifikasi:** dua sisi (ID identik, docstatus, title marker, duplikat 0, nilai,
+    relink) — `pos_sync/verify_mr_po_25sep_7okt.py`. 0 Property Setter tertinggal.
+  - **Artefak:** `pos_sync/migrate_mr_po_25sep_7okt.py`,
+    `fix_tax_rows_po_25sep_7okt.py`, `verify_mr_po_25sep_7okt.py`,
+    `audit_mr_mp_25sep_7okt.py` → `Laporan_Migrasi_MR_PO_25Sep_7Okt2026.xlsx`.
+    Backup `audit_logs/backup_mr_po_25sep_7okt_*.json`, `backup_tax_rows_po_*.json`.
+  - **Jebakan baru yang didokumentasikan:** (a) MR doctype menolak field
+    `custom_department` di `fields` query → seluruh request gagal & `list_all` diam-diam
+    mengembalikan [] (selalu cek status HTTP); (b) `expense_account` baris MR/PO juga
+    perlu normalisasi `- ROPI`→`- JURI`, bukan hanya gudang; (c) template pajak PO
+    perlu `tax_map()` (pola `migrate_po_pr_1_7_okt.py`); (d) update grand_total setelah
+    submit butuh Property Setter untuk **8 field** sekaligus.
+
+- **2026-10-12 (ATURAN OLESAN PASTRY PO > 8 OKT → `BB26012` — DISIMPAN & DITEGAKKAN):**
+  Instruksi user: "per setelah tanggal 8 oktober, semua PO ke supplier PT. Juara
+  Roti Indonesia kalau itemnya Olesan Pastry pakai yang Olesan Pastry (250 g)".
+  - **Aturan disimpan** di `AGENTS.md` (durable) + `KNOWLEDGE.md` §5 (detail) +
+    `PROJECT_STATE.md` §Keputusan desain: PO bertanggal **> 2026-10-08** →
+    `BB26012`; ≤ 2026-10-08 → `BB260046` (historis). SKU eResto `BB0174`/`BB0352`
+    ikut aturan ini.
+  - **Ditegakkan di kode** (bukan cuma dokumentasi): helper baru
+    `prod_common.olesan_pastry_item(po_date)` (cutoff `2026-10-08`), dipakai di
+    `migrate_po_juri_9_12_okt.py`, `migrate_po_juri_eksternal_9_12_okt.py`,
+    `migrate_po_gudang_jakarta_9okt.py`, `migrate_po_eresto_8_9_okt.py`
+    (lookup baris + kumpulan `all_codes`).
+  - **Verifikasi cloud:** 4 PO 9 Okt (`PO042.091026.001`, `PO046.091026.002`,
+    `POO81.091026.001`, `POO90.091026.001`) sudah `BB26012`; **0 PO ≥ 9 Okt**
+    memakai `BB260046`. Data historis ≤ 8 Okt tidak diubah.
+  - Catatan: dokumen lama `KNOWLEDGE.md` sempat berbunyi "sebelum 7 Oktober"
+    (tidak konsisten) — diganti dgn aturan tanggal yang tegas.
+
+- **2026-10-12 (HAPUS DUPLIKAT PO PT. JURI — SELESAI, CLOUD):**
+  Atas instruksi user ("duplikat lebih baik dihapus"). Audit isi (kunci =
+  **company + supplier + tanggal + item-signature**, bukan sekadar total —
+  banyak PO outlet berbeda yg kebetulan nominalnya sama) di
+  `ropierpnext.frappe.cloud`.
+  - **3 duplikat nyata dihapus** (semua sisi Draft, tanpa PR/PI/GL, backup JSON
+    di `audit_logs/`):
+    1. `PO-JURI-261009011` (Draft) ↔ `PO-JURI-261009012` (Submitted) — Shopee
+       Plastik Super Murah Rp4.339.776 (`pos_sync/hapus_po_juri_261009011.py`).
+    2. `PO126.280926.002` ↔ `PO126.280926.001` (dua-duanya draft) — RSUD PADANGAN
+       BOJONEGORO Rp113.000.
+    3. `POO53.300926.001` (Draft) ↔ `POO53.300926.002` (Submitted) — RSUD
+       SETJONEGORO WONOSOBO Rp16.443.020.
+       (2 & 3 via `pos_sync/hapus_po_juri_duplikat.py`.)
+  - Prosedur: guard docstatus=0 + cek rujukan PR/PI + backup JSON + verifikasi
+    404 & dokumen penjaga tetap ada. Idempoten (rerun = SKIP).
+  - **Sweep akhir: 0 grup duplikat tersisa.** `PO101.091026.001` (rejected,
+    RS UI Depok) BUKAN duplikat — dibiarkan. PO outlet ber-total kembar
+    (mis. Rp226.000) bukan duplikat (company berbeda).
+
+- **2026-10-12 (MIGRASI SO FRC PASAMAN (PO eResto outlet FRC → Sales Order) — SELESAI, DRAFT):**
+  Atas instruksi user ("untuk frc langsung jadi customer jadi sales order aja" +
+  "SO nya dibikin draf ya" + "daun teh enak kata orang dikeluarin dulu aja").
+  - **Rekonsiliasi:** 4 PO eResto divisi FRC di jendela 9-12 Okt — Jogokariyan
+    (`POO21.091026.001`) & Ugm (`POO67.101026.001`) **sudah punya SO**
+    (`SORD-JURI-261012008`, `SORD-JURI-261012012`, dibuat 10:36/10:45 hari ini
+    oleh akun operator — pekerjaan paralel, bukan sesi ini); hanya **Pasaman** yang
+    belum.
+  - **Eksekusi (`pos_sync/migrate_so_frc_9_12_okt.py`):** 2 SO **Draft** JURI →
+    customer `CUST-260183` Pasaman (FRC): `SORD-JURI-261012018` (POO33.101026.001)
+    Rp100.960.000 & `SORD-JURI-261012019` (POO33.101026.002) Rp80.030.000 — 8 baris
+    masing-masing, company JURI, `set_warehouse` Gudang Barang Jadi - JURI,
+    `inter_company_order_reference` None (pola SO FRC existing), title `ERESTO <PO>`.
+    Rerun = 4 SKIP_EXISTS (idempoten; cek by customer + total, tanggal apa pun).
+  - **baris dikeluarkan:** `BB0043 'Daun Teh Enak Kata Orang'` (20 Pack @102.000/PO,
+    Rp2.040.000) belum ada padanannya di ERPNext (BARU & LAMA) → di-skip & dicatat
+    (keputusan user). Karena itu total SO lebih kecil Rp2.040.000 dari PO eResto.
+  - Laporan: `pos_sync/Laporan_Migrasi_SO_FRC_9_12_Okt2026.xlsx`.
+
+- **2026-10-12 (MIGRASI PO eResto 9-12 OKT: OUTLET→JURI + JURI-EKSTERNAL, ANTI-DUPLIKAT ISI — SELESAI):**
+  Atas instruksi user ("tarik PO dari eresto input ke erpnext baru, rentang 9-12 Okt,
+  purchase order saja", lalu "untuk company PT. JUARA ROTI INDONESIA tarik PO-nya,
+  pastikan ga duplikat — tim purchasing sebagian sudah migrasi pakai ID dari ERPNext").
+  - **Lane A — PO Outlet → JURI (internal, `migrate_po_juri_9_12_okt.py`):** 43 PO
+    `internal_supplier` di jendela; **21 dimigrasikan** (13 Submitted + 8 Draft, ID =
+    nomor PO eResto, `title="ERESTO <PO>"`, `Stores - <ABBR>`, supplier JURI) total
+    **Rp 77.886.160**; 12 SKIP_EXISTS (sesi sebelumnya), 6 rejected/canceled skip, 4 PO
+    FRC (Jogokariyan/Pasaman×2/UGM) skip (company belum ada). Rerun = 33 SKIP_EXISTS,
+    0 duplikat. 9 SKU baru dipetakan dgn BUKTI (padanan eResto PO332 ↔ LAMA
+    `PO332.220926.001/.002`): BB0006→PEL260006, BB0042→BB260048, BB0076→PEL260068,
+    BB0078→PEL260019, BB0160→PEL260052, BB0185→PEL260010, BB0270→PEL260023;
+    BB0328→SG260012; BB0353→BB26009 'Gula Cair (250 g)' (Botol).
+  - **Lane B — PO JURI ↔ supplier EKSTERNAL (`migrate_po_juri_eksternal_9_12_okt.py`):**
+    21 PO `internal_supplier=false`, company **PT. JUARA ROTI INDONESIA**, gudang JURI.
+    **ANTI-DUPLIKAT BY ISI** (keputusan user): tiap PO eResto dicocokkan ke seluruh PO
+    BARU jendela (tanggal ±1 hari, total ±Rp100, multiset qty sama / 1 baris dgn rasio
+    UOM bulat) → menangkap dokumen purchasing yang diinput dgn ID ERPNext sendiri
+    (`PO-JURI-261009004..019`, `PO-JURI-261012001/002`) & supplier dipecah per toko
+    Shopee. Hasil: **4 dimigrasikan** (POGBJ.091026.002 Draft, POGPK.091026.001 Draft,
+    POGPT.091026.001 Submitted, POGPT.091026.002 Submitted; total **Rp 35.631.260**),
+    **16 DUP_ISI** (POCK2.001/002, POGBBK.001/003, POGBJ.001/003..011, POGPT.121026.001/002),
+    1 SKIP_USER (POGBBK.091026.002 Sumber Rejeki — isi identik PO-JURI-261009009, rate
+    beda; user: anggap duplikat). Rerun = 16 DUP_ISI + 4 DUP_ID, 0 baru, 0 duplikat.
+  - **Jebakan ditemukan & ditangani:** (1) `/tmp/eresto_mig.env` ternyata
+    `ERPNEXT_URL=http://127.0.0.1:8081` (dev lokal) — kunci baru dari user disimpan di
+    `/tmp/eresto_prod.env` → cloud BARU. (2) `prod_common.Client` mengembalikan body
+    utuh; resource anak (`companies`, `items`, `grand_total`) ada di `body['data']` —
+    bug baca ini sempat membuat UOM/CF & verifikasi kosong. (3) Supplier eResto
+    'Tokopedia Shopee - Kemitraan' tidak ada di BARU → alias ke 'Tokopedia - Shopee'
+    (preseden POCK2.280926.001/250926.003). (4) Fajar Mulyo punya charge non-pajak
+    'loading installasi' Rp5,5jt + diskon Rp4,7jt → template `Investasi Outlet - JURI`
+    (akun 1232.001), preseden POGPK.021026.001.
+  - Script baru: `pos_sync/migrate_po_juri_9_12_okt.py`, `pos_sync/migrate_po_juri_eksternal_9_12_okt.py`
+    (dump/dry-run/verify/only, idempoten). Laporan: `Laporan_Migrasi_PO_JURI_9_12_Okt2026.xlsx`,
+    `Laporan_Migrasi_PO_JURI_Eksternal_9_12_Okt2026.xlsx`. Dump: `po_9_12_dump/`, `po_juri_ext_dump/`.
+  - **Kredensial:** kunci API cloud BARU baru disimpan di `/tmp/eresto_prod.env`
+    (volatile) — minta rotasi bila pernah terekspos.
+
+- **2026-10-12 (PERBAIKAN ALOKASI GOODS IN TRANSIT → GUDANG JAKARTA, BARU SAJA — SELESAI):**
+  Atas instruksi user ("stock goodintransit itu sebenarnya alokasi/transferan dari
+  barang jadi; balikin ke barang jadi lalu kirim langsung ke Jakarta tanpa transit;
+  benerin stok barang jadi; kejadiannya 8-9 Oktober; **site baru saja**, lama tidak
+  usah disentuh; qty ikut site lama; gudang asal Gudang Barang Jadi; pakai stock
+  reconciliation purpose adjustment"):
+  - **Audit read-only menemukan:** `Goods In Transit - JURI` (BARU) **kosong** (0 Bin,
+    0 SLE, 0 dokumen). Objek aslinya ada di **LAMA**: 2 Stock Entry Material Transfer
+    8 Okt `MAT-STE-2026-09748` (6 baris dough `PJ260010..016`, 82,6 jt) &
+    `MAT-STE-2026-09752` (6 baris BB/PEL, 5,6 jt), `add_to_transit=1`, tanpa
+    end-transit. Ledger BARU untuk GBJ berhenti **5 Okt** & Jakarta **2 Okt** →
+    alokasi 7-12 Okt memang belum pernah tercatat di BARU.
+  - **Akar `PJ260014` kurang 888 Pcs (LAMA):** `MAT-STE-2026-09748` menarik 19.968 Pcs
+    jam 12:00 (saldo 22.164 → aman), tetapi 6 SE Manufacture pemulihan baru masuk
+    13:10-16:04; DN 9 Okt memotong 360 → saldo GBJ LAMA 10.908. Bukan masalah
+    pengiriman. Di BARU GBJ=19.080 (belum sepadan LAMA 22.164) — karena kompensasi
+    penerimaan 8 Okt belum tercermin.
+  - **Keputusan & eksekusi (`pos_sync/fix_git_jakarta_ke_gbj_transfer.py`, dry-run
+    default):** (1) `RECO-JURI-261012001` Stock Reconciliation purpose
+    "Stock Reconciliation", akun `5110.020 - Penyesuaian Stock - JURI`, posting
+    **2026-10-08 09:00**, 12 item qty **absolut = saldo + kiriman** (selisih
+    Rp 127.926.862) → setara "alokasi 8 Okt dibalikkan ke GBJ"; (2)
+    `SE-MTF-261012001` Material Transfer **`Gudang Barang Jadi - JURI` →
+    `Gudang Jakarta - JURI`**, posting **2026-10-08 12:00**, 12 item, Rp 94.637.150 —
+    **langsung tanpa transit**.
+  - **Hasil & verifikasi:** GBJ **netral** (naik lalu keluar, saldo identik pra-pasca);
+    Jakarta naik tepat (mis. `PJ260014` 7.920 → 27.888, `PJ260013` 12.672 → 34.188,
+    `BB260043` 18.000 → 48.000); `Goods In Transit - JURI` tetap **0 SLE**;
+    **0 Bin negatif seluruh gudang JURI**; `allow_negative_stock` tetap **0**;
+    site LAMA tak disentuh; rerun = SKIP (idempoten). Backup
+    `audit_logs/backup_git_jakarta_fix_20261012_112413.json` & `..._112510.json`.
+  - **Catatan kebijakan:** jalur `GBJ → Transit → Jakarta` DITOLAK karena membuat
+    GBJ keluar 2× qty (`PJ260013` −17.832, `PJ260012` −13.716, `PJ260014` −20.856,
+    `PJ260010` −2.958 Pcs). 2.379 Bin negatif se-sistem yang terlihat saat verifikasi
+    semuanya di `Stores - <outlet>` company lain (kondisi lama, bukan efek pekerjaan).
 
 - **2026-10-11 (POS NEXT: QRIS DELANGGU + PRINT ULANG — PUSHED `0b456af` ke Muhayustrid/POSNext main, BELUM DEPLOY):**
   Investigasi RPMD 10 Okt: tidak ada QRIS hilang. Kasir shift 2 memasukkan QRIS shift 1

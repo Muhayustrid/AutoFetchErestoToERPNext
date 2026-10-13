@@ -602,8 +602,12 @@ def run():
 
     all_codes = set()
     for d in details:
+        _pd = safe_str(d.get("date"))[:10]
         for it in d.get("purchase_items") or []:
-            code = ITEM_MAP.get(safe_str((it.get("inventory") or {}).get("sku")))
+            _sku = safe_str((it.get("inventory") or {}).get("sku"))
+            code = ITEM_MAP.get(_sku)
+            if code and _sku in ("BB0174", "BB0352") and _pd > "2026-10-08":
+                code = "BB26012"
             if code:
                 all_codes.add(code)
     items_master = erp.get_items_master(all_codes)
@@ -692,6 +696,10 @@ def run():
             if not code:
                 row_problems.append(f"SKU {sku} belum ada mapping")
                 continue
+            # ATURAN OLESAN PASTRY (keputusan user 2026-10-12): PO ke PT. JURI
+            # bertanggal > 2026-10-08 -> BB26012 'Olesan Pastry (250 g)'.
+            if sku in ("BB0174", "BB0352") and pdate > "2026-10-08":
+                code = "BB26012"
             master = items_master.get(code)
             if not master:
                 row_problems.append(f"Item {code} tidak ada di master")

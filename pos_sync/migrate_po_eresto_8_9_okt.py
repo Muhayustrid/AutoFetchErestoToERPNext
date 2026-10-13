@@ -365,7 +365,7 @@ def run_migration():
     print("[3/5] Mengambil master data dari ERPNext Baru...")
     existing_pos = erpnext.get_existing_pos()
     abbrs = erpnext.get_companies_and_abbrs()
-    items_master = erpnext.get_items_master(set(ITEM_MAP.values()))
+    items_master = erpnext.get_items_master(set(ITEM_MAP.values()) | {"BB26012"})
     print(f"  {len(existing_pos)} PO existing, {len(abbrs)} Company, {len(items_master)} Item master.\n")
 
     print("[4/5] Memproses dan memigrasikan PO...")
@@ -469,6 +469,10 @@ def run_migration():
                 has_unmapped = True
                 unmapped_reason = f"Item '{raw_nm}' (SKU: {sku}) tidak memiliki Item Code di ERPNext"
                 break
+            # ATURAN OLESAN PASTRY (keputusan user 2026-10-12): PO ke PT. JURI
+            # bertanggal > 2026-10-08 -> BB26012 'Olesan Pastry (250 g)'.
+            if sku in ("BB0174", "BB0352") and pdate > "2026-10-08":
+                code = "BB26012"
 
             it_master = items_master.get(code, {})
             su = it_master.get("stock_uom")

@@ -25,12 +25,15 @@ pos_sync/wip_audit/
 pos_sync/pf_dump/
 pos_sync/window/
 pos_sync/po_juri_dump/
+pos_sync/po_9_12_dump/
+pos_sync/po_juri_ext_dump/
 pos_sync/po_okt_dump/
 pos_sync/deact_dump/
 pos_sync/stock_sep30_dump/
 
 # --- audit backups: JSON dumps of live prod docs (re-creatable from site) ---
 audit_logs/
+pos_sync/eresto_stockcard_89okt.json
 
 # --- private production DB backup (contains tabUser api_key/api_secret) ---
 Backup SIte Production/

@@ -80,6 +80,16 @@ ERPNext records sales, production, and purchase data from the eResto API.
   backfill/migrasi, hanya sementara dan WAJIB restore di `finally`.
   Kekurangan stok diselesaikan dengan mencatat pergerakan riil
   (repack/receipt/transfer), bukan dengan membuka izin minus.
+- **Pastikan TARGET SITE sebelum menulis apa pun.** Ada tiga env dan
+  mudah tertukar: `/tmp/eresto_mig.env` → `ERPNEXT_URL` biasanya **LOKAL**
+  (`http://127.0.0.1:8081`), sedangkan `/tmp/eresto_prod.env` → **CLOUD**
+  (`https://ropierpnext.frappe.cloud`). Permintaan user "site baru /
+  produksi" = **CLOUD**. Salah site = pekerjaan tidak terlihat user
+  (kasus nyata 2026-10-12: perbaikan Jakarta tertulis ke lokal, user
+  memeriksa cloud → "kok ga ada perubahan"). Sebelum eksekusi: **cetak
+  `client.base`** dan sebutkan target di output; setelah eksekusi:
+  verifikasi lewat **marker `remarks`/`remark` + nama dokumen di site yang
+  dipegang user**, bukan hanya dari site tempat menulis.
 - **PI site LAMA = trial saja, JANGAN dimigrasi ke site baru.** Audit
   2026-10-09: 5 PI lama, 0 yang ada di BARU (jangan buat ulang). Faktur
   riil = PI di site BARU (dari eResto) — lihat `pos_sync/migrate_pi_central_okt.py`.
@@ -98,13 +108,26 @@ ERPNext records sales, production, and purchase data from the eResto API.
   di LAMA (`- ROPI`) maupun BARU (`- JURI`). Stoknya cuma testing. Jangan
   buat ulang di script migrasi/opening (`fill_opening_sep30.py` sudah
   di-guard). Tool: `pos_sync/hapus_warehouse_testing.py`.
+- **Olesan Pastry pada PO ke PT. JUARA ROTI INDONESIA (keputusan user
+  2026-10-12)**: PO **bertanggal > 2026-10-08** → pakai **`BB26012`**
+  ("Olesan Pastry (250 g)"), BUKAN `BB260046`. PO tanggal ≤ 2026-10-08
+  tetap `BB260046` (historis). SKU eResto `BB0174` & `BB0352` mengikuti
+  aturan tanggal ini. Detail: `KNOWLEDGE.md` §5 "Alur repack bahan baku".
 - Do not POST to ERPNext before the mapping CSV is approved and the
   target site URL plus API key exist.
 - Do not guess Item Codes. Source of truth is
   `experiments/sku_to_item_code.csv`; conflicts stay flagged, not guessed.
-- Goodie Bag = **`PEL260072`** (keputusan user 2026-10-09). Legacy
+- **Goodie Bag = `PEL260072`** (keputusan user 2026-10-09). Legacy
   `PG001` "Goodie Bag 6 Roti" sudah di-merge ke `PEL260072` & dihapus —
   jangan pakai `PG001` di mapping/package baru.
+- **Barang in-transit: end-transit, jangan transit dua kali.** Kalau barang
+  sudah ada di `Goods In Transit - JURI` (`SE-MTF-*` dengan
+  `to_warehouse = GIT`), perbaikan = **end-transit `GIT → Gudang Jakarta`**
+  (satu Stock Entry) dan **GBJ tidak disentuh**. Jalur `GBJ → GIT → Jakarta`
+  membuat GBJ keluar 2× qty → minus. Kalau GIT kosong, baru kompensasi RECO
+  penyesuaian ke GBJ lalu transfer. Skrip:
+  `pos_sync/endtransit_cloud_jakarta.py` (cloud),
+  `pos_sync/fix_git_jakarta_ke_gbj_transfer.py` (lokal).
 - Rate limit: max 10 parallel workers, 3 retries with backoff on
   429/5xx, 90s timeout. Never hammer the eResto API.
 - Token in shell history is exposed. Ask the user to rotate it if a
