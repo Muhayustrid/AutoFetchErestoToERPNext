@@ -148,6 +148,12 @@ ITEM_MAP = {
     "BB0285": "PER260013",  # Neon Box Bulat Outlet
     "BB0289": "PER260016",  # Oven 1 Deck 2 Tray
     "BB0291": "PER260004",  # Panel 3 Phase
+    "BB0069": "BB260011",   # Gula Halus          [BARU 14 Okt, keputusan user]
+    "BB0092": "PEL260027",  # Loyang -> Loyang Ropi [BARU 14 Okt, keputusan user]
+    "BB0093": "PEL260026",  # Loyang Gempi        [BARU 14 Okt, keputusan user]
+    "BB0095": "BB260007",   # Filling Butter      [BARU 14 Okt, keputusan user]
+    "BB0116": "PEL260033",  # Pisau Roti          [BARU 14 Okt, keputusan user]
+    "BB0314": "PEL260029",  # Palu Karet Outlet -> Palu Karet [BARU 14 Okt, user]
     "BB0293": "PEL260062",  # Stand Booth Outlet
     "BB0294": "PER260010",  # Huruf Dan Logo Timbul Ropi
     "BB0296": "PEL260078",  # Plastik Kresek 1 Cup

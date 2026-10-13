@@ -10,7 +10,7 @@
 Cara baca tabel:
 - **SKU** = `product_sku` eResto (kunci mapping, JANGAN pernah by nama).
 - **Item Code** = master ERPNext site BARU (`ropierpnext.frappe.cloud`);
-  seluruh 166 kode diverifikasi ada di BARU per 2026-10-13 (0 broken link).
+  seluruh 172 kode diverifikasi ada di BARU per 2026-10-14 (0 broken link).
 - **Sumber** = bukti mapping:
   - `skrip-lane` = sudah dipakai & terposting di lane migrasi PO/SO
     (bukti transaksi; keputusan user 13 Okt ditandai `†`).
@@ -39,7 +39,7 @@ Cara baca tabel:
    varian reguler sesuai tabel (keputusan gabung).
 7. Mapping baru hasil keputusan user ditandai `†` + tanggal di tabel.
 
-## Tabel mapping (166 SKU, terurut SKU)
+## Tabel mapping (172 SKU, terurut SKU)
 
 | SKU | Nama eResto | Item Code | Sumber |
 |---|---|---|---|
@@ -54,6 +54,7 @@ Cara baca tabel:
 | BB0055 | Es Kristal (12 kg) | BB260006 | skrip-lane |
 | BB0066 | Goodie Bag | PEL260072 | csv-stok |
 | BB0068 | Kuas Oles Loyang 1,5' | PEL260021 | skrip-lane (keputusan user 13 Okt)† |
+| BB0069 | Gula Halus | BB260011 | keputusan user 14 Okt† (nama persis sama) |
 | BB0071 | Gula Stik | BB260039 | csv-stok |
 | BB0074 | Kanebo | PEL260018 | skrip-lane (keputusan user 13 Okt)† |
 | BB0076 | Kaos Panjang | PEL260068 | skrip-lane |
@@ -75,6 +76,10 @@ Cara baca tabel:
 | BB0118 | Plastik Kresek Ukuran 17 | PEL260081 | skrip-lane |
 | BB0119 | Plastik Kresek Ukuran 24 | PEL260080 | skrip-lane |
 | BB0120 | Plastik Krim | BB260019 | skrip-lane |
+| BB0092 | Loyang | PEL260027 | keputusan user 14 Okt† ("loyang doang = Loyang Ropi") |
+| BB0093 | Loyang Gempi | PEL260026 | keputusan user 14 Okt† (nama persis sama) |
+| BB0095 | Filling Butter | BB260007 | keputusan user 14 Okt† (nama persis sama) |
+| BB0116 | Pisau Roti | PEL260033 | keputusan user 14 Okt† (nama persis sama) |
 | BB0122 | Plastik Seal Roti | PEL260083 | skrip-lane |
 | BB0124 | Proofer | PER260017 | skrip-lane |
 | BB0126 | Ragi Basah | BB260023 | skrip-lane |
@@ -142,6 +147,7 @@ Cara baca tabel:
 | BB0310 | Bubuk Hepi Drink Kopi Karamel (30 Gr) | BB260059 | csv-stok |
 | BB0311 | Bubuk Hepi Drink Chocolate | BB260060 | csv-stok |
 | BB0312 | Air Mineral Outlet 600 ml | PJ260009 | csv-stok |
+| BB0314 | Palu Karet Outlet | PEL260029 | keputusan user 14 Okt† (suffix "Outlet" hanya penamaan eResto) |
 | BB0322 | Kopi Hitam @6gr (Isi 20 Sachet) | BB260061 | csv-stok |
 | BB0323 | Meja Minum Outlet | PEL260065 | skrip-lane |
 | BB0328 | Jilbab Outlet | SG260012 | skrip-lane |
@@ -238,6 +244,7 @@ di sini (tambah baris + sumber bukti/keputusan user).
 | 2026-10-09 | Goodie Bag kanonik = PEL260072; PG001 legacy di-merge & dihapus |
 | 2026-10-12 | Olesan Pastry: BB0174/BB0352 → BB26012 utk PO > 2026-10-08 (≤ → BB260046) |
 | 2026-10-13 | 28 SKU keperluan outlet dimapping (BB0263→ATK260041, BB0131→PEL260038, BB0136→PEL260041, BB0082→BHP260023, BB0087→BHP260020, BB0230→ATK260038, BB0267→BHP260033, sisanya bukti nama master BARU/stok csv); BB0080→PEL260074 & BB0117→PEL260077 ditambah juga ke lane SO FRC |
+| 2026-10-14 | 6 SKU peralatan/bahan gudang dimapping (BB0069→BB260011, BB0092→PEL260027, BB0093→PEL260026, BB0095→BB260007, BB0116→PEL260033, BB0314→PEL260029); user: "loyang doang = Loyang Ropi". Dump eResto 9-13 Okt kini 100% termap |
 
 ## Jejak turunan (agar tidak kehilangan sync)
 
