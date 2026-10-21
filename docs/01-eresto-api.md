@@ -54,9 +54,11 @@ because of it; scripts without it always get 200.
 
 ## Pagination
 
-Stop when `len(batch) < per_page` or `meta.next_page` is null.
-Dedup by `id`. Watch `meta.total_count` drift mid-fetch (live data:
-27,049 at probe, 27,053 collected). Retry transient codes
+Stop when `meta.next_page` is null. Do **not** stop merely because
+`len(batch) < per_page` — that rule truncated the September 2026 stock
+adjustment pull (4,645 of 11,319 rows). Trust `meta.total_count` /
+`meta.next_page`; `total_count` drifts while data is live.
+Dedup by `id`. Retry transient codes
 429/500/502/503/504, max 3 with backoff, 90s timeout.
 Parallel detail fetch: max 10 workers. 160 details took 5.5s.
 
@@ -97,25 +99,142 @@ debit Finished Good `1 1 03 03`, credit Semi Finished Good
 Item-level BOM (inputs vs outputs) is not yet mapped; probe one
 production detail before designing Stock Entry posts.
 
-## Stock opname (diukur 2026-10-04)
+## Stock adjustment (SA) — opname & auto balancing
 
-`GET /v2/stock_adjustments` (list, `date[geq/leq]` format day-name
-seperti refunds). Periode 1-30 Sep 2026: 4.645 baris, 24 page
-(`per_page=200`). `reason` = catatan dokumen; mayoritas
-`"Auto stock balancing"` (sistem) dan `"SO Monthly September"`
-(93 dokumen, 91 outlet). Detail dokumen
-(`/v2/stock_adjustments/{id}`) HANYA memuat jurnal agregat; baris
-item ada di `/v2/stock_adjustment_items?stock_adjustment_id={id}`
-(embed `inventory` sku/nama dan `division` outlet/branch).
+Two READ-ONLY endpoints:
 
-Field baris item: `current_quantity` (sistem sebelum opname),
-`real_quantity` (hasil hitung fisik = stok opname),
-`adjustment_quantity` = real - current, `adjustment_value`
-(rupiah), `current_cost`/`real_cost`. `meta.total_value` =
-checksum; jumlah `adjustment_value` harus sama (terbukti 93/93 di
-`fetch_so_monthly.py`). Item ber-selisih 0 tetap termuat, jadi
-`real_quantity` = stok fisik lengkap hasil hitung, bukan hanya
-yang dikoreksi.
+| Data | Method | URL pattern |
+|---|---|---|
+| Stock adjustment list | GET | `/v2/stock_adjustments` |
+| Stock adjustment items | GET | `/v2/stock_adjustment_items?stock_adjustment_id={id}` |
+
+List params: `date[geq]`/`date[leq]` in **day-name** format (like refunds,
+`Wed, 21 Oct 2026 00:00:00.000`), `division_id=` (empty = all divisions),
+`page`, `per_page` (use 200), `sort[property]=updated_at` +
+`sort[order]=desc` for incremental catch-up. Do not send `If-None-Match`
+(browser capture answered 304 because of it). Root:
+`{"stock_adjustments": [...], "meta": {current_page, next_page, prev_page,
+total_pages, total_count}}`.
+
+### Row contract (verified live 2026-10-21)
+
+| Field | Content |
+|---|---|
+| `id` | UUID |
+| `number` | `SA<branch>.<DDMMYY>.<seq>` — branch is **alphanumeric** (`SA220.211026.005`, `SAO77.211026.004`), do not parse it as digits |
+| `reason` | document note — **free text, not standardised**: `Auto stock balancing` (10,840 of 11,319 in Sep), `SO Monthly September` (123), `SO MID SEPTEMBER` (14), `Periode 1 Bulan September` (6), `PENGAMBILAN HARIAN GUDANG BARANG JADI` (15), `From RSIA Nganjuk`, `BAJB-213 …`, `Reject expired close`, `Revisi`, `Konfirmasi` … |
+| `date` | ISO with `+07:00` offset; `created_at` / `updated_at` likewise |
+| `division` | embedded outlet: `name`, `branch_number` (e.g. `"220"`), `category: outlet`, `parent_division.name` (`REGULER`), `company`, price groups + couriers |
+| `stock_adjustment_type` | embedded: `name` (9 types, see catalogue below), **`adjustment_type`** (`adjustment` \| `loss` \| `add` \| `new`), `account_id` (counterpart account of the auto journal), `default`, `company_id` |
+| `transaction_group` | auto journal: `number` (`R211026143317795`), `automatic: true`, `note` ("auto journal posting for inventory stock adjustment SA…"), `transactions[]` = legs (`account_number`, `account_name`, `debit_amount`, `credit_amount` — **strings**, may be `"0.0"`), `cashflow_activity` |
+| `deleted_at` / `synced_at` | both `null` on live rows — filter `deleted_at` anyway |
+| root `adjustment_type` | **always `null`** — the real discriminator is `stock_adjustment_type.adjustment_type` |
+
+Observed journal legs (21 Okt 2026, 107 SA): `1 1 03 03` Pesediaan Finished
+Good ↔ `5 2 00 01` HPP Produksi (auto-balancing, 2 legs), and for warehouse
+issue `6 1 01 25` Beban Operasional / `1 1 03 01` Persediaan Raw Matterial /
+`2 1 01 07` Hutang Lain-lain (3 legs). Debit/credit order is not stable
+(101 vs 5 flipped) — read per leg, never by position. Accounts seen across
+Sep 2026: `1 1 03 01` Persediaan Raw Matterial, `1 1 03 02` Persediaan Semi
+Finished Good, `1 1 03 03` Pesediaan Finished Good, `2 1 01 07` Hutang
+Lain-lain, `5 2 00 01` HPP Produksi, `6 1 01 25` Beban Operasional, Piutang
+Outlet, Opening Balance, Beban Perlengkapan Kantor, Cadangan Research and
+Development, Aset Tetap - Peralatan Kantor, Peralatan dan Perlengkapan
+Kemitraan.
+
+`GET /v2/stock_adjustments/{id}` adds **nothing** over the list row — only the
+aggregate journal. Line items live in `/v2/stock_adjustment_items`.
+There is **no master endpoint** for the types: `/v2/stock_adjustment_types`
+and `/v2/stock_adjustment_type` both answer 404 — the type object only comes
+embedded in each row.
+
+### Item contract
+
+`current_quantity` (system before count), `real_quantity` (physical count),
+`adjustment_quantity` = real − current, `adjustment_value` (IDR),
+`current_cost` / `real_cost`, `reason` per item — **only** populated for
+auto-balancing ("Auto stock balancing - inbound" / "- outbound"); for all
+other document types the item `reason` is `null` and the note lives in the
+header `reason`. `unit` embedded (`name`, `alias`), `inventory` embedded
+(`sku`, `name`, `account_id`, `cost`, `conversion`), `division` embedded
+(outlet), `stock_card` embedded (`initial_stock`, `stock_in`, `stock_out`,
+`stock_balance` = mutation trail), `stock_adjustment` back-reference,
+`synced_at` / `deleted_at`.
+
+Zero-difference items are still returned, so `real_quantity` carries the
+**full physical count**, not only the corrected rows.
+
+**eResto allows negative quantities** — observed `current_quantity` = −60,
+`real_quantity` = −0.5 / −4. ERPNext does not (`allow_negative_stock = 0`),
+so a negative target count is not a valid RECO row.
+
+Checksum: `meta.total_value` (string) vs `Σ adjustment_value` of the items —
+**valid only for `adjustment` / `add` / `new` types**:
+
+| SA | type | Σ items | `meta.total_value` | verdict |
+|---|---|---|---|---|
+| `SA116.300926.006` | Stock Opname (`SO Monthly September`) | −1,325,788 | −1,325,788 | match |
+| `SA227.300926.002` | Adjusmen Beli Inventory outlet (`add`) | 694,148 | 694,148 | match |
+| `SA186.010926.001` | Opening Stock (`new`) | 23,598,000 | 23,598,000 | match |
+| `SA208.300926.006` | Reject Outlet (`loss`) | −58,900 | 0 | meta 0 — expected for `loss` |
+| `SA133.300926.001` | Adjusment Jual Inventory Outlet (`loss`) | −694,148 | 0 | meta 0 — expected for `loss` |
+| `SA171.300926.006` | Auto stock balancing | 0 | 0 | match (in/out cancel) |
+
+So a validator that requires `Σ items == meta.total_value` **false-alarms on
+every `loss` document**. For `Auto stock balancing` 0 means OK, not "empty".
+
+Historical volume: 1–30 Sep 2026 = **11,319 SA / 57 pages** at
+`per_page=200` (`meta.total_count` 11,319, re-measured 2026-10-21). The
+earlier figure in this file (4,645 rows / 24 pages, measured 2026-10-04) was
+**truncated** by the "stop when a page is shorter than `per_page`" rule — trust
+`meta.total_count` / `meta.next_page` instead. Of the Sep set: 10,840
+`Auto stock balancing` (system) and **210 physical-count documents** — every
+row with `stock_adjustment_type.name = "Stock Opname"` and
+`reason != "Auto stock balancing"`. Their `reason` values are free text
+(`SO Monthly September` 123, `SO MID SEPTEMBER` 14, `Konfirmasi` 6,
+`Periode 1 Bulan September` 6, `Revisi` 3, `rev` 2, `Counter 1 Sep` 2,
+`PENYAMAAN STOK DOUGH` 2, `SO Monthly September Revisi` 1, `SO G.Produksi
+30.09.26` 1, …) — **filter by type + "not auto balancing", not by reason
+string**: `reason == "SO Monthly September"` alone returns only 123 of 210.
+No row in the window has an empty `reason`.
+
+### Type catalogue (1–30 Sep 2026) and ERPNext mapping
+
+`stock_adjustment_type.name` / `adjustment_type` → what the document is →
+the ERPNext document it becomes (new site):
+
+| Type | `adjustment_type` | Meaning | ERPNext document |
+|---|---|---|---|
+| `Stock Opname` | `adjustment` | physical count (reason `SO Monthly …`, `SO MID …`, `Periode …`) | `Stock Reconciliation`, absolute qty, `5110.020 - Penyesuaian Stock` |
+| `Stock Opname` | `adjustment` | system delta (reason `Auto stock balancing`, ~10.8k/month) | **do not post** — audit trail only (project already skips it) |
+| `Opening Stock` | `new` | opening stock | `Stock Reconciliation` opening, `1171.000 - Pembukaan sementara` |
+| `Adjusmen Beli Inventory outlet` | `add` | receiving side of an outlet-to-outlet transfer ("From RSIA Nganjuk") | `Stock Entry` transfer into the receiving outlet |
+| `Adjusment Jual Inventory Outlet` | `loss` | giving side of the same transfer ("To RSUP Surakarta") | `Stock Entry` transfer out of the giving outlet |
+| `Adjustment Stock Out` | `loss` | daily warehouse issue to outlets | `Stock Entry` (Material Transfer / Repack) warehouse → outlet |
+| `Reject Outlet` | `loss` | rejected / expired goods at an outlet | `Stock Reconciliation` (`5110.020`) or Waste |
+| `Keperluan Produksi` | `loss` | material for production | `Stock Entry` Manufacture / Material Transfer |
+| `Cangkang Telur` | `loss` | eggshell waste | `Stock Reconciliation` / Waste |
+| `Keperluan RnD` | `loss` | R&D trial | `Stock Reconciliation` (R&D expense) |
+
+The "Beli"/"Jual" pair is one business movement with **equal and opposite
+values** (e.g. ±694,148 on 30 Sep) → post **one** Stock Entry transfer, not
+two RECO documents. Note the type names contain typos ("Adjusmen Beli",
+"Adjusment Jual") — match on `stock_adjustment_type_id` / `name` exactly as
+returned, do not hand-type spellings.
+
+Account mapping to ERPNext follows the existing item/company master
+(`docs/02-erpnext-mapping.md` + `lengkapi_item_defaults_semua.py`) — do not
+guess account numbers from the eResto COA.
+
+Idempotency marker for the RECO lane: `remarks = "ERESTO SA<number>"` (docs
+without `remarks` → `title`), check-then-skip. `allow_negative_stock = 0` is
+locked, so a backdated RECO above a negative anchor is rejected
+(`NegativeStockError`).
+
+SKU caveat: SA items can carry a `-b` variant SKU (`BB0121-b` "Plastik Paking
+Dough", `BB0155-b` "Karet Gelang"), and the base SKU may already be renamed to
+"Deleted 1" (`BB0121`). Map by `inventory.sku`; SKUs absent from
+`docs/02-erpnext-mapping.md` are skipped and reported, never guessed.
 
 Stok live (bukan snapshot opname): `GET /v2/inventories` ->
 tiap inventory punya `division_inventories[]`

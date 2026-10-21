@@ -1,6 +1,6 @@
 ---
 name: eresto-erpnext
-description: Ropi's POS system map and hard rules — eResto (ropi.eresto.id) API/UI routes, ERPNext baru (ropierpnext.frappe.cloud) vs lama (rotiropi.j.frappe.cloud), SKU mapping, POS Invoice / Work Order / PO-SO-DN-FRC migration, MR/PO LAMA→BARU, Goods In Transit end-transit, stock chain dough→matang→bundle, RECO/opening stock, stock minus policy. Use whenever the user mentions eResto, ERPNext Ropi, ropi.eresto.id, ropierpnext, rotiropi.j, AutoFetchErestoToERPNext, "inject POS invoice", "migrasi PO/WO/SO/PI/SO FRC", "tarik PO eResto", "input PO ke erpnext", duplikat PO, Olesan Pastry, SKU mapping, POSNext, Stock Reconciliation/RECO, "stock minus", Goodie Bag, "goods in transit", "end transit", "material request", or asks to fetch Ropi sales/production/purchase data — even if they don't name the repo.
+description: Ropi's POS system map and hard rules — eResto (ropi.eresto.id) API/UI routes, ERPNext baru (ropierpnext.frappe.cloud) vs lama (rotiropi.j.frappe.cloud), SKU mapping, POS Invoice / Work Order / PO-SO-DN-FRC migration, MR/PO LAMA→BARU, Goods In Transit end-transit, stock chain dough→matang→bundle, RECO/opening stock, stock adjustment eResto (SA/opname → RECO/SE), stock minus policy. Use whenever the user mentions eResto, ERPNext Ropi, ropi.eresto.id, ropierpnext, rotiropi.j, AutoFetchErestoToERPNext, "inject POS invoice", "migrasi PO/WO/SO/PI/SO FRC", "tarik PO eResto", "input PO ke erpnext", duplikat PO, Olesan Pastry, SKU mapping, POSNext, Stock Reconciliation/RECO, "stock minus", "stock adjustment", "opname", "SA eResto", "auto stock balancing", Goodie Bag, "goods in transit", "end transit", "material request", or asks to fetch Ropi sales/production/purchase data — even if they don't name the repo.
 ---
 
 # eResto ↔ ERPNext (Ropi)
@@ -102,6 +102,109 @@ Lane eksternal wajib **dedup by ISI** sebelum POST (tim purchasing sering input
 manual dgn ID ERPNext sendiri, mis. `PO-JURI-261009xxx`, supplier dipecah per
 toko Shopee). Skrip: `pos_sync/migrate_po_juri_eksternal_9_12_okt.py`
 (total ±Rp100 + tanggal ±1 hari + multiset qty, alias supplier).
+
+## Stock adjustment eResto (SA) → dokumen stok ERPNext
+
+Dua endpoint **READ-ONLY**: `/v2/stock_adjustments` (daftar dokumen) +
+`/v2/stock_adjustment_items?stock_adjustment_id={id}` (baris item).
+Detail `/v2/stock_adjustments/{id}` **tidak menambah apa pun** — hanya jurnal agregat.
+
+**Parameter list (terverifikasi live 21 Okt 2026):**
+`date[geq]`/`date[leq]` format **day-name** (`Wed, 21 Oct 2026 00:00:00.000`),
+`division_id=` kosong = semua divisi, `page`, `per_page=200`,
+`sort[property]=updated_at` + `sort[order]=desc` (catch-up incrementally),
+plus `domain=ropi`, `current_user_id`, `token`. **Jangan kirim
+`If-None-Match`** (balas 304, bukan 200).
+
+**Kontrak baris list** (root `{"stock_adjustments": [...], "meta": {...}}`):
+
+| Field | Isi |
+|---|---|
+| `number` | `SA<branch>.<DDMMYY>.<seq>` — branch **alnum** (`SA220.`, `SAO77.`), bukan angka saja |
+| `reason` | **teks bebas** (tidak seragam): `Auto stock balancing` (sistem), `SO Monthly September` / `SO MID SEPTEMBER` / `Periode 1 Bulan September` (opname), `PENGAMBILAN HARIAN ...`, `From RSIA Nganjuk`, `BAJB-213 ...` |
+| `division` | embed outlet: `name`, `branch_number`, `category: outlet`, `parent_division.name` |
+| `stock_adjustment_type` | embed: `name` (9 tipe — lihat katalog di bawah), **`adjustment_type`** ("adjustment" \| "loss" \| "add" \| "new"), `account_id` = akun lawan di jurnal otomatis |
+| `transaction_group` | jurnal otomatis: `automatic: true`, `number` `R…`, `note` "auto journal posting for inventory stock adjustment SA…", `transactions[]` = kaki jurnal (`account_number`, `account_name`, `debit_amount`, `credit_amount`) |
+| `deleted_at` / `synced_at` | filter `deleted_at` null |
+
+**Jebakan utama:** field root `adjustment_type` **selalu `null`** — penentunya
+`stock_adjustment_type.adjustment_type` (nilai: `adjustment` | `loss` | `add` |
+`new`). Memakai field root = salah klasifikasi.
+Kaki jurnal otomatis amounts-nya bisa `"0.0"` (untuk auto-balancing) — jangan
+dibaca sebagai "tidak ada nilai".
+
+**Kontrak item:** `current_quantity` (sistem), `real_quantity` (fisik hasil
+opname), `adjustment_quantity` = real − current, `adjustment_value` (Rp),
+`reason` **per item** (hanya terisi pada auto-balancing: "Auto stock balancing
+- inbound"/"- outbound"; dokumen lain `null` — catatan ada di `reason` header),
+`unit.name`, `inventory.sku`/`inventory.name`, `stock_card`
+(`initial_stock`/`stock_in`/`stock_out`/`stock_balance`), `meta.total_value`
+(checksum). Item ber-selisih 0 tetap termuat → `real_quantity` = stok fisik utuh.
+
+**Checksum:** `Σ adjustment_value` item vs `meta.total_value`. **Hanya sah untuk
+tipe `adjustment`/`add`/`new`** (contoh: `SA116.300926.006` sum −1.325.788 =
+meta −1.325.788 COCOK). Pada tipe **`loss`** meta = **0** walau Σ item ≠ 0
+(contoh `SA208.300926.006` sum −58.900 vs meta 0) → jangan gagalkan batch
+hanya karena selisih checksum di tipe loss. SA "Auto stock balancing" 0 = COCOK
+(inbound & outbound saling meniadakan), bukan "kosong".
+
+### Katalog tipe SA (9 tipe, terukur 1–30 Sep 2026: 11.319 SA) → dokumen ERPNext
+
+| Tipe eResto (`stock_adjustment_type.name`) | `adjustment_type` | Arti | Dokumen ERPNext (cloud baru) |
+|---|---|---|---|
+| `Stock Opname` (reason opname: `SO Monthly …`, `SO MID …`, `Periode 1 Bulan …`) | `adjustment` | opname fisik outlet | `Stock Reconciliation` qty absolut → `5110.020 - Penyesuaian Stock` |
+| `Stock Opname` (reason `Auto stock balancing`) | `adjustment` | koreksi delta sistem (~10,8k/bulan) | **jangan post** — jejak audit saja (praktik proyek: skip di `fetch_so_monthly.py`) |
+| `Opening Stock` | `new` | stok awal | `Stock Reconciliation` opening → `1171.000 - Pembukaan sementara` |
+| `Adjusmen Beli Inventory outlet` | `add` | sisi **terima** transfer antar outlet (mis. "From RSIA Nganjuk") | `Stock Entry` transfer masuk ke outlet penerima |
+| `Adjusment Jual Inventory Outlet` | `loss` | sisi **keluar** transfer antar outlet ("To RSUP Surakarta") | `Stock Entry` transfer keluar dari outlet pengirim |
+| `Adjustment Stock Out` | `loss` | pengambilan harian dari gudang | `Stock Entry` (Material Transfer/Repack) gudang → outlet |
+| `Reject Outlet` | `loss` | barang reject/expired outlet | `Stock Reconciliation` penyesuaian (`5110.020`) atau Waste |
+| `Keperluan Produksi` | `loss` | bahan untuk produksi | `Stock Entry` Manufacture / Material Transfer |
+| `Cangkang Telur` | `loss` | cangkang telur (limbah) | `Stock Reconciliation` penyesuaian / Waste |
+| `Keperluan RnD` | `loss` | uji coba R&D | `Stock Reconciliation` penyesuaian (beban R&D) |
+
+Pasangan transfer antar outlet ("Beli" & "Jual") nilainya **sama** berlawanan
+(±694.148 pada pasangan 30 Sep) → **satu** Stock Entry transfer, jangan dua RECO.
+Akun kaki jurnal eResto: `1 1 03 01` Persediaan Raw Matterial, `1 1 03 02`
+Semi Finished, `1 1 03 03` Pesediaan Finished Good, `2 1 01 07` Hutang
+Lain-lain, `5 2 00 01` HPP Produksi, `6 1 01 25` Beban Operasional, Piutang
+Outlet, Opening Balance. Peta ke akun ERPNext **ikut master item/company**
+(`docs/02` + `lengkapi_item_defaults_semua.py`) — jangan menebak.
+
+**Pemetaan umum ke ERPNext (baru/cloud):** SA opname → `Stock Reconciliation`
+(RECO) **qty absolut**: opening → `1171.000 - Pembukaan sementara`; penyesuaian
+operasional → `5110.020 - Penyesuaian Stock` (jangan campur). Idempotensi:
+marker `remarks = "ERESTO SA<number>"` (dokumen tanpa `remarks` → `title`),
+cek-dulu-skip. `allow_negative_stock = 0` terkunci: RECO backdated di atas
+saldo minus ditolak `NegativeStockError` → catat pergerakan riil
+(receipt/repack/transfer).
+
+### Jebakan SA yang sudah terbukti
+
+1. `adjustment_type` root selalu `null` → pakai `stock_adjustment_type.adjustment_type`.
+2. `meta.total_value` = 0 pada tipe `loss` → bukan error.
+3. **Pagination: andalkan `meta.total_count`/`meta.next_page`, JANGAN stop saat
+   `len(batch) < per_page`** — angka lama 4.645 SA (1–30 Sep, terukur 4 Okt)
+   **terpotong**; terukur ulang 21 Okt = **11.319 SA / 57 halaman**
+   (`meta.total_count` 11.319). `total_count` bisa bergerak (data live).
+4. `reason` = **teks bebas**, opname tidak seragam: `SO Monthly September` (123),
+   `SO MID SEPTEMBER` (14), `Periode 1 Bulan September` (6), `Konfirmasi` (6),
+   `PENYAMAAN STOK DOUGH`, `SO Monthly September Revisi`, `Counter 1 Sep` …
+   **Resep filter opname:** `stock_adjustment_type.name == "Stock Opname"`
+   **DAN** `reason != "Auto stock balancing"` → **210** dokumen di Sep 2026
+   (filter `reason == "SO Monthly September"` saja hanya dapat 123).
+5. **eResto mengizinkan qty negatif** (`current_quantity` −60, `real_quantity`
+   −0,5) — ERPNext tidak (`allow_negative_stock=0`). Target RECO negatif =
+   tidak valid → keluarkan & catat, jangan post.
+6. **SKU pada SA bisa berakhiran `-b`** (varian/renaming: `BB0121-b` "Plastik
+   Paking Dough", `BB0155-b` "Karet Gelang"); SKU dasar bisa sudah di-rename
+   jadi "Deleted 1" (`BB0121`) → map by SKU, dan kalau tak ada di `docs/02`
+   keluarkan & catat (jangan tebak).
+7. Nomor SA selalu pola `SA<branch alnum>.<DDMMYY>.<seq>` (11.319/11.319 cocok).
+
+Skrip acuan: `experiments/fetch_so_monthly.py` (checksum `meta.total_value`) —
+**pagination-nya masih pakai aturan lama** (`len(batch) < PER_PAGE` → hasil
+terpotong); lihat `PROJECT_STATE.md` §Known issues.
 
 ## Jebakan wajib ingat (dari sesi terakhir)
 
@@ -271,6 +374,7 @@ default. Checklist sebelum eksekusi:
 | Ganti WO & error "Persiapan Gagal" (gate qty baris plan, rebind) | `KNOWLEDGE.md` §5 "Work Order & Production Plan" |
 | Alur repack bahan baku (Gula Cair & **Olesan Pastry**) | `KNOWLEDGE.md` §5 "Alur repack bahan baku" |
 | Konsolidasi RECO/opening (akun, cancel v16, substitusi MR) | `docs/12-konsolidasi-reco-opening.md` |
+| Stock adjustment eResto (SA + item → RECO/SE) | `docs/01-eresto-api.md` §Stock adjustment |
 | Rantai produk dough→matang→bundle + resep yield | `docs/05-alur-dough-ke-bundle.md` |
 | Mapping SKU/outlet/payment/void/refund (SINGLE SOURCE) | `docs/02-erpnext-mapping.md` |
 | Mapping SKU by `product_sku`, bukan nama; sumber kebenaran = dokumen mapping utama, bukan CSV | `docs/02-erpnext-mapping.md` |

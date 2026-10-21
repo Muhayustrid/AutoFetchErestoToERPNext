@@ -126,9 +126,11 @@ Aturan yang terbukti (docs/01):
 - **Jangan kirim `If-None-Match`** — server membalas 304; tanpa itu selalu 200.
 - **Token mati → HTTP 500** `{"status":500,...}` di semua endpoint (bukan 401).
   Kalau semua call tiba-tiba 500, uji token lain dulu sebelum menyimpulkan outage.
-- Pagination: `page` (mulai 1), `per_page=200`; berhenti saat
-  `len(batch) < per_page` atau `meta.next_page = null`. Dedup by `id`;
-  `meta.total_count` bisa bergerak saat fetch (data live).
+- Pagination: `page` (mulai 1), `per_page=200`; andalkan `meta.next_page` /
+  `meta.total_count` — **jangan berhenti hanya karena `len(batch) < per_page`**
+  (terbukti memotong: 1–30 Sep 2026 terukur 4.645 SA di 4 Okt, sebenarnya
+  **11.319 SA / 57 halaman** — `meta.total_count` 11.319, terukur ulang 21 Okt).
+  Dedup by `id`; `meta.total_count` bisa bergerak saat fetch (data live).
 - Retry transien 429/500/502/503/504 — maks 3 dengan backoff, timeout 90s.
 - Fetch detail paralel maks **10 worker**. Volume: 160 detail ≈ 5.5s.
 - Pola sync yang benar: **per outlet per jam/hari secara inkremental**, bukan
@@ -144,7 +146,7 @@ Aturan yang terbukti (docs/01):
 | `/v3/orders` | `date[geq]` / `date[leq]` format `YYYY-MM-DD HH:mm:ss.SSS` (`00:00:00.000`…`23:59:59.999`) | plus `outlet_id`, `sort[property]=date`, `sort[order]=asc` |
 | `/v2/refunds` | `created_at[geq]` / `created_at[leq]` format day-name (`Sun, 4 Oct 2026 00:00:00.000`) + `timezone=+07:00` | join ke order via `order_no` |
 | `/v2/productions` | format day-name, `division_id` sebagai ganti `outlet_id` | root `{"productions":[...],"meta":{}}` |
-| `/v2/stock_adjustments` | `date[geq/leq]` day-name (seperti refunds) | item ada di endpoint terpisah |
+| `/v2/stock_adjustments` | `date[geq/leq]` day-name (seperti refunds), `sort[property]=updated_at` + `sort[order]=desc`, `division_id=` kosong = semua divisi | item ada di endpoint terpisah; `per_page=200` |
 
 ---
 
@@ -159,8 +161,8 @@ Aturan yang terbukti (docs/01):
 | PO list (legacy) | GET | `/v2/purchases` | dipakai CLI PO legacy |
 | PO detail (legacy) | GET | `/v2/purchases/{id}/detail` | fallback `/v2/purchases/{id}` |
 | **Faktur pembelian (list)** | GET | `/v2/purchase_invoices` | root `{"purchase_invoices":[...],"meta":{...}}`. Filter `transaction_date[geq/leq]` format **ISO** (`YYYY-MM-DD HH:mm:ss.SSS`, day-name juga jalan) + `division_id`, `sort[property]=transaction_date`. Row: `transaction_number` (`INV<branch>.<DDMMYY>.<seq>`), `transaction_date`, `status` (`paid`/`unpaid`), `total_amount`, `balance_due`, **`purchase_id`** + `purchase.purchase_number` (link ke PO), `purchase_invoice_items[]` (embed `inventory_id` + item), `vendor_ref_no`. Tanpa filter: 13.203 faktur / 2.641 halaman. **Jebakan: `purchase` embedded TIDAK memuat tanggal PO** → tanggal PO harus diambil dari `/v2/purchases/{purchase_id}/detail`. |
-| Stock adjustment list | GET | `/v2/stock_adjustments` | `reason` = catatan dokumen (`SO Monthly September`, `Auto stock balancing`). Detail dokumen hanya jurnal agregat. |
-| Stock adjustment items | GET | `/v2/stock_adjustment_items?stock_adjustment_id={id}` | `current_quantity` (sistem), `real_quantity` (fisik), `adjustment_quantity` = real−current, `adjustment_value` (Rp), embed `inventory` + `division`. `meta.total_value` = checksum. Item selisih 0 tetap termuat → `real_quantity` = stok fisik utuh. |
+| Stock adjustment list | GET | `/v2/stock_adjustments` | root `{"stock_adjustments":[...],"meta":{...}}`. `number` = `SA<branch>.<DDMMYY>.<seq>` (branch **alnum**: `SA220.`, `SAO77.`), `reason` = catatan dokumen (`SO Monthly September`, `Auto stock balancing`, `PENGAMBILAN HARIAN ...` — **teks bebas**). Embed `division` (outlet: `name`, `branch_number`), `stock_adjustment_type` (`name` "Stock Opname"/"Opening Stock"/"Adjusmen Beli Inventory outlet"/"Adjusment Jual Inventory Outlet"/"Adjustment Stock Out"/"Reject Outlet"/"Keperluan Produksi"/"Cangkang Telur"/"Keperluan RnD", **`adjustment_type`** `adjustment`\|`loss`\|`add`\|`new`, `account_id` akun lawan), `transaction_group` (jurnal otomatis `automatic: true`, `transactions[]` kaki jurnal `account_number`/`account_name`/`debit_amount`/`credit_amount`). **Jebakan: field root `adjustment_type` selalu null** — penentunya `stock_adjustment_type.adjustment_type`. Detail `/v2/stock_adjustments/{id}` tidak menambah apa pun. |
+| Stock adjustment items | GET | `/v2/stock_adjustment_items?stock_adjustment_id={id}` | `current_quantity` (sistem), `real_quantity` (fisik), `adjustment_quantity` = real−current, `adjustment_value` (Rp), `reason` **per item** (hanya auto-balancing: "…- inbound"/"…- outbound"; dokumen lain null), `unit.name`, embed `inventory` (sku/nama) + `division` + `stock_card` (`initial_stock`/`stock_in`/`stock_out`/`stock_balance`). `meta.total_value` = checksum **hanya sah untuk tipe `adjustment`/`add`/`new`**; tipe `loss` → meta 0 walau Σ item ≠ 0. Item selisih 0 tetap termuat → `real_quantity` = stok fisik utuh. Qty bisa **negatif** (eResto boleh). |
 | Inventories (live) | GET | `/v2/inventories` | tiap inventory punya `division_inventories[]` (`division_id`, `quantity`). Stok berjalan, bukan snapshot opname. |
 | Stock cards (mutasi) | GET | `/v2/stock_cards?division_id=...` | `reference_type = Production` = hasil masak masuk; `ProductionResultItem` = bahan terpakai keluar (docs/05). |
 
@@ -172,7 +174,8 @@ Volume acuan (terukur 1–4 Okt 2026): 27.053 order / 137 outlet / Rp709 jt;
 ## 5. Aturan bisnis yang tidak boleh dilanggar
 
 **Mapping SKU & item** (sumber kebenaran TUNGGAL sejak 2026-10-13:
-`docs/02-erpnext-mapping.md` — 166 SKU, semua kode diverifikasi ada di BARU;
+`docs/02-erpnext-mapping.md` — tabel SKU terurut; 172 SKU per 14 Okt + 3
+tambahan `BB0039`/`BB0152`/`BB0162`; semua kode diverifikasi ada di BARU;
 CSV `experiments/*.csv` hanya arsip/turunan — jangan menebak):
 
 - Kunci mapping = **`product_sku`**, tidak pernah nama. Satu SKU = satu nama.
@@ -272,6 +275,71 @@ CSV `experiments/*.csv` hanya arsip/turunan — jangan menebak):
   `POST /api/method/erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.execute_repost_item_valuation`
   (whitelisted, memaksa enqueue job).
 
+**Lane "PO outlet → supplier gudang internal JURI" (eResto `internal_supplier`):**
+
+- Sumber = eResto `/v2/purchases` (`internal_supplier = true`). "Supplier" di sini
+  adalah **gudang internal JURI**, bukan vendor luar. Nama gudang eResto → gudang
+  asal JURI (peta `WAREHOUSE_MAP` di `migrate_po_juri_9_12_okt.py`):
+  `Gudang Barang Jadi - PH Klaten` → `Gudang Barang Jadi - JURI`;
+  `Gudang Jakarta` → `Gudang Jakarta - JURI`; `Gudang Outlet - PH Klaten` →
+  `Gudang Outlet - JURI`; `Gudang Bahan Baku - PH Klaten` → `Gudang Bahan Baku - JURI`;
+  `Gudang Peralatan Klaten` → `Gudang Peralatan - JURI`;
+  `Gudang Produksi Klaten` → `Gudang Produksi - JURI`; dll.
+- **Jangan tertukar arah:** "PO Gudang Jakarta" di proyek ini = PO dgn
+  **`supplier.name = 'Gudang Jakarta'`** (Gudang Jakarta **menjual/mengirim** ke
+  outlet; Company = divisi outlet pemesan, mis. `RSUD SEKAYU BANYUASIN`).
+  **BUKAN** PO dgn **divisi pemesan** `Gudang Jakarta` (yang terakhir ini =
+  Gudang Jakarta **membeli** dari vendor luar — `POCK2.*`, supplier
+  Tokopedia/Arta Boga/Ayla Java; itu lane eksternal, bukan lane ini). Dua hal
+  ini mudah tertukar saat audit; cek field mana yang bernilai `Gudang Jakarta`.
+- Bentuk dokumen per PO (ID identik eResto via `rename_doc`):
+  - **Outlet biasa → Purchase Order**: `company` = divisi outlet pemesan;
+    `supplier` = `PT. JUARA ROTI INDONESIA`; `set_warehouse` = `Stores - <ABBR>`
+    (gudang penerimaan outlet); `set_from_warehouse` = gudang JURI asal (peta di
+    atas); `buying_price_list` = `Harga Outlet`; baris `expense_account` =
+    `4210.000 - HPP Pembelian - <ABBR>`, `cost_center` = `Main - <ABBR>`.
+  - **Outlet FRC (divisi `... (FRC)`) → Sales Order** (keputusan user: franchise
+    langsung jadi customer): `company` = `PT. JUARA ROTI INDONESIA`,
+    `customer` = internal FRC (`Customer` group `Outlet Franchise`, cocokkan by
+    `customer_name`), `set_warehouse` = `Gudang Barang Jadi - JURI`,
+    **tanpa** `inter_company_order_reference`.
+- **ANTI-DUPLIKAT 3 LAPIS — jangan pernah andalkan ID saja** (permintaan user
+  2026-10-14): sebuah PO dianggap sudah ada bila cocok **salah satu**:
+  (a) nama dokumen == nomor PO eResto; (b) `title == 'ERESTO <nomor-PO>'`
+  (menangkap dokumen dgn nama series fallback); (c) **signature isi** =
+  `company + supplier + transaction_date + grand_total + multiset (item_code, qty)`.
+  Untuk SO FRC: title ATAU signature `(item_code, qty)`. Lapis (c) menangkap
+  duplikat yang dibuat manual / ID beda tapi isi kembar.
+- **Urutan cek penting**: cek duplikat (name/title) **sebelum** validasi item;
+  kalau tidak, PO yang sudah ada tapi memakai SKU tak-termap / item Olesan
+  Pastry akan salah masuk `Skipped` alih-alih `SKIP_EXISTS`.
+- Status eResto `rejected`/`canceled` **tidak** dimigrasi. Status default draft
+  bisa dipaksa (`FORCE_DRAFT`) atau mengikuti eResto — ikuti instruksi user.
+- SKU tanpa padanan Item **tidak ditebak** — baris/PO di-skip & dicatat.
+  (mis. `BB0043` "Daun Teh Enak Kata Orang" belum ada padanan di BARU →
+  dipakai di 10 PO (1 Sep–15 Okt), 6 di antaranya supplier Gudang Jakarta/GBJ;
+  baris dikeluarkan & dicatat, bukan ditebak.)
+- **Rename PO/SO butuh `allow_rename` sementara** (Purchase Order & Sales Order
+  `allow_rename = 0`): lihat jebakan §6.8a. Bila rename gagal, dokumen tertinggal
+  dgn nama series (`PO-.ABBR.-.YY..MM..DD.###`); self-heal lewat cek `title`.
+  **Jebakan #8b: kegagalan rename itu SILENT** — POST bisa `200` tapi rename
+  `417`; wajib cek status rename & panggil `ensure_allow_rename` SEBELUM create.
+- **Jendela yang belum digarap = sumber gap besar.** Jangan asumsikan
+  "PO lama sudah dimigrasi": 2026-10-14 ditemukan **seluruh September 2026
+  (1–24 Sep) belum pernah digarap** untuk supplier `Gudang Jakarta` (67 PO
+  regular hilang; Sekayu 4 PO). Cara audit cepat: tarik `/v2/purchases` jendela
+  lebar, filter supplier-gudang, banding dgn index dokumen BARU (name+title).
+  Skrip rentang: `migrate_po_gudang_jakarta_window.py --from --to`.
+- Skrip per jendela mengikuti pola sama, jangan saling menimpa cache/laporan:
+  `migrate_po_juri_9_12_okt.py`, `migrate_po_juri_13_14_okt.py`,
+  `migrate_po_gudang_jakarta_9okt.py` (satu tanggal),
+  **`migrate_po_gudang_jakarta_window.py`** (rentang tanggal, `FORCE_DRAFT`,
+  `EXTRA_ITEM_MAP`), dan **`migrate_po_gbj_klaten.py`**
+  (supplier `Gudang Barang Jadi - PH Klaten`, CLI
+  `--dump/--refresh/--dry-run/--verify/--date-from/--date-to`, laporan
+  auto-nama per jendela).
+
+
 **Stock & item kanonik (keputusan user 2026-10-09):**
 
 - **Stock minus DILARANG** — `Stock Settings.allow_negative_stock = 0`
@@ -296,6 +364,44 @@ CSV `experiments/*.csv` hanya arsip/turunan — jangan menebak):
   `pos_sync/endtransit_cloud_jakarta.py` (cloud),
   `pos_sync/fix_git_jakarta_ke_gbj_transfer.py` (lokal),
   audit: `pos_sync/audit_cloud_jakarta_git.py`.
+- **Stock adjustment eResto (SA) → dokumen stok ERPNext** (kontrak lengkap di
+  `docs/01-eresto-api.md` §Stock adjustment; skill
+  `.agents/skills/eresto-erpnext/SKILL.md` §Stock adjustment eResto):
+  - 9 tipe `stock_adjustment_type` (terukur 1–30 Sep 2026, **11.319 SA** —
+    angka lama 4.645 terpotong aturan stop pagination, andalkan
+    `meta.total_count`/`meta.next_page`): `Stock Opname` (`adjustment`),
+    `Opening Stock` (`new`), `Adjusmen Beli Inventory outlet` (`add`),
+    `Adjusment Jual Inventory Outlet`/`Reject Outlet`/`Adjustment Stock Out`/
+    `Keperluan Produksi`/`Cangkang Telur`/`Keperluan RnD` (`loss`).
+  - **Peta tipe → dokumen ERPNext:** opname (`reason` `SO Monthly …` /
+    `SO MID …` / `Periode …`) → `Stock Reconciliation` (qty absolut) akun
+    `5110.020 - Penyesuaian Stock`; `Opening Stock` → RECO opening
+    `1171.000 - Pembukaan sementara`; `Adjusmen Beli` + `Adjusment Jual` =
+    **satu** transfer antar outlet (nilainya berlawanan & sama → Stock Entry
+    transfer, jangan dua RECO); `Adjustment Stock Out` = pengambilan gudang →
+    Stock Entry (Material Transfer/Repack); `Reject Outlet`/`Cangkang Telur`/
+    `Keperluan RnD` → RECO penyesuaian; `Keperluan Produksi` → Stock Entry
+    Manufacture. `Stock Opname` ber-reason **`Auto stock balancing`** =
+    koreksi delta sistem (~10,8k/bulan) → **jangan post**, jejak audit saja.
+  - Idempotensi marker: `remarks = "ERESTO SA<number>"` (dokumen tanpa
+    `remarks` → `title`), cek-dulu-skip. Nomor SA = `SA<branch alnum>.<DDMMYY>.<seq>`.
+  - Klasifikasi jangan pakai field root `adjustment_type` (selalu `null`);
+    penentunya `stock_adjustment_type.adjustment_type`
+    (`adjustment` | `loss` | `add` | `new`).
+  - Checksum `meta.total_value` **hanya sah untuk tipe `adjustment`/`add`/`new`**;
+    tipe `loss` meta = 0 walau Σ item ≠ 0 → jangan gagalkan batch karena itu.
+  - `reason` = teks bebas (opname: `SO Monthly September` 123, `SO MID
+    SEPTEMBER` 14, `Konfirmasi` 6, `Periode 1 Bulan September` 6, `Revisi`,
+    `PENYAMAAN STOK DOUGH`, …) → **filter opname = tipe `Stock Opname` AND
+    `reason != "Auto stock balancing"`** (210 dokumen di Sep 2026; filter
+    `reason == "SO Monthly September"` saja cuma dapat 123).
+  - **eResto mengizinkan qty negatif** (`current_quantity` −60, `real_quantity`
+    −0,5) → target RECO negatif tidak valid, keluarkan & catat.
+  - SKU SA bisa berakhiran `-b` (varian: `BB0121-b` "Plastik Paking Dough",
+    `BB0155-b` "Karet Gelang"); SKU dasar bisa sudah di-rename jadi "Deleted 1"
+    → map by SKU, tak ada di `docs/02` → keluarkan & catat (jangan tebak).
+  - RECO backdated di atas saldo minus ditolak `NegativeStockError`
+    (`allow_negative_stock=0`) → catat pergerakan riil, jangan buka flag.
 - **Konversi UOM dokumen LAMA → stok BARU**: dokumen LAMA memakai UOM baris
   (`Pack`, `Kg`) dan site BARU `stock_uom` bisa beda (`Pcs`, `g`) dengan
   `conversion_factor` **berbeda per item** (`PJ260010` cf=6, `PJ260011` cf=3,
@@ -364,6 +470,28 @@ CSV `experiments/*.csv` hanya arsip/turunan — jangan menebak):
     (lihat `pos_sync/restore_sr7_zeroouts.py` sebagai contoh).
 8. **Update setelah submit:** `before_save` tidak jalan → pakai Property Setter
    `allow_on_submit=1` sementara + `frappe.client.set_value`, lalu pulihkan ke 0.
+8a. **Rename dokumen dengan `allow_rename=0`** (mis. Purchase Order, Sales Order):
+   `frappe.client.rename_doc` menolak `HTTP 417 ValidationError: ... not allowed
+   to be renamed` (validate_rename cek `meta.allow_rename`). Bikin **Property
+   Setter** `{doc_type, property=allow_rename, property_type=Check, value=1}`
+   sementara → rename → **hapus** setter (bila dibuat barusan) atau kembalikan
+   ke 0. Pola ini wajib agar ID dokumen bisa disamakan dgn nomor PO eResto;
+   kalau lupa, POST tetap berhasil tapi dokumen tertinggal dgn nama series
+   (`PO-.ABBR.-.YY..MM..DD.###`) → self-heal lewat cek `title = 'ERESTO <PO>'`.
+8b. **Jebakan #8a SILENT kecuali status HTTP rename dicek.** Kasus nyata
+   2026-10-14: lane PO Gudang Jakarta rentang-September membuat 60 PO sukses
+   (`HTTP 200`) tetapi **seluruh 60 `rename_doc` gagal `417`** — script hanya
+   mencetak status, tidak raise, jadi dokumen jatuh ke nama auto `PO-<ABBR>-...`
+   dan user melihat "ID eResto tidak dipakai". **Aturan: di lane tulis mana pun,
+   `ensure_allow_rename(dt)` dipanggil SEBELUM create bila akan rename; dan
+   periksa status rename (`st == 200`), jangan hanya andalkan "POST sukses".**
+   Perbaikan massal: `pos_sync/fix_rename_po_jakarta_window.py` (nyalakan setter →
+   rename per `title` marker → hapus setter → verifikasi 0 sisa). Helper rujukan:
+   `migrate_mr_po_25sep_7okt.ensure_allow_rename`, `migrate_pi_central_okt.ensure_allow_rename`.
+8c. **"Buat semua DRAFT" ≠ ikut status eResto.** Beberapa lane punya flag
+   `FORCE_DRAFT` (mis. lane PO Gudang Jakarta rentang) — docstatus 0 apa pun
+   status eResto. Jangan campur dengan default lane lain
+   (`processing/completed`→submit). Tentukan per instruksi user, catat di laporan.
 9. **Payment Ledger Entry read-only via API** (403). Hapus dokumen ber-ledger:
    cancel → purge Print Log → set `delete_linked_ledger_entries=1` sementara di
    Accounts Settings → delete → pulihkan 0.
@@ -470,6 +598,7 @@ Perintah utama (detail flag & urutan di `PROJECT_STATE.md` §Cara jalanin):
 | Injeksi POS Invoice (per order, backfill) | `pos_sync/inject_pos_invoice.py` (+ `set_item_valuation.py` sekali di awal) |
 | Migrasi WO pabrik | `pos_sync/migrate_wo_full_okt.py` (`--dump/--plans/--wos/--mrs/--ses/--verify`) |
 | Migrasi PO Outlet → JURI | `pos_sync/migrate_outlet_po_to_juri.py` (`--dump/--prep/--migrate/--verify/--rewarehouse`) |
+| Migrasi PO eResto supplier Gudang Barang Jadi Klaten (13–14 Okt) | `pos_sync/migrate_po_gbj_klaten.py` (`--dump/--refresh/--dry-run/--verify/--date-from/--date-to`; outlet→PO draft, FRC→SO draft, anti-duplikat 3 lapis) |
 | Migrasi SO + DN Outlet → JURI | `pos_sync/migrate_outlet_so_dn_to_juri.py` (`--dump/--prep/--so/--dn/--verify`) |
 | Print format (header global) | `pos_sync/migrate_print_formats.py` (`--build/--push/--verify/--revert --stage local\|cloud`) |
 | Catch-up delta harian | `pos_sync/catchup_oct7.py` (pola mengikuti) |
@@ -481,7 +610,7 @@ Perintah utama (detail flag & urutan di `PROJECT_STATE.md` §Cara jalanin):
 | Doc | Isi |
 |---|---|
 | `docs/01-eresto-api.md` | Auth, endpoint, params, kontrak JSON eResto (dasar §3–4 di atas) |
-| `docs/02-erpnext-mapping.md` | **Sumber tunggal mapping SKU→Item (166 SKU)** + outlet, payment, aturan void/refund, pilot 1 order, mapping stok SO |
+| `docs/02-erpnext-mapping.md` | **Sumber tunggal mapping SKU→Item** (tabel SKU terurut; 172 +3 SKU 14 Okt) + outlet, payment, aturan void/refund, pilot 1 order, mapping stok SO |
 | `docs/03-production-sync-design.md` | Desain sync POS→produksi→purchase, fase 1–4, aturan cutover |
 | `docs/04-posnext-cara-kerja-penjualan.md` | Cara kerja POSNext: opening shift, invoice, closing |
 | `docs/05-alur-dough-ke-bundle.md` | Rantai tetap dough→matang→bundle + resep yield terukur |
