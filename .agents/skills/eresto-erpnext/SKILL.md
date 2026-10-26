@@ -1,6 +1,6 @@
 ---
 name: eresto-erpnext
-description: Ropi's POS system map and hard rules — eResto (ropi.eresto.id) API/UI routes, ERPNext baru (ropierpnext.frappe.cloud) vs lama (rotiropi.j.frappe.cloud), SKU mapping, POS Invoice / Work Order / PO-SO-DN-FRC migration, MR/PO LAMA→BARU, Goods In Transit end-transit, stock chain dough→matang→bundle, RECO/opening stock, stock adjustment eResto (SA/opname → RECO/SE), stock minus policy. Use whenever the user mentions eResto, ERPNext Ropi, ropi.eresto.id, ropierpnext, rotiropi.j, AutoFetchErestoToERPNext, "inject POS invoice", "migrasi PO/WO/SO/PI/SO FRC", "tarik PO eResto", "input PO ke erpnext", duplikat PO, Olesan Pastry, SKU mapping, POSNext, Stock Reconciliation/RECO, "stock minus", "stock adjustment", "opname", "SA eResto", "auto stock balancing", Goodie Bag, "goods in transit", "end transit", "material request", or asks to fetch Ropi sales/production/purchase data — even if they don't name the repo.
+description: Use when working with Ropi eResto or ERPNext (ropi.co.id, ropi.eresto.id, ropierpnext, rotiropi.j), POSNext, SKU mapping, POS invoices, WO, MR, PO/SO/PR/PI/DN migration, duplicate documents, Stock Reconciliation/RECO, opening stock, SO opname, SA stock adjustment, auto stock balancing, negative stock, Goods In Transit/end-transit, Olesan Pastry, Goodie Bag, or Ropi sales, production, purchase and inventory data.
 ---
 
 # eResto ↔ ERPNext (Ropi)
@@ -11,7 +11,7 @@ Baca berurutan sebelum menyentuh API apa pun:
 2. `AGENTS.md` — aturan tetap proyek (style, constraint, alur).
 3. `PROJECT_STATE.md` — status terkini: apa yang sudah selesai, task aktif, known issues.
 
-Dokumentasi topik ada di `docs/01..12` (indeks di `KNOWLEDGE.md` §8).
+Dokumentasi topik ada di `docs/01..13` (indeks di `KNOWLEDGE.md` §8).
 Kode: `pos_sync/` (migrasi & injeksi, idempoten) dan `experiments/` (setup + probe;
 `test_*` bukan produksi — jangan di-import).
 
@@ -20,7 +20,7 @@ Kode: `pos_sync/` (migrasi & injeksi, idempoten) dan `experiments/` (setup + pro
 - **Cek TARGET SITE sebelum menulis apa pun.** Tiga env mudah tertukar:
   `/tmp/eresto_mig.env` → `ERPNEXT_URL` biasanya **LOKAL**
   (`http://127.0.0.1:8081`); `/tmp/eresto_prod.env` → **CLOUD**
-  (`https://ropierpnext.frappe.cloud`). Permintaan "site baru / produksi" =
+  (`https://ropi.co.id`, dulu `ropierpnext.frappe.cloud`). Permintaan "site baru / produksi" =
   **CLOUD**. Sebelum eksekusi **cetak `client.base`**; sesudahnya verifikasi
   di site yang dipegang user. (Kasus nyata 2026-10-12: perbaikan tertulis ke
   lokal → user "kok ga ada perubahan".)
@@ -30,9 +30,11 @@ Kode: `pos_sync/` (migrasi & injeksi, idempoten) dan `experiments/` (setup + pro
   biasanya di `/tmp/eresto_mig.env` & `/tmp/eresto_prod.env` (volatile).
 - **Jangan pernah kirim ke site yang salah.** Kunci API cloud baru TIDAK
   berlaku di site lama dan sebaliknya. Kunci dari chat = perlu rotasi (catat).
-- Rerun wajib idempoten: marker `remarks = "ERESTO <order_no>"`,
-  `cheque_no = "ERESTO-<branch>-<date>"`, atau `SKIP_EXISTS` by name/ID lama.
-  PO/SO/DN tidak punya field `remarks` — kunci idempotensi di `title`.
+- Reruns must be idempotent: `remarks = "ERESTO <order_no>"`,
+  `cheque_no = "ERESTO-<branch>-<date>"`, or `SKIP_EXISTS` by existing name/ID.
+  Check doctype metadata before querying marker fields. Use `title` only when
+  available; if neither `remarks` nor `title` exists, use native Comments with
+  reference doctype/name plus timestamp/item signatures.
 - Mapping SKU by **`product_sku`**, bukan nama. Jangan menebak Item Code —
   sumber kebenaran `docs/02-erpnext-mapping.md` (CSV experiments hanya arsip);
   bila padanan tak ada, **cari bukti** (PO identik di site LAMA) atau
@@ -71,10 +73,12 @@ Kode: `pos_sync/` (migrasi & injeksi, idempoten) dan `experiments/` (setup + pro
   JURI`, TANPA `inter_company_order_reference`; default **DRAFT**
   (`pos_sync/migrate_so_frc_9_12_okt.py`). Cek dulu SO existing per customer
   (jangan bikin dobel).
-- **RECO kanonik**: opening = `1171.000 Pembukaan sementara`, satu dokumen
-  per gudang @ 30 Sep 23:00; penyesuaian operasional = `5110.020 Penyesuaian
-  Stock`. Cancel RECO v16 menggeser trail — jangan cancel/recreate asal;
-  zero-out di atas minus → substitusi Material Receipt.
+- **RECO opening:** account `1171.000 - Pembukaan sementara`; operational
+  adjustment: `5110.020 - Penyesuaian Stock`. For eResto SO-derived opening,
+  use the source SO timestamp and one RECO per SO per warehouse. Non-eResto
+  opening remains at 23:00 on its approved date. The older blanket 30 Sep
+  23:00 convention does not override a source SO timestamp. Cancel RECO v16
+  shifts later ledger balances; follow the replacement procedure below.
 - **Warehouse testing DIHAPUS di kedua site** (LAMA `- ROPI` & BARU
   `- JURI`) — jangan dibuat ulang di script migrasi/opening.
 - **Goodie Bag = `PEL260072`** (legacy `PG001` di-merge & dihapus;
@@ -148,6 +152,72 @@ meta −1.325.788 COCOK). Pada tipe **`loss`** meta = **0** walau Σ item ≠ 0
 hanya karena selisih checksum di tipe loss. SA "Auto stock balancing" 0 = COCOK
 (inbound & outbound saling meniadakan), bukan "kosong".
 
+### SO opening source selection
+
+When the user requests SO-prefixed opname, select non-deleted headers with
+`stock_adjustment_type.name == "Stock Opname"` and
+`reason.strip().upper().startswith("SO")`. The note is header **`reason`**,
+not the SA number or the automatically generated journal note. Always exclude
+auto-balancing, including item reasons `Auto stock balancing - inbound/outbound`.
+Daily withdrawals (`PENGAMBILAN HARIAN ...`) are not SO opening sources.
+The broader non-auto Stock Opname filter remains valid for requests explicitly
+covering all opname reasons; do not silently broaden an SO-only request.
+
+Use **`real_quantity`**, including unchanged and zero-count items, not
+`adjustment_quantity`. Map by SKU and verified UOM factor. Report unmapped
+positive quantities explicitly; never call a partial mapping "all items imported".
+Keep non-eResto opening at 23:00 and later operational adjustments separate.
+
+### Counted rows versus correction rows
+
+Report source rows, mapped unique items, exclusions, and changed rows separately.
+A count of 10 differences does not mean an SO contains only 10 items. Trace each
+mapped SKU to its document and ledger balance at the SO timestamp, not to today's
+Bin or EOD alone. Existing split RECOs may overlap; deduplicate by warehouse/item.
+**Zero targets may have no new SLE** when book quantity is already zero; verify
+their effective balance rather than requiring one SLE per document row.
+
+### Safe replacement of split RECOs
+
+1. Audit live target, exact inclusive date range, dependencies, source rows,
+   existing RECOs, future SLE, Bin quantities and stock values. Backup first.
+2. Prepare the full mapped payload with custom UOM fields and obtain exact
+   replacement-scope approval before cancellation/deletion/submission. Read
+   back native drafts/submissions; submitting over old anchors can drop rows.
+3. Scope deletion to approved names, not every RECO in the date range. Preserve
+   non-eResto opening, operational adjustments, and rows belonging to other
+   warehouses in mixed documents. Preserve their timestamp, qty and valuation
+   in warehouse-specific replacements; verify counted-data invariants after
+   repost, not byte-equality of server-recomputed current/difference fields.
+4. Submitted zero-difference rows can be removed by server validation. Do not
+   submit over old layers, delete those layers, and assume full SO coverage.
+   Validate replacement order; cancelling oldest-created layers first preserves
+   next-RECO boundaries but can still raise **NegativeStockError**.
+5. If cancellation fails, stop and read back documents/Bin to verify rollback.
+   Approval to replace RECOs is NOT approval to enable negative stock. Obtain
+   explicit permission for that specific temporary exception; restore
+   `allow_negative_stock=0` in `finally`, even if replacement fails.
+6. After approved cancellation, preserve cross-warehouse rows and submit the
+   consolidated draft before permanently deleting originals. If deletion is
+   blocked by **Workflow Action**, backup and remove only actions whose
+   `reference_doctype/reference_name` match the approved cancelled voucher.
+   Restore `delete_linked_ledger_entries` in `finally`.
+7. Verify submitted row signatures and SO-time balances; protected counted data;
+   approved projected quantities and expected EOD; report valuation changes;
+   balanced GL (an empty journal may be valid for a same-account transfer);
+   old names 404 and GL/SLE residue 0; no negative target Bin; restored settings;
+   repost pending/failed 0. Do not claim success while repost remains pending.
+
+Evidence, execution history and current document IDs belong in `docs/13` and
+`PROJECT_STATE.md`, not in permanent skill rules.
+
+### Stock audit and repost edge cases
+
+Before a stock audit or backdated correction, read
+[Stock audit safety](references/stock-audit-safety.md): stable ERP pagination,
+native omitted-row proof, counted-versus-derived fields, scoped historical
+negatives, safe no-op decisions, metadata, precision and asynchronous deletion.
+
 ### Katalog tipe SA (9 tipe, terukur 1–30 Sep 2026: 11.319 SA) → dokumen ERPNext
 
 | Tipe eResto (`stock_adjustment_type.name`) | `adjustment_type` | Arti | Dokumen ERPNext (cloud baru) |
@@ -174,8 +244,9 @@ Outlet, Opening Balance. Peta ke akun ERPNext **ikut master item/company**
 **Pemetaan umum ke ERPNext (baru/cloud):** SA opname → `Stock Reconciliation`
 (RECO) **qty absolut**: opening → `1171.000 - Pembukaan sementara`; penyesuaian
 operasional → `5110.020 - Penyesuaian Stock` (jangan campur). Idempotensi:
-marker `remarks = "ERESTO SA<number>"` (dokumen tanpa `remarks` → `title`),
-cek-dulu-skip. `allow_negative_stock = 0` terkunci: RECO backdated di atas
+marker `remarks = "ERESTO SA<number>"` where metadata permits; otherwise use
+`title` if available, or native Comments plus timestamp/item signatures when
+both fields are absent. Check before writing. `allow_negative_stock = 0` terkunci: RECO backdated di atas
 saldo minus ditolak `NegativeStockError` → catat pergerakan riil
 (receipt/repack/transfer).
 
