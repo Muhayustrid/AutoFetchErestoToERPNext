@@ -92,6 +92,32 @@ Kode: `pos_sync/` (migrasi & injeksi, idempoten) dan `experiments/` (setup + pro
   Kecil→BHP260020 (Selotip), BB0230 Sticker Label→ATK260038,
   BB0267 Tinta Isi Ulang→BHP260033.
 
+## Purchase Request retrieval (eResto)
+
+- **GET `/v2/purchase_requests`** lists Purchase Requests, not PO records or
+  ERPNext Purchase Receipts. Read `purchase_requests[]`; confirmed header keys
+  are `id` (UUID) and `request_no` (for example `PRGBJ.281026.004`).
+- Use `created_at[geq]` / `created_at[leq]` in day-name format, `division_id`,
+  `po_status=uncreated`, `page`, `per_page`, `sort[property]=updated_at`,
+  `sort[order]=desc`, plus the standard env-based query/header authentication.
+  Exact sanitized parameters: `docs/01-eresto-api.md` §Purchase Requests.
+  Pass decoded values to the HTTP client's query encoder; do not double-encode
+  `%5B`/`%5D` or copy a credential-bearing browser URL into code or logs.
+- `po_status=uncreated` restricts the result to the uncreated-PO view, not all
+  PRs. Other filter values and removal semantics need verification. Empty
+  `division_id` is the captured all-division scope; use an explicit division
+  when a single outlet is requested. `created_at` is not the document date.
+- Follow `meta.next_page` to null, deduplicate headers by `id` and reconcile
+  unique counts against `meta.total_count`; report live drift rather than
+  claiming completeness from one page. The capture used `per_page=20`;
+  larger page sizes are unverified for this endpoint.
+- **Item rows remain unverified:** the supplied list capture collapses each
+  PR object. Inspect a complete object or capture the GET triggered by opening
+  a PR before specifying its item field, detail endpoint, SKU, qty or UOM.
+  Do not guess `/purchase_request_items` or reuse the PO detail contract.
+  Missing item evidence is not an empty item list. Retrieve only; no ERPNext
+  creation or stock movement is authorized by this reference update.
+
 ## Migrasi PO dari eResto — dua lane + anti-duplikat
 
 eResto `/v2/purchases`: flag benar = **`internal_supplier` (boolean di root)**,

@@ -27,6 +27,7 @@ The PO-script pair is unproven for orders.
 | POS order detail | GET | `/v3/orders/{order_id}` |
 | Refund list | GET | `/v2/refunds` |
 | Production list | GET | `/v2/productions` |
+| Purchase Request list | GET | `/v2/purchase_requests` (`created_at[geq/leq]`, `po_status=uncreated`; item contract unverified) |
 | PO list (legacy) | GET | `/v2/purchases` |
 | PO detail (legacy) | GET | `/v2/purchases/{id}/detail` (fallback `/v2/purchases/{id}`) |
 | Purchase invoice list | GET | `/v2/purchase_invoices` (`transaction_date[geq/leq]`, ISO format) |
@@ -61,6 +62,56 @@ adjustment pull (4,645 of 11,319 rows). Trust `meta.total_count` /
 Dedup by `id`. Retry transient codes
 429/500/502/503/504, max 3 with backoff, 90s timeout.
 Parallel detail fetch: max 10 workers. 160 details took 5.5s.
+
+## Purchase Requests
+
+Evidence: user-provided browser capture, HTTP 200 on 2026-10-30; not an
+independent live probe. Target: `GET https://ropi.eresto.id/v2/purchase_requests`.
+This is a request-to-purchase list, not `/v2/purchases` (PO) or ERPNext's
+Purchase Receipt (also commonly abbreviated PR).
+
+Sanitized, decoded query parameters (use the standard Auth section above):
+
+```text
+created_at[geq]=Sat, 24 Oct 2026 00:00:00.000
+created_at[leq]=Fri, 30 Oct 2026 23:59:59.999
+current_user_id={ERESTO_USER_ID}
+division_id=
+domain=ropi
+page=1
+per_page=20
+po_status=uncreated
+sort[order]=desc
+sort[property]=updated_at
+token={ERESTO_TOKEN}
+```
+
+- `%5B` / `%5D` decode to `[` / `]`; query-string `+` represents a space.
+  Supply decoded values through the HTTP client's query encoder, not an
+  already encoded URL. Keep token/email in env and redact URLs/auth headers.
+- This filters **creation timestamps**, not necessarily the PR document date.
+  `po_status=uncreated` is the uncreated-PO view: do not describe it as all PRs.
+  Other values or behavior without this filter have not been verified.
+  Empty `division_id` is the captured all-division scope; prefer an explicit
+  division for an outlet-specific request.
+- Response root: `purchase_requests[]` and `meta`. Confirmed row fields:
+  `id` (UUID), `request_no` (e.g. `PRGBJ.281026.004`, `PR183.301026.001`).
+  Captured metadata: `current_page=1`, `next_page=2`, `prev_page=null`,
+  `total_pages=7`, `total_count=134`. These are snapshot values, not constants;
+  134 is a header count, not an item count. The supplied page has 20 headers.
+- Follow `meta.next_page` until null; deduplicate headers by `id`, compare
+  unique header count with `meta.total_count`, and report drift if live updates
+  change the set. Do not stop at a short batch or claim page 1 is complete.
+  Only `per_page=20` is evidenced here; validate larger sizes before relying
+  on them. Apply the shared retry/timeout limits and omit `If-None-Match`.
+- **Item retrieval is not yet mapped.** The supplied PR objects are collapsed;
+  this does not prove that embedded items exist or are absent. Obtain one
+  complete object, or capture the actual GET used when opening a PR, to verify
+  the item field/detail endpoint and SKU/quantity/UOM fields. Do not invent
+  `/v2/purchase_request_items`, assume PO detail routes, or treat missing
+  fields as zero items. Preserve source rows once the contract is known and
+  use approved SKU mapping plus verified UOM conversions. This reference does
+  not authorize creating ERPNext documents or moving stock.
 
 ## JSON contracts
 
